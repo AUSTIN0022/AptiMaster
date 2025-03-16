@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 import mongoose from "mongoose";
 import { validateEmail } from './utils/utilitsFunctions.js';
 
-import { Users } from "./Database/schema.js";
+import { Topics, Users } from "./Database/schema.js";
 
 dotenv.config();
 
@@ -15,6 +15,10 @@ await mongoose.connect(process.env.MONGO_URI);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Worker
+import './workers/ReCalculateQueCount.js';
+
 
 // Middleware
 app.use(express.json());
@@ -114,8 +118,30 @@ app.post('/api/auth/logout', (req, res) => {
 
 // Topics & Modules
 // Fetch all available Topics
-app.get('/api/topics', (req, res) => {
-    
+app.get('/api/topics', async (req, res) => {
+    try{
+        const topics = await Topics.find({}, {
+            name: 1, 
+            description: 1, 
+            icon: 1, 
+            coverImage: 1,
+            questionCount: 1,
+            moduleCount: { $size: "$modules" }
+          });
+
+        if(!topics){
+            return res.status(400).json({
+                message: `Erroring fetching the topics ${err.message}`
+            });
+        }
+
+        res.json({ topics: topics })
+
+    } catch(err) {
+        return res.status(400).json({
+            message: `Erroring fetching the topics ${err.message}`
+        });
+    }
 });
 
 // Get modules for a given topic

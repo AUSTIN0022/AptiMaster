@@ -8,19 +8,53 @@ mongoose.connect(process.env.MONGO_URI);
 
 const TopicSchema = new Schema({
     name: { type: String, required: true, unique: true, index: true },
-    icon: { type: String }, // URL to icon image
-    coverImage: { type: String }, // URL to a larger cover image (optional)
+    icon: { type: String },
+    coverImage: { type: String },
     description: { type: String },
-    learningOutcomes: [{ type: String }], // What users will learn
+    questionCount: { type: Number, default: 0 }, // Total questions for this topic
+    learningOutcomes: [{ type: String }],
     modules: [{
       name: { type: String, required: true },
       description: { type: String },
-      // icon: { type: String }, // Optional module-specific icon
-      questionCount: { type: Number, default: 0 } // Can be updated when questions are added
+      questionCount: { type: Number, default: 0 } // Questions specific to this module
     }],
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
-  });
+});
+
+// Add this to your schema file where TopicSchema is defined
+TopicSchema.statics.recalculateAllCounts = async function() {
+    const Topics = this; // 'this' refers to the model
+    const topics = await Topics.find({});
+    
+    console.log(`Recalculating counts for ${topics.length} topics...`);
+    
+    for (const topic of topics) {
+      // Get question count for this topic
+      const topicQuestionCount = await mongoose.model('Questions').countDocuments({ 
+        topic: topic._id 
+      });
+      
+      // Update modules question counts
+      for (let i = 0; i < topic.modules.length; i++) {
+        const moduleQuestionCount = await mongoose.model('Questions').countDocuments({ 
+          topic: topic._id, 
+          module: topic.modules[i].name 
+        });
+        
+        topic.modules[i].questionCount = moduleQuestionCount;
+      }
+      
+      // Update the topic with correct counts
+      topic.questionCount = topicQuestionCount;
+      await topic.save();
+      
+      console.log(`Updated counts for topic: ${topic.name} - Total questions: ${topicQuestionCount}`);
+    }
+    
+    console.log("All counts recalculated successfully!");
+    return true;
+  };
 
 const QuestionSchema = new Schema({
     topic: {type: Schema.Types.ObjectId, ref:"Topics", required: true, index: true},
@@ -34,6 +68,29 @@ const QuestionSchema = new Schema({
 }, {timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' }});
 
 
+// After saving a question
+QuestionSchema.post('save', async function(doc) {
+    // Increment the topic's question count
+    await Topics.findByIdAndUpdate(doc.topic, { $inc: { questionCount: 1 } });
+    
+    // Increment the specific module's question count
+    await Topics.findOneAndUpdate(
+      { _id: doc.topic, 'modules.name': doc.module },
+      { $inc: { 'modules.$.questionCount': 1 } }
+    );
+  });
+  
+  // After deleting a question
+  QuestionSchema.post('remove', async function(doc) {
+    // Decrement the topic's question count
+    await Topics.findByIdAndUpdate(doc.topic, { $inc: { questionCount: -1 } });
+    
+    // Decrement the specific module's question count
+    await Topics.findOneAndUpdate(
+      { _id: doc.topic, 'modules.name': doc.module },
+      { $inc: { 'modules.$.questionCount': -1 } }
+    );
+  });
 
 QuestionSchema.methods.checkAnswer = function(selectedOption) {
     return selectedOption === this.correctOption;

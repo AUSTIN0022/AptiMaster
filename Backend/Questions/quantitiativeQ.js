@@ -1,8 +1,8 @@
-module.exports = [
+const questions =  [
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
-      "questionText": "375, 75, 30, 18, ?, 14.4",
+      "questionText": "375, 75, 30, 18, ?",
       "options": ["15", "15.2", "16", "14.4", "16.5"],
       "correctOption": "D",
       "difficulty": "easy",
@@ -10,7 +10,7 @@ module.exports = [
       "hint": "Look for a consistent multiplier between terms (like dividing by a constant factor)"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "25, 89, 332, 588, 713, ?",
       "options": ["855", "856", "749", "860", "785"],
@@ -20,7 +20,7 @@ module.exports = [
       "hint": "Notice that the difference between consecutive terms is increasing by a fixed amount"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "18, 36, 62, 96, 138, ?",
       "options": ["172", "206", "244", "220", "188"],
@@ -30,7 +30,7 @@ module.exports = [
       "hint": "Look for a pattern where each addition increases by a fixed value (8)"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "16, 24, 60, 210, 945, ?",
       "options": ["5197.5", "4234.5", "5848.5", "4113.5", "5434.5"],
@@ -40,7 +40,7 @@ module.exports = [
       "hint": "Try multiplying each term by increasing values with a pattern (1.5, 2.5, 3.5...)"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "8, 18, 86, 308, 828, ?",
       "options": ["1955", "1902", "1406", "1838", "1629"],
@@ -50,7 +50,7 @@ module.exports = [
       "hint": "Look for a pattern involving cubes of even numbers plus the even number itself"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "16, 20, 28, 27, 42, ?",
       "options": ["26", "45", "67", "42", "32"],
@@ -60,7 +60,7 @@ module.exports = [
       "hint": "This series alternates between addition and subtraction of squared numbers (2², 3², 4², 5²)"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "5, 7, 11, 37, ?, 721",
       "options": ["143", "294", "138", "147", "256"],
@@ -70,7 +70,7 @@ module.exports = [
       "hint": "Look for a pattern that alternates between multiplication and addition/subtraction operations"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "21, 33, 85, 301, 1359, ?",
       "options": ["6066", "7359", "7480", "6242", "5155"],
@@ -80,7 +80,7 @@ module.exports = [
       "hint": "Each term is multiplied by (n+0.5) and then (n+0.5) is added to it"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "6, 9, 24, 90, 432, ?",
       "options": ["2380", "1340", "2460", "2520", "1420"],
@@ -90,7 +90,7 @@ module.exports = [
       "hint": "Each number is multiplied by the next position number and then divided by that same number"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Number Series",
       "questionText": "4, 13, 41, 126, ?, 1151",
       "options": ["382", "688", "453", "562", "436"],
@@ -100,7 +100,7 @@ module.exports = [
       "hint": "Each term is multiplied by 3 and then the position number is added"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Simple & Compound Interest",
       "questionText": "If the difference between Simple Interest and Compound Interest at 10% p.a rate of interest for 3 years is Rs. 930, then find the Sum.",
       "options": ["Rs 25,000", "Rs 30,000", "Rs 35,000", "Rs 40,000", "None of these"],
@@ -110,7 +110,7 @@ module.exports = [
       "hint": "The difference between CI and SI equals P(r/100)²(1+r/100) for 2 years, and more complex for 3 years"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Simple & Compound Interest",
       "questionText": "On a certain rate of interest a sum of Rs 5000 becomes Rs 16,200 in certain years at compound interest. In half of the time given, this sum will become?",
       "options": ["Rs 10,000", "Rs 5,600", "Rs 9,000", "Cannot be determined", "None of these"],
@@ -120,7 +120,7 @@ module.exports = [
       "hint": "Think of this as a geometric progression where the middle term is the geometric mean of the first and last terms"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Simple & Compound Interest",
       "questionText": "If a certain sum becomes double in 3 years at certain rate of interest at C.I. Then in how many years it will become 16 times?",
       "options": ["12 years", "24 years", "8 years", "Cannot be determined", "None of the above"],
@@ -130,7 +130,7 @@ module.exports = [
       "hint": "If amount doubles in x years, it becomes 2ⁿ times in nx years"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Simple & Compound Interest",
       "questionText": "Ram invests two sum of money A and B at 10% p.a. and 20% p.a respectively at CI for 2 years. IF the total interest on both the sum is Rs 5350 then find the sum invested in A if the total sum of A and B was Rs 20,000?",
       "options": ["Rs 5,000", "Rs 10,000", "Rs 12,000", "Rs 15,000", "None of these"],
@@ -140,7 +140,7 @@ module.exports = [
       "hint": "Use the formula for total interest: A(1+r₁)² + B(1+r₂)² - (A+B) = 5350, where A+B = 20,000"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Simple & Compound Interest",
       "questionText": "The compound interest on a certain sum for 2 years at a certain rate of interest is Rs 1025 and Simple Interest on the same sum, same time and same rate of interest is Rs 1,000. Then find the C.I for same sum in 3 years.",
       "options": ["Rs 1575.25", "Rs 1576.25", "Rs 1576.75", "Rs 1575.75", "None of these"],
@@ -150,7 +150,7 @@ module.exports = [
       "hint": "From the CI and SI for 2 years, find the principal and rate, then calculate CI for 3 years"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Simple & Compound Interest",
       "questionText": "A sum becomes triple in 6 years at S.I. The same sum will become 19 times in how many years?",
       "options": ["50 years", "48 years", "54 years", "57 years", "None of these"],
@@ -160,7 +160,7 @@ module.exports = [
       "hint": "If amount becomes (n+1) times in x years, it becomes (m+1) times in (m-1)x/(n-1) years"
     },
     {
-      "topic": "67d51c8b0667607b0f8ef908",
+      "topic": "67d6b45a953bd3a26da2ad7f",
       "module": "Simple & Compound Interest",
       "questionText": "A sum of Rs 343 becomes 512 in 3 years at C.I. Find the rate of interest.",
       "options": ["14 (2/7) %", "12.5 %", "8 (2/3) %", "16 (2/3) %", "None of these"],
@@ -170,7 +170,7 @@ module.exports = [
       "hint": "For n years of CI, take the nth root of A/P to find (1+r/100)"
     },
     {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Simple & Compound Interest",
         "questionText": "Find the C.I on Rs 20,000 at 10% rate of interest in 2 years if compounded half yearly. (Approximately)",
         "options": ["Rs 4210", "Rs 4310", "Rs 4410", "Rs 4510", "None of these"],
@@ -180,7 +180,7 @@ module.exports = [
         "hint": "Use the formula A = P(1+r/2)^(2n) where n is number of years"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Simple & Compound Interest",
         "questionText": "A sum of Rs 6,000 was taken as a loan. This is to be repaid in two equal annual installments. If the rate of interest is 20% compounded annually then find the value of each installment",
         "options": ["Rs 4400", "Rs 2220", "Rs 4320", "Rs 4420", "None of these"],
@@ -190,7 +190,7 @@ module.exports = [
         "hint": "Use the present value formula: EMI/[(1+r)¹] + EMI/[(1+r)²] = Principal"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Simple & Compound Interest",
         "questionText": "If the ratio of difference between CI and SI for 3 years and 2 years is 31:10, then find the Rate of Interest",
         "options": ["11.11%", "10%", "20%", "25%", "None of these"],
@@ -200,7 +200,7 @@ module.exports = [
         "hint": "For 2 years, CI-SI = P(r/100)²; for 3 years, it's more complex. Set up equations using the given ratio"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "Mohan can do a work in 15 days. After working for 3 days he is joined by Vinod. If they complete the remaining work in 3 more days, in how many days can Vinod alone complete the work?",
         "options": ["10 days", "8 days", "5 days", "12 days", "15 days"],
@@ -210,7 +210,7 @@ module.exports = [
         "hint": "Calculate how much work is remaining after Mohan works for 3 days, then find Vinod's work rate"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "Arun can do a certain work in the same time in which Bipasha and Rahul together can do it. If Arun and Bipasha together could do it in 10 days and Rahul alone in 50 days, then Bipasha alone could do it in:",
         "options": ["15 days", "20 days", "25 days", "30 days", "35 days"],
@@ -220,7 +220,7 @@ module.exports = [
         "hint": "Write equations using work rates (1/time) and solve for Bipasha's rate"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "Sekar, Pradeep and Sandeep can do a piece of work in 15 days. After all the three worked for 2 days, sekar left. Pradeep and Sandeep worked for 10 more days and Pradeep left. Sandeep worked for another 40 days and completed the work. In how many days can sekar alone complete the work if sandeep can complete it in 75 days?",
         "options": ["25 days", "20 days", "30 days", "35 days", "15 days"],
@@ -230,7 +230,7 @@ module.exports = [
         "hint": "Use LCM method to assign concrete work units, then calculate each person's work rate"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "Dinesh does 80% of a work in 20 days. He then calls in Gokul and they together finish the remaining work in 3 days. How long Gokul alone would take to do the whole work?",
         "options": ["39 days", "37 days", "37 ½ days", "40 days", "39 ½ days"],
@@ -240,7 +240,7 @@ module.exports = [
         "hint": "Find Dinesh's daily rate, then find the combined rate for the last 3 days, and solve for Gokul's rate"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "Hari and Vijay can together finish a work in 30 days. They worked together for 20 days and then Vijay left. After another 20 days, hari finished the remaining work. In how many days hari alone can finish the work?",
         "options": ["45", "60", "35", "50", "65"],
@@ -250,7 +250,7 @@ module.exports = [
         "hint": "Calculate how much work is done together in 20 days, then find Hari's rate from the remaining work"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "Madhavan can finish a work in 5 hours. He invites Manohar and Manjima who can work 3/4th as fast as he can to join him. He also invites Mani and Mohan who can work only 1/5th as fast as he can to join him. If the five person team works the same job and they start together, how long will it take for them to finish the job?",
         "options": ["50/97 days", "87 days", "50/29 days", "78 days", "62 days"],
@@ -260,7 +260,7 @@ module.exports = [
         "hint": "Calculate each person's work rate relative to Madhavan's, then find their combined rate"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "A typing work is done by three person P, Q and R. P alone takes 10 hours to type a single booklet but B and C working together takes 4 hours, for the completion of the same booklet. If all of them worked together and completed 14 booklets, then how many hours have they worked?",
         "options": ["30hrs", "40hrs", "25hrs", "45hrs", "50hrs"],
@@ -270,7 +270,7 @@ module.exports = [
         "hint": "Find the combined work rate of all three people, then calculate how long it takes to complete 14 booklets"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "Nakul and Ram are working on aproduction company. Nakul takes 6 hours to make 32 products, while Ram takes 5 hours to make 40 products. How much time will they take, working together to make 110 products?",
         "options": ["8 hours", "8 hours 15 minutes", "9 hours", "8 hours 25 minutes", "9 hours 15 minutes"],
@@ -280,7 +280,7 @@ module.exports = [
         "hint": "Calculate each person's production rate per hour, then find their combined rate"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "Gopal does a work in 90 days, Vikash in 40 days and Santhosh in 12 days. They work one after another for a day each, starting with Gopal followed by Vikash and then by Santhosh. If the total wages received are Rs 360 and Gopal, Vikash, Santhosh share them in the ratio of the work done, find their respective individual wages",
         "options": ["Rs 44, Rs 80 and Rs 264", "Rs 40, Rs 87 and Rs 276", "Rs 36, Rs 81 and Rs 243", "Rs 42, Rs 86 and Rs 232", "Rs 37, Rs 89 and Rs 284"],
@@ -290,7 +290,7 @@ module.exports = [
         "hint": "Use the LCM method and track work units each person completes, then divide wages proportionally"
       },
       {
-        "topic": "67d51c8b0667607b0f8ef908",
+        "topic": "67d6b45a953bd3a26da2ad7f",
         "module": "Time & Work",
         "questionText": "When Ashok and Karthik are working alone, they can complete a piece of work in 25 days and 30 days respectively. On day 1, Karthik started the work and Ashok joined B from day 3 on-wards. Find approximately after how many days will the work be completed?",
         "options": ["20 days", "10 days", "15 days", "25 days", "30 days"],
@@ -300,3 +300,5 @@ module.exports = [
         "hint": "Calculate work done in first 2 days by Karthik alone, then find how long it takes both together to complete the remaining work",
       }
 ]
+
+export default questions;
