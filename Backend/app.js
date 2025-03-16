@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 import mongoose from "mongoose";
 import { validateEmail } from './utils/utilitsFunctions.js';
 
-import { Topics, Users } from "./Database/schema.js";
+import { Questions, Topics, Users } from "./Database/schema.js";
 
 dotenv.config();
 
@@ -144,17 +144,67 @@ app.get('/api/topics', async (req, res) => {
     }
 });
 
-// Get modules for a given topic
-app.get('/api/module/:topicId', (req, res) => {
-    
+// Get modules for a given topic (by ID or name)
+app.get('/api/modules/:topicId', async (req, res) => {
+    const { topicId } = req.params;
+
+    try {
+        if(!topicId ) {
+            return res.status(400).json({ message: "Provide either a topic id or name" });
+        }
+
+        let topicData = await Topics.findById( topicId );
+
+        if(!topicData) {
+            return res.status(404).json({ message: "Topic not found" });
+        }
+        res.json({ 
+            topicName: topicData.name,
+            modules: topicData.modules 
+        });
+
+    } catch(err) {
+        return res.status(400).json({
+            message: "Error getting details"
+        })
+    }
 })
 
 // Questions & Practice
 // Get questions for a selected module
-app.get('/api/questions/:moduleName', (req, res) => {
-    
-})
+// Get questions for a selected module
+app.get('/api/questions/:topicId/:moduleName', async (req, res) => {
+    const { topicId, moduleName } = req.params;
+    const { difficulty } = req.query;  
 
+    try {
+        // Build query object
+        const query = { 
+            topic: topicId,
+            module: moduleName 
+        };
+        
+        // Allow multiple difficulties like ?difficulty=easy,medium
+        if (difficulty) {
+            const difficultyArray = difficulty.split(',');
+            query.difficulty = { $in: difficultyArray };
+        }
+
+        const questions = await Questions.find(query);
+        
+        if (questions.length === 0) {
+            return res.status(404).json({
+                message: `No questions found matching the criteria`
+            });
+        }
+
+        res.json({ questions: questions });
+    } catch (err) {
+        return res.status(500).json({
+            message: `Error fetching questions: ${err.message}`
+        });
+    }
+});
 // submit an answer & get Feedback
 app.post('/api/practice/submit', (req, res) => {
     
