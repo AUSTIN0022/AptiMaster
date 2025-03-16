@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
+import dotenv from "dotenv";
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
-require("dotenv").config();
+dotenv.config();
 
 mongoose.connect(process.env.MONGO_URI);
 
@@ -39,7 +40,7 @@ QuestionSchema.methods.checkAnswer = function(selectedOption) {
 };
 
 const UsersSchema = new Schema({
-    username: {type: String, required: true},
+    username: {type: String, required: true, unique:true},
     email: {type: String, required: true, index: true},
     password: {type: String, required: true},
     avatar: {type: String},
@@ -80,28 +81,141 @@ UsersSchema.methods.updateStats = async function(isCorrect) {
 
 const PracticeSessionsSchema = new Schema({
     userId: {type: Schema.Types.ObjectId, ref: "Users", required: true},
-    questionId: {type: Schema.Types.ObjectId, ref: "Questions", required: true},
-    selectedOption: {type: String},
-    isCorrect: {type: Boolean},
-    createdAt: {type: Date, default: Date.now}
+    topicId: {type: Schema.Types.ObjectId, ref: "Topics"},
+    moduleId: {type: String},
+    questions: [{
+        questionId: {type: Schema.Types.ObjectId, ref: "Questions", required: true},
+        selectedOption: {type: String},
+        isCorrect: {type: Boolean},
+        attemptedAt: {type: Date, default: Date.now}
+    }],
+    totalQuestions: {type: Number, default: 0},
+    correctAnswers: {type: Number, default: 0},
+    score: {type: Number, default: 0},
+    completed: {type: Boolean, default: false},
+    createdAt: {type: Date, default: Date.now},
+    completedAt: {type: Date}
 });
 
 PracticeSessionsSchema.methods.getResults = async function() {
     // Get detailed results for this practice session
-    const question = await mongoose.model('Questions').findById(this.questionId);
     const user = await mongoose.model('Users').findById(this.userId);
+    
+    // Get all questions at once to avoid multiple database queries
+    const questionIds = this.questions.map(q => q.questionId);
+        const questionDocs = await mongoose.model('Questions').find({
+            _id: { $in: questionIds }
+    });
+    
+    // Create a map for quick lookups
+    const questionsMap = {};
+        questionDocs.forEach(q => {
+            questionsMap[q._id.toString()] = q;
+    });
+    
+    // Map the questions with their details
+    const detailedQuestions = this.questions.map(q => {
+        const question = questionsMap[q.questionId.toString()];
+        return {
+            questionId: q.questionId,
+            question: question.questionText,
+            options: question.options,
+            correctOption: question.correctOption,
+            selectedOption: q.selectedOption,
+            isCorrect: q.isCorrect,
+            explanation: question.explanation,
+            difficulty: question.difficulty,
+            module: question.module,
+            attemptedAt: q.attemptedAt
+        };
+    });
     
     return {
         sessionId: this._id,
-        question: question.questionText,
-        correctOption: question.correctOption,
-        selectedOption: this.selectedOption,
-        isCorrect: this.isCorrect,
-        explanation: question.explanation,
-        difficulty: question.difficulty,
         username: user.username,
-        attemptedAt: this.createdAt
+        topicId: this.topicId,
+        moduleId: this.moduleId,
+        totalQuestions: this.totalQuestions,
+        correctAnswers: this.correctAnswers,
+        score: this.score,
+        completed: this.completed,
+        startedAt: this.createdAt,
+        completedAt: this.completedAt,
+        questions: detailedQuestions
     };
+};
+
+// Add a method to add a question attempt to the session
+PracticeSessionsSchema.methods.addQuestionAttempt = async function(questionId, selectedOption) {
+    const question = await mongoose.model('Questions').findById(questionId);
+    if (!question) {
+        throw new Error('Question not found');
+    }
+    
+    const isCorrect = question.checkAnswer(selectedOption);
+    
+    this.questions.push({
+        questionId: questionId,
+        selectedOption: selectedOption,
+        isCorrect: isCorrect,
+        attemptedAt: new Date()
+    });
+    
+    this.totalQuestions = this.questions.length;
+    this.correctAnswers = this.questions.filter(q => q.isCorrect).length;
+    this.score = Math.round((this.correctAnswers / this.totalQuestions) * 100);
+    
+    return this.save();
+};
+
+// Method to complete a session
+PracticeSessionsSchema.methods.completeSession = async function() {
+    this.completed = true;
+    this.completedAt = new Date();
+    
+    // Update user stats
+    const user = await mongoose.model('Users').findById(this.userId);
+    user.total_questions_attempted += this.totalQuestions;
+    user.total_correct_answers += this.correctAnswers;
+    
+    // Update streak if they got any questions correct
+    if (this.correctAnswers > 0) {
+        user.streak += 1;
+        
+        // Check for badges
+        if (user.streak >= 7 && !user.badges.includes('7-Day Streak')) {
+            user.badges.push('7-Day Streak');
+        }
+        
+        if (user.total_correct_answers >= 100 && !user.badges.includes('Century Club')) {
+            user.badges.push('Century Club');
+        }
+    } else {
+        user.streak = 0;
+    }
+    
+    await user.save();
+    
+    // Update leaderboard if needed
+    try {
+        let leaderboardEntry = await mongoose.model('Leaderboard').findOne({ userId: this.userId });
+        
+        if (leaderboardEntry) {
+            leaderboardEntry.score += this.correctAnswers;
+            await leaderboardEntry.updateRank();
+        } else {
+            leaderboardEntry = new mongoose.model('Leaderboard')({
+                userId: this.userId,
+                score: this.correctAnswers
+            });
+            await leaderboardEntry.save();
+            await leaderboardEntry.updateRank();
+        }
+    } catch (err) {
+        console.error('Error updating leaderboard:', err);
+    }
+    
+    return this.save();
 };
 
 const LeaderboardSchema = new Schema({
@@ -151,13 +265,13 @@ FeedbackSchema.methods.acknowledge = function(adminUsername) {
     return this.save();
 };
 
-module.exports = { 
-    Users: mongoose.model('Users', UsersSchema),
-    Topics: mongoose.model('Topics', TopicSchema),
-    Questions: mongoose.model('Questions', QuestionSchema),
-    PracticeSessions: mongoose.model('PracticeSessions', PracticeSessionsSchema),
-    Leaderboard: mongoose.model('Leaderboard', LeaderboardSchema),
-    Feedback: mongoose.model('Feedback', FeedbackSchema)
-};
+// schema.js
+export const Users = mongoose.model('Users', UsersSchema);
+export const Topics = mongoose.model('Topics', TopicSchema);
+export const Questions = mongoose.model('Questions', QuestionSchema);
+export const PracticeSessions = mongoose.model('PracticeSessions', PracticeSessionsSchema);
+export const Leaderboard = mongoose.model('Leaderboard', LeaderboardSchema);
+export const Feedback = mongoose.model('Feedback', FeedbackSchema);
+
 
 
