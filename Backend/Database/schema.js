@@ -105,9 +105,7 @@ const UsersSchema = new Schema({
     total_questions_attempted: {type: Number, default: 0},
     total_correct_answers: {type: Number, default: 0},
     badges: {type: [String], default: []},
-    createdAt: {type: Date, default: Date.now},
-    updatedAt: {type: Date, default: Date.now}
-});
+},{timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' }});
 
 UsersSchema.methods.updateStats = async function(isCorrect) {
     // Implementation for updating user statistics
@@ -154,28 +152,48 @@ const PracticeSessionsSchema = new Schema({
     completedAt: {type: Date}
 });
 
-PracticeSessionsSchema.methods.getResults = async function() {
-    // Get detailed results for this practice session
+PracticeSessionsSchema.methods.getResults = async function () {
     const user = await mongoose.model('Users').findById(this.userId);
-    
-    // Get all questions at once to avoid multiple database queries
+    if (!user) {
+        throw new Error("User not found");
+    }
+
+    // ✅ Check if questions exist
+    if (!this.questions || this.questions.length === 0) {
+        throw new Error("No questions found for this session");
+    }
+
     const questionIds = this.questions.map(q => q.questionId);
-        const questionDocs = await mongoose.model('Questions').find({
-            _id: { $in: questionIds }
+
+    // ✅ Fetch all questions safely
+    const questionDocs = await mongoose.model('Questions').find({
+        _id: { $in: questionIds }
     });
-    
-    // Create a map for quick lookups
+
+    if (!questionDocs || questionDocs.length === 0) {
+        throw new Error("Questions data is missing in the database");
+    }
+
+    // ✅ Create a map for quick lookup
     const questionsMap = {};
-        questionDocs.forEach(q => {
-            questionsMap[q._id.toString()] = q;
+    questionDocs.forEach(q => {
+        questionsMap[q._id.toString()] = q;
     });
-    
-    // Map the questions with their details
+
+    // ✅ Ensure each question exists before accessing its properties
     const detailedQuestions = this.questions.map(q => {
         const question = questionsMap[q.questionId.toString()];
+        if (!question) {
+            console.error(`Question not found: ${q.questionId}`);
+            return {
+                questionId: q.questionId,
+                error: "Question details missing"
+            };
+        }
+
         return {
             questionId: q.questionId,
-            question: question.questionText,
+            questionText: question.questionText,
             options: question.options,
             correctOption: question.correctOption,
             selectedOption: q.selectedOption,
@@ -186,7 +204,7 @@ PracticeSessionsSchema.methods.getResults = async function() {
             attemptedAt: q.attemptedAt
         };
     });
-    
+
     return {
         sessionId: this._id,
         username: user.username,
@@ -226,54 +244,46 @@ PracticeSessionsSchema.methods.addQuestionAttempt = async function(questionId, s
 };
 
 // Method to complete a session
-PracticeSessionsSchema.methods.completeSession = async function() {
+PracticeSessionsSchema.methods.completeSession = async function () {
     this.completed = true;
     this.completedAt = new Date();
     
-    // Update user stats
     const user = await mongoose.model('Users').findById(this.userId);
     user.total_questions_attempted += this.totalQuestions;
     user.total_correct_answers += this.correctAnswers;
-    
-    // Update streak if they got any questions correct
+
     if (this.correctAnswers > 0) {
         user.streak += 1;
-        
-        // Check for badges
         if (user.streak >= 7 && !user.badges.includes('7-Day Streak')) {
             user.badges.push('7-Day Streak');
         }
-        
         if (user.total_correct_answers >= 100 && !user.badges.includes('Century Club')) {
             user.badges.push('Century Club');
         }
     } else {
         user.streak = 0;
     }
-    
+
     await user.save();
-    
-    // Update leaderboard if needed
-    try {
-        let leaderboardEntry = await mongoose.model('Leaderboard').findOne({ userId: this.userId });
-        
-        if (leaderboardEntry) {
-            leaderboardEntry.score += this.correctAnswers;
-            await leaderboardEntry.updateRank();
-        } else {
-            leaderboardEntry = new mongoose.model('Leaderboard')({
-                userId: this.userId,
-                score: this.correctAnswers
-            });
-            await leaderboardEntry.save();
-            await leaderboardEntry.updateRank();
-        }
-    } catch (err) {
-        console.error('Error updating leaderboard:', err);
+
+    // ✅ Update Leaderboard
+    let leaderboardEntry = await mongoose.model('Leaderboard').findOne({ userId: this.userId });
+
+    if (leaderboardEntry) {
+        leaderboardEntry.score += this.correctAnswers; // Add correct answers to the score
+        await leaderboardEntry.updateRank();  // Call updateRank() here
+    } else {
+        leaderboardEntry = new mongoose.model('Leaderboard')({
+            userId: this.userId,
+            score: this.correctAnswers
+        });
+        await leaderboardEntry.save();
+        await leaderboardEntry.updateRank();
     }
-    
+
     return this.save();
 };
+
 
 const LeaderboardSchema = new Schema({
     userId: {type: Schema.Types.ObjectId, ref: 'Users', required: true},
