@@ -61,7 +61,8 @@ const QuestionSchema = new Schema({
     module: {type: String,  required: true, index: true},
     questionText: {type: String, required: true},
     options: {type: [String], required: true},
-    correctOption: {type: String, required: true},
+    correctOptionIndex: {type: Number, required: true},
+    correctOptionText: {type: String, required: true},
     difficulty: {type: String, enum: ['easy', 'medium', 'hard'], required: true, index: true},
     explanation: {type: String},
     hint: {type: String}

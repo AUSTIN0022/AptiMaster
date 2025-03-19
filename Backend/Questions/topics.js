@@ -518,13 +518,13 @@
                 "questionCount": 10
             },
             {
-                "name": "ES6+ Features",
-                "description": "Learn modern JavaScript features including arrow functions, destructuring, and modules.",
+                "name": "JavaScript Object-Oriented Programming",
+                "description": "Understand prototypes, classes, and inheritance in JavaScript.",
                 "questionCount": 10
             },
             {
-                "name": "JavaScript Object-Oriented Programming",
-                "description": "Understand prototypes, classes, and inheritance in JavaScript.",
+                "name": "ES6+ Features",
+                "description": "Learn modern JavaScript features including arrow functions, destructuring, and modules.",
                 "questionCount": 10
             },
             {
