@@ -4819,11 +4819,6 @@ const JSQuestions = [
             "explanation": "Test Double is a general term for any object that replaces a real component for testing purposes. Test doubles include mocks, stubs, fakes, spies, and dummies, each serving a different testing purpose.",
             "hint": "This is an umbrella term covering several types of test replacements."
         }
-        
-          
-        
-        
-              
 
       ]
 
