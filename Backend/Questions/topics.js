@@ -479,7 +479,6 @@
             "Create interactive web applications",
             "Apply object-oriented concepts in JavaScript",
             "Manage state in JavaScript applications",
-            "Use JavaScript frameworks effectively",
             "Implement client-side form validation",
             "Consume REST APIs with JavaScript",
             "Debug JavaScript applications",
@@ -540,11 +539,6 @@
             {
                 "name": "Local Storage & Session Storage",
                 "description": "Learn client-side storage techniques for web applications.",
-                "questionCount": 10
-            },
-            {
-                "name": "JavaScript Frameworks Introduction",
-                "description": "Get acquainted with popular JavaScript frameworks like React, Vue, and Angular.",
                 "questionCount": 10
             },
             {

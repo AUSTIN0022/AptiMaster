@@ -81,20 +81,20 @@ QuestionSchema.post('save', async function(doc) {
     );
   });
   
-  // After deleting a question
-  QuestionSchema.post('remove', async function(doc) {
-    // Decrement the topic's question count
-    await Topics.findByIdAndUpdate(doc.topic, { $inc: { questionCount: -1 } });
-    
-    // Decrement the specific module's question count
-    await Topics.findOneAndUpdate(
-      { _id: doc.topic, 'modules.name': doc.module },
-      { $inc: { 'modules.$.questionCount': -1 } }
-    );
-  });
+// After deleting a question
+QuestionSchema.post('remove', async function(doc) {
+// Decrement the topic's question count
+await Topics.findByIdAndUpdate(doc.topic, { $inc: { questionCount: -1 } });
+
+// Decrement the specific module's question count
+await Topics.findOneAndUpdate(
+    { _id: doc.topic, 'modules.name': doc.module },
+    { $inc: { 'modules.$.questionCount': -1 } }
+);
+});
 
 QuestionSchema.methods.checkAnswer = function(selectedOption) {
-    return selectedOption === this.correctOption;
+    return selectedOption === this.correctOptionText;
 };
 
 const UsersSchema = new Schema({
