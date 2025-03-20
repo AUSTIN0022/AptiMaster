@@ -4559,6 +4559,336 @@ const pythonQuestions = [
     },
 
     // Python for Machine Learning
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which library is commonly used for machine learning in Python?",
+        "options": ["NumPy", "Pandas", "Scikit-learn", "Matplotlib"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Scikit-learn",
+        "difficulty": "easy",
+        "explanation": "Scikit-learn is a popular library for machine learning in Python, providing tools for data modeling and analysis.",
+        "hint": "Think of the library that provides tools like `LinearRegression` and `KMeans`."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `train_test_split` function in Scikit-learn?",
+        "options": ["To normalize data", "To split data into training and testing sets", "To train a model", "To evaluate a model"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To split data into training and testing sets",
+        "difficulty": "easy",
+        "explanation": "`train_test_split` is used to divide a dataset into training and testing subsets for model evaluation.",
+        "hint": "This function is used before training a model."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a supervised learning algorithm?",
+        "options": ["K-Means", "DBSCAN", "Linear Regression", "PCA"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Linear Regression",
+        "difficulty": "medium",
+        "explanation": "Linear Regression is a supervised learning algorithm used for predicting continuous values.",
+        "hint": "Supervised learning requires labeled data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What does the `fit()` method do in Scikit-learn?",
+        "options": ["Evaluates the model", "Splits the data", "Trains the model", "Normalizes the data"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Trains the model",
+        "difficulty": "easy",
+        "explanation": "The `fit()` method is used to train a machine learning model on the provided data.",
+        "hint": "This method is called before making predictions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is used to handle missing values in a dataset?",
+        "options": ["StandardScaler", "SimpleImputer", "LabelEncoder", "OneHotEncoder"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "SimpleImputer",
+        "difficulty": "medium",
+        "explanation": "`SimpleImputer` is used to fill missing values in a dataset with strategies like mean, median, or mode.",
+        "hint": "This tool is part of Scikit-learn's preprocessing module."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `StandardScaler` in Scikit-learn?",
+        "options": ["To encode categorical variables", "To normalize features", "To split data", "To reduce dimensionality"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To normalize features",
+        "difficulty": "medium",
+        "explanation": "`StandardScaler` standardizes features by removing the mean and scaling to unit variance.",
+        "hint": "It is used to make features comparable in scale."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a clustering algorithm?",
+        "options": ["Linear Regression", "Decision Tree", "K-Means", "Logistic Regression"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "K-Means",
+        "difficulty": "easy",
+        "explanation": "K-Means is an unsupervised clustering algorithm used to group data into clusters.",
+        "hint": "Clustering algorithms do not require labeled data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the output of `model.predict()` in Scikit-learn?",
+        "options": ["Model accuracy", "Predicted labels", "Training data", "Feature importance"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Predicted labels",
+        "difficulty": "easy",
+        "explanation": "The `predict()` method is used to generate predictions for the input data using a trained model.",
+        "hint": "This method is called after training the model."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a classification algorithm?",
+        "options": ["Linear Regression", "K-Means", "Logistic Regression", "PCA"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Logistic Regression",
+        "difficulty": "medium",
+        "explanation": "Logistic Regression is used for binary or multi-class classification problems.",
+        "hint": "It predicts probabilities for class labels."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `random_state` parameter in Scikit-learn?",
+        "options": ["To control randomness", "To set the learning rate", "To normalize data", "To split data"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To control randomness",
+        "difficulty": "medium",
+        "explanation": "The `random_state` parameter ensures reproducibility by fixing the random seed.",
+        "hint": "It is used in algorithms like `train_test_split` and `KMeans`."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is used for dimensionality reduction?",
+        "options": ["PCA", "K-Means", "Decision Tree", "Logistic Regression"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "PCA",
+        "difficulty": "medium",
+        "explanation": "Principal Component Analysis (PCA) is used to reduce the number of features while preserving variance.",
+        "hint": "It is an unsupervised technique."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `confusion_matrix` in Scikit-learn?",
+        "options": ["To evaluate classification performance", "To normalize data", "To split data", "To train a model"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To evaluate classification performance",
+        "difficulty": "medium",
+        "explanation": "A confusion matrix shows the true vs. predicted labels for classification problems.",
+        "hint": "It includes metrics like true positives and false negatives."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a hyperparameter in a machine learning model?",
+        "options": ["Learning rate", "Training data", "Test data", "Feature names"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Learning rate",
+        "difficulty": "hard",
+        "explanation": "Hyperparameters are parameters set before training, such as learning rate, number of clusters, etc.",
+        "hint": "They are not learned from the data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `GridSearchCV` in Scikit-learn?",
+        "options": ["To split data", "To normalize data", "To perform hyperparameter tuning", "To evaluate a model"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To perform hyperparameter tuning",
+        "difficulty": "hard",
+        "explanation": "`GridSearchCV` is used to find the best hyperparameters for a model using cross-validation.",
+        "hint": "It exhaustively searches through a specified parameter grid."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a loss function used in regression?",
+        "options": ["Cross-Entropy", "Mean Squared Error", "Accuracy", "Precision"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Mean Squared Error",
+        "difficulty": "medium",
+        "explanation": "Mean Squared Error (MSE) is a common loss function for regression tasks.",
+        "hint": "It measures the average squared difference between predicted and actual values."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `OneHotEncoder` in Scikit-learn?",
+        "options": ["To normalize data", "To encode categorical variables", "To split data", "To reduce dimensionality"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To encode categorical variables",
+        "difficulty": "medium",
+        "explanation": "`OneHotEncoder` converts categorical variables into a binary matrix representation.",
+        "hint": "It is used for nominal categorical data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a Python library for deep learning?",
+        "options": ["Scikit-learn", "TensorFlow", "Pandas", "NumPy"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "TensorFlow",
+        "difficulty": "easy",
+        "explanation": "TensorFlow is a popular library for building and training deep learning models.",
+        "hint": "It is developed by Google."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `KNeighborsClassifier` in Scikit-learn?",
+        "options": ["To perform clustering", "To classify data using k-nearest neighbors", "To reduce dimensionality", "To normalize data"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To classify data using k-nearest neighbors",
+        "difficulty": "medium",
+        "explanation": "`KNeighborsClassifier` is a supervised learning algorithm used for classification based on nearest neighbors.",
+        "hint": "It uses a distance metric to find the closest data points."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a Python library for data visualization?",
+        "options": ["Scikit-learn", "Matplotlib", "Pandas", "NumPy"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Matplotlib",
+        "difficulty": "easy",
+        "explanation": "Matplotlib is a widely used library for creating static, animated, and interactive visualizations.",
+        "hint": "It is often used alongside Pandas and NumPy."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `LabelEncoder` in Scikit-learn?",
+        "options": ["To normalize data", "To encode categorical labels", "To split data", "To reduce dimensionality"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To encode categorical labels",
+        "difficulty": "medium",
+        "explanation": "`LabelEncoder` converts categorical labels into numerical values.",
+        "hint": "It is used for ordinal categorical data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a Python library for numerical computing?",
+        "options": ["Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "NumPy",
+        "difficulty": "easy",
+        "explanation": "NumPy is a library for numerical computing, providing support for arrays and matrices.",
+        "hint": "It is often used for mathematical operations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `cross_val_score` function in Scikit-learn?",
+        "options": ["To split data", "To evaluate model performance using cross-validation", "To normalize data", "To train a model"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To evaluate model performance using cross-validation",
+        "difficulty": "hard",
+        "explanation": "`cross_val_score` evaluates a model's performance by splitting the data into multiple folds and averaging the results.",
+        "hint": "It is used to avoid overfitting."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a Python library for data manipulation?",
+        "options": ["NumPy", "Pandas", "Scikit-learn", "Matplotlib"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Pandas",
+        "difficulty": "easy",
+        "explanation": "Pandas is a library for data manipulation and analysis, providing data structures like DataFrames.",
+        "hint": "It is often used for cleaning and preprocessing data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `MinMaxScaler` in Scikit-learn?",
+        "options": ["To normalize data", "To encode categorical variables", "To split data", "To reduce dimensionality"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To normalize data",
+        "difficulty": "medium",
+        "explanation": "`MinMaxScaler` scales features to a specified range, typically between 0 and 1.",
+        "hint": "It is used to transform features to a common scale."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a Python library for natural language processing?",
+        "options": ["NLTK", "Pandas", "Scikit-learn", "NumPy"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "NLTK",
+        "difficulty": "medium",
+        "explanation": "NLTK (Natural Language Toolkit) is a library for working with human language data.",
+        "hint": "It is used for tasks like tokenization and sentiment analysis."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `RandomForestClassifier` in Scikit-learn?",
+        "options": ["To perform clustering", "To classify data using an ensemble of decision trees", "To reduce dimensionality", "To normalize data"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To classify data using an ensemble of decision trees",
+        "difficulty": "hard",
+        "explanation": "`RandomForestClassifier` is an ensemble learning method that uses multiple decision trees for classification.",
+        "hint": "It reduces overfitting by averaging predictions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a Python library for gradient boosting?",
+        "options": ["XGBoost", "Pandas", "Scikit-learn", "NumPy"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "XGBoost",
+        "difficulty": "hard",
+        "explanation": "XGBoost is a library for gradient boosting, known for its speed and performance.",
+        "hint": "It is often used in competitions like Kaggle."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `SVC` class in Scikit-learn?",
+        "options": ["To perform clustering", "To classify data using support vector machines", "To reduce dimensionality", "To normalize data"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To classify data using support vector machines",
+        "difficulty": "hard",
+        "explanation": "`SVC` (Support Vector Classifier) is used for classification tasks using support vector machines.",
+        "hint": "It finds the optimal hyperplane to separate classes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "Which of the following is a Python library for time series analysis?",
+        "options": ["Statsmodels", "Pandas", "Scikit-learn", "NumPy"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Statsmodels",
+        "difficulty": "medium",
+        "explanation": "Statsmodels is a library for statistical modeling, including time series analysis.",
+        "hint": "It is used for tasks like ARIMA modeling."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Python for Machine Learning",
+        "questionText": "What is the purpose of the `GradientBoostingClassifier` in Scikit-learn?",
+        "options": ["To perform clustering", "To classify data using gradient boosting", "To reduce dimensionality", "To normalize data"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To classify data using gradient boosting",
+        "difficulty": "hard",
+        "explanation": "`GradientBoostingClassifier` is an ensemble method that builds models sequentially to correct errors.",
+        "hint": "It is a type of boosting algorithm."
+    }
 
   ]
 
