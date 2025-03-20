@@ -10,6 +10,7 @@ cron.schedule('32 23 * * *', async () => {
     await Topics.recalculateAllCounts();
     console.log('Scheduled recalculation completed successfully');
 
+    console.log('\nRunning scheduled task: recalculateAllRanks');
     await Leaderboard.recalculateAllRanks();
     console.log('Scheduled Update Ranks completed successfully');    
   } catch (error) {
