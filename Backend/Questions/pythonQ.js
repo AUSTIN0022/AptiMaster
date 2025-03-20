@@ -2708,10 +2708,1169 @@ const pythonQuestions = [
     },
 
     // Regular Expressions
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which Python module is used for working with regular expressions?",
+        "options": ["regex", "re", "regexp", "regularexp"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "re",
+        "difficulty": "easy",
+        "explanation": "The 're' module in Python provides support for regular expressions, offering functions for pattern matching and string manipulation.",
+        "hint": "It's a two-letter module name."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the '\\d' pattern match in a regular expression?",
+        "options": ["Any letter", "Any digit", "Any whitespace", "Any special character"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Any digit",
+        "difficulty": "easy",
+        "explanation": "The '\\d' pattern in regular expressions matches any single digit (0-9).",
+        "hint": "Think about what 'd' might stand for in this context."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which function in the 're' module is used to find all occurrences of a pattern in a string?",
+        "options": ["re.search()", "re.match()", "re.findall()", "re.locate()"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "re.findall()",
+        "difficulty": "easy",
+        "explanation": "The re.findall() function returns all non-overlapping matches of a pattern in a string, as a list of strings.",
+        "hint": "The name of this function clearly indicates its purpose."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What is the difference between re.match() and re.search()?",
+        "options": [
+        "re.match() finds all matches, re.search() finds only the first match",
+        "re.match() checks for a match only at the beginning of the string, re.search() checks for a match anywhere in the string",
+        "re.match() is case-sensitive, re.search() is case-insensitive",
+        "re.match() works with strings, re.search() works with lists"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "re.match() checks for a match only at the beginning of the string, re.search() checks for a match anywhere in the string",
+        "difficulty": "medium",
+        "explanation": "re.match() checks if the pattern matches at the beginning of the string only, while re.search() scans through the string looking for a match anywhere.",
+        "hint": "Consider where in the string each function looks for matches."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the '+' quantifier mean in a regular expression?",
+        "options": [
+        "The preceding character must occur exactly once",
+        "The preceding character must occur zero or one time",
+        "The preceding character must occur one or more times",
+        "The preceding character must occur zero or more times"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The preceding character must occur one or more times",
+        "difficulty": "easy",
+        "explanation": "The '+' quantifier in regular expressions means that the preceding character or group must occur one or more times.",
+        "hint": "Think about what the + operator does in mathematics."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which pattern would match a valid email address format?",
+        "options": [
+        "^[a-zA-Z0-9_.]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+        "^[0-9]+@[a-zA-Z]+\\.[a-zA-Z]+$",
+        "^[a-zA-Z]+@[0-9]+\\.[a-zA-Z]+$",
+        "^[a-zA-Z0-9]+$"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "^[a-zA-Z0-9_.]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+        "difficulty": "hard",
+        "explanation": "This pattern matches a typical email format with username (letters, numbers, underscores, or dots), followed by @, domain name (letters, numbers, or hyphens), and top-level domain (letters, numbers, hyphens, or dots).",
+        "hint": "Consider the different components of an email address and the characters allowed in each part."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the '\\w' pattern match in a regular expression?",
+        "options": ["Any whitespace character", "Any word character (alphanumeric and underscore)", "Any non-word character", "Any special character"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Any word character (alphanumeric and underscore)",
+        "difficulty": "easy",
+        "explanation": "The '\\w' pattern in regular expressions matches any word character, which includes alphanumeric characters (a-z, A-Z, 0-9) and underscore (_).",
+        "hint": "Think about what 'w' might stand for in this context."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which of the following correctly uses a capturing group in a regular expression?",
+        "options": ["re.findall('\\d{3}-\\d{4}', text)", "re.findall('(\\d{3})-(\\d{4})', text)", "re.findall('\\d+', text)", "re.findall('[0-9]', text)"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "re.findall('(\\d{3})-(\\d{4})', text)",
+        "difficulty": "medium",
+        "explanation": "This example uses capturing groups with parentheses (\\d{3}) and (\\d{4}) to capture and extract the two numeric parts of a pattern like '123-4567'.",
+        "hint": "Capturing groups are defined using parentheses in regular expressions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the '\\b' assertion match in a regular expression?",
+        "options": ["A backspace character", "A word boundary", "A blank space", "A binary digit"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A word boundary",
+        "difficulty": "medium",
+        "explanation": "The '\\b' assertion in regular expressions matches a word boundary, which is the position between a word character (\\w) and a non-word character (\\W) or the start/end of the string.",
+        "hint": "This assertion helps ensure you're matching whole words rather than partial matches within words."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which flag in the re module makes the pattern case-insensitive?",
+        "options": ["re.IGNORECASE or re.I", "re.CASEINSENSITIVE", "re.NOCASE", "re.CASEBLIND"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "re.IGNORECASE or re.I",
+        "difficulty": "medium",
+        "explanation": "The re.IGNORECASE (or its shorthand re.I) flag makes the pattern matching case-insensitive, so it will match regardless of case.",
+        "hint": "This flag allows you to match 'ABC', 'abc', and 'Abc' with the same pattern."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the pattern '[^0-9]' match?",
+        "options": ["Any digit", "Any character that is not a digit", "The beginning of a line", "The end of a line"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Any character that is not a digit",
+        "difficulty": "medium",
+        "explanation": "The caret (^) inside square brackets creates a negated character class. So '[^0-9]' matches any character that is not a digit (0-9).",
+        "hint": "The caret inside square brackets has a special meaning that's different from when it appears outside them."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which function is used to replace all occurrences of a pattern in a string?",
+        "options": ["re.replace()", "re.sub()", "re.substitute()", "re.swap()"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "re.sub()",
+        "difficulty": "easy",
+        "explanation": "The re.sub() function is used to replace all occurrences of a pattern in a string with a specified replacement.",
+        "hint": "This function name is short for 'substitute'."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the '?' quantifier mean in a regular expression?",
+        "options": [
+        "The preceding character must occur exactly once",
+        "The preceding character must occur zero or one time",
+        "The preceding character must occur one or more times",
+        "The preceding character must occur zero or more times"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The preceding character must occur zero or one time",
+        "difficulty": "easy",
+        "explanation": "The '?' quantifier in regular expressions means that the preceding character or group is optional, occurring zero or one time.",
+        "hint": "Think about what a question mark typically represents in natural language."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the pattern '^$' match?",
+        "options": ["An empty string", "A string with only one character", "A string with only digits", "A string with only letters"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "An empty string",
+        "difficulty": "medium",
+        "explanation": "The pattern '^$' matches an empty string. The '^' asserts the start of the string, and the '$' asserts the end of the string. When these are adjacent, they match a string with nothing between the start and end.",
+        "hint": "Consider what it means when the beginning and end of a string are right next to each other."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which of the following is a valid way to compile a regular expression pattern in Python?",
+        "options": [
+        "pattern = re.compile('\\d+')",
+        "pattern = re.create('\\d+')",
+        "pattern = re.pattern('\\d+')",
+        "pattern = re.make('\\d+')"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "pattern = re.compile('\\d+')",
+        "difficulty": "easy",
+        "explanation": "The re.compile() function is used to compile a regular expression pattern into a regular expression object, which can be used for matching later.",
+        "hint": "This function creates a reusable pattern object for improved performance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the pattern '.*' match?",
+        "options": [
+        "Any single character",
+        "Zero or more characters (greedy)",
+        "One or more characters",
+        "Exactly one character"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Zero or more characters (greedy)",
+        "difficulty": "medium",
+        "explanation": "The '.*' pattern combines the dot (.) which matches any character except a newline, with the asterisk (*) which means zero or more occurrences. By default, it's greedy, meaning it will match as much as possible.",
+        "hint": "This is a common pattern for matching any sequence of characters."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What's the difference between '.*' and '.*?' in regular expressions?",
+        "options": [
+        "No difference, they are equivalent",
+        "'.*' is greedy (matches as much as possible), '.*?' is non-greedy (matches as little as possible)",
+        "'.*' matches letters, '.*?' matches digits",
+        "'.*' matches horizontally, '.*?' matches vertically"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "'.*' is greedy (matches as much as possible), '.*?' is non-greedy (matches as little as possible)",
+        "difficulty": "hard",
+        "explanation": "The question mark after a quantifier makes it non-greedy (also called lazy). '.*' will match as many characters as possible, while '.*?' will match as few as possible while still allowing the overall pattern to match.",
+        "hint": "Consider how the addition of '?' affects the behavior of the quantifier."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which pattern would match a string containing only hexadecimal digits (0-9, a-f, A-F)?",
+        "options": ["^[0-9a-fA-F]+$", "^[0-9a-f]+$", "^[A-F0-9]+$", "^[\\d]+$"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "^[0-9a-fA-F]+$",
+        "difficulty": "medium",
+        "explanation": "The pattern '^[0-9a-fA-F]+$' matches a string containing only hexadecimal digits. It uses a character class that includes digits 0-9 and letters a-f (both lowercase and uppercase), and the anchors ^ and $ ensure the entire string matches this pattern.",
+        "hint": "Hexadecimal digits include numbers and certain letters in both uppercase and lowercase."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the re.MULTILINE flag do?",
+        "options": [
+        "Allows the pattern to match across multiple lines",
+        "Makes ^ and $ match the start and end of each line, not just the start and end of the string",
+        "Enables matching of multiple patterns simultaneously",
+        "Creates multiple match objects for each match found"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Makes ^ and $ match the start and end of each line, not just the start and end of the string",
+        "difficulty": "hard",
+        "explanation": "The re.MULTILINE flag changes the behavior of the ^ and $ anchors. With this flag, they match the start and end of each line within the string, not just the start and end of the entire string.",
+        "hint": "This flag affects how the beginning and end of lines are interpreted in a multi-line string."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the pattern '\\s' match?",
+        "options": ["Any whitespace character", "Any non-whitespace character", "Any special character", "Any symbol"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Any whitespace character",
+        "difficulty": "easy",
+        "explanation": "The '\\s' pattern in regular expressions matches any whitespace character, which includes space, tab, newline, carriage return, form feed, and vertical tab.",
+        "hint": "Think about what 's' might stand for in this context."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which function would you use to split a string by a pattern?",
+        "options": ["re.split()", "re.divide()", "re.separate()", "re.breakup()"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "re.split()",
+        "difficulty": "easy",
+        "explanation": "The re.split() function is used to split a string by occurrences of a pattern, returning a list of substrings.",
+        "hint": "This function is similar to the string.split() method but uses regular expressions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the following code do? `re.sub('\\s+', ' ', text)`",
+        "options": [
+        "Removes all whitespace from the text",
+        "Replaces each whitespace character with a single space",
+        "Replaces one or more consecutive whitespace characters with a single space",
+        "Adds spaces between all characters in the text"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Replaces one or more consecutive whitespace characters with a single space",
+        "difficulty": "medium",
+        "explanation": "This code uses re.sub() to replace all occurrences of one or more consecutive whitespace characters (\\s+) with a single space. It's commonly used to normalize spacing in text.",
+        "hint": "Look at the pattern '\\s+' and consider what the '+' quantifier means."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the following pattern match? `\\d{3}-\\d{2}-\\d{4}`",
+        "options": ["A phone number format", "A date format", "A Social Security Number format", "A product code format"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A Social Security Number format",
+        "difficulty": "medium",
+        "explanation": "This pattern matches a string in the format of a U.S. Social Security Number: three digits, followed by a hyphen, two digits, another hyphen, and four digits (e.g., 123-45-6789).",
+        "hint": "Think about common numeric identifiers that follow this specific pattern."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "Which of the following is a valid way to use a backreference in a regular expression?",
+        "options": [
+        "re.sub('(\\w+) \\1', 'duplicate', text)",
+        "re.sub('(\\w+) \\w+', 'duplicate', text)",
+        "re.sub('\\w+ \\w+', 'duplicate', text)",
+        "re.sub('\\w+ (\\w+)', 'duplicate', text)"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "re.sub('(\\w+) \\1', 'duplicate', text)",
+        "difficulty": "hard",
+        "explanation": "This code uses a backreference (\\1) to refer back to the first captured group (\\w+). It matches a word followed by a space and then the same word again, replacing such duplicates with 'duplicate'.",
+        "hint": "A backreference lets you match the same text that was matched by a capturing group earlier in the pattern."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the pattern '[a-z]{3,5}' match?",
+        "options": [
+        "Any lowercase letter repeated 3 to 5 times",
+        "Any lowercase letter sequence of length 3 to 5",
+        "Any three to five lowercase letters anywhere in the string",
+        "Exactly 3 lowercase letters"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Any lowercase letter sequence of length 3 to 5",
+        "difficulty": "medium",
+        "explanation": "The pattern '[a-z]{3,5}' matches a sequence of lowercase letters with a length between 3 and 5 characters inclusive.",
+        "hint": "The curly braces specify a range for the number of occurrences."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the flag re.DOTALL do?",
+        "options": [
+        "Makes the dot (.) match all characters including newlines",
+        "Makes the dot (.) match only dots in the text",
+        "Displays all matches with dot notation",
+        "Prints all matches with dots between them"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Makes the dot (.) match all characters including newlines",
+        "difficulty": "hard",
+        "explanation": "By default, the dot (.) in regular expressions matches any character except a newline. The re.DOTALL flag (also written as re.S) modifies this behavior to make the dot match any character including newlines.",
+        "hint": "This flag changes what the dot metacharacter can match."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What is a look-ahead assertion in regular expressions?",
+        "options": [
+        "A pattern that checks what characters come after the current position without consuming them",
+        "A pattern that predicts future input based on machine learning",
+        "A pattern that automatically corrects typing errors",
+        "A pattern that searches only the beginning of a string"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A pattern that checks what characters come after the current position without consuming them",
+        "difficulty": "hard",
+        "explanation": "A look-ahead assertion (using syntax like (?=...) for positive look-ahead or (?!...) for negative look-ahead) checks if a pattern matches at the current position, but doesn't actually consume any characters. This allows you to assert that something follows without including it in the match.",
+        "hint": "This advanced feature lets you check what comes next without advancing the matching position."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the pattern '\\A' match?",
+        "options": [
+        "The letter 'A'",
+        "The beginning of the string",
+        "Any uppercase letter",
+        "Any alphabetic character"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The beginning of the string",
+        "difficulty": "medium",
+        "explanation": "The '\\A' assertion matches the beginning of the string. Unlike the caret (^), it always matches only at the start of the string, even in multiline mode.",
+        "hint": "This is similar to the caret (^) but behaves differently with the multiline flag."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What's the difference between re.findall() and re.finditer()?",
+        "options": [
+        "re.findall() returns a list of strings, re.finditer() returns an iterator of match objects",
+        "re.findall() finds only the first match, re.finditer() finds all matches",
+        "re.findall() is case-sensitive, re.finditer() is case-insensitive",
+        "re.findall() works with strings, re.finditer() works with lists"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "re.findall() returns a list of strings, re.finditer() returns an iterator of match objects",
+        "difficulty": "medium",
+        "explanation": "While both functions find all occurrences of a pattern, re.findall() returns a list of matching strings (or tuples if groups are used), while re.finditer() returns an iterator yielding match objects. The latter is more memory-efficient for large inputs and provides more information about each match.",
+        "hint": "Consider the return type and the information provided by each function."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Regular Expressions",
+        "questionText": "What does the pattern '[^a-zA-Z0-9]' match?",
+        "options": [
+        "Any alphanumeric character",
+        "Any non-alphanumeric character",
+        "Any character at the beginning of a string",
+        "Any character at the end of a string"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Any non-alphanumeric character",
+        "difficulty": "medium",
+        "explanation": "The pattern '[^a-zA-Z0-9]' creates a negated character class that matches any character that is not a letter (a-z, A-Z) or digit (0-9). This effectively matches any non-alphanumeric character.",
+        "hint": "The caret (^) inside square brackets creates a negated character class."
+    },
 
     // Database Operations
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which Python module is commonly used to connect to SQLite databases?",
+        "options": ["sqlite", "sqlite3", "pysqlite", "sqlconnector"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "sqlite3",
+        "difficulty": "easy",
+        "explanation": "The sqlite3 module is built into Python's standard library and provides a straightforward way to interact with SQLite databases.",
+        "hint": "This module is included in Python's standard library and has a name that includes a number."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which method is used to execute an SQL query in the sqlite3 module?",
+        "options": ["run()", "query()", "execute()", "perform()"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "execute()",
+        "difficulty": "easy",
+        "explanation": "The execute() method of a cursor object is used to execute SQL queries in the sqlite3 module.",
+        "hint": "This method name directly reflects what you're doing with the SQL statement."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the correct way to connect to a MySQL database using the mysql-connector-python library?",
+        "options": [
+        "mysql.connect(host='localhost', user='username', password='password', database='dbname')",
+        "mysql.connector.connect(host='localhost', user='username', password='password', database='dbname')",
+        "mysql.connection(host='localhost', user='username', password='password', database='dbname')",
+        "mysql.db.connect(host='localhost', user='username', password='password', database='dbname')"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "mysql.connector.connect(host='localhost', user='username', password='password', database='dbname')",
+        "difficulty": "medium",
+        "explanation": "When using the mysql-connector-python library, the correct method to establish a connection is mysql.connector.connect() with the appropriate connection parameters.",
+        "hint": "The method is part of the connector submodule."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which of the following is NOT a valid parameter for the sqlite3.connect() function?",
+        "options": ["database", "timeout", "detect_types", "port"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "port",
+        "difficulty": "medium",
+        "explanation": "The 'port' parameter is not valid for sqlite3.connect() since SQLite is a file-based database and doesn't use network ports. The other options (database, timeout, and detect_types) are valid parameters.",
+        "hint": "SQLite is a file-based database that doesn't require network configuration."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the purpose of the commit() method in database operations?",
+        "options": [
+        "To validate SQL syntax",
+        "To save changes permanently to the database",
+        "To execute multiple queries at once",
+        "To close the database connection"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To save changes permanently to the database",
+        "difficulty": "easy",
+        "explanation": "The commit() method saves all pending changes to the database permanently. Without commit(), changes might be lost when the connection is closed.",
+        "hint": "Think about what happens in version control systems when you 'commit' changes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which method fetches all rows from a query result as a list of tuples?",
+        "options": ["fetchone()", "fetchall()", "fetchmany()", "fetchrows()"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "fetchall()",
+        "difficulty": "easy",
+        "explanation": "The fetchall() method retrieves all rows from a query result set and returns them as a list of tuples.",
+        "hint": "The name indicates that it retrieves everything at once."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is SQL injection and how can it be prevented in Python?",
+        "options": [
+        "A database optimization technique; by using indexing",
+        "A security vulnerability; by using parameterized queries",
+        "A method to insert large datasets; by using bulk insert operations",
+        "A database backup strategy; by using regular commits"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A security vulnerability; by using parameterized queries",
+        "difficulty": "medium",
+        "explanation": "SQL injection is a security vulnerability where malicious SQL code is inserted into query parameters. It can be prevented by using parameterized queries (prepared statements) which separate SQL code from data.",
+        "hint": "Think about security issues that arise when user input is directly incorporated into SQL statements."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the main difference between fetchone() and fetchmany(size) methods?",
+        "options": [
+        "fetchone() returns a single column, fetchmany() returns multiple columns",
+        "fetchone() returns a single row, fetchmany() returns a specified number of rows",
+        "fetchone() works with SELECT queries, fetchmany() works with INSERT queries",
+        "fetchone() returns data as tuples, fetchmany() returns data as dictionaries"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "fetchone() returns a single row, fetchmany() returns a specified number of rows",
+        "difficulty": "medium",
+        "explanation": "fetchone() retrieves the next row of a query result set as a single tuple, while fetchmany(size) retrieves the specified number of rows as a list of tuples.",
+        "hint": "Think about the quantity of data each method returns."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "In SQLAlchemy, what is the purpose of the Session object?",
+        "options": [
+        "To create database schemas",
+        "To handle user authentication",
+        "To manage database transactions and persistence operations",
+        "To optimize SQL queries"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To manage database transactions and persistence operations",
+        "difficulty": "hard",
+        "explanation": "In SQLAlchemy, the Session object is responsible for managing a collection of mapped objects and handling database transactions, including committing changes and rolling back on errors.",
+        "hint": "Think about what maintains the state of objects and their changes before they're saved to the database."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the purpose of the rowcount attribute of a cursor object?",
+        "options": [
+        "It returns the total number of rows in a table",
+        "It returns the number of rows affected by the last executed DML statement",
+        "It returns the maximum number of rows allowed in a query result",
+        "It returns the current row number being processed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It returns the number of rows affected by the last executed DML statement",
+        "difficulty": "medium",
+        "explanation": "The rowcount attribute of a cursor object returns the number of rows affected by the last executed INSERT, UPDATE, or DELETE statement. For SELECT statements, its behavior can vary between database systems.",
+        "hint": "This attribute tells you how many records were modified by a database operation."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which Python ORM (Object-Relational Mapping) library provides a high-level abstraction for database operations?",
+        "options": ["PyORM", "DBMapper", "SQLAlchemy", "RelationalPy"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "SQLAlchemy",
+        "difficulty": "easy",
+        "explanation": "SQLAlchemy is a popular Python ORM library that provides a high-level abstraction for database operations, allowing developers to work with Python objects instead of writing raw SQL.",
+        "hint": "This is one of the most widely used ORM libraries in the Python ecosystem."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What does the following code accomplish? `cursor.executemany('INSERT INTO users VALUES(?,?,?)', user_data)`",
+        "options": [
+        "Executes multiple SELECT statements",
+        "Inserts multiple rows into the users table",
+        "Updates multiple records in the users table",
+        "Creates multiple tables named users"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Inserts multiple rows into the users table",
+        "difficulty": "medium",
+        "explanation": "The executemany() method executes an SQL command against all parameter sequences in the sequence user_data. In this case, it inserts multiple rows into the users table.",
+        "hint": "The method name suggests executing something many times, and the SQL statement is an INSERT."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which of the following is an advantage of using an ORM like SQLAlchemy over raw SQL?",
+        "options": [
+        "Better performance for complex queries",
+        "Support for more database systems",
+        "Automatic protection against SQL injection",
+        "Lower memory usage"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Automatic protection against SQL injection",
+        "difficulty": "medium",
+        "explanation": "ORMs like SQLAlchemy automatically use parameterized queries, which provide protection against SQL injection attacks. This is a significant security advantage over writing raw SQL, where developers must manually ensure proper query parameterization.",
+        "hint": "Think about security benefits that come from abstractions that handle how queries are constructed."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the correct way to create a table in SQLite using Python?",
+        "options": [
+        "conn.create_table('CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)')",
+        "cursor.make_table('users', {'id': 'INTEGER PRIMARY KEY', 'name': 'TEXT', 'age': 'INTEGER'})",
+        "cursor.execute('CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)')",
+        "sqlite3.new_table(conn, 'users', ['id INTEGER PRIMARY KEY', 'name TEXT', 'age INTEGER'])"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "cursor.execute('CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)')",
+        "difficulty": "easy",
+        "explanation": "To create a table in SQLite using Python, you use the execute() method of a cursor object with a CREATE TABLE SQL statement.",
+        "hint": "This uses the same method that executes any other SQL statement."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is a database transaction?",
+        "options": [
+        "A record of table creation and deletion operations",
+        "A fee charged for database operations",
+        "A unit of work that is performed against a database",
+        "A type of database index for faster queries"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A unit of work that is performed against a database",
+        "difficulty": "medium",
+        "explanation": "A database transaction is a sequence of operations performed as a single logical unit of work. It must exhibit ACID properties: Atomicity, Consistency, Isolation, and Durability.",
+        "hint": "This concept relates to grouping operations that should succeed or fail together."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which method would you use to implement a rollback in case of an error during database operations?",
+        "options": ["rollback()", "undo()", "revert()", "cancel()"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "rollback()",
+        "difficulty": "easy",
+        "explanation": "The rollback() method is used to undo all changes made in the current transaction. It's typically used in exception handling blocks to ensure database integrity when errors occur.",
+        "hint": "This term comes from traditional database terminology for reverting changes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the main purpose of the WITH statement when working with database connections?",
+        "options": [
+        "To specify which tables to query",
+        "To create temporary views",
+        "To automatically manage resources and ensure proper closure",
+        "To enable parallel query execution"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To automatically manage resources and ensure proper closure",
+        "difficulty": "medium",
+        "explanation": "The WITH statement (context manager) in Python ensures that resources like database connections are properly closed after use, even if exceptions occur. This prevents resource leaks and ensures proper cleanup.",
+        "hint": "This Python feature helps with resource management, similar to how it's used with file operations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What does the following code do? `conn.row_factory = sqlite3.Row`",
+        "options": [
+        "Creates a new row in the database",
+        "Sets the maximum number of rows to return",
+        "Makes query results accessible by column name",
+        "Defines a custom row validation function"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Makes query results accessible by column name",
+        "difficulty": "hard",
+        "explanation": "Setting the row_factory attribute to sqlite3.Row changes how query results are returned. Instead of tuples, results will be Row objects that can be accessed both by index and by column name, making the code more readable.",
+        "hint": "This setting changes the format of query results to provide more access options."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which of the following is a valid way to use placeholders in a parameterized query with sqlite3?",
+        "options": [
+        "cursor.execute('SELECT * FROM users WHERE age > %s', (18,))",
+        "cursor.execute('SELECT * FROM users WHERE age > :age', {'age': 18})",
+        "cursor.execute('SELECT * FROM users WHERE age > $1', [18])",
+        "All of the above"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "cursor.execute('SELECT * FROM users WHERE age > :age', {'age': 18})",
+        "difficulty": "medium",
+        "explanation": "In sqlite3, you can use named placeholders like :age and provide a dictionary with matching keys. While sqlite3 also supports ? placeholders with tuples, the %s format is typically used with other database adapters like psycopg2, and $1 is used in libraries like node-postgres.",
+        "hint": "This option uses named parameters with a dictionary, which is one of sqlite3's supported parameterization styles."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the purpose of the PRAGMA statements in SQLite?",
+        "options": [
+        "To optimize query performance",
+        "To define database constraints",
+        "To modify database settings and control the operation of the SQLite library",
+        "To import external data sources"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To modify database settings and control the operation of the SQLite library",
+        "difficulty": "hard",
+        "explanation": "PRAGMA statements in SQLite are used to modify the operation of the SQLite library or to query the library for information. They can be used to change settings like foreign key enforcement, journal mode, or cache size.",
+        "hint": "These special commands configure how the database engine behaves rather than manipulating data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which of the following best describes a database connection pool?",
+        "options": [
+        "A collection of identical tables across multiple databases",
+        "A cache of database query results",
+        "A set of open database connections maintained for reuse",
+        "A group of connected database servers for load balancing"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A set of open database connections maintained for reuse",
+        "difficulty": "hard",
+        "explanation": "A connection pool is a cache of database connections maintained so that connections can be reused when future requests to the database are required. This improves performance by avoiding the overhead of establishing a new connection for each database operation.",
+        "hint": "This concept relates to resource management for better performance in applications with frequent database access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What happens if you attempt to execute SQL without committing previous changes in a transaction?",
+        "options": [
+        "The new SQL statement will automatically commit previous changes",
+        "The new SQL statement will fail with an error",
+        "Previous changes remain pending and are not yet saved to the database",
+        "Previous changes are automatically discarded"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Previous changes remain pending and are not yet saved to the database",
+        "difficulty": "medium",
+        "explanation": "When working with transactions, changes remain pending until explicitly committed. You can continue executing SQL statements within the same transaction, but the changes won't be permanently saved to the database until you call commit().",
+        "hint": "Think about the persistence state of data modifications before explicitly saving them."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which SQLAlchemy component is responsible for representing database tables as Python classes?",
+        "options": ["Engine", "Session", "Mapper", "Declarative Base"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Declarative Base",
+        "difficulty": "hard",
+        "explanation": "In SQLAlchemy, the Declarative Base is used to create base classes from which your model classes inherit. This allows you to define database tables as Python classes with attributes representing columns.",
+        "hint": "This component helps define the structure that maps Python classes to database tables."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the purpose of the foreign_keys pragma in SQLite?",
+        "options": [
+        "To list all foreign keys in the database",
+        "To enable or disable foreign key constraint enforcement",
+        "To automatically create foreign key relationships",
+        "To optimize queries involving foreign keys"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To enable or disable foreign key constraint enforcement",
+        "difficulty": "hard",
+        "explanation": "In SQLite, foreign key constraints are disabled by default. The foreign_keys pragma can be used to enable (PRAGMA foreign_keys = ON) or disable (PRAGMA foreign_keys = OFF) foreign key constraint enforcement at runtime.",
+        "hint": "This setting controls whether relationship rules between tables are actively enforced."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which method in psycopg2 is used to convert PostgreSQL arrays to Python lists?",
+        "options": ["cursor.arrayparse()", "psycopg2.array_to_list()", "register_array()", "None, it happens automatically"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "None, it happens automatically",
+        "difficulty": "hard",
+        "explanation": "Psycopg2 automatically converts PostgreSQL arrays to Python lists without requiring any special method calls. This type adaptation is handled internally by the driver.",
+        "hint": "Think about how psycopg2 handles data type conversion by default."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the purpose of the isolation_level parameter when creating a connection with sqlite3?",
+        "options": [
+        "To specify the security level of the database",
+        "To control how concurrent transactions interact with each other",
+        "To set the compression level of the database file",
+        "To determine the level of error reporting"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To control how concurrent transactions interact with each other",
+        "difficulty": "hard",
+        "explanation": "The isolation_level parameter controls the transaction isolation level, which determines how concurrent database transactions interact with each other. It can be set to None (autocommit mode), 'DEFERRED', 'IMMEDIATE', or 'EXCLUSIVE' in sqlite3.",
+        "hint": "This setting affects how multiple transactions interact when running simultaneously."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which of the following statements correctly describes the difference between executescript() and execute()?",
+        "options": [
+        "executescript() is for stored procedures, execute() is for simple queries",
+        "executescript() accepts multiple SQL statements separated by semicolons, execute() accepts only a single statement",
+        "executescript() is for SELECT queries, execute() is for INSERT, UPDATE, DELETE queries",
+        "executescript() automatically commits changes, execute() does not"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "executescript() accepts multiple SQL statements separated by semicolons, execute() accepts only a single statement",
+        "difficulty": "medium",
+        "explanation": "The executescript() method allows you to execute multiple SQL statements in a single call by separating them with semicolons. In contrast, execute() can only execute a single SQL statement at a time.",
+        "hint": "The 'script' in executescript suggests running a series of commands rather than just one."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "What is the purpose of an index in a database?",
+        "options": [
+        "To enforce data integrity constraints",
+        "To speed up data retrieval operations",
+        "To reduce the physical size of the database",
+        "To automatically update related tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To speed up data retrieval operations",
+        "difficulty": "easy",
+        "explanation": "A database index is a data structure that improves the speed of data retrieval operations on a database table. It works similar to an index in a book, allowing the database engine to find data quickly without scanning the entire table.",
+        "hint": "Think about what helps you find information quickly in a large book."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Database Operations",
+        "questionText": "Which of the following is NOT a valid cursor method in sqlite3?",
+        "options": ["execute()", "executemany()", "fetchall()", "executeall()"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "executeall()",
+        "difficulty": "easy",
+        "explanation": "There is no executeall() method in the sqlite3 module. The valid methods are execute() for executing a single SQL statement, executemany() for executing a SQL command against multiple parameter sequences, and executescript() for executing multiple SQL statements.",
+        "hint": "This option combines naming elements from execute() and fetchall()."
+    },
 
     // Data Analysis with NumPy & Pandas
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What function would you use to read a CSV file into a pandas DataFrame?",
+        "options": ["pd.read_csv()", "pd.load_csv()", "pd.import_csv()", "pd.open_csv()"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "pd.read_csv()",
+        "difficulty": "easy",
+        "explanation": "The pandas function `pd.read_csv()` is used to read CSV files into a DataFrame for data analysis.",
+        "hint": "Look for the 'read_' prefix in pandas functions for importing data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "Which NumPy function creates an array filled with zeros?",
+        "options": ["np.zeros()", "np.empty()", "np.null()", "np.blank()"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "np.zeros()",
+        "difficulty": "easy",
+        "explanation": "The NumPy function `np.zeros()` creates an array of specified shape filled with zeros.",
+        "hint": "This function's name directly relates to the value it fills the array with."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the pandas equivalent of SQL's GROUP BY operation?",
+        "options": ["sort_values()", "groupby()", "aggregate()", "pivot()"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "groupby()",
+        "difficulty": "easy",
+        "explanation": "The `groupby()` method in pandas is used to split data into groups based on some criteria, similar to SQL's GROUP BY clause.",
+        "hint": "The name is very similar to the SQL operation it mimics."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "Which method is used to handle missing values in a pandas DataFrame?",
+        "options": ["df.dropna()", "df.fillna()", "df.replacena()", "All of the above"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "All of the above",
+        "difficulty": "medium",
+        "explanation": "Pandas provides multiple methods for handling missing values: `dropna()` removes rows or columns with missing values, `fillna()` replaces missing values with a specified value, and `replacena()` (though not standard, is sometimes used as a custom method) can be used to replace NaN values with other values.",
+        "hint": "Think about the different strategies for handling missing data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the result of `np.array([1, 2, 3]) + np.array([4, 5, 6])`?",
+        "options": ["[5, 7, 9]", "[1, 2, 3, 4, 5, 6]", "Error", "[4, 10, 18]"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "[5, 7, 9]",
+        "difficulty": "easy",
+        "explanation": "NumPy performs element-wise addition when adding arrays of the same shape, resulting in [1+4, 2+5, 3+6] = [5, 7, 9].",
+        "hint": "NumPy operations are typically element-wise by default."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "Which pandas method is used to rename columns in a DataFrame?",
+        "options": ["df.rename()", "df.columns()", "df.change_names()", "df.relabel()"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "df.rename()",
+        "difficulty": "easy",
+        "explanation": "The `rename()` method in pandas is used to change column names in a DataFrame, typically with a dictionary mapping old names to new names.",
+        "hint": "This method takes a dictionary to map old names to new names."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What does the `axis` parameter control in many pandas functions?",
+        "options": ["The direction of operation (rows vs columns)", "The speed of computation", "The type of plot to generate", "The number of iterations"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The direction of operation (rows vs columns)",
+        "difficulty": "medium",
+        "explanation": "The `axis` parameter in pandas functions determines whether the operation is applied across rows (axis=0) or columns (axis=1).",
+        "hint": "Think about the dimensions of a DataFrame and how operations can be applied."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the difference between `loc` and `iloc` in pandas?",
+        "options": ["loc uses labels, iloc uses integer positions", "loc is for columns, iloc is for rows", "loc is faster, iloc is more flexible", "loc allows filtering, iloc doesn't"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "loc uses labels, iloc uses integer positions",
+        "difficulty": "medium",
+        "explanation": "In pandas, `loc` is used for label-based indexing, while `iloc` is used for integer-based indexing. `loc` selects data by the actual index label, while `iloc` selects data by position.",
+        "hint": "Think about what the 'i' in 'iloc' might stand for."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "Which NumPy function would you use to find the mean of elements in an array?",
+        "options": ["np.mean()", "np.average()", "np.median()", "np.mode()"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "np.mean()",
+        "difficulty": "easy",
+        "explanation": "NumPy's `mean()` function calculates the arithmetic mean of elements in an array.",
+        "hint": "This is the most common statistical measure of central tendency."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the purpose of the `pd.merge()` function in pandas?",
+        "options": ["To combine DataFrames based on common columns", "To sort DataFrame values", "To remove duplicate rows", "To reshape the DataFrame"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To combine DataFrames based on common columns",
+        "difficulty": "medium",
+        "explanation": "The `pd.merge()` function combines DataFrames based on common columns, similar to SQL joins.",
+        "hint": "Think about what 'merge' means in database operations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What will `np.arange(10, 30, 5)` return?",
+        "options": ["[10, 15, 20, 25]", "[10, 15, 20, 25, 30]", "[10, 15, 20, 25, 30, 35]", "[5, 10, 15, 20, 25, 30]"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "[10, 15, 20, 25]",
+        "difficulty": "medium",
+        "explanation": "The `np.arange()` function creates values from the start value (10) up to, but not including, the end value (30) with the specified step (5).",
+        "hint": "Remember that the end value is exclusive in arange()."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "Which pandas method is used to calculate descriptive statistics for a DataFrame?",
+        "options": ["df.info()", "df.describe()", "df.summary()", "df.stats()"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "df.describe()",
+        "difficulty": "easy",
+        "explanation": "The `describe()` method generates descriptive statistics that summarize the central tendency, dispersion, and shape of a dataset's distribution.",
+        "hint": "This method provides a quick overview of numerical columns in your data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What does the `df.pivot_table()` function do?",
+        "options": ["Creates a spreadsheet-style pivot table", "Rotates the DataFrame 90 degrees", "Sorts the DataFrame by multiple columns", "Converts the DataFrame to a dictionary"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Creates a spreadsheet-style pivot table",
+        "difficulty": "medium",
+        "explanation": "The `pivot_table()` function creates a spreadsheet-style pivot table as a DataFrame, allowing for summarization of data across specified dimensions.",
+        "hint": "Think about pivot tables in spreadsheet applications like Excel."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the correct way to select rows in a pandas DataFrame where column 'A' is greater than 10?",
+        "options": ["df[df.A > 10]", "df.select(A > 10)", "df.where(A > 10)", "df.filter(A > 10)"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "df[df.A > 10]",
+        "difficulty": "medium",
+        "explanation": "In pandas, you can filter rows by using a boolean condition inside square brackets. The expression `df.A > 10` creates a boolean series which is then used to filter the DataFrame.",
+        "hint": "Think about boolean indexing in pandas."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "Which NumPy function would you use to calculate the dot product of two arrays?",
+        "options": ["np.dot()", "np.multiply()", "np.product()", "np.matmul()"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "np.dot()",
+        "difficulty": "medium",
+        "explanation": "The `np.dot()` function calculates the dot product of two arrays, which is the sum of the products of corresponding elements.",
+        "hint": "This is a common operation in linear algebra and vector mathematics."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the result of `pd.Series([1, 2, 3]).map(lambda x: x * 2)`?",
+        "options": ["Series([2, 4, 6])", "Series([1, 2, 3, 1, 2, 3])", "Error", "[2, 4, 6]"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Series([2, 4, 6])",
+        "difficulty": "medium",
+        "explanation": "The `map()` method applies a function to each element in a Series. Here, the lambda function multiplies each element by 2, resulting in a new Series with doubled values.",
+        "hint": "The map function applies the given function to each element individually."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the purpose of the `apply()` method in pandas?",
+        "options": ["To apply a function along an axis of a DataFrame", "To apply for a license to use pandas", "To apply changes to the DataFrame structure", "To apply a template to the DataFrame"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To apply a function along an axis of a DataFrame",
+        "difficulty": "medium",
+        "explanation": "The `apply()` method in pandas allows you to apply a function along an axis (row or column) of a DataFrame.",
+        "hint": "This method is useful for custom operations on entire rows or columns."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What does the `inplace=True` parameter do in many pandas methods?",
+        "options": ["Modifies the original object instead of returning a new one", "Increases processing speed", "Applies the operation to all columns", "Prevents data copying"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Modifies the original object instead of returning a new one",
+        "difficulty": "medium",
+        "explanation": "When `inplace=True` is specified in pandas methods, the operation modifies the original DataFrame or Series object rather than creating and returning a new one.",
+        "hint": "Think about whether you want to modify your original data or create a new copy."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the difference between `df.drop_duplicates()` and `df.duplicated()`?",
+        "options": ["`drop_duplicates()` removes duplicates, `duplicated()` identifies them", "`drop_duplicates()` works on rows, `duplicated()` works on columns", "`drop_duplicates()` is faster, `duplicated()` is more thorough", "`drop_duplicates()` is for DataFrames, `duplicated()` is for Series"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "`drop_duplicates()` removes duplicates, `duplicated()` identifies them",
+        "difficulty": "medium",
+        "explanation": "The `drop_duplicates()` method returns a DataFrame with duplicate rows removed, while `duplicated()` returns a boolean Series indicating which rows are duplicates.",
+        "hint": "One method takes action, while the other just provides information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What will `np.random.randint(1, 10, size=5)` return?",
+        "options": ["5 random integers between 1 and 9", "5 random integers between 1 and 10", "5 random integers between 0 and 9", "5 random integers between 0 and 10"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "5 random integers between 1 and 9",
+        "difficulty": "medium",
+        "explanation": "The `np.random.randint()` function generates random integers from a range. The parameters are the lowest value (inclusive), the highest value (exclusive), and the number of integers to generate.",
+        "hint": "The upper bound is exclusive in this function."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the purpose of the `pd.get_dummies()` function?",
+        "options": ["To create indicator variables for categorical data", "To generate random data", "To normalize numerical data", "To detect outliers in the data"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To create indicator variables for categorical data",
+        "difficulty": "medium",
+        "explanation": "The `pd.get_dummies()` function converts categorical variables into indicator variables (also known as dummy variables or one-hot encoding), which is useful for machine learning algorithms.",
+        "hint": "This is commonly used in preprocessing data for machine learning."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What does the `df.stack()` method do?",
+        "options": ["Pivots DataFrame from wide to long format", "Combines multiple DataFrames into one", "Calculates cumulative sums", "Sorts the DataFrame by index"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Pivots DataFrame from wide to long format",
+        "difficulty": "hard",
+        "explanation": "The `stack()` method pivots a DataFrame from wide format to long format by moving the columns to rows (i.e., stacking the columns into a MultiIndex).",
+        "hint": "Think about what it means to 'stack' columns on top of each other."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the output of `np.eye(3)`?",
+        "options": ["A 3x3 identity matrix", "A 3x3 matrix of ones", "A 3x3 matrix of zeros", "A 3x3 matrix of random values"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A 3x3 identity matrix",
+        "difficulty": "medium",
+        "explanation": "The `np.eye()` function creates an identity matrix of the specified size, with ones on the diagonal and zeros elsewhere.",
+        "hint": "Think about the mathematical notation for an identity matrix (often denoted as 'I')."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What does the `pd.cut()` function do?",
+        "options": ["Bins continuous data into discrete intervals", "Removes rows from a DataFrame", "Splits a DataFrame into multiple parts", "Truncates decimal places in numeric data"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Bins continuous data into discrete intervals",
+        "difficulty": "hard",
+        "explanation": "The `pd.cut()` function bins continuous data into discrete intervals, which is useful for creating categorical variables from continuous data.",
+        "hint": "This is often used in data preprocessing to create categorical features from numerical data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the result of `np.linspace(0, 10, 5)`?",
+        "options": ["[0, 2.5, 5, 7.5, 10]", "[0, 2, 4, 6, 8, 10]", "[0, 2, 4, 6, 8]", "[0, 1, 2, 3, 4]"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "[0, 2.5, 5, 7.5, 10]",
+        "difficulty": "medium",
+        "explanation": "The `np.linspace()` function returns evenly spaced numbers over a specified interval. It takes the start point, end point, and the number of points to generate.",
+        "hint": "Unlike arange(), linspace() includes the end point and divides the interval into equal parts."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the purpose of the `pd.melt()` function?",
+        "options": ["To convert wide format data to long format", "To combine multiple DataFrames", "To normalize data values", "To remove missing values"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To convert wide format data to long format",
+        "difficulty": "hard",
+        "explanation": "The `pd.melt()` function transforms a DataFrame from wide format to long format by unpivoting it, converting columns into rows.",
+        "hint": "Think of 'melting' as turning columns into rows, making the data longer and narrower."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What happens when you apply `np.reshape(arr, (3, -1))` to a NumPy array?",
+        "options": ["The array is reshaped to have 3 rows and automatically calculated columns", "The array is transposed to have 3 columns", "The array is flattened to a 1D array", "The array is padded with -1 values"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The array is reshaped to have 3 rows and automatically calculated columns",
+        "difficulty": "hard",
+        "explanation": "When using `np.reshape()` with -1 as one of the dimensions, NumPy automatically calculates that dimension based on the array's size and the other specified dimension.",
+        "hint": "The -1 is a placeholder that tells NumPy to figure out the appropriate size for that dimension."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the difference between `pd.Series.str.contains()` and `pd.Series.isin()`?",
+        "options": ["`str.contains()` checks for substrings, `isin()` checks for exact matches in a list", "`str.contains()` is for strings, `isin()` is for numeric data", "`str.contains()` is case-sensitive, `isin()` is case-insensitive", "`str.contains()` works on Series, `isin()` works on DataFrames"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "`str.contains()` checks for substrings, `isin()` checks for exact matches in a list",
+        "difficulty": "hard",
+        "explanation": "The `str.contains()` method checks if a string contains a substring pattern, while `isin()` checks if values are in a given list of values.",
+        "hint": "Think about partial matches versus complete matches."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What will `df.groupby('A').agg({'B': 'sum', 'C': 'mean'})` do?",
+        "options": ["Group by column A and apply sum to B and mean to C", "Group by column A and apply sum and mean to both B and C", "Group by columns A and B and apply mean to C", "Apply sum to A and B, and mean to C"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Group by column A and apply sum to B and mean to C",
+        "difficulty": "hard",
+        "explanation": "This code groups the DataFrame by values in column A, then applies the sum aggregation to column B and the mean aggregation to column C.",
+        "hint": "The `agg()` method allows you to apply different aggregation functions to different columns."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad85",
+        "module": "Data Analysis with NumPy & Pandas",
+        "questionText": "What is the result of `pd.date_range('2023-01-01', periods=5, freq='M')`?",
+        "options": ["The last day of each month for 5 months starting January 2023", "The first day of each month for 5 months starting January 2023", "Every day in January 2023", "Every Monday in January 2023"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The last day of each month for 5 months starting January 2023",
+        "difficulty": "hard",
+        "explanation": "The `pd.date_range()` function with `freq='M'` creates a DatetimeIndex with dates at the end of each month. The result would be [2023-01-31, 2023-02-28, 2023-03-31, 2023-04-30, 2023-05-31].",
+        "hint": "The 'M' frequency in pandas refers to calendar month end."
+    },
     
     // Data Visualization
 
