@@ -93,9 +93,10 @@ await Topics.findOneAndUpdate(
 );
 });
 
-QuestionSchema.methods.checkAnswer = function(selectedOption) {
-    return selectedOption === this.correctOptionText;
+QuestionSchema.methods.checkAnswer = function (selectedOption) {
+    return selectedOption.trim().toLowerCase() === this.correctOptionText.trim().toLowerCase();
 };
+
 
 const UsersSchema = new Schema({
     username: {type: String, required: true, unique:true},

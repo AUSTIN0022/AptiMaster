@@ -25,6 +25,7 @@ import './workers/ReCalculateQueCount.js';
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser())
+app.use(express.urlencoded({ extended: true }));
 
 // Auth
 // Register a new user
@@ -183,7 +184,7 @@ app.get('/api/questions/:topicId/:moduleName', async (req, res) => {
             topic: topicId,
             module: moduleName 
         };
-        
+
         // Allow multiple difficulties like ?difficulty=easy,medium
         if (difficulty) {
             const difficultyArray = difficulty.split(',');
@@ -191,7 +192,7 @@ app.get('/api/questions/:topicId/:moduleName', async (req, res) => {
         }
 
         const questions = await Questions.find(query);
-        
+
         if (questions.length === 0) {
             return res.status(404).json({
                 message: `No questions found matching the criteria`
@@ -208,6 +209,8 @@ app.get('/api/questions/:topicId/:moduleName', async (req, res) => {
 
 // Create a New Practice Session
 app.post("/api/session/create", async (req, res) => {
+    console.log("Request Body:", req.body);
+
     try {
         const { topicId, numQuestions, difficulty } = req.body;
 
@@ -226,8 +229,9 @@ app.post("/api/session/create", async (req, res) => {
             return res.status(400).json({ message: "Missing required fields" });
         }
 
-        
-        let matchQuery = { topic: topicId };
+
+        let matchQuery = { topic: new mongoose.Types.ObjectId(topicId) };
+
 
         if (difficulty && difficulty.trim().length > 0) {
             matchQuery.difficulty = difficulty;
@@ -235,19 +239,20 @@ app.post("/api/session/create", async (req, res) => {
             matchQuery.$or = [{ difficulty: { $exists: true } }, { difficulty: { $eq: null } }];
         }
 
-        
+        console.log("Match Query:", matchQuery);
+
         const totalAvailable = await Questions.find(matchQuery).countDocuments();
         console.log(`Total questions available for criteria: ${totalAvailable}`);
 
         if (totalAvailable === 0) {
             return res.status(404).json({ message: "No questions found for the given criteria" });
         }
-
+        
         const sampleSize = Math.min(parseInt(numQuestions), totalAvailable);
 
         const questions = await Questions.aggregate([
             { $match: matchQuery },
-            { $limit: sampleSize }
+            { $sample: { size: sampleSize } }
         ]);
         
 
