@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { Questions } from "./Database/schema.js";
+import CQuestions from './Questions/cQ.js';
 import JSQuestions from './Questions/javascriptQ.js';
 import pythonQuestions from './Questions/pythonQ.js';
 dotenv.config();
@@ -24,17 +25,23 @@ const insertQuestions = async () => {
     //   }
     //   console.log("Quantitiatvie Questions inserted successfully!");
 
-      for (const questionData of JSQuestions) {
+     for (const questionData of CQuestions) {
         const question = new Questions(questionData);
         await question.save(); // This will trigger the hooks
+      }
+      console.log("C Questions inserted successfully!");
+
+      for (const questionData of JSQuestions) {
+        const question = new Questions(questionData);
+        await question.save(); 
       }
       console.log("JavaScript Questions inserted successfully!");
       
       for (const questionData of pythonQuestions) {
         const question = new Questions(questionData);
-        await question.save(); // This will trigger the hooks
+        await question.save();
       }
-      console.log("Pyhton Questions inserted successfully!");
+      console.log("Python Questions inserted successfully!");
       
     } catch (err) {
       console.error("Error inserting questions:", err);

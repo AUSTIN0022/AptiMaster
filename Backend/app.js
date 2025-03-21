@@ -5,9 +5,8 @@ import dotenv from "dotenv";
 import express from "express";
 import jwt from 'jsonwebtoken';
 import mongoose from "mongoose";
-import isLogged from './middleware/isLoggedIn.js';
+import isLoggedIn from './middleware/isLoggedIn.js';
 import { validateEmail } from './utils/utilitsFunctions.js';
-
 // Database  Module's
 import { Feedback, Leaderboard, PracticeSessions, Questions, Topics, Users } from "./Database/schema.js";
 
@@ -207,7 +206,7 @@ app.get('/api/questions/:topicId/:moduleName', async (req, res) => {
 });
 
 // Create a New Practice Session
-app.post("/api/session/create", isLogged, async (req, res) => {
+app.post("/api/session/create", isLoggedIn, async (req, res) => {
     console.log("Request Body:", req.body);
 
     try {
@@ -283,7 +282,7 @@ app.post("/api/session/create", isLogged, async (req, res) => {
 });
 
 // submit an answer & get Feedback
-app.post('/api/practice/submit', isLogged, async (req, res) => {
+app.post('/api/practice/submit', isLoggedIn, async (req, res) => {
     const { questionId, selectedOption, sessionId } = req.body;
     
     try {
@@ -342,7 +341,7 @@ app.post('/api/practice/submit', isLogged, async (req, res) => {
 });
 
 // Complete a practice session
-app.post('/api/practice/complete', isLogged,async (req, res) => {
+app.post('/api/practice/complete', isLoggedIn,async (req, res) => {
     const { sessionId } = req.body;
     
     try {
@@ -409,7 +408,7 @@ app.get('/api/leaderboard', async (req, res) => {
 });
 
 // Fetch user's personal progress
-app.get('/api/user/stats', isLogged, async (req, res) => {
+app.get('/api/user/stats', isLoggedIn, async (req, res) => {
     try {
         const userId = req.user;
         
@@ -459,7 +458,7 @@ app.get('/api/user/stats', isLogged, async (req, res) => {
 });
 
 // Feedback
-app.post('/api/feedback', isLogged,  async (req, res) => {
+app.post('/api/feedback', isLoggedIn,  async (req, res) => {
     const { message } = req.body;
     
     try {
@@ -489,7 +488,7 @@ app.post('/api/feedback', isLogged,  async (req, res) => {
 });
 
 // Get user's past practice sessions
-app.get('/api/user/sessions', isLogged, async (req, res) => {
+app.get('/api/user/sessions', isLoggedIn, async (req, res) => {
     try {
         
         const userId = req.user;
@@ -543,7 +542,7 @@ app.get('/api/user/sessions', isLogged, async (req, res) => {
 });
 
 // Get specific session details
-app.get('/api/sessions/:sessionId', isLogged,  async (req, res) => {
+app.get('/api/sessions/:sessionId', isLoggedIn,  async (req, res) => {
     const { sessionId } = req.params;
     
     try {
