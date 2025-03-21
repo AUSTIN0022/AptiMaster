@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import express from "express";
 import jwt from 'jsonwebtoken';
 import mongoose from "mongoose";
+import isLogged from './middleware/isLoggedIn.js';
 import { validateEmail } from './utils/utilitsFunctions.js';
 
 // Database  Module's
@@ -17,8 +18,9 @@ await mongoose.connect(process.env.MONGO_URI);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Worker to Count the Questions ineach Topic/Modules
-import './workers/ReCalculateQueCount.js';
+// Worker's
+import './workers/AllRanksReCalculate.js'; // Worker to Count the Questions in each Topic/Modules
+import './workers/QueCountReCalculate.js'; // Worker to Rank users basec on score
 
 
 // Middleware 
@@ -179,13 +181,10 @@ app.get('/api/questions/:topicId/:moduleName', async (req, res) => {
     const { difficulty } = req.query;  
 
     try {
-        // Build query object
-        const query = { 
-            topic: topicId,
-            module: moduleName 
-        };
+       
+        const query = { topic: topicId, module: moduleName };
 
-        // Allow multiple difficulties like ?difficulty=easy,medium
+        // multiple difficulties / ?difficulty=easy,medium
         if (difficulty) {
             const difficultyArray = difficulty.split(',');
             query.difficulty = { $in: difficultyArray };
@@ -208,38 +207,26 @@ app.get('/api/questions/:topicId/:moduleName', async (req, res) => {
 });
 
 // Create a New Practice Session
-app.post("/api/session/create", async (req, res) => {
+app.post("/api/session/create", isLogged, async (req, res) => {
     console.log("Request Body:", req.body);
 
     try {
         const { topicId, numQuestions, difficulty } = req.body;
+        const userId = req.user
 
-        console.log(`Request: topic=${topicId}, numQuestions=${numQuestions}, difficulty=${difficulty}`);
-
-        const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
-        if (!token) {
-            return res.status(401).json({ message: "Authentication required" });
-        }
-
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const userId = decoded.userId;
-
+        console.log(`Request: topic=${topicId}, numQuestions=${numQuestions}, difficulty=${difficulty}`)
         
         if (!topicId || !numQuestions) {
             return res.status(400).json({ message: "Missing required fields" });
         }
 
-
         let matchQuery = { topic: new mongoose.Types.ObjectId(topicId) };
-
 
         if (difficulty && difficulty.trim().length > 0) {
             matchQuery.difficulty = difficulty;
         } else {
             matchQuery.$or = [{ difficulty: { $exists: true } }, { difficulty: { $eq: null } }];
         }
-
-        console.log("Match Query:", matchQuery);
 
         const totalAvailable = await Questions.find(matchQuery).countDocuments();
         console.log(`Total questions available for criteria: ${totalAvailable}`);
@@ -255,7 +242,6 @@ app.post("/api/session/create", async (req, res) => {
             { $sample: { size: sampleSize } }
         ]);
         
-
         console.log(`Fetched Questions: ${questions.length}`);
 
         if (questions.length === 0) {
@@ -292,20 +278,15 @@ app.post("/api/session/create", async (req, res) => {
         });
 
     } catch (err) {
-        if (err.name === "JsonWebTokenError") {
-            return res.status(401).json({ message: "Invalid token" });
-        }
         return res.status(500).json({ message: `Error creating session: ${err.message}` });
     }
 });
 
-
 // submit an answer & get Feedback
-app.post('/api/practice/submit', async (req, res) => {
+app.post('/api/practice/submit', isLogged, async (req, res) => {
     const { questionId, selectedOption, sessionId } = req.body;
     
     try {
-        // Validate input
         if (!questionId || !selectedOption) {
             return res.status(400).json({ message: "Question ID and selected option are required" });
         }
@@ -320,7 +301,8 @@ app.post('/api/practice/submit', async (req, res) => {
         } else {
             // If no session ID provided, create a new one
             // This requires additional parameters like userId, topicId
-            const { userId, topicId, moduleId } = req.body;
+            const { topicId, moduleId } = req.body;
+            const userId = req.user;
             if (!userId || !topicId) {
                 return res.status(400).json({ message: "User ID and topic ID are required for new sessions" });
             }
@@ -360,7 +342,7 @@ app.post('/api/practice/submit', async (req, res) => {
 });
 
 // Complete a practice session
-app.post('/api/practice/complete', async (req, res) => {
+app.post('/api/practice/complete', isLogged,async (req, res) => {
     const { sessionId } = req.body;
     
     try {
@@ -427,17 +409,9 @@ app.get('/api/leaderboard', async (req, res) => {
 });
 
 // Fetch user's personal progress
-app.get('/api/user/stats', async (req, res) => {
+app.get('/api/user/stats', isLogged, async (req, res) => {
     try {
-        // Authentication middleware should be used here
-        // This is a placeholder for getting the userId from the token
-        const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
-        if (!token) {
-            return res.status(401).json({ message: "Authentication required" });
-        }
-        
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const userId = decoded.userId;
+        const userId = req.user;
         
         const user = await Users.findById(userId);
         if (!user) {
@@ -478,9 +452,6 @@ app.get('/api/user/stats', async (req, res) => {
         
         return res.status(200).json({ stats });
     } catch (err) {
-        if (err.name === 'JsonWebTokenError') {
-            return res.status(401).json({ message: "Invalid token" });
-        }
         return res.status(500).json({
             message: `Error fetching user stats: ${err.message}`
         });
@@ -488,29 +459,18 @@ app.get('/api/user/stats', async (req, res) => {
 });
 
 // Feedback
-app.post('/api/feedback', async (req, res) => {
+app.post('/api/feedback', isLogged,  async (req, res) => {
     const { message } = req.body;
     
     try {
-        // Authentication middleware should be used here
-        // This is a placeholder for getting the userId from the token
-        const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
-        if (!token) {
-            return res.status(401).json({ message: "Authentication required" });
-        }
-        
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const userId = decoded.userId;
+        const userId = req.user;
         
         if (!message || message.trim().length === 0) {
             return res.status(400).json({ message: "Feedback message is required" });
         }
         
-        // Create new feedback entry
-        const feedback = new Feedback({
-            userId,
-            message
-        });
+        // new feedback entry
+        const feedback = new Feedback({ userId, message });
         
         await feedback.save();
         
@@ -522,9 +482,6 @@ app.post('/api/feedback', async (req, res) => {
             }
         });
     } catch (err) {
-        if (err.name === 'JsonWebTokenError') {
-            return res.status(401).json({ message: "Invalid token" });
-        }
         return res.status(500).json({
             message: `Error submitting feedback: ${err.message}`
         });
@@ -532,16 +489,10 @@ app.post('/api/feedback', async (req, res) => {
 });
 
 // Get user's past practice sessions
-app.get('/api/user/sessions', async (req, res) => {
+app.get('/api/user/sessions', isLogged, async (req, res) => {
     try {
-        // Authentication middleware should be used here
-        const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
-        if (!token) {
-            return res.status(401).json({ message: "Authentication required" });
-        }
         
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const userId = decoded.userId;
+        const userId = req.user;
         
         const { limit = 10, page = 1, completed } = req.query;
         const skip = (parseInt(page) - 1) * parseInt(limit);
@@ -585,9 +536,6 @@ app.get('/api/user/sessions', async (req, res) => {
             }
         });
     } catch (err) {
-        if (err.name === 'JsonWebTokenError') {
-            return res.status(401).json({ message: "Invalid token" });
-        }
         return res.status(500).json({
             message: `Error fetching sessions: ${err.message}`
         });
@@ -595,18 +543,11 @@ app.get('/api/user/sessions', async (req, res) => {
 });
 
 // Get specific session details
-app.get('/api/sessions/:sessionId', async (req, res) => {
+app.get('/api/sessions/:sessionId', isLogged,  async (req, res) => {
     const { sessionId } = req.params;
     
     try {
-        // Authentication middleware should be used here
-        const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
-        if (!token) {
-            return res.status(401).json({ message: "Authentication required" });
-        }
-        
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const userId = decoded.userId;
+        const userId = req.user;
         
         const session = await PracticeSessions.findById(sessionId);
         if (!session) {
@@ -618,14 +559,11 @@ app.get('/api/sessions/:sessionId', async (req, res) => {
             return res.status(403).json({ message: "Unauthorized access to this session" });
         }
         
-        // Get detailed results
+        // Detailed results
         const results = await session.getResults();
         
         return res.status(200).json({ session: results });
     } catch (err) {
-        if (err.name === 'JsonWebTokenError') {
-            return res.status(401).json({ message: "Invalid token" });
-        }
         return res.status(500).json({
             message: `Error fetching session details: ${err.message}`
         });

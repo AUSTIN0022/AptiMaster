@@ -1,6 +1,6 @@
 // In your server initialization file or a dedicated scheduler file
 import cron from 'node-cron';
-import { Leaderboard, Topics } from '../Database/schema.js';
+import { Topics } from '../Database/schema.js';
 
 
 // Run every day at midnight
@@ -9,10 +9,6 @@ cron.schedule('10 * * * *', async () => {
   try {
     await Topics.recalculateAllCounts();
     console.log('Scheduled recalculation completed successfully');
-
-    console.log('\nRunning scheduled task: recalculateAllRanks');
-    await Leaderboard.recalculateAllRanks();
-    console.log('Scheduled Update Ranks completed successfully');    
   } catch (error) {
     console.error('Error during scheduled recalculation:', error);
   }
