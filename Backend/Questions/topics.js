@@ -1027,6 +1027,107 @@
                 "questionCount": 10
             }
         ]
+    },
+    {
+        "name": "Node.js",
+        "icon": "https://example.com/icons/nodejs.png",
+        "coverImage": "https://example.com/covers/nodejs.jpg",
+        "description": "This topic covers essential and advanced concepts in Node.js, including asynchronous programming, event-driven architecture, HTTP servers, Express.js, databases, middleware, authentication, testing, and performance optimization.",
+        "questionCount": 0,
+        "learningOutcomes": [
+            "Understand the core principles of Node.js",
+            "Work with asynchronous programming and event-driven architecture",
+            "Handle file system operations using the fs module",
+            "Build and manage HTTP servers",
+            "Develop RESTful APIs using Express.js",
+            "Integrate Node.js with databases using ORMs",
+            "Implement middleware for request processing",
+            "Apply effective error handling and debugging techniques",
+            "Implement authentication and authorization",
+            "Develop full-stack applications using Node.js",
+            "Write unit and integration tests",
+            "Optimize Node.js applications for performance",
+            "Explore advanced Node.js concepts such as clustering and streams"
+        ],
+        "modules": [
+            {
+                "name": "Introduction to Node.js",
+                "description": "Learn about Node.js, its architecture, and installation.",
+                "questionCount": 10
+            },
+            {
+                "name": "Node.js Fundamentals",
+                "description": "Understand core concepts such as event-driven programming, global objects, and modules.",
+                "questionCount": 10
+            },
+            {
+                "name": "Asynchronous Programming",
+                "description": "Master callbacks, Promises, and async/await for handling asynchronous operations.",
+                "questionCount": 10
+            },
+            {
+                "name": "Event-Driven Architecture",
+                "description": "Learn about Node.js event loop, EventEmitter, and handling custom events.",
+                "questionCount": 10
+            },
+            {
+                "name": "File System (fs) Module",
+                "description": "Work with file operations such as reading, writing, and deleting files.",
+                "questionCount": 10
+            },
+            {
+                "name": "HTTP Server & Networking",
+                "description": "Create and manage HTTP servers and network requests.",
+                "questionCount": 10
+            },
+            {
+                "name": "Express.js Framework",
+                "description": "Learn to build web applications and REST APIs using Express.js.",
+                "questionCount": 10
+            },
+            {
+                "name": "Databases & ORMs",
+                "description": "Connect Node.js applications to databases using ORMs like Sequelize and Mongoose.",
+                "questionCount": 10
+            },
+            {
+                "name": "Middleware",
+                "description": "Understand middleware functions and their role in Express.js applications.",
+                "questionCount": 10
+            },
+            {
+                "name": "Error Handling & Debugging",
+                "description": "Implement proper error handling and debugging techniques in Node.js.",
+                "questionCount": 10
+            },
+            {
+                "name": "Authentication & Authorization",
+                "description": "Secure applications using JWT, OAuth, and session-based authentication.",
+                "questionCount": 10
+            },
+            {
+                "name": "Node.js Applications",
+                "description": "Develop full-stack and backend applications using Node.js.",
+                "questionCount": 10
+            },
+            {
+                "name": "Testing & Debugging",
+                "description": "Learn to write and execute tests using Mocha, Jest, and Chai.",
+                "questionCount": 10
+            },
+            {
+                "name": "Advanced Topics",
+                "description": "Explore advanced concepts like clustering, worker threads, and streams.",
+                "questionCount": 10
+            },
+            {
+                "name": "Performance Optimization",
+                "description": "Optimize Node.js applications using caching, load balancing, and best practices.",
+                "questionCount": 10
+            }
+        ]
     }
+    
+    
     
 ]
