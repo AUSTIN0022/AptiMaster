@@ -5431,7 +5431,336 @@ const nodeJSQuestions = [
     },
 
     // Testing & Debugging
-
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "Which command is used to run Jest tests in Node.js?",
+        "options": ["node test", "npm test", "jest run", "node jest"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "npm test",
+        "difficulty": "easy",
+        "explanation": "The standard command to run Jest tests is 'npm test', which is typically configured in the package.json file.",
+        "hint": "Think about the most common npm command used for testing."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the primary purpose of the 'describe' function in Jest?",
+        "options": ["To run a specific test", "To create a test suite that groups related tests", "To debug failed tests", "To skip a test"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To create a test suite that groups related tests",
+        "difficulty": "easy",
+        "explanation": "The 'describe' function in Jest is used to create a block that groups together related tests, making the test structure more organized and readable.",
+        "hint": "It's about organizing tests into logical groups."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "Which assertion method in Jest checks if a value is truthy?",
+        "options": ["expect(value).isTrue()", "expect(value).toBeTruthy()", "expect(value).truthy()", "expect(value).isValid()"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "expect(value).toBeTruthy()",
+        "difficulty": "easy",
+        "explanation": "The 'toBeTruthy()' method is used to check if a value is truthy in Jest assertions.",
+        "hint": "Jest's assertion syntax usually starts with 'expect' followed by a matcher."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is a mock function in Jest?",
+        "options": ["A function that improves performance", "A function that simulates the behavior of real functions or modules", "A function that automatically fixes bugs", "A function that generates random test data"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A function that simulates the behavior of real functions or modules",
+        "difficulty": "medium",
+        "explanation": "Mock functions in Jest allow you to replace real implementations with controlled simulations to isolate the code being tested and verify interactions.",
+        "hint": "It's related to creating test doubles to simplify testing."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "How do you create a basic mock function in Jest?",
+        "options": ["mock.fn()", "jest.createMock()", "jest.fn()", "new Mock()"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "jest.fn()",
+        "difficulty": "easy",
+        "explanation": "The jest.fn() method creates a new mock function that can be used to replace real functions during testing.",
+        "hint": "It's a method on the global 'jest' object."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the purpose of 'beforeEach' in Jest?",
+        "options": ["To run code after each test", "To run code before all tests", "To run code before each test", "To skip the next test"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To run code before each test",
+        "difficulty": "easy",
+        "explanation": "The 'beforeEach' function runs before each test in a describe block, allowing you to set up common test conditions.",
+        "hint": "It's about test setup that needs to happen repeatedly."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "Which of the following is NOT a valid Jest matcher?",
+        "options": ["toBe()", "toEqual()", "toBeExactly()", "toContain()"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "toBeExactly()",
+        "difficulty": "medium",
+        "explanation": "'toBeExactly()' is not a valid Jest matcher. The common matchers are 'toBe()', 'toEqual()', 'toContain()', etc.",
+        "hint": "Look for the option that doesn't follow Jest's naming conventions."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "How do you test asynchronous code in Jest?",
+        "options": ["By using setTimeout()", "By returning a Promise or using async/await", "By using the synchronous() method", "By setting jest.async = true"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "By returning a Promise or using async/await",
+        "difficulty": "medium",
+        "explanation": "Jest supports testing asynchronous code by either returning a Promise from the test function or by using async/await syntax.",
+        "hint": "Jest waits for the asynchronous operation to complete before continuing."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "Which command line flag can be used to run Jest in watch mode?",
+        "options": ["--monitor", "--watch", "--observe", "--live"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "--watch",
+        "difficulty": "easy",
+        "explanation": "The '--watch' flag is used to run Jest in watch mode, which automatically re-runs tests when files change.",
+        "hint": "It's related to automated test execution when code changes."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the purpose of Jest's 'spyOn' method?",
+        "options": ["To track a user's activity", "To monitor memory usage", "To create a spy for a method on an object", "To spy on network requests"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To create a spy for a method on an object",
+        "difficulty": "medium",
+        "explanation": "The 'jest.spyOn()' method creates a mock that tracks calls to a specific method on an object while letting the original implementation run.",
+        "hint": "It allows you to observe method calls without replacing functionality."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is a snapshot test in Jest?",
+        "options": ["A test that verifies a component renders correctly by comparing it to a saved reference", "A test that takes screenshots of the application", "A test that runs quickly", "A test that captures the current state of the database"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A test that verifies a component renders correctly by comparing it to a saved reference",
+        "difficulty": "medium",
+        "explanation": "Snapshot tests in Jest capture the output of a component or function and compare it to a reference snapshot to detect unexpected changes.",
+        "hint": "It's about ensuring consistent output across code changes."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "Which Node.js debugging tool is built into Chrome DevTools?",
+        "options": ["Node Inspector", "V8 Inspector", "Chrome Node Debugger", "DevTools for Node"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "V8 Inspector",
+        "difficulty": "medium",
+        "explanation": "The V8 Inspector is integrated with Chrome DevTools and allows debugging of Node.js applications directly from the browser.",
+        "hint": "It's named after the JavaScript engine used in Node.js."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "How do you run a specific test file with Jest?",
+        "options": ["jest run filename.test.js", "jest --file filename.test.js", "jest filename.test.js", "jest --only filename.test.js"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "jest filename.test.js",
+        "difficulty": "easy",
+        "explanation": "To run a specific test file with Jest, you simply pass the filename as an argument to the jest command.",
+        "hint": "The simplest approach is to specify the file path directly."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What does the 'coverage' command do in Jest?",
+        "options": ["It measures how fast tests run", "It measures how much of your code is tested", "It measures the number of tests", "It measures the complexity of your tests"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It measures how much of your code is tested",
+        "difficulty": "medium",
+        "explanation": "The coverage command in Jest generates a report showing how much of your code is covered by tests, including statements, branches, functions, and lines.",
+        "hint": "It's about measuring test completeness."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "Which testing framework is NOT commonly used with Node.js?",
+        "options": ["Mocha", "Jest", "Jasmine", "PHPUnit"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "PHPUnit",
+        "difficulty": "easy",
+        "explanation": "PHPUnit is a testing framework for PHP, not for Node.js. Mocha, Jest, and Jasmine are all commonly used for testing Node.js applications.",
+        "hint": "Look for the option that's associated with a different programming language."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is Test-Driven Development (TDD)?",
+        "options": ["Writing tests after writing code", "Writing code first, then tests", "Writing tests before writing code", "Testing only after deployment"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Writing tests before writing code",
+        "difficulty": "easy",
+        "explanation": "Test-Driven Development (TDD) is a development process where tests are written before the actual code, guiding the implementation.",
+        "hint": "It's about using tests to drive the development process."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "How do you mock an entire module in Jest?",
+        "options": ["import.mock('./modulePath')", "jest.mockModule('./modulePath')", "jest.mock('./modulePath')", "mock.module('./modulePath')"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "jest.mock('./modulePath')",
+        "difficulty": "medium",
+        "explanation": "The 'jest.mock()' function is used to automatically mock an entire module in Jest tests.",
+        "hint": "It's a method on the global 'jest' object, similar to jest.fn()."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the purpose of the 'test.only' function in Jest?",
+        "options": ["To mark a test as important", "To run only that specific test", "To ensure the test always passes", "To make the test run faster"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To run only that specific test",
+        "difficulty": "medium",
+        "explanation": "'test.only()' (or 'it.only()') tells Jest to run only that specific test while skipping all other tests in the file.",
+        "hint": "It's useful when focusing on a specific test during development."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "Which assertion checks if a mock function was called exactly once?",
+        "options": ["expect(mockFn).toHaveBeenCalledOnce()", "expect(mockFn).toBeCalledTimes(1)", "expect(mockFn).wasCalled(1)", "expect(mockFn.calls.count()).toBe(1)"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "expect(mockFn).toBeCalledTimes(1)",
+        "difficulty": "medium",
+        "explanation": "The 'toBeCalledTimes(1)' matcher checks if a mock function was called exactly once. Alternatively, you can also use 'toHaveBeenCalledTimes(1)'.",
+        "hint": "Look for the option that specifies an exact count of calls."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the 'done' parameter used for in Jest tests?",
+        "options": ["To indicate a test has passed", "To handle asynchronous code in callback style", "To end the testing process", "To finalize test results"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To handle asynchronous code in callback style",
+        "difficulty": "medium",
+        "explanation": "The 'done' parameter is used in Jest for testing asynchronous code that uses callbacks. Calling done() signals that the test is complete.",
+        "hint": "It's an older way to handle async operations before Promises were common."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the purpose of Supertest in Node.js testing?",
+        "options": ["To create super-powerful tests", "To test high-load scenarios", "To test HTTP requests and responses", "To run tests in parallel"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To test HTTP requests and responses",
+        "difficulty": "medium",
+        "explanation": "Supertest is a library used to test HTTP servers in Node.js by providing a high-level abstraction for testing HTTP requests and responses.",
+        "hint": "It's specifically designed for testing API endpoints."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the purpose of the 'debugger' statement in Node.js?",
+        "options": ["To automatically fix bugs", "To log debug information", "To set a breakpoint for debugging tools", "To highlight potential bugs in the code"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To set a breakpoint for debugging tools",
+        "difficulty": "easy",
+        "explanation": "The 'debugger' statement in Node.js sets a breakpoint where code execution will pause when running in a debugging environment.",
+        "hint": "It's about stopping execution at a specific point for inspection."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the purpose of Chai in the Node.js testing ecosystem?",
+        "options": ["A test runner", "An assertion library", "A code coverage tool", "A mocking framework"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An assertion library",
+        "difficulty": "medium",
+        "explanation": "Chai is an assertion library for Node.js that can be paired with testing frameworks like Mocha to provide various styles of assertions.",
+        "hint": "It's about verifying expectations in tests."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What command launches the Node.js built-in debugger?",
+        "options": ["node debug script.js", "node --debug script.js", "node --inspect script.js", "node debugger script.js"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "node --inspect script.js",
+        "difficulty": "medium",
+        "explanation": "The 'node --inspect script.js' command launches a Node.js process with the inspector protocol enabled, allowing debugging with Chrome DevTools.",
+        "hint": "The current standard flag for debugging in modern Node.js."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "Which utility in Jest is used to reset all mocks between tests?",
+        "options": ["jest.resetMocks()", "jest.clearAllMocks()", "jest.resetAllMocks()", "jest.cleanMocks()"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "jest.resetAllMocks()",
+        "difficulty": "hard",
+        "explanation": "The 'jest.resetAllMocks()' utility resets the state of all mocks, including their implementation, return values, and captured calls.",
+        "hint": "It completely resets all mock functions to their initial state."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the main difference between 'toBe()' and 'toEqual()' matchers in Jest?",
+        "options": ["They are identical", "'toBe()' checks for exact object references, while 'toEqual()' checks value equality", "'toEqual()' is for strings, 'toBe()' is for numbers", "'toBe()' is faster than 'toEqual()'"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "'toBe()' checks for exact object references, while 'toEqual()' checks value equality",
+        "difficulty": "hard",
+        "explanation": "'toBe()' uses 'Object.is' for strict equality comparison (including reference equality for objects), while 'toEqual()' performs deep equality checking of all properties.",
+        "hint": "Think about how JavaScript compares primitive values versus objects."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is a common use case for Jest's 'toMatchObject()' matcher?",
+        "options": ["To compare two functions", "To check if an object contains at least the specified subset of properties", "To match regular expressions", "To compare arrays exactly"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To check if an object contains at least the specified subset of properties",
+        "difficulty": "hard",
+        "explanation": "The 'toMatchObject()' matcher is used to check if an object contains at least the properties in the expected object, making it useful for partial object matching.",
+        "hint": "It's about partial, not exact, object comparison."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "How can you debug memory leaks in a Node.js application?",
+        "options": ["By adding more RAM to the server", "By using tools like the Chrome DevTools Memory panel and heap snapshots", "By restarting the application regularly", "Memory leaks cannot be debugged in Node.js"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "By using tools like the Chrome DevTools Memory panel and heap snapshots",
+        "difficulty": "hard",
+        "explanation": "Memory leaks in Node.js can be debugged by analyzing heap snapshots, memory profiles, and using the Chrome DevTools Memory panel to identify objects that aren't being garbage collected.",
+        "hint": "It involves examining memory allocation and garbage collection patterns."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the purpose of the 'faker' library in Node.js testing?",
+        "options": ["To detect fake tests", "To generate fake data for testing", "To simulate network failures", "To create fake Node.js processes"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To generate fake data for testing",
+        "difficulty": "medium",
+        "explanation": "The 'faker' library (now often used as '@faker-js/faker') is used to generate realistic fake data for testing, such as names, addresses, phone numbers, etc.",
+        "hint": "It's about creating test data that looks realistic."
+    },
+    {
+        "topic": "67dec085269789799b76ef03",
+        "module": "Testing & Debugging",
+        "questionText": "What is the difference between unit tests and integration tests?",
+        "options": ["Unit tests are faster, integration tests are slower", "Unit tests check individual components in isolation, integration tests check how components work together", "Unit tests are written first, integration tests are written later", "Unit tests use Jest, integration tests use Mocha"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Unit tests check individual components in isolation, integration tests check how components work together",
+        "difficulty": "easy",
+        "explanation": "Unit tests focus on testing individual functions or modules in isolation, often using mocks. Integration tests verify that different parts of the application work correctly together.",
+        "hint": "It's about the scope and what is being tested."
+    },
     // Advanced Topics
 
     // Performance Optimization
