@@ -1126,8 +1126,310 @@
                 "questionCount": 10
             }
         ]
+    },
+    {
+        "name": "MongoDB",
+        "icon": "https://example.com/icons/mongodb.png",
+        "coverImage": "https://example.com/covers/mongodb.jpg",
+        "description": "This topic covers essential and advanced concepts in MongoDB, including document database architecture, CRUD operations, indexing, aggregation pipeline, data modeling, replication, sharding, security, performance tuning, and integration with application frameworks.",
+        "questionCount": 0,
+        "learningOutcomes": [
+            "Understand NoSQL database concepts and MongoDB architecture",
+            "Install and configure MongoDB environments",
+            "Perform CRUD operations using MongoDB shell and drivers",
+            "Design effective schema and data models for document databases",
+            "Create and optimize indexes for query performance",
+            "Master aggregation framework for data processing",
+            "Implement data validation and constraints",
+            "Work with MongoDB Atlas cloud service",
+            "Configure replication for high availability",
+            "Implement sharding for horizontal scaling",
+            "Secure MongoDB deployments with authentication and authorization",
+            "Monitor and optimize MongoDB performance",
+            "Integrate MongoDB with application frameworks",
+            "Implement data backup and recovery strategies",
+            "Apply best practices for production deployments"
+        ],
+        "modules": [
+            {
+                "name": "Introduction to MongoDB",
+                "description": "Learn about NoSQL databases, MongoDB architecture, and installation options.",
+                "questionCount": 10
+            },
+            {
+                "name": "MongoDB Shell & Basic Operations",
+                "description": "Master MongoDB shell commands and basic document operations.",
+                "questionCount": 10
+            },
+            {
+                "name": "CRUD Operations",
+                "description": "Perform Create, Read, Update, and Delete operations on MongoDB documents.",
+                "questionCount": 10
+            },
+            {
+                "name": "Data Modeling",
+                "description": "Design effective document schemas and data models for MongoDB applications.",
+                "questionCount": 10
+            },
+            {
+                "name": "Indexing Strategies",
+                "description": "Create and manage indexes to optimize query performance.",
+                "questionCount": 10
+            },
+            {
+                "name": "Aggregation Framework",
+                "description": "Process and analyze data using MongoDB's powerful aggregation pipeline.",
+                "questionCount": 10
+            },
+            {
+                "name": "Data Validation",
+                "description": "Implement schema validation and enforce data integrity constraints.",
+                "questionCount": 10
+            },
+            {
+                "name": "MongoDB Atlas",
+                "description": "Work with MongoDB's cloud database service for deployment and management.",
+                "questionCount": 10
+            },
+            {
+                "name": "Replication",
+                "description": "Configure replica sets for high availability and fault tolerance.",
+                "questionCount": 10
+            },
+            {
+                "name": "Sharding",
+                "description": "Implement horizontal scaling through MongoDB sharding architecture.",
+                "questionCount": 10
+            },
+            {
+                "name": "Security & Authentication",
+                "description": "Secure MongoDB deployments with authentication, authorization, and encryption.",
+                "questionCount": 10
+            },
+            {
+                "name": "Performance Optimization",
+                "description": "Monitor and optimize MongoDB performance using best practices and tools.",
+                "questionCount": 10
+            },
+            {
+                "name": "MongoDB Drivers",
+                "description": "Connect to MongoDB from different programming languages using official drivers.",
+                "questionCount": 10
+            },
+            {
+                "name": "Backup & Recovery",
+                "description": "Implement data backup, restore, and disaster recovery strategies.",
+                "questionCount": 10
+            },
+            {
+                "name": "Advanced MongoDB Concepts",
+                "description": "Explore advanced features like change streams, transactions, and time series collections.",
+                "questionCount": 10
+            }
+        ]
+    },
+    {
+        "name": "React.js",
+        "icon": "https://example.com/icons/reactjs.png",
+        "coverImage": "https://example.com/covers/reactjs.jpg",
+        "description": "A comprehensive journey through React.js development, from foundational concepts to advanced techniques. Learn to build interactive user interfaces with the component-based architecture that powers some of the world's most popular web applications. Master hooks, state management, routing, and deployment while creating efficient, maintainable, and scalable front-end applications.",
+        "questionCount": 0,
+        "learningOutcomes": [
+            "Understand React core concepts and virtual DOM",
+            "Create and manage functional and class components",
+            "Implement state and props for data management",
+            "Master React Hooks for stateful logic",
+            "Use Context API for state sharing across components",
+            "Implement client-side routing with React Router",
+            "Build forms with validation and state management",
+            "Create reusable components and custom hooks",
+            "Integrate React with REST APIs and GraphQL",
+            "Implement state management with Redux or Zustand",
+            "Write unit and integration tests for React components",
+            "Optimize React application performance",
+            "Implement server-side rendering with Next.js",
+            "Apply React best practices and design patterns",
+            "Build production-ready React applications"
+        ],
+        "modules": [
+            {
+                "name": "Introduction to React",
+                "description": "Learn React fundamentals, JSX syntax, and component architecture.",
+                "questionCount": 10
+            },
+            {
+                "name": "Components & Props",
+                "description": "Create functional and class components, and manage data with props.",
+                "questionCount": 10
+            },
+            {
+                "name": "State Management",
+                "description": "Implement component state and understand state lifecycle.",
+                "questionCount": 10
+            },
+            {
+                "name": "React Hooks",
+                "description": "Master useState, useEffect, useRef, and other built-in hooks.",
+                "questionCount": 10
+            },
+            {
+                "name": "Custom Hooks",
+                "description": "Create reusable stateful logic with custom hooks.",
+                "questionCount": 10
+            },
+            {
+                "name": "Context API",
+                "description": "Share state across component tree without prop drilling.",
+                "questionCount": 10
+            },
+            {
+                "name": "React Router",
+                "description": "Implement client-side routing and navigation in React apps.",
+                "questionCount": 10
+            },
+            {
+                "name": "Forms & Validation",
+                "description": "Build controlled forms with validation and error handling.",
+                "questionCount": 10
+            },
+            {
+                "name": "API Integration",
+                "description": "Connect React applications to REST APIs and handle async operations.",
+                "questionCount": 10
+            },
+            {
+                "name": "Redux & State Management",
+                "description": "Implement global state management with Redux or alternatives.",
+                "questionCount": 10
+            },
+            {
+                "name": "Testing React Applications",
+                "description": "Write unit and integration tests using Jest and React Testing Library.",
+                "questionCount": 10
+            },
+            {
+                "name": "Performance Optimization",
+                "description": "Optimize component rendering and application performance.",
+                "questionCount": 10
+            },
+            {
+                "name": "Server-Side Rendering",
+                "description": "Implement SSR and static site generation with Next.js.",
+                "questionCount": 10
+            },
+            {
+                "name": "Advanced Patterns",
+                "description": "Apply advanced React patterns like render props and compound components.",
+                "questionCount": 10
+            },
+            {
+                "name": "Production Deployment",
+                "description": "Deploy React applications to production with CI/CD pipelines.",
+                "questionCount": 10
+            }
+        ]
+    },
+    {
+        "name": "Angular",
+        "icon": "https://example.com/icons/angular.png",
+        "coverImage": "https://example.com/covers/angular.jpg",
+        "description": "Dive into the powerful ecosystem of Angular, Google's enterprise-ready framework for building sophisticated single-page applications. This learning path takes you from TypeScript basics to creating complex, scalable applications with Angular's comprehensive toolset. Explore component architecture, dependency injection, reactive programming, and more while developing the skills needed for professional front-end development in enterprise environments.",
+        "questionCount": 0,
+        "learningOutcomes": [
+            "Understand Angular architecture and TypeScript fundamentals",
+            "Create and manage Angular components, directives, and pipes",
+            "Implement dependency injection and services",
+            "Master reactive programming with RxJS and Observables",
+            "Design modular applications using Angular modules",
+            "Implement client-side routing with Angular Router",
+            "Build template-driven and reactive forms with validation",
+            "Communicate with backend services using Angular HTTP client",
+            "Apply Angular animations and material design components",
+            "Implement state management with NgRx or services",
+            "Write unit and integration tests for Angular applications",
+            "Optimize Angular application performance",
+            "Implement server-side rendering with Angular Universal",
+            "Apply Angular best practices and design patterns",
+            "Build production-ready enterprise Angular applications"
+        ],
+        "modules": [
+            {
+                "name": "Introduction to Angular",
+                "description": "Learn Angular fundamentals, TypeScript, and development environment setup.",
+                "questionCount": 10
+            },
+            {
+                "name": "Angular Components",
+                "description": "Create and manage components, templates, and component lifecycle.",
+                "questionCount": 10
+            },
+            {
+                "name": "Directives & Pipes",
+                "description": "Build custom directives and pipes for template manipulation.",
+                "questionCount": 10
+            },
+            {
+                "name": "Services & Dependency Injection",
+                "description": "Implement services and understand Angular's DI system.",
+                "questionCount": 10
+            },
+            {
+                "name": "RxJS & Observables",
+                "description": "Master reactive programming with RxJS in Angular applications.",
+                "questionCount": 10
+            },
+            {
+                "name": "Angular Modules",
+                "description": "Organize code into feature and shared modules for maintainability.",
+                "questionCount": 10
+            },
+            {
+                "name": "Angular Router",
+                "description": "Implement client-side routing, guards, and lazy loading.",
+                "questionCount": 10
+            },
+            {
+                "name": "Template-Driven Forms",
+                "description": "Build and validate forms using Angular's template-driven approach.",
+                "questionCount": 10
+            },
+            {
+                "name": "Reactive Forms",
+                "description": "Implement model-driven forms with dynamic validation and control.",
+                "questionCount": 10
+            },
+            {
+                "name": "HTTP Client",
+                "description": "Connect to backend services using Angular's HTTP client.",
+                "questionCount": 10
+            },
+            {
+                "name": "Angular Material",
+                "description": "Implement material design components and Angular animations.",
+                "questionCount": 10
+            },
+            {
+                "name": "State Management",
+                "description": "Manage application state with NgRx store, effects, and selectors.",
+                "questionCount": 10
+            },
+            {
+                "name": "Testing Angular Applications",
+                "description": "Write unit and integration tests using Jasmine and Karma.",
+                "questionCount": 10
+            },
+            {
+                "name": "Performance Optimization",
+                "description": "Optimize Angular applications with change detection strategies and AOT compilation.",
+                "questionCount": 10
+            },
+            {
+                "name": "Advanced Angular Concepts",
+                "description": "Explore Angular Universal, PWAs, and enterprise application patterns.",
+                "questionCount": 10
+            }
+        ]
     }
-    
     
     
 ]
