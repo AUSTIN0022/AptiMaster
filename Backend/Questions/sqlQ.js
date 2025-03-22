@@ -4888,6 +4888,336 @@ const SQLQuestions = [
 
     
     // SQL Security
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which SQL command is used to create a new database user?",
+        "options": ["CREATE USER", "ADD USER", "NEW USER", "INSERT USER"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "CREATE USER",
+        "difficulty": "easy",
+        "explanation": "The CREATE USER statement is used to create a new database user account.",
+        "hint": "Think about the pattern of SQL commands that create new objects."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which privilege allows a user to create new tables in a database?",
+        "options": ["SELECT", "CREATE", "INSERT", "EXECUTE"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "CREATE",
+        "difficulty": "easy",
+        "explanation": "The CREATE privilege is required to create new tables in a database.",
+        "hint": "The privilege name matches the command used to make new tables."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What command is used to grant privileges to a user?",
+        "options": ["GRANT", "ALLOW", "PERMIT", "AUTHORIZE"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "GRANT",
+        "difficulty": "easy",
+        "explanation": "The GRANT command is used to assign privileges to users or roles in a database.",
+        "hint": "This command 'grants' access or permissions to a user."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which command removes privileges from a user?",
+        "options": ["REVOKE", "REMOVE", "DELETE", "DENY"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "REVOKE",
+        "difficulty": "easy",
+        "explanation": "The REVOKE command is used to remove previously granted privileges from users or roles.",
+        "hint": "This command is the opposite of GRANT."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the purpose of the WITH GRANT OPTION clause?",
+        "options": ["It allows the user to execute stored procedures", "It allows the user to grant the same privileges to other users", "It allows the user to create views", "It allows the user to create indexes"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It allows the user to grant the same privileges to other users",
+        "difficulty": "medium",
+        "explanation": "When you grant privileges using WITH GRANT OPTION, the recipient can grant those same privileges to other users.",
+        "hint": "This option allows privilege propagation to other users."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which of the following is NOT a standard SQL privilege?",
+        "options": ["SELECT", "INSERT", "MODIFY", "DELETE"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "MODIFY",
+        "difficulty": "medium",
+        "explanation": "MODIFY is not a standard SQL privilege. The standard privileges include SELECT, INSERT, UPDATE, DELETE, EXECUTE, etc.",
+        "hint": "Look for the option that doesn't match typical SQL DML commands."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What does the SQL command ALTER USER primarily do?",
+        "options": ["Changes a user's privileges", "Changes a user's password or attributes", "Removes a user from the database", "Creates a backup of user data"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Changes a user's password or attributes",
+        "difficulty": "medium",
+        "explanation": "The ALTER USER command is used to modify existing user accounts, typically to change passwords, default schemas, or other user attributes.",
+        "hint": "ALTER commands typically modify existing objects rather than changing permissions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the purpose of a database role?",
+        "options": ["To execute stored procedures", "To group users with similar permission needs", "To encrypt sensitive data", "To automate database backups"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To group users with similar permission needs",
+        "difficulty": "medium",
+        "explanation": "Database roles are used to group users with similar security needs. Privileges can be granted to roles, and users can be assigned to roles, simplifying permission management.",
+        "hint": "Think about how roles function in organizational security contexts."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which SQL command is used to rename a user?",
+        "options": ["RENAME USER", "ALTER USER", "UPDATE USER", "MODIFY USER"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "RENAME USER",
+        "difficulty": "medium",
+        "explanation": "The RENAME USER command is specifically used to change a user's name in the database system.",
+        "hint": "The name of the command clearly indicates its purpose."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What happens to owned objects when you execute DROP USER?",
+        "options": ["They remain in the database with no owner", "They are automatically assigned to the admin user", "They are also dropped by default in most DBMS", "Nothing happens to them"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "They are also dropped by default in most DBMS",
+        "difficulty": "medium",
+        "explanation": "In most database systems, when you drop a user, all objects owned by that user are also dropped by default, unless you've taken specific steps to transfer ownership.",
+        "hint": "Consider what would happen to orphaned objects from a database management perspective."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the purpose of the 'IDENTIFIED BY' clause in user creation?",
+        "options": ["To specify a user's role", "To set a user's password", "To define user privileges", "To set the user's schema"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To set a user's password",
+        "difficulty": "medium",
+        "explanation": "The 'IDENTIFIED BY' clause is used to set the password when creating a new database user.",
+        "hint": "How does the system identify and authenticate users?"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which SQL privilege allows a user to add new rows to an existing table?",
+        "options": ["SELECT", "UPDATE", "INSERT", "CREATE"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "INSERT",
+        "difficulty": "easy",
+        "explanation": "The INSERT privilege allows users to add new rows to an existing table.",
+        "hint": "Which SQL command is used to add new data to tables?"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "In SQL, what is the principle of least privilege?",
+        "options": ["Users should have minimal database connections", "Users should be granted only the privileges they need to perform their tasks", "Users should not be allowed to create database objects", "Users should have different passwords for each database"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Users should be granted only the privileges they need to perform their tasks",
+        "difficulty": "medium",
+        "explanation": "The principle of least privilege is a security concept where users are given only the minimal set of privileges necessary to perform their required tasks.",
+        "hint": "This security principle minimizes potential damage from accidental or deliberate misuse."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What does the SQL command REVOKE ALL PRIVILEGES do?",
+        "options": ["Removes all users from the database", "Removes all tables from the database", "Removes all privileges from a specified user", "Disables the database server"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Removes all privileges from a specified user",
+        "difficulty": "medium",
+        "explanation": "REVOKE ALL PRIVILEGES removes all previously granted privileges from the specified user or role.",
+        "hint": "The command name suggests removing privileges rather than users or database objects."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is SQL injection?",
+        "options": ["A way to optimize SQL queries", "A technique to import data into SQL databases", "A security vulnerability where malicious SQL code is inserted into input fields", "A method to create backup copies of SQL databases"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A security vulnerability where malicious SQL code is inserted into input fields",
+        "difficulty": "medium",
+        "explanation": "SQL injection is a code injection technique where an attacker inserts malicious SQL into input fields, which is then executed by the database, potentially leading to data theft or corruption.",
+        "hint": "Think about security vulnerabilities related to user input in web applications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which of these is the best defense against SQL injection attacks?",
+        "options": ["Using more complex passwords", "Using prepared statements with parameterized queries", "Encrypting the database", "Limiting the number of database connections"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using prepared statements with parameterized queries",
+        "difficulty": "hard",
+        "explanation": "Prepared statements with parameterized queries separate SQL code from data, preventing attackers from injecting malicious code into SQL statements.",
+        "hint": "The solution involves treating user input as data rather than executable code."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is a database schema in the context of security?",
+        "options": ["A collection of tables in a database", "A collection of users with similar privileges", "A namespace that organizes database objects and can be used for access control", "A security protocol for database encryption"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A namespace that organizes database objects and can be used for access control",
+        "difficulty": "hard",
+        "explanation": "In the context of security, a database schema is a namespace that organizes database objects and can be used as a security boundary for access control.",
+        "hint": "Think about how organizing objects into containers might help with permission management."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the difference between authentication and authorization in database security?",
+        "options": ["They are synonyms and can be used interchangeably", "Authentication verifies user identity, while authorization determines what actions they can perform", "Authentication grants permissions, while authorization verifies identity", "Authentication is for users, while authorization is for applications"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Authentication verifies user identity, while authorization determines what actions they can perform",
+        "difficulty": "hard",
+        "explanation": "Authentication is the process of verifying who a user is, while authorization determines what resources a user can access and what operations they can perform.",
+        "hint": "Think about the sequence: first determine who someone is, then what they're allowed to do."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What security mechanism is used to ensure that only authorized users can view sensitive data in specific columns?",
+        "options": ["Database encryption", "Row-level security", "Column-level security", "Database firewalls"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Column-level security",
+        "difficulty": "hard",
+        "explanation": "Column-level security allows database administrators to restrict access to specific columns in a table, ensuring that sensitive data is only visible to authorized users.",
+        "hint": "The name of this security feature indicates the granularity of the protection."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "In PostgreSQL, what is the purpose of the 'pg_hba.conf' file?",
+        "options": ["It stores user passwords", "It controls client authentication", "It configures database backups", "It defines stored procedures"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It controls client authentication",
+        "difficulty": "hard",
+        "explanation": "In PostgreSQL, the pg_hba.conf (Host-Based Authentication) file defines how clients are authenticated when connecting to the database server.",
+        "hint": "The 'hba' in the filename stands for 'Host-Based Authentication'."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the purpose of row-level security (RLS) in databases?",
+        "options": ["To encrypt individual rows", "To restrict which rows a user can view or modify based on security policies", "To improve query performance for row operations", "To prevent SQL injection attacks"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To restrict which rows a user can view or modify based on security policies",
+        "difficulty": "hard",
+        "explanation": "Row-level security allows database administrators to define policies that restrict which rows in a table can be viewed or modified by specific users, providing fine-grained access control.",
+        "hint": "Think about how this security feature might filter data horizontally rather than vertically."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which of the following is a common method for hashing passwords in modern databases?",
+        "options": ["MD5", "bcrypt", "Base64", "ROT13"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "bcrypt",
+        "difficulty": "hard",
+        "explanation": "bcrypt is a password hashing function designed to be slow and computationally intensive, making it resistant to brute force attacks. It's widely used in modern database systems for secure password storage.",
+        "hint": "This algorithm was specifically designed for password hashing and includes salting."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is Transparent Data Encryption (TDE) in database systems?",
+        "options": ["A method to make data invisible to users", "A technology that encrypts database files at the file system level", "A protocol for secure data transmission between servers", "A technique to compress database tables"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A technology that encrypts database files at the file system level",
+        "difficulty": "hard",
+        "explanation": "Transparent Data Encryption (TDE) encrypts database files at the file system level, protecting data at rest. It's 'transparent' because applications don't need to be modified to work with encrypted data.",
+        "hint": "This encryption happens at a low level and is invisible to applications and users."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the primary purpose of database auditing?",
+        "options": ["To improve query performance", "To encrypt sensitive data", "To track user activities and changes to database objects", "To prevent SQL injection attacks"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To track user activities and changes to database objects",
+        "difficulty": "hard",
+        "explanation": "Database auditing is the monitoring and recording of database activities, including user actions and changes to database objects. It's used for security monitoring, compliance, and forensic analysis.",
+        "hint": "Think about how this feature helps with accountability and compliance requirements."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the concept of 'defense in depth' in database security?",
+        "options": ["Using the deepest possible encryption algorithms", "Implementing multiple layers of security controls", "Storing databases in physically secure locations", "Having depth-first search algorithms for security scanning"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Implementing multiple layers of security controls",
+        "difficulty": "hard",
+        "explanation": "Defense in depth is a security approach where multiple layers of security controls are implemented so that if one layer fails, others will still provide protection. It includes network security, authentication, authorization, encryption, and auditing.",
+        "hint": "This military-inspired strategy involves having multiple defensive barriers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "Which SQL Server statement is used to create a security credential?",
+        "options": ["CREATE CREDENTIAL", "NEW CREDENTIAL", "ADD CREDENTIAL", "MAKE CREDENTIAL"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "CREATE CREDENTIAL",
+        "difficulty": "medium",
+        "explanation": "In SQL Server, the CREATE CREDENTIAL statement is used to create a credential, which is a record that contains the authentication information required to connect to a resource outside the instance of SQL Server.",
+        "hint": "This follows the standard SQL CREATE pattern for creating objects."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the meaning of 'PUBLIC' in SQL grant statements?",
+        "options": ["The database is publicly accessible on the internet", "Only government agencies can access the data", "All database users have the specified privilege", "The data can be published to external sources"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "All database users have the specified privilege",
+        "difficulty": "medium",
+        "explanation": "In SQL, PUBLIC is a special role that includes all users. When privileges are granted to PUBLIC, all users automatically have those privileges.",
+        "hint": "Think about what the word 'public' typically means in terms of access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is a 'SQL Server login'?",
+        "options": ["A record of when someone accessed the database", "A security principal that can connect to the database engine", "A stored procedure that validates user credentials", "A trigger that executes when a user logs in"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A security principal that can connect to the database engine",
+        "difficulty": "medium",
+        "explanation": "In SQL Server, a login is a security principal that allows authentication to the database engine instance. It's the first layer of security that users must pass through to access any database in the instance.",
+        "hint": "This concept relates to authentication at the server level rather than at the database level."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the purpose of a digital certificate in database security?",
+        "options": ["To encrypt database backups", "To provide proof of database ownership", "To authenticate connections and encrypt data", "To verify database integrity"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To authenticate connections and encrypt data",
+        "difficulty": "hard",
+        "explanation": "In database security, digital certificates are used to authenticate connections between clients and servers and to encrypt data transmitted between them, often using SSL/TLS protocols.",
+        "hint": "These serve similar purposes as in web security (HTTPS)."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad87",
+        "module": "SQL Security",
+        "questionText": "What is the meaning of 'WITH ADMIN OPTION' in SQL grant statements?",
+        "options": ["It gives the grantee administrative privileges on the server", "It allows the grantee to grant the role to other users", "It restricts the grant to administrative tables only", "It requires administrator approval for the grant to take effect"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It allows the grantee to grant the role to other users",
+        "difficulty": "hard",
+        "explanation": "The WITH ADMIN OPTION clause, when used with GRANT, allows the grantee to grant the role to other users, essentially giving them administrative control over the role.",
+        "hint": "This option relates to propagating role memberships."
+    },
 
 
   ];
