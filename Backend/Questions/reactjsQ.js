@@ -2299,10 +2299,1397 @@ const reactJSQ = [
     },
 
     // Context API
-
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What problem does React's Context API primarily solve?",
+        "options": [
+        "Managing local component state",
+        "Avoiding prop drilling",
+        "Handling side effects",
+        "Optimizing performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Avoiding prop drilling",
+        "difficulty": "easy",
+        "explanation": "React's Context API is designed to solve the problem of 'prop drilling,' which occurs when props need to be passed through multiple nested components. Context provides a way to share values between components without explicitly passing props through every level of the component tree.",
+        "hint": "Think about passing data through multiple levels of the component hierarchy."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "Which React function is used to create a new context?",
+        "options": [
+        "React.makeContext()",
+        "React.newContext()",
+        "React.createContext()",
+        "React.generateContext()"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "React.createContext()",
+        "difficulty": "easy",
+        "explanation": "React.createContext() is the correct function to create a new context object. It accepts an optional default value and returns a Context object with Provider and Consumer components.",
+        "hint": "The function name follows React's typical 'create' pattern."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What are the two main components that React.createContext() returns?",
+        "options": [
+        "Sender and Receiver",
+        "Creator and User",
+        "Producer and Consumer",
+        "Provider and Consumer"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Provider and Consumer",
+        "difficulty": "easy",
+        "explanation": "React.createContext() returns an object with two components: Provider and Consumer. The Provider component is used to provide the context value to its descendant components, while the Consumer component is used to consume the context value.",
+        "hint": "One component provides values, and the other consumes them."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What is the role of the Context.Provider component?",
+        "options": [
+        "To consume context values",
+        "To provide context values to all descendant components",
+        "To create a new context instance",
+        "To optimize rendering performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To provide context values to all descendant components",
+        "difficulty": "easy",
+        "explanation": "The Context.Provider component accepts a 'value' prop that is passed to consuming components that are descendants of this Provider. All descendants that use the same Context can access this provided value.",
+        "hint": "This component makes values available to components further down the tree."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "How do you access context values in a functional component?",
+        "options": [
+        "Using the useState hook",
+        "Using the useContext hook",
+        "Using the withContext HOC",
+        "Using this.context"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using the useContext hook",
+        "difficulty": "easy",
+        "explanation": "The useContext hook is the preferred way to consume context values in functional components. It accepts a context object (created by React.createContext) and returns the current context value for that context.",
+        "hint": "React provides a specific hook for working with context."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What happens when the value prop of a Context.Provider changes?",
+        "options": [
+        "Nothing, context values are immutable",
+        "It triggers a re-render of all components that consume that context",
+        "It only updates components that explicitly call for an update",
+        "It throws an error and requires a context reset"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It triggers a re-render of all components that consume that context",
+        "difficulty": "medium",
+        "explanation": "When the value prop of a Context.Provider changes, React will re-render all the components that consume this context. This is an important aspect of context and affects performance considerations when using context for frequently changing values.",
+        "hint": "Think about how React's reactivity system works with context updates."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What is the default value in React.createContext(defaultValue) used for?",
+        "options": [
+        "It's used when no matching Provider is found in the component tree",
+        "It's used to reset the context to its initial state",
+        "It's used as a fallback when the Provider's value is undefined",
+        "It's used to compare with new values to determine if re-rendering is needed"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "It's used when no matching Provider is found in the component tree",
+        "difficulty": "medium",
+        "explanation": "The default value is only used when a component consumes the context but does not have a matching Provider above it in the component tree. This is useful for testing components in isolation or for providing fallback values.",
+        "hint": "Think about what happens when you use useContext without wrapping your component in a Provider."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What will the following code output?\n\n```jsx\nconst MyContext = React.createContext('default');\n\nfunction MyComponent() {\n  return (\n    <div>\n      <MyContext.Consumer>\n        {value => <p>{value}</p>}\n      </MyContext.Consumer>\n    </div>\n  );\n}\n```",
+        "options": [
+        "<p>default</p>",
+        "<p>undefined</p>",
+        "<p>[object Object]</p>",
+        "It will throw an error"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "<p>default</p>",
+        "difficulty": "medium",
+        "explanation": "Since there is no MyContext.Provider above MyComponent in the component tree, the Consumer will receive the default value 'default' that was passed to React.createContext(). Therefore, it will render <p>default</p>.",
+        "hint": "What happens when a Consumer is used without a Provider?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "How can you access context in a class component?",
+        "options": [
+        "Using this.useContext(MyContext)",
+        "Using a static contextType property",
+        "Only with HOCs, class components can't use context directly",
+        "By extending ContextComponent instead of React.Component"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using a static contextType property",
+        "difficulty": "medium",
+        "explanation": "In class components, you can access a single context by setting the static contextType property to the context you want to use. This allows you to access the context value using this.context within the component.",
+        "hint": "Class components have a special property to define which context they want to access."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What's the most efficient way to structure context for a large application with multiple domains of state?",
+        "options": [
+        "Create one large context for the entire application",
+        "Create separate contexts for different domains of state",
+        "Always use Redux instead of Context for large applications",
+        "Use Context for UI state and Redux for business logic"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Create separate contexts for different domains of state",
+        "difficulty": "medium",
+        "explanation": "For large applications, it's more efficient to create separate, smaller contexts for different domains of state (e.g., user context, theme context, etc.). This approach prevents unnecessary re-renders, as components will only re-render when the specific context they consume changes, not when any part of a large unified context changes.",
+        "hint": "Think about minimizing re-renders when only certain parts of the state change."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What is a common performance issue when using Context API?",
+        "options": [
+        "Context API is always slower than Redux",
+        "Context causes memory leaks",
+        "All components that consume a context re-render when the context value changes",
+        "Context API can't handle complex state objects"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "All components that consume a context re-render when the context value changes",
+        "difficulty": "medium",
+        "explanation": "A common performance issue with Context API is that all components that consume a particular context will re-render when the context value changes, even if they only use a portion of the context that didn't change. This can lead to unnecessary re-renders in large applications.",
+        "hint": "Consider what happens to consumer components when any part of a context value changes."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What's the best way to combine Context with state management for complex applications?",
+        "options": [
+        "Use useState inside the Provider and pass both state and setter functions in the context value",
+        "Context shouldn't be used for state management, only for static configuration",
+        "Always use useReducer with Context for complex state",
+        "Avoid Context entirely and use Redux for all state management"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Use useState inside the Provider and pass both state and setter functions in the context value",
+        "difficulty": "medium",
+        "explanation": "A common pattern is to create a Provider component that uses hooks like useState to manage state, then include both the state values and setter functions in the context value. This allows consumer components to both read from and update the shared state.",
+        "hint": "Think about how to make the context not just readable but also writable by consumers."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What's wrong with the following code?\n\n```jsx\nconst ThemeContext = React.createContext();\n\nfunction ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n  \n  return (\n    <ThemeContext.Provider value={theme}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n\nfunction ThemedButton() {\n  const theme = useContext(ThemeContext);\n  \n  return (\n    <button\n      style={{ background: theme === 'light' ? '#fff' : '#000' }}\n      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}\n    >\n      Toggle Theme\n    </button>\n  );\n}\n```",
+        "options": [
+        "The ThemeProvider should use useReducer instead of useState",
+        "The setTheme function isn't included in the context value",
+        "The useContext hook is used incorrectly",
+        "The ThemeContext shouldn't have a default value"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The setTheme function isn't included in the context value",
+        "difficulty": "medium",
+        "explanation": "The ThemedButton component tries to call setTheme, but this function isn't available in the context. The ThemeProvider only provides the theme value, not the setter function. To fix this, the Provider should include both in its value: value={{ theme, setTheme }}.",
+        "hint": "Look at what's provided in the context versus what's being used in the consumer component."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "When is it appropriate to use the Context API instead of prop drilling?",
+        "options": [
+        "Always, prop drilling should never be used",
+        "Only for global state like themes or user authentication",
+        "When props need to be passed through more than one level of components",
+        "When props need to be passed through three or more levels of components"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "When props need to be passed through three or more levels of components",
+        "difficulty": "hard",
+        "explanation": "While there's no hard rule, a common guideline is to consider using Context when props need to be passed through three or more levels of components. For just one or two levels, prop drilling is often simpler and doesn't introduce the complexity of Context.",
+        "hint": "Consider the trade-off between the complexity of Context setup versus the simplicity of direct props."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "How can you optimize performance when using Context with frequently changing values?",
+        "options": [
+        "Split your context into multiple contexts based on update frequency",
+        "Always use useMemo to memoize the context value",
+        "Context isn't suitable for frequently changing values",
+        "Use shouldComponentUpdate in class components"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Split your context into multiple contexts based on update frequency",
+        "difficulty": "hard",
+        "explanation": "A good strategy is to split your context into multiple, more focused contexts. For example, have one context for rarely changing values (like user info) and another for frequently changing values (like UI state). This prevents components that only need the stable data from re-rendering when the volatile data changes.",
+        "hint": "Think about how to minimize the scope of re-renders when certain parts of the state change."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What does the following code create?\n\n```jsx\nconst AuthContext = React.createContext();\n\nfunction useAuth() {\n  const context = useContext(AuthContext);\n  if (context === undefined) {\n    throw new Error('useAuth must be used within an AuthProvider');\n  }\n  return context;\n}\n\nfunction AuthProvider({ children }) {\n  const [user, setUser] = useState(null);\n  \n  const login = useCallback((username, password) => {\n    // Authentication logic\n    setUser({ username });\n  }, []);\n  \n  const logout = useCallback(() => {\n    setUser(null);\n  }, []);\n  \n  const value = { user, login, logout };\n  \n  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;\n}\n```",
+        "options": [
+        "A custom hook that provides authentication functionality",
+        "A higher-order component for authentication",
+        "A context provider with a custom hook to access it",
+        "A reducer for managing authentication state"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A context provider with a custom hook to access it",
+        "difficulty": "hard",
+        "explanation": "This code creates an authentication context (AuthContext), a provider component (AuthProvider) that manages authentication state, and a custom hook (useAuth) that provides a convenient way to access the authentication context. This pattern combines Context with custom hooks for a clean API.",
+        "hint": "Look at how the code combines multiple React patterns to create a reusable authentication solution."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What will happen if you call useContext multiple times for the same context in a component?",
+        "options": [
+        "It will create multiple subscriptions to the context",
+        "It will return the same value each time with no performance penalty",
+        "It will throw an error about duplicate context subscriptions",
+        "It will cause memory leaks"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It will return the same value each time with no performance penalty",
+        "difficulty": "medium",
+        "explanation": "Calling useContext multiple times for the same context in a component is fine. Each call will return the same current context value, and React optimizes this so there's no performance penalty for multiple calls to useContext with the same context.",
+        "hint": "Think about how React's hooks system handles multiple calls to the same hook."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "How can a class component consume multiple contexts?",
+        "options": [
+        "Using multiple static contextType properties",
+        "By extending multiple context classes",
+        "It can't; class components can only consume one context",
+        "By nesting Context.Consumer components"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "By nesting Context.Consumer components",
+        "difficulty": "hard",
+        "explanation": "While a class component can only have one static contextType, it can consume multiple contexts by nesting Context.Consumer components. Each Consumer uses a render prop pattern where you provide a function that receives the context value and returns JSX.",
+        "hint": "The static contextType approach only works for a single context in class components."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What pattern does the following code implement?\n\n```jsx\nconst TodosDispatchContext = React.createContext(null);\nconst TodosStateContext = React.createContext(null);\n\nfunction TodosProvider({ children }) {\n  const [todos, dispatch] = useReducer(todosReducer, []);\n  \n  return (\n    <TodosDispatchContext.Provider value={dispatch}>\n      <TodosStateContext.Provider value={todos}>\n        {children}\n      </TodosStateContext.Provider>\n    </TodosDispatchContext.Provider>\n  );\n}\n\nfunction useTodosState() {\n  return useContext(TodosStateContext);\n}\n\nfunction useTodosDispatch() {\n  return useContext(TodosDispatchContext);\n}\n```",
+        "options": [
+        "The Singleton pattern",
+        "The Observer pattern",
+        "The Context splitting pattern",
+        "The Factory pattern"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The Context splitting pattern",
+        "difficulty": "hard",
+        "explanation": "This code implements the 'Context splitting' pattern, where state and dispatch functions are separated into different contexts. Components can choose to consume only what they need (read-only state or dispatch functions), minimizing unnecessary re-renders. This is a recommended pattern from the React team for performance optimization.",
+        "hint": "This pattern divides a single logical context into separate pieces for more granular consumption."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What's wrong with the following code that attempts to update context values?\n\n```jsx\nconst CountContext = React.createContext(0);\n\nfunction CountDisplay() {\n  const count = useContext(CountContext);\n  return <div>Count: {count}</div>;\n}\n\nfunction CountButton() {\n  const count = useContext(CountContext);\n  \n  return (\n    <button onClick={() => count + 1}>\n      Increment\n    </button>\n  );\n}\n```",
+        "options": [
+        "The context value should be an object, not a primitive",
+        "The onClick handler doesn't actually update the context value",
+        "useContext is being used in too many components",
+        "CountContext needs a Provider wrapping these components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The onClick handler doesn't actually update the context value",
+        "difficulty": "medium",
+        "explanation": "The main issue is that the onClick handler in CountButton doesn't actually update the context value. It just calculates count + 1 but doesn't do anything with it. Context is read-only in consumer components; to update it, you need to include a setter function in the context value that the provider supplies.",
+        "hint": "Look at the onClick handler and what it actually does with the calculation."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "When would you use the Context.Consumer component instead of the useContext hook?",
+        "options": [
+        "When you need better performance",
+        "In class components or when using render props",
+        "When accessing multiple contexts",
+        "When you need to modify the context value"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "In class components or when using render props",
+        "difficulty": "medium",
+        "explanation": "Context.Consumer is primarily used in class components (that need to consume multiple contexts) or when you're using the render props pattern. For functional components, useContext is generally simpler and more concise.",
+        "hint": "Think about scenarios where hooks aren't available or render props are preferred."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What happens if you don't specify a value prop for Context.Provider?",
+        "options": [
+        "It uses the default value specified in createContext()",
+        "It sets the context value to undefined",
+        "It throws an error",
+        "It uses the previous value from the last render"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It sets the context value to undefined",
+        "difficulty": "medium",
+        "explanation": "If you don't specify a value prop for Context.Provider, it will pass undefined as the context value to consumers. The default value specified in createContext() is only used when a component tries to read the context but isn't wrapped in a Provider.",
+        "hint": "The default value from createContext() is only used in a specific scenario."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What's the recommended way to initialize state in a Context Provider?",
+        "options": [
+        "From localStorage or other persistent storage",
+        "Always use default values specified in the component",
+        "Accept initial values as props to the Provider component",
+        "Always initialize with empty/null values"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Accept initial values as props to the Provider component",
+        "difficulty": "hard",
+        "explanation": "The most flexible approach is to accept initial values as props to the Provider component. This makes the Provider component reusable and testable, as you can provide different initial values in different situations or tests.",
+        "hint": "Think about making the provider component configurable and reusable."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "Which technique is most effective for memoizing context values to prevent unnecessary re-renders?",
+        "options": [
+        "Using the useCallback hook on each value separately",
+        "Using the useMemo hook to memoize the entire value object",
+        "Storing values in useRef instead of useState",
+        "Wrapping the Provider component in React.memo"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using the useMemo hook to memoize the entire value object",
+        "difficulty": "hard",
+        "explanation": "The most effective approach is using useMemo to memoize the entire context value object. Because React context uses reference equality to determine when to re-render, creating a new object on every render (even with the same properties) will cause all consumers to re-render. useMemo ensures the object reference stays the same when dependencies haven't changed.",
+        "hint": "Context performs a reference comparison on values to determine when to update."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What happens in this scenario?\n\n```jsx\nconst ThemeContext = React.createContext('light');\n\nfunction App() {\n  return (\n    <ThemeContext.Provider value={'dark'}>\n      <ThemeContext.Provider value={'light'}>\n        <ThemedButton />\n      </ThemeContext.Provider>\n    </ThemeContext.Provider>\n  );\n}\n\nfunction ThemedButton() {\n  const theme = useContext(ThemeContext);\n  return <button className={theme}>Themed Button</button>;\n}\n```",
+        "options": [
+        "The button will have a 'dark' class",
+        "The button will have a 'light' class",
+        "The button will have both 'dark' and 'light' classes",
+        "It will throw an error about nested providers"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The button will have a 'light' class",
+        "difficulty": "hard",
+        "explanation": "When Context.Providers are nested, the innermost Provider's value takes precedence for components within its subtree. In this case, ThemedButton is within the scope of the inner Provider with value 'light', so it will use that value rather than 'dark' from the outer Provider.",
+        "hint": "Think about how nested providers affect the context value that a component receives."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What is the purpose of the following pattern?\n\n```jsx\nfunction MyProvider({ children }) {\n  const [state, dispatch] = useReducer(reducer, initialState);\n  \n  const contextValue = useMemo(() => {\n    return { state, dispatch };\n  }, [state, dispatch]);\n  \n  return (\n    <MyContext.Provider value={contextValue}>\n      {children}\n    </MyContext.Provider>\n  );\n}\n```",
+        "options": [
+        "To create a global Redux-like store",
+        "To optimize performance by preventing unnecessary re-renders",
+        "To combine useReducer with Context API",
+        "To provide type safety for the context value"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To optimize performance by preventing unnecessary re-renders",
+        "difficulty": "hard",
+        "explanation": "This pattern uses useMemo to memoize the context value object. Without this, a new object would be created on every render of the Provider component, causing all consumers to re-render even if the actual state and dispatch haven't changed. useMemo ensures the object reference stays stable between renders when dependencies haven't changed.",
+        "hint": "Consider what happens to the context value object between renders and how React determines when to update context consumers."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What's the key difference between React Context and Redux?",
+        "options": [
+        "Context is built into React while Redux is a third-party library",
+        "Context is for UI state while Redux is for business logic",
+        "Context provides a way to pass data through the component tree without props, while Redux implements a predictable state container",
+        "Context can only be used with functional components, while Redux works with both functional and class components"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Context provides a way to pass data through the component tree without props, while Redux implements a predictable state container",
+        "difficulty": "medium",
+        "explanation": "The fundamental difference is that Context is a mechanism for passing data down the component tree without props, while Redux is a complete state management solution with a single store, actions, reducers, and middleware. Context by itself doesn't provide state management, though it can be combined with hooks like useReducer to create state management solutions.",
+        "hint": "Think about what each technology was primarily designed to solve."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What will this code render?\n\n```jsx\nconst CountContext = React.createContext();\n\nfunction CountProvider({ children, initialCount = 0 }) {\n  const value = useState(initialCount);\n  return <CountContext.Provider value={value}>{children}</CountContext.Provider>;\n}\n\nfunction Counter() {\n  const [count, setCount] = useContext(CountContext);\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <CountProvider initialCount={10}>\n      <Counter />\n    </CountProvider>\n  );\n}\n```",
+        "options": [
+        "Count: 0 (ignoring the initialCount prop)",
+        "Count: 10 (using the initialCount prop)",
+        "Nothing, it will throw an error about null context",
+        "Nothing, it will throw an error about incorrect useContext usage"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Count: 10 (using the initialCount prop)",
+        "difficulty": "hard",
+        "explanation": "This code properly passes the entire result of useState (both the state value and setter function) as the context value. The Counter component destructures this array with useContext. Since the CountProvider is created with initialCount={10}, the initial count displayed will be 10.",
+        "hint": "Pay attention to how the state hook result is being passed through context and how initialCount is used."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "In a React application, when might you need both Context API and Redux?",
+        "options": [
+        "Never, they solve the same problem and should not be used together",
+        "For different parts of the application with different state management needs",
+        "Always, Context for UI state and Redux for business logic",
+        "Only in large enterprise applications"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "For different parts of the application with different state management needs",
+        "difficulty": "hard",
+        "explanation": "It's reasonable to use both Context API and Redux in the same application for different purposes. For example, you might use Context for UI themes, current user data, or localization, while using Redux for more complex business logic, API cache management, or when you need middleware for side effects. Each tool has strengths for different scenarios.",
+        "hint": "Consider that different parts of an application may have different state management requirements."
+    },  
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Context API",
+        "questionText": "What issue might you encounter when using Context with React's Concurrent Mode?",
+        "options": [
+          "Context isn't supported in Concurrent Mode",
+          "Context might cause more re-renders than expected due to tearing",
+          "Context values are not stable between renders in Concurrent Mode",
+          "You must use useTransition with all context updates"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Context might cause more re-renders than expected due to tearing",
+        "difficulty": "hard",
+        "explanation": "In Concurrent Mode, React might render a component multiple times with different priorities. If context values change during these renders, it can cause 'tearing' where parts of the UI show inconsistent states. To mitigate this, you can use techniques like memoization, batching updates, or external state management tools like Redux to ensure consistency.",
+        "hint": "Think about how React prioritizes renders in Concurrent Mode and how that affects shared state."
+    },
+    
+    
     // React Router
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "Which package is the main package for React Router?",
+        "options": ["react-routing", "react-router", "react-router-dom", "react-navigation"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "react-router-dom",
+        "difficulty": "easy",
+        "explanation": "The main package used for routing in web applications is 'react-router-dom', which provides DOM bindings for React Router.",
+        "hint": "This package provides DOM-specific components for React Router."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "Which component is used to define a route in React Router v6?",
+        "options": ["<Path>", "<Route>", "<Router>", "<Switch>"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "<Route>",
+        "difficulty": "easy",
+        "explanation": "The <Route> component is used to define a route in React Router v6, mapping a URL path to a specific component.",
+        "hint": "This component maps paths to components in React Router."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "In React Router v6, which component replaced <Switch> from v5?",
+        "options": ["<Path>", "<Routes>", "<Router>", "<Outlet>"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "<Routes>",
+        "difficulty": "medium",
+        "explanation": "In React Router v6, the <Routes> component replaced the <Switch> component from v5. It serves a similar purpose of matching routes but with improved capabilities.",
+        "hint": "This component provides a new way to define route matching in v6."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the purpose of the 'element' prop in React Router v6's <Route> component?",
+        "options": ["To specify the route path", "To specify the component to render", "To specify route parameters", "To handle route transitions"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To specify the component to render",
+        "difficulty": "easy",
+        "explanation": "The 'element' prop in React Router v6's <Route> component is used to specify the React element/component that should be rendered when the route matches.",
+        "hint": "This prop determines what content will be displayed when a route matches."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "Which hook is used to access route parameters in React Router v6?",
+        "options": ["useParams", "useRouteParams", "usePathParams", "useQueryParams"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "useParams",
+        "difficulty": "easy",
+        "explanation": "The useParams hook is used to access the parameters from the current route in React Router v6.",
+        "hint": "This hook lets you access dynamic segments in your route path."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the correct way to create a nested route in React Router v6?",
+        "options": [
+        "Use multiple <Router> components",
+        "Use the 'children' prop with <Route>",
+        "Use nested <Route> elements inside the parent <Route>",
+        "Use the 'nested' attribute"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use nested <Route> elements inside the parent <Route>",
+        "difficulty": "medium",
+        "explanation": "In React Router v6, nested routes are created by placing <Route> elements inside a parent <Route> element. This approach allows for creating hierarchical route structures.",
+        "hint": "This approach allows for hierarchical or parent-child routing relationships."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "Which component is used to render nested routes in React Router v6?",
+        "options": ["<Nested>", "<Outlet>", "<Children>", "<View>"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "<Outlet>",
+        "difficulty": "medium",
+        "explanation": "The <Outlet> component in React Router v6 is used as a placeholder where child routes will be rendered. It's essential for rendering nested routes.",
+        "hint": "This component acts as a placeholder for where child routes should render."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the purpose of the useNavigate hook in React Router v6?",
+        "options": [
+        "To handle browser navigation events",
+        "To access navigation history",
+        "To programmatically navigate between routes",
+        "To create custom navigation components"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To programmatically navigate between routes",
+        "difficulty": "medium",
+        "explanation": "The useNavigate hook in React Router v6 returns a function that lets you navigate programmatically, replacing the history.push method from earlier versions.",
+        "hint": "This hook provides a way to change routes from within your code rather than via user clicks."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the correct syntax for a route with URL parameters in React Router v6?",
+        "options": [
+        "<Route path='/user/:id' element={<UserProfile />} />",
+        "<Route path='/user/{id}' element={<UserProfile />} />",
+        "<Route path='/user/(id)' element={<UserProfile />} />",
+        "<Route path='/user/[id]' element={<UserProfile />} />"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "<Route path='/user/:id' element={<UserProfile />} />",
+        "difficulty": "easy",
+        "explanation": "In React Router, dynamic segments (URL parameters) are defined using a colon followed by the parameter name. The correct syntax is '/user/:id' where ':id' is the parameter.",
+        "hint": "URL parameters in React Router are prefixed with a specific character."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "Which component is used to create a link to another route in React Router?",
+        "options": ["<RouterLink>", "<Hyperlink>", "<Link>", "<NavLink>"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "<Link>",
+        "difficulty": "easy",
+        "explanation": "The <Link> component is used to create navigation links in React Router. It renders an <a> element but prevents the default page refresh behavior.",
+        "hint": "This component creates a standard navigation link without special styling features."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the difference between <Link> and <NavLink> in React Router?",
+        "options": [
+        "<NavLink> supports external URLs, <Link> doesn't",
+        "<NavLink> can apply active styles, <Link> cannot",
+        "<NavLink> supports nested routes, <Link> doesn't",
+        "<NavLink> performs server-side rendering, <Link> doesn't"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "<NavLink> can apply active styles, <Link> cannot",
+        "difficulty": "medium",
+        "explanation": "<NavLink> extends the functionality of <Link> by adding the ability to apply styling when the link's route is active. It automatically adds an 'active' class or can use the 'style' or 'className' props that accept functions.",
+        "hint": "One of these components has special features for styling the current/active route."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "How do you handle 404 (Not Found) routes in React Router v6?",
+        "options": [
+        "Use <Route path='/404' element={<NotFound />} />",
+        "Use <NotFound /> component outside the <Routes>",
+        "Use <Route path='*' element={<NotFound />} />",
+        "Set notFound attribute on <Routes>"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use <Route path='*' element={<NotFound />} />",
+        "difficulty": "medium",
+        "explanation": "In React Router v6, you can create a catch-all route using the asterisk (*) path. This route will match any URL that doesn't match any of the previous routes, making it perfect for 404 pages.",
+        "hint": "You need a special wildcard route that captures any unmatched paths."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What React Router hook would you use to access the current location object?",
+        "options": ["useRoute", "useLocation", "useHistory", "usePath"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "useLocation",
+        "difficulty": "medium",
+        "explanation": "The useLocation hook returns the current location object, which contains information about the current URL like pathname, search, and hash properties.",
+        "hint": "This hook gives you access to details about the current URL the user is viewing."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "How would you implement a redirect in React Router v6?",
+        "options": [
+        "<Redirect to='/login' />",
+        "<Route path='/old-path' redirect='/new-path' />",
+        "Use the Navigate component: <Navigate to='/login' />",
+        "Use the Redirect component with element prop"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use the Navigate component: <Navigate to='/login' />",
+        "difficulty": "medium",
+        "explanation": "In React Router v6, the <Navigate> component replaces the <Redirect> component from v5. You can use it to declaratively navigate to a new location.",
+        "hint": "React Router v6 introduced a new component for declarative redirects."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What does the following code do in React Router v6?\n```jsx\n<Routes>\n  <Route path='/' element={<Layout />}>\n    <Route index element={<Home />} />\n    <Route path='about' element={<About />} />\n  </Route>\n</Routes>\n```",
+        "options": [
+        "Creates two separate routes at '/' and '/about'",
+        "Creates nested routes with Layout as the parent and Home and About as children",
+        "Creates a layout that applies only to the Home component",
+        "This is invalid syntax in React Router v6"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creates nested routes with Layout as the parent and Home and About as children",
+        "difficulty": "medium",
+        "explanation": "This code creates a nested route structure. The Layout component will be rendered for both '/' and '/about' paths, and either Home or About will be rendered inside Layout where the <Outlet> component is placed.",
+        "hint": "Think about how parent-child relationships work in React Router v6."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What does the 'index' attribute do in a <Route> component?",
+        "options": [
+        "Sets the order of routes to be matched",
+        "Indicates it's the first route in the router",
+        "Makes it the default route for the parent's path",
+        "Sets the component as a higher priority"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Makes it the default route for the parent's path",
+        "difficulty": "medium",
+        "explanation": "The 'index' prop indicates that this route should match when the parent's path matches exactly. It acts as the default child route that renders when no other child routes match.",
+        "hint": "This attribute helps determine what to show at a parent's exact path."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "Which hook would you use to access URL search parameters (query string) in React Router v6?",
+        "options": ["useQueryParams", "useSearchParams", "useURLParams", "useQueryString"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "useSearchParams",
+        "difficulty": "medium",
+        "explanation": "The useSearchParams hook in React Router v6 returns an array with two items: the current search parameters and a function to update them. It works similarly to React's useState hook.",
+        "hint": "This hook gives you access to the part of the URL after the '?' character."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the purpose of the 'replace' prop in the <Navigate> component?",
+        "options": [
+        "To replace the content with new elements",
+        "To replace the current URL in the history stack instead of adding a new one",
+        "To replace the component with a different one",
+        "To replace all child routes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To replace the current URL in the history stack instead of adding a new one",
+        "difficulty": "hard",
+        "explanation": "The 'replace' prop in the <Navigate> component determines whether the navigation should replace the current entry in the history stack (true) or add a new one (false, default). Using replace=true means the user can't use the browser's back button to return to the current page.",
+        "hint": "This prop affects how browser history behaves after navigation."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the role of the <BrowserRouter> component in React Router?",
+        "options": [
+        "To enable browser-specific features",
+        "To store the history of visited routes",
+        "To use the HTML5 history API for clean URLs",
+        "To add browser compatibility for older browsers"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To use the HTML5 history API for clean URLs",
+        "difficulty": "medium",
+        "explanation": "The <BrowserRouter> component uses the HTML5 history API (pushState, replaceState, and popstate event) to keep the UI in sync with the URL. It creates clean URLs without the hash (#) character.",
+        "hint": "This router type uses modern browser capabilities to create standard-looking URLs."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What's the main difference between <BrowserRouter> and <HashRouter>?",
+        "options": [
+        "<HashRouter> supports more browsers than <BrowserRouter>",
+        "<BrowserRouter> uses HTML5 history API while <HashRouter> uses URL hash",
+        "<HashRouter> supports server-side rendering while <BrowserRouter> doesn't",
+        "<BrowserRouter> is faster than <HashRouter>"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "<BrowserRouter> uses HTML5 history API while <HashRouter> uses URL hash",
+        "difficulty": "medium",
+        "explanation": "<BrowserRouter> uses the HTML5 history API for clean URLs (like '/about'), while <HashRouter> uses the hash portion of the URL (like '/#/about'). <HashRouter> is useful for older browsers or static file servers that don't configure server-side routing.",
+        "hint": "Look at the URL format each router type produces."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the correct way to pass state to a new route when using the useNavigate hook?",
+        "options": [
+        "navigate('/profile', { withState: { id: 123 } })",
+        "navigate('/profile?id=123')",
+        "navigate('/profile', { state: { id: 123 } })",
+        "navigate.withState('/profile', { id: 123 })"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "navigate('/profile', { state: { id: 123 } })",
+        "difficulty": "hard",
+        "explanation": "When using the useNavigate hook, you can pass state to the new route by providing a state object in the second parameter. This state can then be accessed in the target component using the useLocation hook.",
+        "hint": "The navigate function accepts an options object as its second parameter."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the primary use of the 'exact' prop in React Router v5 and what replaced it in v6?",
+        "options": [
+        "It was used for exact path matching; in v6 all paths match exactly by default",
+        "It was used for case-sensitive matching; in v6 use the 'sensitive' prop",
+        "It was used for strict path matching; in v6 use the 'strict' prop",
+        "It was used for exact component matching; in v6 use the 'exact' attribute"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "It was used for exact path matching; in v6 all paths match exactly by default",
+        "difficulty": "hard",
+        "explanation": "In React Router v5, the 'exact' prop was used to ensure that a route would only match if the path matched exactly. In v6, this behavior is the default, so the 'exact' prop was removed. Routes in v6 match exactly unless you add a * at the end of the path.",
+        "hint": "Think about the default matching behavior change between versions."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the purpose of the useRoutes hook in React Router v6?",
+        "options": [
+        "To dynamically generate routes based on user permissions",
+        "To create routes from an object-based configuration instead of JSX",
+        "To monitor route changes for analytics",
+        "To handle route transitions and animations"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To create routes from an object-based configuration instead of JSX",
+        "difficulty": "hard",
+        "explanation": "The useRoutes hook in React Router v6 allows developers to define routes using JavaScript objects instead of JSX. This can be useful for applications that need to generate routes dynamically or from an external configuration.",
+        "hint": "This hook provides an alternative to using JSX for defining routes."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "In React Router v6, what happens when you navigate to the same route with different parameters?",
+        "options": [
+        "The component won't re-render by default",
+        "The component will always re-render completely",
+        "A navigation error will be thrown",
+        "The router will prevent the navigation"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The component won't re-render by default",
+        "difficulty": "hard",
+        "explanation": "In React Router v6, when navigating to the same route with different parameters, the component won't re-render by default. You need to use the useParams hook and include it in your component's dependency array to detect parameter changes.",
+        "hint": "Consider the component lifecycle when route parameters change."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What does the following code accomplish in React Router v6?\n```jsx\nconst element = useRouteError();\nconsole.error(element);\n```",
+        "options": [
+        "Logs navigation errors to the console",
+        "Captures and logs errors from a route error boundary",
+        "Identifies invalid route configurations",
+        "Logs errors when route parameters are invalid"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Captures and logs errors from a route error boundary",
+        "difficulty": "hard",
+        "explanation": "This code uses the useRouteError hook, which is part of React Router v6's error handling system. When used within an errorElement, it retrieves the error that was thrown during rendering, data loading, or navigation. This allows for centralized error handling in routing.",
+        "hint": "This relates to React Router's way of handling errors that occur during routing."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "Which feature is used to prefetch routes for better performance in React Router?",
+        "options": ["<Prefetch>", "<Suspense>", "<Link prefetch>", "useLoader"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "<Link prefetch>",
+        "difficulty": "hard",
+        "explanation": "In React Router, you can improve performance by prefetching routes with the 'prefetch' attribute on <Link> components. This will fetch the necessary data and components before the user actually clicks the link, making navigation feel instantaneous.",
+        "hint": "This optimizes performance by loading route data before a user navigates to it."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the purpose of the 'loader' function in React Router v6.4+?",
+        "options": [
+        "To show loading indicators during navigation",
+        "To load static assets for a route",
+        "To fetch data before a route component renders",
+        "To load route components lazily"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To fetch data before a route component renders",
+        "difficulty": "hard",
+        "explanation": "Introduced in React Router v6.4, the 'loader' function allows you to load data for a route before its component renders. This creates a better user experience by ensuring all necessary data is available when the component mounts, rather than showing loading states after navigation.",
+        "hint": "This feature helps avoid the need for loading states within components."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "Which hook would you use to access data returned by a route's loader function?",
+        "options": ["useLoaderData", "useRouteData", "useLoadedData", "useData"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "useLoaderData",
+        "difficulty": "hard",
+        "explanation": "The useLoaderData hook is used to access the data returned by the current route's loader function. This hook is a key part of the data loading features introduced in React Router v6.4 and later.",
+        "hint": "This hook lets components access data that was loaded before they rendered."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the purpose of the 'action' function in React Router v6.4+?",
+        "options": [
+        "To define animations between route transitions",
+        "To handle form submissions and data mutations",
+        "To execute actions when a route is about to unmount",
+        "To define custom route behaviors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To handle form submissions and data mutations",
+        "difficulty": "hard",
+        "explanation": "The 'action' function in React Router v6.4+ is used to handle form submissions and data mutations. When a form is submitted to a route with an action, the action function receives the form data and can perform mutations like creating, updating, or deleting resources.",
+        "hint": "This feature is primarily used with forms to modify data on the server."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Router",
+        "questionText": "What is the purpose of the useSubmit hook in React Router v6.4+?",
+        "options": [
+        "To handle form submissions programmatically",
+        "To submit data to an API endpoint",
+        "To validate form inputs before submission",
+        "To submit route changes to a state management system"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To handle form submissions programmatically",
+        "difficulty": "hard",
+        "explanation": "The useSubmit hook in React Router v6.4+ returns a function that lets you programmatically submit a form to a route action. This is useful when you want to trigger a form submission from a button click or other event that's outside the form itself.",
+        "hint": "This hook gives you a way to trigger form submissions without a user clicking a submit button."
+    },
 
     // Forms & Validation
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What are the two main types of form components in React?",
+        "options": ["Static and Dynamic", "Input and Output", "Controlled and Uncontrolled", "Simple and Complex"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Controlled and Uncontrolled",
+        "difficulty": "easy",
+        "explanation": "React forms can be either controlled (where form data is handled by React state) or uncontrolled (where form data is handled by the DOM itself).",
+        "hint": "Think about who manages the form data - React or the DOM."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "In a controlled component, what is required to update the input's value?",
+        "options": ["A ref", "An onChange handler", "A useEffect hook", "A form action"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An onChange handler",
+        "difficulty": "easy",
+        "explanation": "In controlled components, you need to implement an onChange handler to update the state that stores the input value. Without this, the input will appear to be read-only.",
+        "hint": "This handler is needed to update the state when a user types."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the primary difference between a controlled and uncontrolled input?",
+        "options": [
+        "Controlled inputs can be styled, uncontrolled ones cannot",
+        "Controlled inputs store values in React state, uncontrolled inputs store values in the DOM",
+        "Controlled inputs are faster than uncontrolled inputs",
+        "Uncontrolled inputs work only with class components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Controlled inputs store values in React state, uncontrolled inputs store values in the DOM",
+        "difficulty": "easy",
+        "explanation": "The key difference is where the form data lives. In controlled components, React state is the 'single source of truth'. In uncontrolled components, the DOM itself maintains the form data.",
+        "hint": "Think about where the input's value is stored and managed."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "How do you access the value of an uncontrolled input in React?",
+        "options": [
+        "Using the useState hook",
+        "Using React.createState()",
+        "Using a ref with useRef()",
+        "Using document.getElementById()"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using a ref with useRef()",
+        "difficulty": "easy",
+        "explanation": "In uncontrolled components, you can access input values using React refs. Create a ref with useRef() and attach it to the input element to access its value when needed.",
+        "hint": "This React feature lets you directly access DOM elements."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the correct way to handle a form submission in React?",
+        "options": [
+        "Always use the form's action attribute",
+        "Add an onSubmit handler to the form and call event.preventDefault()",
+        "Let the browser handle it by default",
+        "Use window.submit() method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Add an onSubmit handler to the form and call event.preventDefault()",
+        "difficulty": "easy",
+        "explanation": "In React, you typically handle form submissions by attaching an onSubmit handler to the form element and calling event.preventDefault() to prevent the default browser behavior of page reload.",
+        "hint": "You need to prevent the default browser behavior and handle the submission programmatically."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What does the following code accomplish?\n```jsx\nconst [value, setValue] = useState('');\n\nreturn (\n  <input \n    value={value} \n    onChange={(e) => setValue(e.target.value)}\n  />\n);\n```",
+        "options": [
+        "Creates an uncontrolled input",
+        "Creates a controlled input",
+        "Creates a read-only input",
+        "Creates a form validation system"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creates a controlled input",
+        "difficulty": "easy",
+        "explanation": "This code creates a controlled input. The input's value is controlled by React state (value), and it's updated using the setValue function in the onChange handler.",
+        "hint": "Look at how the input's value is managed and updated."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the default behavior when a form is submitted in a browser?",
+        "options": [
+        "The form data is cleared",
+        "Nothing happens without JavaScript",
+        "The page reloads and form data is sent to the action URL",
+        "A validation error is shown"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The page reloads and form data is sent to the action URL",
+        "difficulty": "easy",
+        "explanation": "By default, when a form is submitted, the browser will reload the page and send the form data to the URL specified in the action attribute (or the current URL if no action is specified).",
+        "hint": "This is the standard HTML form behavior that React form handling often needs to override."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "How do you set a default value for an uncontrolled input in React?",
+        "options": [
+        "Use the defaultValue prop",
+        "Use the initialValue prop",
+        "Use the value prop",
+        "Set it in useState()"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Use the defaultValue prop",
+        "difficulty": "medium",
+        "explanation": "For uncontrolled inputs in React, you can set an initial value using the defaultValue prop. This sets the initial value once but allows the input to be modified without React intervention afterward.",
+        "hint": "This prop sets the initial value without making the input controlled."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the equivalent of defaultValue for checkboxes and radio buttons?",
+        "options": ["defaultState", "defaultChecked", "initialChecked", "checkedValue"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "defaultChecked",
+        "difficulty": "medium",
+        "explanation": "For checkboxes and radio buttons, the defaultChecked prop is used to set the initial checked state in uncontrolled components, similar to how defaultValue works for text inputs.",
+        "hint": "This prop is specific to input elements that can be checked or unchecked."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the best way to handle multiple input fields in a form?",
+        "options": [
+        "Create a separate state variable for each input",
+        "Use one state object with properties for each input",
+        "Always use uncontrolled components with refs",
+        "Use the DOM API directly"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use one state object with properties for each input",
+        "difficulty": "medium",
+        "explanation": "For forms with multiple inputs, using a single state object with properties corresponding to each input field is more maintainable. This approach scales better and keeps related form data grouped together.",
+        "hint": "This approach keeps all form data in one place and is easier to manage as forms grow in complexity."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What does the following code accomplish?\n```jsx\nconst handleChange = (e) => {\n  setFormData({\n    ...formData,\n    [e.target.name]: e.target.value\n  });\n};\n```",
+        "options": [
+        "Creates a new form element",
+        "Handles multiple input changes using a single handler",
+        "Validates form input",
+        "Submits form data to a server"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Handles multiple input changes using a single handler",
+        "difficulty": "medium",
+        "explanation": "This code creates a single change handler that can update multiple form fields in a state object. It uses the input's 'name' attribute to determine which property in the state object to update, making it reusable across many inputs.",
+        "hint": "This pattern is commonly used to avoid writing separate handlers for each input field."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the purpose of form validation in React applications?",
+        "options": [
+        "To prevent users from submitting forms",
+        "To ensure the backend receives correct data formats",
+        "To provide users feedback on input errors before submission",
+        "To improve performance of React applications"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To provide users feedback on input errors before submission",
+        "difficulty": "medium",
+        "explanation": "Form validation in React applications is primarily used to provide immediate feedback to users about input errors before they submit the form. This improves user experience and reduces server load by catching errors early.",
+        "hint": "Think about the user experience when entering data into forms."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "When is client-side validation insufficient for form data?",
+        "options": [
+        "When using controlled components",
+        "When the form has more than five fields",
+        "For security-sensitive operations or data that must be verified on the server",
+        "When using the useState hook"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "For security-sensitive operations or data that must be verified on the server",
+        "difficulty": "medium",
+        "explanation": "Client-side validation improves user experience but can be bypassed. For security-sensitive operations (like authentication) or data that requires server verification (like checking if a username exists), server-side validation is essential.",
+        "hint": "Consider cases where validation is related to security or requires server-side data."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the most basic approach to implement form validation in React?",
+        "options": [
+        "Using HTML5 built-in validation attributes",
+        "Always use a validation library",
+        "Server-side validation only",
+        "Use React.createValidator()"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using HTML5 built-in validation attributes",
+        "difficulty": "medium",
+        "explanation": "The most basic approach to form validation in React is using HTML5 built-in validation attributes like required, minlength, max, pattern, etc. These provide simple validation with minimal code.",
+        "hint": "This approach uses standard HTML features rather than React-specific code."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is a disadvantage of using HTML5 validation attributes for form validation?",
+        "options": [
+        "They're not supported in modern browsers",
+        "Limited customization of error messages and validation behavior",
+        "They require JavaScript to function",
+        "They make forms slower to render"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Limited customization of error messages and validation behavior",
+        "difficulty": "medium",
+        "explanation": "While HTML5 validation attributes are easy to use, they offer limited customization options for error messages and validation behavior. Custom validations, complex rules, and personalized error messages often require JavaScript-based validation approaches.",
+        "hint": "Consider how much control you have over the user experience with built-in HTML validation."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the purpose of the 'touched' state in form validation?",
+        "options": [
+        "To track if the user has physically touched the screen",
+        "To track if the user has visited/interacted with a field",
+        "To track if a field has been validated",
+        "To track if a field contains valid data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To track if the user has visited/interacted with a field",
+        "difficulty": "medium",
+        "explanation": "The 'touched' state tracks whether a user has interacted with a form field. This is commonly used to avoid showing validation errors before the user has had a chance to interact with the field, providing a better user experience.",
+        "hint": "This helps determine when to start showing validation errors to users."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "In a custom validation implementation, when is the best time to show validation errors to users?",
+        "options": [
+        "As soon as the form loads",
+        "Only after form submission is attempted",
+        "After a field loses focus (onBlur) or submission is attempted",
+        "Only when explicitly requested by the user"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "After a field loses focus (onBlur) or submission is attempted",
+        "difficulty": "medium",
+        "explanation": "Showing validation errors after a field loses focus (onBlur) or when submission is attempted provides the best user experience. This approach doesn't interrupt users while they're typing but still provides timely feedback.",
+        "hint": "Consider when feedback would be most helpful without being intrusive."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What does the following code accomplish?\n```jsx\nconst validateEmail = (email) => {\n  const re = /^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$/;\n  return re.test(email);\n};\n```",
+        "options": [
+        "Sends an email to the user",
+        "Validates if a string is a properly formatted email address",
+        "Creates an email subscription",
+        "Encrypts email data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Validates if a string is a properly formatted email address",
+        "difficulty": "medium",
+        "explanation": "This code defines a function that uses a regular expression to validate if a string matches the pattern of a properly formatted email address. It returns true if the email is valid and false otherwise.",
+        "hint": "The function uses a regex pattern to check the format of the input string."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What popular form libraries are commonly used with React?",
+        "options": [
+        "React-Form and Redux-Form",
+        "Formik and React Hook Form",
+        "Angular Forms and React Forms",
+        "Vue-Form and React-Validate"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Formik and React Hook Form",
+        "difficulty": "medium",
+        "explanation": "Formik and React Hook Form are two of the most popular form libraries used with React. They provide solutions for managing form state, validation, error messages, and form submission with less boilerplate code.",
+        "hint": "These libraries help reduce the amount of code needed to handle forms in React."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What are the main benefits of using a form library like Formik?",
+        "options": [
+        "It makes forms look better visually",
+        "It automatically connects to databases",
+        "It helps manage form state, validation, error handling, and submission with less code",
+        "It's required for React forms to work"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "It helps manage form state, validation, error handling, and submission with less code",
+        "difficulty": "medium",
+        "explanation": "Form libraries like Formik reduce boilerplate code by providing utilities to manage form state, handle validation logic, track field touches, display error messages, and manage form submission - all common tasks that would otherwise require repetitive code.",
+        "hint": "Think about what tasks are repetitive when working with forms and how a library might simplify them."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "How does React Hook Form differ from other form libraries like Formik?",
+        "options": [
+        "It only works with functional components",
+        "It uses uncontrolled components by default for better performance",
+        "It requires TypeScript",
+        "It's maintained by the React team"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It uses uncontrolled components by default for better performance",
+        "difficulty": "hard",
+        "explanation": "React Hook Form primarily uses uncontrolled components with refs by default, which reduces the number of re-renders and can improve performance. This is different from Formik which uses controlled components by default.",
+        "hint": "Think about the approach to managing input values and how that affects rendering."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is Yup commonly used for in React form implementations?",
+        "options": [
+        "State management",
+        "Form submission handling",
+        "Schema-based form validation",
+        "UI component styling"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Schema-based form validation",
+        "difficulty": "hard",
+        "explanation": "Yup is a JavaScript schema builder for value parsing and validation. It's commonly used with form libraries like Formik to create validation schemas that define the shape and validation rules for form data.",
+        "hint": "This library helps define the expected shape and rules for your data."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What does the following Yup validation schema check for?\n```jsx\nconst schema = Yup.object().shape({\n  username: Yup.string()\n    .min(3, 'Username must be at least 3 characters')\n    .required('Username is required'),\n  password: Yup.string()\n    .min(8, 'Password must be at least 8 characters')\n    .matches(/[0-9]/, 'Password must contain at least one number')\n    .required('Password is required')\n});\n```",
+        "options": [
+        "It validates that usernames are unique and passwords are secure",
+        "It checks for required fields only",
+        "It validates username length (min 3) and password length (min 8) with a number requirement",
+        "It only checks that the fields exist in the submitted data"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "It validates username length (min 3) and password length (min 8) with a number requirement",
+        "difficulty": "hard",
+        "explanation": "This Yup schema validates that: 1) username is a string with at least 3 characters and is required, 2) password is a string with at least 8 characters, contains at least one number (via regex), and is required. It also provides custom error messages for each validation case.",
+        "hint": "Analyze each constraint defined in the schema and what it checks for."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "In Formik, what is the purpose of the <ErrorMessage> component?",
+        "options": [
+        "To log errors to the console",
+        "To display validation error messages for specific fields",
+        "To handle form submission errors",
+        "To catch and handle JavaScript errors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To display validation error messages for specific fields",
+        "difficulty": "hard",
+        "explanation": "In Formik, the <ErrorMessage> component is used to easily display validation error messages for specific form fields. It automatically connects to Formik's context to access errors for the specified field name.",
+        "hint": "This component helps render field-specific validation messages from Formik's state."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the purpose of the 'setFieldTouched' function in Formik?",
+        "options": [
+        "To mark a field as modified",
+        "To mark a field as visited by the user",
+        "To set a field's validation status",
+        "To trigger field re-rendering"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To mark a field as visited by the user",
+        "difficulty": "hard",
+        "explanation": "The 'setFieldTouched' function in Formik is used to manually mark a field as 'touched' (visited by the user). This is useful for custom input components or manually triggering validation after a user interaction like blur (onBlur).",
+        "hint": "This relates to tracking user interaction with fields to control when validation feedback appears."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the primary advantage of using the 'useField' hook in Formik?",
+        "options": [
+        "It creates new form fields programmatically",
+        "It simplifies connecting custom input components to Formik",
+        "It enables field-level validation only",
+        "It improves form rendering performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It simplifies connecting custom input components to Formik",
+        "difficulty": "hard",
+        "explanation": "The 'useField' hook in Formik simplifies the process of connecting custom input components to Formik. It returns field props, meta information (like errors, touched status), and helper functions in one call, making it easier to create reusable form components.",
+        "hint": "This hook helps create custom form controls that work seamlessly with Formik."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What does the 'register' function do in React Hook Form?",
+        "options": [
+        "Creates a new form instance",
+        "Adds a field to the form for validation and state tracking",
+        "Registers the form with a backend service",
+        "Creates form validation rules"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Adds a field to the form for validation and state tracking",
+        "difficulty": "hard",
+        "explanation": "The 'register' function in React Hook Form is used to register an input with the form. It returns props that should be spread on the input element, connecting it to the form's validation and state management system.",
+        "hint": "This is how inputs become 'known' to React Hook Form for tracking and validation."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What does this React Hook Form code accomplish?\n```jsx\nconst { register, handleSubmit, formState: { errors } } = useForm();\n\nconst onSubmit = data => console.log(data);\n\nreturn (\n  <form onSubmit={handleSubmit(onSubmit)}>\n    <input {...register('name', { required: 'Name is required' })} />\n    {errors.name && <p>{errors.name.message}</p>}\n    <button type='submit'>Submit</button>\n  </form>\n);\n```",
+        "options": [
+        "Creates an uncontrolled form with no validation",
+        "Creates a form where 'name' is required with error display",
+        "Submits form data to a server automatically",
+        "Validates that the name input contains alphabetic characters only"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creates a form where 'name' is required with error display",
+        "difficulty": "hard",
+        "explanation": "This code sets up a form using React Hook Form where: 1) The 'name' field is registered with validation requiring it to be filled in, 2) Error messages are displayed if validation fails, 3) When submitted, the form data is logged to the console via the onSubmit function.",
+        "hint": "Look at how the input is registered and what validation rules are applied."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What is the purpose of the 'resetForm' function in Formik?",
+        "options": [
+        "To refresh the page and start over",
+        "To reset all form fields to their initial values",
+        "To clear only validation errors",
+        "To reset the form's submission status"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To reset all form fields to their initial values",
+        "difficulty": "hard",
+        "explanation": "The 'resetForm' function in Formik resets the form state back to its initial values. This includes clearing all current values, errors, touched fields, and submission status. It's commonly used after successful form submission.",
+        "hint": "This function is often used after form submission completes to prepare for new input."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "How can you implement conditional validation in React forms?",
+        "options": [
+        "It's not possible; all validations must be static",
+        "By using if/else statements inside validation functions",
+        "By using the conditional() method in validation libraries",
+        "Only by using external validation services"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "By using if/else statements inside validation functions",
+        "difficulty": "hard",
+        "explanation": "Conditional validation can be implemented using if/else or other conditional logic inside validation functions. This allows you to apply different validation rules based on the values of other fields or application state.",
+        "hint": "Think about how JavaScript logic can be used within validation functions."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Forms & Validation",
+        "questionText": "What approach would you use to validate a password confirmation field should match the password field?",
+        "options": [
+        "Use the HTML5 'match' attribute",
+        "This can only be validated on the server",
+        "Compare the values in a custom validation function",
+        "Use the built-in 'sameAs' validator"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Compare the values in a custom validation function",
+        "difficulty": "hard",
+        "explanation": "To validate that a password confirmation field matches the password field, you would create a custom validation function that compares the two values. This can be done by accessing both field values and checking if they're equal.",
+        "hint": "This requires access to multiple field values during validation."
+    },
 
     // API Integration
 
