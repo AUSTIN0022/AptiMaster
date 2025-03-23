@@ -1376,8 +1376,927 @@ const reactJSQ = [
     },
 
     // React Hooks
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What are React Hooks?",
+        "options": [
+        "Classes that let you use state in functional components",
+        "Functions that let you use React features in functional components",
+        "Components that can be reused across different parts of the application",
+        "Methods to optimize rendering performance in React"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Functions that let you use React features in functional components",
+        "difficulty": "easy",
+        "explanation": "React Hooks are functions that let you 'hook into' React state and lifecycle features from function components. They allow you to use state and other React features without writing a class.",
+        "hint": "Think about what Hooks enable you to do in functional components that was previously only possible in class components."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "Which of the following is NOT a built-in React Hook?",
+        "options": [
+        "useEffect",
+        "useState",
+        "useDispatch",
+        "useContext"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "useDispatch",
+        "difficulty": "easy",
+        "explanation": "useDispatch is not a built-in React Hook; it's a Hook provided by the Redux library (specifically, react-redux). useState, useEffect, and useContext are all built-in React Hooks.",
+        "hint": "Which option is provided by a third-party library rather than React itself?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What does the useState Hook return?",
+        "options": [
+        "The current state value only",
+        "A function to update the state only",
+        "An array with the current state value and a function to update it",
+        "An object with the current state value and a function to update it"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "An array with the current state value and a function to update it",
+        "difficulty": "easy",
+        "explanation": "The useState Hook returns an array with exactly two elements: the current state value and a function to update that state. This is why array destructuring is commonly used with useState.",
+        "hint": "Think about how you typically use useState in a component and what you get from it."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the purpose of the dependency array in useEffect?",
+        "options": [
+        "To specify when the component should re-render",
+        "To determine when the effect should be re-run",
+        "To list the states that can be modified by the effect",
+        "To optimize memory usage in React applications"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To determine when the effect should be re-run",
+        "difficulty": "easy",
+        "explanation": "The dependency array in useEffect is used to control when the effect function should be re-executed. The effect will only run if one of the values in the dependency array has changed since the last render.",
+        "hint": "What happens to the effect function when a value in the dependency array changes?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What will happen if you don't provide a dependency array to useEffect?",
+        "options": [
+        "The effect will run once when the component mounts",
+        "The effect will never run",
+        "The effect will run after every render",
+        "React will throw an error"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The effect will run after every render",
+        "difficulty": "medium",
+        "explanation": "When no dependency array is provided to useEffect, the effect function will run after every render of the component. This includes the initial render and all subsequent re-renders.",
+        "hint": "Consider the different behaviors of useEffect with different dependency array configurations."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What does the useRef Hook return?",
+        "options": [
+        "A primitive value that persists across renders",
+        "A mutable object with a 'current' property",
+        "A function to update a reference",
+        "An array with the current reference and a setter function"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A mutable object with a 'current' property",
+        "difficulty": "medium",
+        "explanation": "useRef returns a mutable object with a 'current' property. This object persists for the full lifetime of the component, and changing the 'current' property doesn't cause a re-render.",
+        "hint": "Think about the structure of what useRef returns and how you access the stored value."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the main difference between useState and useRef?",
+        "options": [
+        "useState can store objects, useRef cannot",
+        "useRef values persist between renders, useState values don't",
+        "Changes to useState trigger re-renders, changes to useRef don't",
+        "useRef can only be used for DOM references"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Changes to useState trigger re-renders, changes to useRef don't",
+        "difficulty": "medium",
+        "explanation": "The main difference is that updates to a useState value trigger component re-renders, while changes to a useRef's current property don't cause the component to re-render. Both can persist values between renders.",
+        "hint": "Consider what happens to the component when each type of value is changed."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the purpose of the useContext Hook?",
+        "options": [
+        "To create a new context object",
+        "To provide context values to child components",
+        "To subscribe to a context and access its value",
+        "To manage global state in a React application"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To subscribe to a context and access its value",
+        "difficulty": "medium",
+        "explanation": "The useContext Hook is used to subscribe to a React context and access its current value. It accepts a context object (created by React.createContext) and returns the current context value for that context.",
+        "hint": "Think about what useContext allows a component to do with an existing context."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "When using the useReducer Hook, what parameters does it accept?",
+        "options": [
+        "A reducer function and an initial state",
+        "A reducer function, an initial state, and a middleware function",
+        "A reducer function, an initial state, and optionally an init function",
+        "A reducer function and a context object"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A reducer function, an initial state, and optionally an init function",
+        "difficulty": "medium",
+        "explanation": "useReducer accepts a reducer function, an initial state, and optionally a third function (the 'init' function) that can be used to lazily initialize the state, which is useful for complex state initialization logic.",
+        "hint": "What are all the possible parameters that can be passed to useReducer?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What does the useReducer Hook return?",
+        "options": [
+        "The current state only",
+        "The dispatch function only",
+        "An array containing the current state and the dispatch function",
+        "An object containing the current state and the dispatch function"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "An array containing the current state and the dispatch function",
+        "difficulty": "medium",
+        "explanation": "The useReducer Hook returns an array with exactly two elements: the current state and the dispatch function. The dispatch function is used to trigger state updates by sending actions to the reducer.",
+        "hint": "What do you get back when you call useReducer that allows you to both access and update state?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What does the useMemo Hook do?",
+        "options": [
+        "Caches a function definition between renders",
+        "Memoizes a computed value to avoid recalculation on every render",
+        "Creates a mutable reference that persists through renders",
+        "Triggers side effects in function components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Memoizes a computed value to avoid recalculation on every render",
+        "difficulty": "medium",
+        "explanation": "useMemo memoizes (caches) the result of a computation between renders. It only recomputes the cached value when one of the dependencies has changed, optimizing performance by avoiding unnecessary calculations.",
+        "hint": "What performance optimization does useMemo provide when you have expensive calculations in your component?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the purpose of the useCallback Hook?",
+        "options": [
+        "To create a callback function that persists between renders",
+        "To execute a callback after every render",
+        "To create callback references to DOM elements",
+        "To handle asynchronous operations in React"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To create a callback function that persists between renders",
+        "difficulty": "medium",
+        "explanation": "useCallback returns a memoized version of the callback function that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.",
+        "hint": "How does useCallback help with function stability across renders?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the difference between useMemo and useCallback?",
+        "options": [
+        "useMemo is for values, useCallback is for functions",
+        "useCallback can handle side effects, useMemo cannot",
+        "useMemo works with class components, useCallback with functional components",
+        "useCallback has a dependency array, useMemo doesn't"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "useMemo is for values, useCallback is for functions",
+        "difficulty": "medium",
+        "explanation": "The key difference is what they memoize: useMemo memoizes the returned value of a function, while useCallback memoizes the function itself. useCallback(fn, deps) is equivalent to useMemo(() => fn, deps).",
+        "hint": "Consider what type of data each Hook is designed to cache between renders."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the result of this code?\n```jsx\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  \n  useEffect(() => {\n    const id = setInterval(() => {\n      setCount(count + 1);\n    }, 1000);\n    return () => clearInterval(id);\n  }, []);\n  \n  return <div>{count}</div>;\n}\n```",
+        "options": [
+        "The counter increases by 1 every second indefinitely",
+        "The counter increases to 1 and stops",
+        "The counter remains at 0",
+        "The code results in an error"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The counter increases to 1 and stops",
+        "difficulty": "hard",
+        "explanation": "The count will increase from 0 to 1 and then stop. Since the effect's dependency array is empty, the effect is only run once after the initial render, capturing count as 0. The interval keeps setting count to 0+1, but never sees updated values of count.",
+        "hint": "Pay attention to the dependency array and closure capture in the effect."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "How can you fix the previous Counter component to make it increment indefinitely?",
+        "options": [
+        "Add count to the dependency array",
+        "Remove the dependency array entirely",
+        "Use a functional update with setCount(c => c + 1)",
+        "Change useEffect to useLayoutEffect"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use a functional update with setCount(c => c + 1)",
+        "difficulty": "hard",
+        "explanation": "Using a functional update with setCount(c => c + 1) solves the problem because it doesn't rely on the captured value of count in the closure. It gets the latest state value directly from React, allowing the counter to increment properly.",
+        "hint": "What form of setState allows you to update based on the current state without depending on closure-captured values?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the purpose of the useLayoutEffect Hook?",
+        "options": [
+        "It's used for DOM measurements before the browser paints",
+        "It optimizes layout rendering in React applications",
+        "It's used for asynchronous data fetching",
+        "It manages the component's responsive layout"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "It's used for DOM measurements before the browser paints",
+        "difficulty": "hard",
+        "explanation": "useLayoutEffect works similarly to useEffect, but it fires synchronously after all DOM mutations, before the browser paints. This is useful for DOM measurements and manipulations that should happen before the user sees any visual updates.",
+        "hint": "When might you need to measure or update the DOM synchronously before the browser paint cycle?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What's wrong with this code?\n```jsx\nfunction Example() {\n  const [count, setCount] = useState(0);\n  \n  if (count > 5) {\n    const [message, setMessage] = useState('Count is high');\n  }\n  \n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  );\n}\n```",
+        "options": [
+        "Nothing is wrong with this code",
+        "You can't use multiple useState Hooks in one component",
+        "You can't conditionally call Hooks",
+        "useState must be assigned to a const variable"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "You can't conditionally call Hooks",
+        "difficulty": "medium",
+        "explanation": "React Hooks must be called at the top level of the component and cannot be called conditionally, inside loops, or inside nested functions. This ensures that Hooks are called in the same order on every render, which is crucial for React to correctly preserve the state between renders.",
+        "hint": "What is one of the Rules of Hooks that this code violates?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What will be logged when the button is clicked?\n```jsx\nfunction Example() {\n  const [count, setCount] = useState(0);\n  const countRef = useRef(count);\n  \n  const handleClick = () => {\n    setCount(count + 1);\n    countRef.current = count + 1;\n    console.log('Count:', count);\n    console.log('CountRef:', countRef.current);\n  };\n  \n  return <button onClick={handleClick}>Click me</button>;\n}\n```",
+        "options": [
+        "Count: 0, CountRef: 0",
+        "Count: 1, CountRef: 1",
+        "Count: 0, CountRef: 1",
+        "Count: 1, CountRef: 0"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Count: 0, CountRef: 1",
+        "difficulty": "hard",
+        "explanation": "When handleClick runs, the count state is still 0 due to the closure and React's asynchronous state updates. The console.log will show the current closure value (0). However, countRef.current is updated synchronously to 1, so it shows the updated value.",
+        "hint": "Consider the difference between state updates (which are asynchronous) and ref updates (which are synchronous)."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "When would you use the useImperativeHandle Hook?",
+        "options": [
+        "To optimize re-renders in a component tree",
+        "To handle imperative browser APIs like localStorage",
+        "To customize the instance value exposed when using refs with forwardRef",
+        "To handle imperative functions like DOM measurements"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To customize the instance value exposed when using refs with forwardRef",
+        "difficulty": "hard",
+        "explanation": "useImperativeHandle is used with forwardRef to customize the instance value that is exposed when a parent component uses a ref to access a child component. It allows the child to expose only specific functions or properties to the parent.",
+        "hint": "Which scenario involves controlling what a parent component can access when using refs?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the useDebugValue Hook used for?",
+        "options": [
+        "To debug performance issues in React applications",
+        "To display custom labels for custom Hooks in React DevTools",
+        "To log state changes during development",
+        "To add breakpoints within functional components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To display custom labels for custom Hooks in React DevTools",
+        "difficulty": "hard",
+        "explanation": "useDebugValue is used to display a custom label for custom Hooks in React DevTools. It helps developers identify and inspect custom Hooks when debugging an application.",
+        "hint": "How can you make custom Hooks more identifiable in development tools?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What will this component display?\n```jsx\nfunction Example() {\n  const [state, setState] = useState({ count: 0, name: 'John' });\n  \n  function handleClick() {\n    setState({ count: state.count + 1 });\n  }\n  \n  return (\n    <div>\n      <p>Count: {state.count}, Name: {state.name}</p>\n      <button onClick={handleClick}>Increment</button>\n    </div>\n  );\n}\n```",
+        "options": [
+        "Count: 1, Name: John (after clicking)",
+        "Count: 1, Name: undefined (after clicking)",
+        "An error because you can't use objects with useState",
+        "Count: 0, Name: John (won't update on click)"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Count: 1, Name: undefined (after clicking)",
+        "difficulty": "medium",
+        "explanation": "Unlike this.setState in class components, the setState function from useState doesn't automatically merge objects. It completely replaces the state value. After clicking, state will be { count: 1 } without the name property.",
+        "hint": "How does useState's update behavior differ from class component's this.setState when dealing with objects?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the best way to update an object state with useState?",
+        "options": [
+        "Directly modify the object and call setState",
+        "Use two separate useState calls for each property",
+        "Use the spread operator to merge the old state with new values",
+        "Use useReducer instead of useState for objects"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use the spread operator to merge the old state with new values",
+        "difficulty": "medium",
+        "explanation": "When updating object state with useState, you should use the spread operator to create a new object that includes all the properties of the previous state object, with the updated properties overriding the old ones: setState({...state, count: state.count + 1}).",
+        "hint": "Which approach preserves existing properties while updating specific ones?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What will be logged in this component when clicking the button?\n```jsx\nfunction Example() {\n  const [count, setCount] = useState(0);\n  \n  useEffect(() => {\n    console.log('Effect ran, count is:', count);\n  }, [count]);\n  \n  function handleClick() {\n    setCount(prevCount => prevCount + 1);\n    setCount(prevCount => prevCount + 1);\n    console.log('After updates, count is:', count);\n  }\n  \n  return <button onClick={handleClick}>Update</button>;\n}\n```",
+        "options": [
+        "'After updates, count is: 2' followed by 'Effect ran, count is: 2'",
+        "'After updates, count is: 0' followed by 'Effect ran, count is: 2'",
+        "'Effect ran, count is: 0' followed by 'After updates, count is: 0'",
+        "'After updates, count is: 0' followed by 'Effect ran, count is: 0'"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "'After updates, count is: 0' followed by 'Effect ran, count is: 2'",
+        "difficulty": "hard",
+        "explanation": "Due to closure, handleClick sees the count value from render time (0). State updates are batched and don't immediately update the state in the current execution context. The effect runs after render with the new count value (2).",
+        "hint": "Consider the timing of state updates, closures, and when effects run in the React lifecycle."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "When should you include a function in the dependency array of useEffect?",
+        "options": [
+        "Never, functions should not be dependencies",
+        "Only when the function is defined inside the component and used in the effect",
+        "Always, any function used in the effect must be a dependency",
+        "Only when the function is passed as a prop to the component"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Only when the function is defined inside the component and used in the effect",
+        "difficulty": "hard",
+        "explanation": "Functions defined inside components are recreated on each render and are part of the component's closure. If an effect uses such a function, it should be included in the dependency array to ensure the effect uses the latest version of that function.",
+        "hint": "Think about when a function references values from the component scope and how that affects dependencies."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the effect of passing an empty array as the dependency to useEffect?",
+        "options": [
+        "The effect runs after every render",
+        "The effect runs only once, after the first render",
+        "The effect never runs",
+        "The effect runs only when the component unmounts"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The effect runs only once, after the first render",
+        "difficulty": "easy",
+        "explanation": "When you pass an empty array ([]) as the dependency to useEffect, the effect will run only once after the initial render (component mount), similar to componentDidMount in class components.",
+        "hint": "How can you make an effect behave like componentDidMount in class components?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What happens if you return a function from useEffect?",
+        "options": [
+        "React throws an error",
+        "The function runs before the effect on subsequent renders",
+        "The function runs when the component unmounts or before the effect runs again",
+        "The function becomes a callback that must be manually triggered"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The function runs when the component unmounts or before the effect runs again",
+        "difficulty": "medium",
+        "explanation": "A function returned from useEffect is the cleanup function. It runs when the component unmounts and also before the effect runs again on subsequent renders. This is useful for cleaning up resources or subscriptions.",
+        "hint": "When is the cleanup function in useEffect executed?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What's a proper use case for the useRef Hook?",
+        "options": [
+        "To store state that triggers re-renders when changed",
+        "To access DOM elements directly",
+        "To memoize expensive calculations",
+        "To share state between components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To access DOM elements directly",
+        "difficulty": "easy",
+        "explanation": "One of the primary use cases for useRef is to get a reference to a DOM element, allowing direct manipulation or measurement of that element when necessary. This is achieved by assigning the ref to the ref attribute of a JSX element.",
+        "hint": "What might you need to do that requires direct access to DOM nodes?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What will be the result of this code?\n```jsx\nfunction Example() {\n  const [count, setCount] = useState(0);\n  const prevCountRef = useRef();\n  \n  useEffect(() => {\n    prevCountRef.current = count;\n  });\n  \n  const prevCount = prevCountRef.current;\n  \n  return (\n    <div>\n      <p>Now: {count}, Before: {prevCount}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  );\n}\n```",
+        "options": [
+        "Now: 1, Before: 0 (after clicking)",
+        "Now: 1, Before: 1 (after clicking)",
+        "Now: 1, Before: undefined (after first click)",
+        "Now: 0, Before: undefined (initial render)"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Now: 0, Before: undefined (initial render)",
+        "difficulty": "hard",
+        "explanation": "On the initial render, prevCountRef.current is undefined because the effect hasn't run yet. After clicking, it would show Now: 1, Before: 0 because the effect updates prevCountRef.current with the previous count after each render.",
+        "hint": "Consider the sequence of operations during the initial render, including when useEffect runs."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "How do you correctly implement a previous value pattern with Hooks?",
+        "options": [
+        "Use two state variables, one for current and one for previous",
+        "Use useRef to store the previous value and update it in useEffect",
+        "Use useState with an object containing both current and previous values",
+        "Use useReducer to manage both current and previous states"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use useRef to store the previous value and update it in useEffect",
+        "difficulty": "hard",
+        "explanation": "To track the previous value of a state or prop, you can use a ref to store it, and then update that ref in an effect that runs after the render. This works because refs persist between renders and useEffect runs after the render is committed.",
+        "hint": "Which approach uses a combination of Hooks to track values across renders without triggering additional renders?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What is the recommended way to fetch data with Hooks?",
+        "options": [
+        "Use the built-in useFetch Hook",
+        "Call fetch directly in the component body",
+        "Use useEffect with proper cleanup and dependency management",
+        "Use the useData Hook provided by React"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use useEffect with proper cleanup and dependency management",
+        "difficulty": "medium",
+        "explanation": "The recommended pattern for data fetching with Hooks is to use useEffect with proper dependency management and cleanup. This includes handling loading states, errors, and cancellation of requests when the component unmounts or dependencies change.",
+        "hint": "Which approach handles both the initial fetch and proper cleanup when dependencies change or the component unmounts?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "React Hooks",
+        "questionText": "What's wrong with this code?\n```jsx\nfunction SearchResults({ query }) {\n  const [results, setResults] = useState([]);\n  const [isLoading, setIsLoading] = useState(false);\n  \n  useEffect(() => {\n    const fetchData = async () => {\n      setIsLoading(true);\n      const response = await fetch(`/api/search?q=${query}`);\n      const data = await response.json();\n      setResults(data);\n      setIsLoading(false);\n    };\n    \n    fetchData();\n  }, [query]);\n  \n  return (\n    <div>\n      {isLoading ? <p>Loading...</p> : (\n        <ul>\n          {results.map(item => <li key={item.id}>{item.title}</li>)}\n        </ul>\n      )}\n    </div>\n  );\n}\n```",
+        "options": [
+        "You can't use async/await in useEffect",
+        "You should use useReducer instead of multiple state variables",
+        "The effect is missing a cleanup function for pending requests",
+        "useState shouldn't be used with arrays"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The effect is missing a cleanup function for pending requests",
+        "difficulty": "hard",
+        "explanation": "The code is missing a cleanup function in useEffect that would cancel or ignore results from outdated requests. If the query changes rapidly, responses might arrive out of order, causing race conditions where older results overwrite newer ones.",
+        "hint": "What happens if the query changes before the previous request completes?"
+    },
 
     // Custom Hooks
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What is the naming convention for custom hooks in React?",
+        "options": ["start with 'use' prefix", "start with 'hook' prefix", "end with 'Hook' suffix", "no specific convention"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "start with 'use' prefix",
+        "difficulty": "easy",
+        "explanation": "Custom hooks in React must start with the 'use' prefix (e.g., useCounter, useFetch) to indicate to React that they follow the Rules of Hooks.",
+        "hint": "React has a specific naming requirement to identify functions as hooks."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What is the primary purpose of creating custom hooks?",
+        "options": [
+        "To replace Redux entirely",
+        "To extract and reuse stateful logic between components",
+        "To create class components without writing classes",
+        "To optimize performance automatically"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To extract and reuse stateful logic between components",
+        "difficulty": "easy",
+        "explanation": "Custom hooks allow developers to extract component logic into reusable functions, making it possible to share stateful logic across multiple components without duplicating code.",
+        "hint": "Think about sharing functionality between components without repeating code."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "Which of the following is NOT a valid custom hook?",
+        "options": ["useWindowSize()", "useDataFetching()", "DataProvider()", "useLocalStorage()"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "DataProvider()",
+        "difficulty": "easy",
+        "explanation": "DataProvider() doesn't follow the naming convention for custom hooks, which must start with 'use'. The other options follow this convention and are valid custom hook names.",
+        "hint": "Look for the naming convention that all valid hooks must follow."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "Can custom hooks call other hooks?",
+        "options": ["Yes, always", "No, never", "Only if they're built-in hooks", "Only if they're in the same component"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Yes, always",
+        "difficulty": "easy",
+        "explanation": "Custom hooks can call other hooks (both built-in and custom). This composition is a key feature that makes hooks powerful for reusing logic.",
+        "hint": "Think about the composability aspect of hooks."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "When implementing a custom hook called usePrevious that tracks a previous value, what hook would you most likely use internally?",
+        "options": ["useState", "useEffect", "useRef", "useCallback"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "useRef",
+        "difficulty": "medium",
+        "explanation": "useRef is typically used to implement usePrevious because it persists values between renders without causing re-renders, and the .current property can be updated in useEffect to store the previous value.",
+        "hint": "Which hook provides a mutable object that persists across renders?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's the correct implementation of a simple useToggle custom hook?",
+        "options": [
+        "const useToggle = () => { const [state, setState] = useState(false); return [state, setState]; }",
+        "const useToggle = (initialState = false) => { const [state, setState] = useState(initialState); const toggle = () => setState(!state); return [state, toggle]; }",
+        "const useToggle = (initialState = false) => { let state = initialState; const toggle = () => { state = !state; }; return [state, toggle]; }",
+        "const useToggle = (initialState = false) => { const state = useRef(initialState); const toggle = () => { state.current = !state.current; }; return [state, toggle]; }"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "const useToggle = (initialState = false) => { const [state, setState] = useState(initialState); const toggle = () => setState(!state); return [state, toggle]; }",
+        "difficulty": "medium",
+        "explanation": "A proper useToggle hook uses useState to manage the toggle state and returns both the current state and a function to toggle that state. Option 1 doesn't provide a toggle function, Option 3 doesn't use React state, and Option 4 uses useRef but doesn't trigger re-renders.",
+        "hint": "The hook should use React state management and provide a way to toggle the state."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "Which statement about custom hooks is FALSE?",
+        "options": [
+        "Custom hooks can share stateful logic between components",
+        "Custom hooks must be used inside components or other hooks",
+        "Custom hooks create shared state between components that use them",
+        "Custom hooks can use other hooks inside them"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Custom hooks create shared state between components that use them",
+        "difficulty": "medium",
+        "explanation": "Custom hooks do NOT create shared state between components. Each component that uses a custom hook gets its own isolated instance of the state. If you need shared state, you need to use Context or another state management solution.",
+        "hint": "Think about how state is isolated between components in React."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What will the following custom hook return when called?\n\n```jsx\nfunction useCounter(initialValue = 0) {\n  const [count, setCount] = useState(initialValue);\n  \n  const increment = () => setCount(c => c + 1);\n  const decrement = () => setCount(c => c - 1);\n  const reset = () => setCount(initialValue);\n  \n  return { count, increment, decrement, reset };\n}\n```",
+        "options": [
+        "A number",
+        "An array containing the count and three functions",
+        "An object containing the count and three functions",
+        "A function to update the count"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "An object containing the count and three functions",
+        "difficulty": "easy",
+        "explanation": "The useCounter hook returns an object with four properties: count (the current state value), and three functions (increment, decrement, and reset) to manipulate that state.",
+        "hint": "Look at the return statement and its structure."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "Which built-in React hook would you use to implement a custom hook that needs to run code on component mount and cleanup on unmount?",
+        "options": ["useState", "useEffect", "useCallback", "useMemo"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "useEffect",
+        "difficulty": "easy",
+        "explanation": "useEffect with an empty dependency array runs code on mount, and its return function runs on unmount, making it perfect for initialization and cleanup operations in custom hooks.",
+        "hint": "Which hook handles side effects in the component lifecycle?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's wrong with this custom hook implementation?\n\n```jsx\nfunction useFetchData(url) {\n  if (url) {\n    const [data, setData] = useState(null);\n    useEffect(() => {\n      fetch(url).then(res => res.json()).then(setData);\n    }, [url]);\n    return data;\n  }\n  return null;\n}\n```",
+        "options": [
+        "It doesn't handle loading or error states",
+        "The useState call is conditional, violating Rules of Hooks",
+        "It should return an array, not a single value",
+        "The useEffect dependency array is incorrect"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The useState call is conditional, violating Rules of Hooks",
+        "difficulty": "medium",
+        "explanation": "React's Rules of Hooks state that hooks must not be called conditionally. In this code, useState is inside an if statement, which violates this rule and can lead to bugs.",
+        "hint": "React has strict rules about where and how hooks can be called."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's the best way to implement a useLocalStorage custom hook that syncs state with localStorage?",
+        "options": [
+        "Use useState with useEffect that only runs on mount",
+        "Use useRef to store the value and update localStorage directly",
+        "Use useState with useEffect that runs whenever the state changes",
+        "Use a regular variable and update it with localStorage.setItem"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use useState with useEffect that runs whenever the state changes",
+        "difficulty": "medium",
+        "explanation": "A proper useLocalStorage hook uses useState to manage the value and an useEffect with the state in its dependency array to sync changes to localStorage. This ensures the state and localStorage stay in sync as the state changes.",
+        "hint": "You need React state management plus a way to respond to state changes."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What would the following custom hook be useful for?\n\n```jsx\nfunction useDebounce(value, delay) {\n  const [debouncedValue, setDebouncedValue] = useState(value);\n\n  useEffect(() => {\n    const timer = setTimeout(() => setDebouncedValue(value), delay);\n    return () => clearTimeout(timer);\n  }, [value, delay]);\n\n  return debouncedValue;\n}\n```",
+        "options": [
+        "Preventing too many re-renders",
+        "Making API calls more efficient",
+        "Delaying state updates until user stops typing",
+        "Preventing memory leaks"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Delaying state updates until user stops typing",
+        "difficulty": "medium",
+        "explanation": "This is a debounce hook that delays updating its returned value until after a specified delay has passed without the input value changing. It's commonly used for search inputs to prevent API calls on every keystroke.",
+        "hint": "Think about scenarios where you want to wait for a pause in user activity."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's the expected behavior of this custom hook?\n\n```jsx\nfunction useTimeout(callback, delay) {\n  const savedCallback = useRef(callback);\n  \n  useEffect(() => {\n    savedCallback.current = callback;\n  }, [callback]);\n  \n  useEffect(() => {\n    if (delay !== null) {\n      const id = setTimeout(() => savedCallback.current(), delay);\n      return () => clearTimeout(id);\n    }\n  }, [delay]);\n}\n```",
+        "options": [
+        "Executes the callback repeatedly every 'delay' milliseconds",
+        "Executes the callback once after 'delay' milliseconds",
+        "Cancels a timeout after 'delay' milliseconds",
+        "Creates a debounced version of the callback"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Executes the callback once after 'delay' milliseconds",
+        "difficulty": "hard",
+        "explanation": "This hook creates a timeout that executes the callback once after the specified delay. It also properly cleans up the timeout on unmount or when delay changes. The useRef + useEffect pattern ensures the latest callback is always used.",
+        "hint": "Look at the setTimeout usage and how it differs from setInterval."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What does this custom hook do?\n\n```jsx\nfunction useMediaQuery(query) {\n  const [matches, setMatches] = useState(false);\n\n  useEffect(() => {\n    const media = window.matchMedia(query);\n    setMatches(media.matches);\n    \n    const listener = (e) => setMatches(e.matches);\n    media.addEventListener('change', listener);\n    \n    return () => media.removeEventListener('change', listener);\n  }, [query]);\n\n  return matches;\n}\n```",
+        "options": [
+        "Fetches media files based on a query",
+        "Detects if the browser matches a media query (like screen size)",
+        "Plays media when a condition is met",
+        "Tracks media loading state"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Detects if the browser matches a media query (like screen size)",
+        "difficulty": "medium",
+        "explanation": "This hook uses the browser's matchMedia API to check if the current viewport matches a CSS media query (like screen width). It returns a boolean and updates when the match status changes, useful for responsive designs.",
+        "hint": "Think about responsive design and how to detect screen characteristics."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What would be a good use case for the following custom hook?\n\n```jsx\nfunction usePrevious(value) {\n  const ref = useRef();\n  \n  useEffect(() => {\n    ref.current = value;\n  }, [value]);\n  \n  return ref.current;\n}\n```",
+        "options": [
+        "Animation effects that need the previous state",
+        "Form validation comparing current and previous inputs",
+        "Performance optimization to prevent re-renders",
+        "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "All of the above",
+        "difficulty": "medium",
+        "explanation": "The usePrevious hook captures the previous value of a variable across renders. This is useful for animations that compare previous and current state, form validation that needs to compare values, and optimizations that need to know when values have changed.",
+        "hint": "Think about scenarios where you need to compare the current value with its previous value."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What will happen if you call the following custom hook from a component?\n\n```jsx\nfunction useDangerousHook() {\n  console.log('Hook called');\n  \n  if (Math.random() > 0.5) {\n    const [state, setState] = useState(0);\n    return state;\n  }\n  \n  const [fallback, setFallback] = useState(-1);\n  return fallback;\n}\n```",
+        "options": [
+        "It will return 0 or -1 randomly",
+        "It will cause a React error about the Rules of Hooks",
+        "It will always return -1",
+        "It will crash the application"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It will cause a React error about the Rules of Hooks",
+        "difficulty": "hard",
+        "explanation": "This hook violates the Rules of Hooks by conditionally calling useState. React requires hooks to be called in the same order on every render, which this doesn't guarantee. React will detect this error and warn about it.",
+        "hint": "Consider the order in which hooks are called across different renders."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's the purpose of using useRef in custom hooks instead of useState when you need to store a value that shouldn't trigger re-renders?",
+        "options": [
+        "useRef is faster than useState",
+        "useRef values persist between renders without causing re-renders",
+        "useRef can store more complex data structures",
+        "useRef values can be accessed outside of React components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "useRef values persist between renders without causing re-renders",
+        "difficulty": "medium",
+        "explanation": "useRef creates a mutable object whose .current property persists across renders, and changes to it don't trigger re-renders. This makes it ideal for storing values that need to persist but shouldn't cause the component to update when changed.",
+        "hint": "Think about the key difference in rendering behavior between useState and useRef."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What type of problem is this custom hook designed to solve?\n\n```jsx\nfunction useClickOutside(ref, handler) {\n  useEffect(() => {\n    const listener = (event) => {\n      if (!ref.current || ref.current.contains(event.target)) {\n        return;\n      }\n      handler(event);\n    };\n    \n    document.addEventListener('mousedown', listener);\n    document.addEventListener('touchstart', listener);\n    \n    return () => {\n      document.removeEventListener('mousedown', listener);\n      document.removeEventListener('touchstart', listener);\n    };\n  }, [ref, handler]);\n}\n```",
+        "options": [
+        "Tracking mouse movements across the screen",
+        "Detecting clicks outside a specific element (like closing modals)",
+        "Preventing default browser behavior on clicks",
+        "Creating draggable elements"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Detecting clicks outside a specific element (like closing modals)",
+        "difficulty": "medium",
+        "explanation": "This hook detects clicks that occur outside a specified element (referenced by ref). It's commonly used to close dropdowns, modals, or popups when a user clicks anywhere else on the page.",
+        "hint": "Consider what happens when the handler is called - under what specific click condition?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "In a custom hook that uses multiple state variables, what's the best practice for its return value?",
+        "options": [
+        "Return a single object with all state variables and setter functions",
+        "Return an array with all state variables first, followed by all setter functions",
+        "Return just the state variables and keep setter functions internal to the hook",
+        "Return a function that gives access to the state when called"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Return a single object with all state variables and setter functions",
+        "difficulty": "medium",
+        "explanation": "When a custom hook manages multiple state variables, it's best to return an object with named properties. This makes the hook's API clearer and allows consumers to destructure only the values they need. Arrays are better for hooks with just 1-2 return values.",
+        "hint": "Think about readability and how consumers will use the returned values."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's the main issue with this custom hook implementation?\n\n```jsx\nfunction useFetch(url) {\n  const [data, setData] = useState(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n  \n  useEffect(() => {\n    fetch(url)\n      .then(res => res.json())\n      .then(data => {\n        setData(data);\n        setLoading(false);\n      })\n      .catch(err => {\n        setError(err);\n        setLoading(false);\n      });\n  }, []);\n  \n  return { data, loading, error };\n}\n```",
+        "options": [
+        "It doesn't handle the response status code",
+        "It uses too many state variables",
+        "The url dependency is missing from the useEffect dependency array",
+        "It should use async/await instead of promises"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The url dependency is missing from the useEffect dependency array",
+        "difficulty": "medium",
+        "explanation": "The hook has a critical flaw: the url parameter is used in the useEffect, but it's not included in the dependency array. This means if the url changes, the effect won't rerun and the data won't be refetched.",
+        "hint": "The effect depends on a value that isn't listed in its dependencies."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's the advantage of using the useCallback hook inside custom hooks?",
+        "options": [
+        "It makes the code run faster",
+        "It prevents infinite loops in useEffect",
+        "It ensures functions maintain referential equality between renders",
+        "It automatically memoizes the result of function calls"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "It ensures functions maintain referential equality between renders",
+        "difficulty": "hard",
+        "explanation": "useCallback ensures that functions maintain the same reference between renders (unless their dependencies change). This is important in custom hooks because returning a stable function reference prevents unnecessary re-renders in components that depend on those functions.",
+        "hint": "Think about how JavaScript compares functions by reference, not value."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What does this custom hook do?\n\n```jsx\nfunction useUpdateEffect(effect, dependencies) {\n  const isFirstRender = useRef(true);\n  \n  useEffect(() => {\n    if (isFirstRender.current) {\n      isFirstRender.current = false;\n      return;\n    }\n    return effect();\n  }, dependencies);\n}\n```",
+        "options": [
+        "Runs the effect only on the first render",
+        "Runs the effect on every render except the first one",
+        "Updates dependencies automatically",
+        "Prevents the effect from running too often"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Runs the effect on every render except the first one",
+        "difficulty": "hard",
+        "explanation": "This hook is a variation of useEffect that skips the first render. It tracks the first render with a ref, and only runs the effect when dependencies change on subsequent renders. This is useful when you want to respond to changes but not on initial mount.",
+        "hint": "The hook is tracking something about the render cycle - when exactly does the effect function run?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What is the correct way to handle cleanup in a custom hook that subscribes to events?",
+        "options": [
+        "Call removeEventListener in a separate useEffect",
+        "Return a cleanup function from useEffect that removes event listeners",
+        "Use useLayoutEffect instead of useEffect",
+        "Store event listeners in state"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Return a cleanup function from useEffect that removes event listeners",
+        "difficulty": "medium",
+        "explanation": "The proper way to handle cleanup in custom hooks is to return a function from useEffect that performs the cleanup (like removing event listeners). React will call this function before the component unmounts or before the effect runs again.",
+        "hint": "useEffect has a specific feature to handle resource cleanup."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What will happen if you use this custom hook in multiple components?\n\n```jsx\nlet shared = 0;\n\nfunction useSharedCounter() {\n  const increment = () => {\n    shared += 1;\n    return shared;\n  };\n  \n  return [shared, increment];\n}\n```",
+        "options": [
+        "Each component will have its own isolated counter",
+        "All components will share the same counter value",
+        "Only the first component will be able to increment the counter",
+        "React will throw an error about hook implementation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "All components will share the same counter value",
+        "difficulty": "hard",
+        "explanation": "This hook uses a variable declared outside the hook (shared) which creates a globally shared state. All components using this hook will share the same counter value. This is generally an anti-pattern in React, as it creates implicit dependencies between components.",
+        "hint": "Consider the scope of the 'shared' variable and how it relates to component instances."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What problem does this custom hook solve?\n\n```jsx\nfunction useOnScreen(ref, rootMargin = '0px') {\n  const [isIntersecting, setIntersecting] = useState(false);\n  \n  useEffect(() => {\n    const observer = new IntersectionObserver(\n      ([entry]) => setIntersecting(entry.isIntersecting),\n      { rootMargin }\n    );\n    \n    if (ref.current) {\n      observer.observe(ref.current);\n    }\n    \n    return () => {\n      observer.disconnect();\n    };\n  }, [ref, rootMargin]);\n  \n  return isIntersecting;\n}\n```",
+        "options": [
+        "Detecting when an element is visible in the viewport",
+        "Measuring the exact dimensions of an element",
+        "Preventing elements from overlapping",
+        "Tracking mouse position relative to an element"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Detecting when an element is visible in the viewport",
+        "difficulty": "hard",
+        "explanation": "This hook uses the Intersection Observer API to detect when a referenced element enters or exits the viewport (or a specified container). This is commonly used for lazy loading, infinite scrolling, or triggering animations when elements become visible.",
+        "hint": "The IntersectionObserver API is used to detect a specific condition about element visibility."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's the correct implementation for a useAsync custom hook that handles asynchronous operations?",
+        "options": [
+        "useAsync = (asyncFn) => { useState(asyncFn()); }",
+        "useAsync = async (asyncFn) => { const [state, setState] = useState(null); setState(await asyncFn()); return state; }",
+        "useAsync = (asyncFn, immediate = true) => { const [state, setState] = useState({ loading: false, value: null, error: null }); const execute = useCallback(() => { setState({loading: true, value: null, error: null}); return asyncFn().then(value => { setState({loading: false, value, error: null}); return value; }).catch(error => { setState({loading: false, value: null, error}); throw error; }); }, [asyncFn]); useEffect(() => { if (immediate) { execute(); } }, [execute, immediate]); return [state, execute]; }",
+        "useAsync = (asyncFn) => { useEffect(() => { asyncFn(); }, []); }"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "useAsync = (asyncFn, immediate = true) => { const [state, setState] = useState({ loading: false, value: null, error: null }); const execute = useCallback(() => { setState({loading: true, value: null, error: null}); return asyncFn().then(value => { setState({loading: false, value, error: null}); return value; }).catch(error => { setState({loading: false, value: null, error}); throw error; }); }, [asyncFn]); useEffect(() => { if (immediate) { execute(); } }, [execute, immediate]); return [state, execute]; }",
+        "difficulty": "hard",
+        "explanation": "This implementation correctly handles all states of an async operation: loading, success, and error. It returns both the current state and an execute function to trigger the operation manually. It also has an immediate flag to control whether the operation runs automatically on mount.",
+        "hint": "A proper async hook should track loading state, success values, error states, and provide a way to trigger the operation."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's wrong with the following custom hook implementation?\n\n```jsx\nfunction useInput(initialValue) {\n  const [value, setValue] = useState(initialValue);\n  \n  function handleChange(e) {\n    setValue(e.target.value);\n  }\n  \n  function reset() {\n    setValue(initialValue);\n  }\n  \n  return {\n    value,\n    onChange: handleChange,\n    reset\n  };\n}\n```",
+        "options": [
+        "The initialValue should be in the dependency array of a useEffect",
+        "The handleChange function should be wrapped in useCallback",
+        "The reset function will always reset to the original initialValue, not an updated one",
+        "There's nothing wrong with this implementation"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The reset function will always reset to the original initialValue, not an updated one",
+        "difficulty": "hard",
+        "explanation": "The issue is that if the initialValue prop changes after the component mounts, the reset function will still use the original initialValue from the first render. To fix this, the hook should track the latest initialValue with a ref or in state.",
+        "hint": "Consider what happens if the component using this hook receives a new initialValue prop after mount."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Custom Hooks",
+        "questionText": "What's the benefit of extracting logic into custom hooks versus using regular helper functions?",
+        "options": [
+        "Custom hooks can't be used outside of React components",
+        "Custom hooks can use React's built-in hooks and follow component lifecycle",
+        "Custom hooks are always more performant than regular functions",
+        "Custom hooks automatically memoize their return values"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Custom hooks can use React's built-in hooks and follow component lifecycle",
+        "difficulty": "medium",
+        "explanation": "The key advantage of custom hooks over regular functions is that hooks can use React's built-in hooks (useState, useEffect, useContext, etc.). This allows them to integrate with React's component lifecycle, use state, context, and other React features that regular functions can't access.",
+        "hint": "Think about what capabilities custom hooks have that regular JavaScript functions don't."
+    },
 
     // Context API
 
