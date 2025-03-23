@@ -3692,10 +3692,1328 @@ const reactJSQ = [
     },
 
     // API Integration
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "Which hook is commonly used to fetch data from an API in a functional component?",
+        "options": ["useAPI", "useEffect", "useFetch", "useData"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "useEffect",
+        "difficulty": "easy",
+        "explanation": "The useEffect hook is commonly used to perform side effects like data fetching in functional components.",
+        "hint": "This hook runs after render and can be used for API calls."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the recommended way to handle loading states when fetching data from an API?",
+        "options": [
+        "Use a global loading variable",
+        "Use setTimeout to delay rendering",
+        "Maintain a loading state in component state",
+        "Use CSS animations only"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Maintain a loading state in component state",
+        "difficulty": "easy",
+        "explanation": "Maintaining a loading state in your component's state allows you to conditionally render different UI elements based on whether data is still being fetched.",
+        "hint": "You need to track when data is being fetched and when it's ready."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What would be the result of this code snippet?\n```jsx\nimport { useState, useEffect } from 'react';\n\nfunction UserList() {\n  const [users, setUsers] = useState([]);\n  \n  useEffect(() => {\n    fetch('https://api.example.com/users')\n      .then(response => response.json())\n      .then(data => setUsers(data));\n  });\n  \n  return (\n    <ul>\n      {users.map(user => <li key={user.id}>{user.name}</li>)}\n    </ul>\n  );\n}\n```",
+        "options": [
+        "The component will fetch users data once and display it",
+        "The component will fetch users data repeatedly in an infinite loop",
+        "The component will throw an error because the useEffect is missing dependencies",
+        "The component will not fetch any data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The component will fetch users data repeatedly in an infinite loop",
+        "difficulty": "medium",
+        "explanation": "Without a dependency array, useEffect runs after every render. Setting state in useEffect triggers a re-render, creating an infinite loop.",
+        "hint": "Look at the useEffect dependencies argument and what happens after setState."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the purpose of the second argument (the dependency array) in a useEffect hook when fetching API data?",
+        "options": [
+        "It specifies which variables to include in the API request",
+        "It controls how often the effect runs based on which values have changed",
+        "It defines the order of multiple API calls",
+        "It sets the timeout duration for the API request"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It controls how often the effect runs based on which values have changed",
+        "difficulty": "easy",
+        "explanation": "The dependency array tells React to only re-run the effect if any of the specified values have changed between renders. An empty array means the effect runs only once after the initial render.",
+        "hint": "This argument helps prevent unnecessary API calls."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What's the best practice for handling API errors in React components?",
+        "options": [
+        "Let the global error handler catch all errors",
+        "Ignore errors to prevent UI disruption",
+        "Use try/catch blocks or .catch() on promises and set an error state",
+        "Always reload the page when an error occurs"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use try/catch blocks or .catch() on promises and set an error state",
+        "difficulty": "medium",
+        "explanation": "Properly handling API errors involves catching them with try/catch (for async/await) or .catch() (for promises) and storing error information in state to display appropriate error messages to users.",
+        "hint": "Think about how to capture errors and make them visible to users."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the purpose of an AbortController when making API requests in React?",
+        "options": [
+        "To cancel in-flight API requests when a component unmounts",
+        "To automatically retry failed API requests",
+        "To authenticate API requests",
+        "To compress API response data"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To cancel in-flight API requests when a component unmounts",
+        "difficulty": "hard",
+        "explanation": "AbortController allows you to cancel pending fetch requests, which is useful for cleaning up when a component unmounts to prevent setting state on unmounted components and memory leaks.",
+        "hint": "It helps with proper cleanup when components are no longer visible."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the correct way to make a POST request using the fetch API?",
+        "options": [
+        "fetch(url, { body: JSON.stringify(data) })",
+        "fetch(url, { method: 'POST', body: data })",
+        "fetch(url, { method: 'POST', body: JSON.stringify(data), headers: { 'Content-Type': 'application/json' } })",
+        "fetch(url).post(JSON.stringify(data))"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "fetch(url, { method: 'POST', body: JSON.stringify(data), headers: { 'Content-Type': 'application/json' } })",
+        "difficulty": "medium",
+        "explanation": "A POST request with fetch requires specifying the method, stringifying the data for the body, and setting the Content-Type header to application/json for JSON data.",
+        "hint": "Consider what method, body format, and headers are needed for a proper POST request."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What's the issue with this API fetch implementation?\n```jsx\nfunction ProductDetail({ productId }) {\n  const [product, setProduct] = useState(null);\n  \n  useEffect(() => {\n    fetch(`https://api.example.com/products/${productId}`)\n      .then(response => response.json())\n      .then(data => setProduct(data));\n  }, []);\n  \n  return product ? <div>{product.name}</div> : <div>Loading...</div>;\n}\n```",
+        "options": [
+        "Missing error handling",
+        "Not using async/await",
+        "productId is not included in the dependency array",
+        "Should use axios instead of fetch"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "productId is not included in the dependency array",
+        "difficulty": "medium",
+        "explanation": "The useEffect's dependency array is empty, so it only runs once when the component mounts. If productId changes, the effect won't re-run to fetch the new product data.",
+        "hint": "What happens if the productId prop changes after the component has mounted?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "Which library is NOT commonly used for making API requests in React applications?",
+        "options": ["axios", "fetch API", "redux-saga", "jquery-ajax"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "jquery-ajax",
+        "difficulty": "easy",
+        "explanation": "While jQuery's ajax method was popular in the past, it's rarely used in modern React applications. Instead, developers typically use fetch (built into browsers), axios, or redux-saga for more complex workflows.",
+        "hint": "Think about which option represents an older approach that's less common in modern React apps."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the primary advantage of using axios over the native fetch API?",
+        "options": [
+        "Automatic JSON parsing of responses",
+        "Built-in CSRF protection",
+        "Lower bundle size",
+        "Native browser support"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Automatic JSON parsing of responses",
+        "difficulty": "medium",
+        "explanation": "Axios automatically parses JSON responses, whereas with fetch you need to call .json() on the response object. Axios also provides other conveniences like better error handling and request cancellation.",
+        "hint": "Think about steps you need to take with fetch that axios handles automatically."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What pattern does this code implement?\n```jsx\nconst useFetch = (url) => {\n  const [data, setData] = useState(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n\n  useEffect(() => {\n    const fetchData = async () => {\n      try {\n        const response = await fetch(url);\n        if (!response.ok) throw new Error(`HTTP error ${response.status}`);\n        const result = await response.json();\n        setData(result);\n      } catch (err) {\n        setError(err);\n      } finally {\n        setLoading(false);\n      }\n    };\n    fetchData();\n  }, [url]);\n\n  return { data, loading, error };\n};\n```",
+        "options": [
+        "Higher-Order Component pattern",
+        "Render Props pattern",
+        "Custom Hook pattern",
+        "Context Provider pattern"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Custom Hook pattern",
+        "difficulty": "medium",
+        "explanation": "This code implements a custom hook called useFetch that encapsulates the data fetching logic, including loading and error states, making it reusable across different components.",
+        "hint": "This pattern allows for reusing stateful logic across components and starts with 'use'."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the purpose of the React Query library in API integration?",
+        "options": [
+        "It's just a wrapper around fetch with no additional benefits",
+        "It provides caching, background updates, and stale data handling for API requests",
+        "It's primarily for GraphQL queries only",
+        "It's used for database querying directly from React"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It provides caching, background updates, and stale data handling for API requests",
+        "difficulty": "medium",
+        "explanation": "React Query is a data-fetching library that provides powerful features like caching, automatic refetching, and background updates, making API integration in React much more efficient.",
+        "hint": "Think about what problems this library solves compared to manual fetch implementations."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "How should environment-specific API URLs be handled in a React application?",
+        "options": [
+        "Hardcode different URLs based on conditional checks",
+        "Always use localhost URLs and change them before deployment",
+        "Use environment variables (like REACT_APP_API_URL in Create React App)",
+        "Store URLs in localStorage"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use environment variables (like REACT_APP_API_URL in Create React App)",
+        "difficulty": "medium",
+        "explanation": "Environment variables allow you to use different API URLs for development, testing, and production environments without changing the code. In Create React App, these variables must start with REACT_APP_.",
+        "hint": "What's the best way to configure different values for development vs. production?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What does the following code accomplish?\n```jsx\nconst cache = new Map();\n\nfunction fetchWithCache(url) {\n  if (cache.has(url)) {\n    return Promise.resolve(cache.get(url));\n  }\n  \n  return fetch(url)\n    .then(response => response.json())\n    .then(data => {\n      cache.set(url, data);\n      return data;\n    });\n}\n```",
+        "options": [
+        "Implements server-side rendering",
+        "Creates a simple client-side caching mechanism for API responses",
+        "Handles API rate limiting",
+        "Implements JWT authentication"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creates a simple client-side caching mechanism for API responses",
+        "difficulty": "hard",
+        "explanation": "This code implements a basic cache using a Map. If a URL has been fetched before, it returns the cached data instead of making a new network request, improving performance for repeated requests to the same endpoint.",
+        "hint": "What happens when the same URL is requested multiple times?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the recommended approach for handling authentication tokens in API requests?",
+        "options": [
+        "Store them in component state",
+        "Store them in localStorage or cookies and include them in request headers",
+        "Include them directly in the API endpoint URL",
+        "Regenerate them for each request"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Store them in localStorage or cookies and include them in request headers",
+        "difficulty": "medium",
+        "explanation": "Authentication tokens should typically be stored in localStorage (for SPA) or secure cookies, then included in the Authorization header of API requests. This provides persistence across page refreshes while keeping them out of your codebase.",
+        "hint": "Consider both persistence and security concerns."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What's the purpose of using async/await with API calls instead of promises with .then()?",
+        "options": [
+        "async/await is the only way to handle errors in API calls",
+        "async/await makes the code faster",
+        "async/await makes asynchronous code look and behave more like synchronous code",
+        "async/await is required for using the fetch API"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "async/await makes asynchronous code look and behave more like synchronous code",
+        "difficulty": "easy",
+        "explanation": "async/await is syntactic sugar for promises that makes asynchronous code more readable and maintainable by allowing it to be written in a style that looks more like traditional synchronous code.",
+        "hint": "Think about readability and code structure."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "When is it appropriate to use the SWR library in a React application?",
+        "options": [
+        "Only for server-side rendering",
+        "Only for WebSocket connections",
+        "For data fetching with smart caching, revalidation, and stale-while-revalidate strategy",
+        "Only when using Redux for state management"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "For data fetching with smart caching, revalidation, and stale-while-revalidate strategy",
+        "difficulty": "hard",
+        "explanation": "SWR (stale-while-revalidate) is a data fetching library that implements a caching strategy where it returns cached (stale) data first, then revalidates in the background, making it excellent for frequently updated data and optimistic UI updates.",
+        "hint": "The library's name contains a clue about its primary strategy."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the correct way to handle form submissions to an API in React?",
+        "options": [
+        "Always use axios.post() directly on form submit",
+        "Prevent the default form behavior, collect form data, and send it to the API",
+        "Use HTML form action attribute to point to the API endpoint",
+        "Forms cannot be used with APIs in React"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Prevent the default form behavior, collect form data, and send it to the API",
+        "difficulty": "easy",
+        "explanation": "When handling form submissions in React that need to be sent to an API, you should prevent the default form submission behavior with e.preventDefault(), collect the form data (often from component state), and then make the API request programmatically.",
+        "hint": "Think about how to maintain a single-page application experience."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What issue might arise when setting component state based on API responses if the component unmounts before the response is received?",
+        "options": [
+        "The API call will be canceled automatically",
+        "React will throw a warning about memory leaks",
+        "The state update will silently fail",
+        "The component will remount automatically"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "React will throw a warning about memory leaks",
+        "difficulty": "medium",
+        "explanation": "If you try to update state on an unmounted component, React will issue a warning about memory leaks. To prevent this, you should either cancel the API request or use a flag to avoid the state update if the component has unmounted.",
+        "hint": "React has a specific message it displays in the console for this situation."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What does this code accomplish in terms of API cleanup?\n```jsx\nuseEffect(() => {\n  let isMounted = true;\n  fetch(url)\n    .then(response => response.json())\n    .then(data => {\n      if (isMounted) setData(data);\n    });\n  return () => {\n    isMounted = false;\n  };\n}, [url]);\n```",
+        "options": [
+        "It cancels the API request if the component unmounts",
+        "It prevents state updates if the component has unmounted",
+        "It caches the API response for future use",
+        "It retries the API call if it fails"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It prevents state updates if the component has unmounted",
+        "difficulty": "hard",
+        "explanation": "This code uses an 'isMounted' flag that is set to false in the cleanup function when the component unmounts. This prevents updating state on an unmounted component, avoiding memory leak warnings. However, it doesn't actually cancel the ongoing network request.",
+        "hint": "Look at how the flag is being used before setting state."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "Which HTTP status code range indicates a successful API response?",
+        "options": ["100-199", "200-299", "300-399", "400-499"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "200-299",
+        "difficulty": "easy",
+        "explanation": "HTTP status codes in the 200-299 range indicate success. The most common is 200 OK, but others include 201 Created, 202 Accepted, and 204 No Content.",
+        "hint": "These indicate that the request was received, understood, and processed successfully."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What's wrong with this data fetching approach?\n```jsx\nfunction UserProfile({ userId }) {\n  const [user, setUser] = useState(null);\n  \n  fetch(`https://api.example.com/users/${userId}`)\n    .then(response => response.json())\n    .then(data => setUser(data));\n  \n  return user ? <div>{user.name}</div> : <div>Loading...</div>;\n}\n```",
+        "options": [
+        "The API call should use axios instead of fetch",
+        "The fetch call is made on every render, causing an infinite loop",
+        "UserId is not being used correctly in the fetch URL",
+        "The API call should be asynchronous"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The fetch call is made on every render, causing an infinite loop",
+        "difficulty": "medium",
+        "explanation": "The fetch call is placed directly in the component body, so it runs on every render. When the fetch completes, it updates state with setUser, which triggers another render, creating an infinite loop. API calls should be placed inside useEffect.",
+        "hint": "Think about the component lifecycle and when this code will execute."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is optimistic UI updating in the context of API integration?",
+        "options": [
+        "Assuming the API will always return success and not handling errors",
+        "Updating the UI immediately based on expected API response, then reconciling when the actual response arrives",
+        "Having a positive attitude toward API response times",
+        "Only updating the UI after multiple successful API calls"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Updating the UI immediately based on expected API response, then reconciling when the actual response arrives",
+        "difficulty": "hard",
+        "explanation": "Optimistic UI updating is a pattern where the UI is updated immediately based on the expected result of an API call, without waiting for the actual response. If the API call succeeds, nothing more needs to be done. If it fails, the UI is reverted or reconciled accordingly.",
+        "hint": "This approach makes the application feel more responsive to users."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is a correct implementation of an API request with proper error handling?",
+        "options": [
+        "```jsx\nfetch(url).then(res => res.json()).then(setData);\n```",
+        "```jsx\ntry {\n  fetch(url).then(res => res.json()).then(setData);\n} catch (err) {\n  setError(err);\n}\n```",
+        "```jsx\nfetch(url)\n  .then(res => {\n    if (!res.ok) throw new Error(`HTTP error ${res.status}`);\n    return res.json();\n  })\n  .then(setData)\n  .catch(setError);\n```",
+        "```jsx\naxios.get(url).json().then(setData);\n```"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "```jsx\nfetch(url)\n  .then(res => {\n    if (!res.ok) throw new Error(`HTTP error ${res.status}`);\n    return res.json();\n  })\n  .then(setData)\n  .catch(setError);\n```",
+        "difficulty": "hard",
+        "explanation": "This implementation properly checks if the response is ok (status 200-299) and throws an error if not, which is then caught by the catch block. Many developers forget that fetch() only rejects on network errors, not HTTP error statuses.",
+        "hint": "The fetch API doesn't automatically reject on HTTP error status codes."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is the purpose of Axios interceptors in API integration?",
+        "options": [
+        "To block certain API calls based on user permissions",
+        "To intercept and modify requests or responses before they are handled by then or catch",
+        "To cache API responses automatically",
+        "To create mock API responses for testing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To intercept and modify requests or responses before they are handled by then or catch",
+        "difficulty": "hard",
+        "explanation": "Axios interceptors allow you to globally modify requests before they are sent or responses before they are processed by your application. Common uses include adding authentication headers to all requests or normalizing response data formats.",
+        "hint": "Think about global pre-processing of requests or responses."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is CORS and how does it affect API integration in React applications?",
+        "options": [
+        "CORS is a React library for optimizing API calls",
+        "CORS is a browser security feature that restricts cross-origin HTTP requests, potentially blocking API calls to different domains",
+        "CORS is a server-side framework for building APIs",
+        "CORS is an encryption protocol for secure API communication"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "CORS is a browser security feature that restricts cross-origin HTTP requests, potentially blocking API calls to different domains",
+        "difficulty": "medium",
+        "explanation": "Cross-Origin Resource Sharing (CORS) is a security mechanism built into browsers that restricts web applications from making requests to domains different from the one that served the web application, unless the API server explicitly allows it with specific headers.",
+        "hint": "Think about security restrictions when making requests to different domains."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "When implementing an API fetch with pagination, what should be stored in state?",
+        "options": [
+        "Only the current page of data",
+        "All pages of data concatenated together, current page number, and total pages",
+        "Only the total number of items available",
+        "Just the API endpoint URL"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "All pages of data concatenated together, current page number, and total pages",
+        "difficulty": "medium",
+        "explanation": "For paginated API data, you typically want to store all fetched data concatenated together (to avoid refetching earlier pages), the current page number (to know what to fetch next), and total pages or other metadata (to know when to stop).",
+        "hint": "Think about what information you need to both display the current data and know what to fetch next."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What approach does this code implement for API error handling?\n```jsx\nconst UserDetail = ({ id }) => {\n  const [user, setUser] = useState(null);\n  const [error, setError] = useState(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    fetch(`/api/users/${id}`)\n      .then(res => {\n        if (!res.ok) {\n          if (res.status === 404) {\n            throw new Error('User not found');\n          } else if (res.status === 403) {\n            throw new Error('Not authorized');\n          } else {\n            throw new Error('Something went wrong');\n          }\n        }\n        return res.json();\n      })\n      .then(data => setUser(data))\n      .catch(err => setError(err.message))\n      .finally(() => setLoading(false));\n  }, [id]);\n\n  if (loading) return <div>Loading...</div>;\n  if (error) return <div>Error: {error}</div>;\n  return user ? <UserProfile user={user} /> : null;\n};\n```",
+        "options": [
+        "Basic error handling with a single error message",
+        "Global error boundary approach",
+        "Error handling with status-specific error messages",
+        "Error handling with retry mechanism"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Error handling with status-specific error messages",
+        "difficulty": "hard",
+        "explanation": "This code implements error handling that provides different error messages based on HTTP status codes. It checks for specific status codes (404, 403) and provides tailored error messages, with a fallback for other errors.",
+        "hint": "Look at how the code handles different HTTP status codes differently."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "When using the fetch API, what is the correct way to include request headers?",
+        "options": [
+        "fetch(url, { headers: { 'Content-Type': 'application/json' } })",
+        "fetch(url, headers: { 'Content-Type': 'application/json' })",
+        "fetch(url).headers({ 'Content-Type': 'application/json' })",
+        "fetch(url).setHeaders({ 'Content-Type': 'application/json' })"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "fetch(url, { headers: { 'Content-Type': 'application/json' } })",
+        "difficulty": "easy",
+        "explanation": "Headers are passed as an object within the options object (the second argument to fetch). The headers property takes an object where each key-value pair represents a header name and value.",
+        "hint": "Headers are part of the request configuration object in fetch."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "API Integration",
+        "questionText": "What is a common pattern for refreshing authentication tokens in React applications?",
+        "options": [
+        "Manually refresh the page when tokens expire",
+        "Use axios interceptors to detect 401 responses and request a new token before retrying the original request",
+        "Always request a new token with each API call",
+        "Tokens cannot be refreshed automatically"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use axios interceptors to detect 401 responses and request a new token before retrying the original request",
+        "difficulty": "hard",
+        "explanation": "A common pattern for token refreshing is to use axios response interceptors to detect 401 (Unauthorized) responses, then make a request to refresh the token, and finally retry the original request with the new token. This creates a seamless experience for users.",
+        "hint": "This approach handles expired tokens without requiring user intervention."
+    },
 
     // Redux & state Management
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the primary purpose of Redux in a React application?",
+        "options": [
+        "To replace React's component state",
+        "To manage global state in a predictable way",
+        "To improve application performance",
+        "To handle API requests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To manage global state in a predictable way",
+        "difficulty": "easy",
+        "explanation": "Redux provides a predictable state container for JavaScript apps, primarily used for managing global application state in a consistent manner with clear update patterns.",
+        "hint": "Think about state management across multiple components."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What are the three principles of Redux?",
+        "options": [
+        "Components, Actions, Store",
+        "Single source of truth, State is read-only, Changes are made with pure functions",
+        "Immutability, Purity, Composition",
+        "Reducers, Actions, Middleware"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Single source of truth, State is read-only, Changes are made with pure functions",
+        "difficulty": "medium",
+        "explanation": "Redux is based on three fundamental principles: maintaining a single state tree (single source of truth), making state read-only (only changed by dispatching actions), and using pure functions (reducers) to specify how actions transform the state.",
+        "hint": "These principles define how data flows through Redux."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is a Redux action?",
+        "options": [
+        "A function that directly modifies the state",
+        "A plain JavaScript object that describes what happened",
+        "A component that renders Redux state",
+        "A middleware function"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A plain JavaScript object that describes what happened",
+        "difficulty": "easy",
+        "explanation": "Redux actions are plain JavaScript objects that have a 'type' property describing the action and optionally a payload with additional data. They describe what happened but don't specify how the state changes.",
+        "hint": "Actions describe 'what happened' in your application."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is a reducer in Redux?",
+        "options": [
+        "A function that dispatches actions",
+        "A component that subscribes to the store",
+        "A pure function that takes the previous state and an action, and returns the next state",
+        "A middleware function that intercepts actions"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A pure function that takes the previous state and an action, and returns the next state",
+        "difficulty": "easy",
+        "explanation": "A reducer is a pure function that receives the current state and an action, then returns a new state based on that action. Reducers specify how the application's state changes in response to actions.",
+        "hint": "These functions determine how state should change in response to actions."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What does the following Redux reducer do?\n```javascript\nfunction counterReducer(state = { count: 0 }, action) {\n  switch (action.type) {\n    case 'INCREMENT':\n      return { count: state.count + 1 };\n    case 'DECREMENT':\n      return { count: state.count - 1 };\n    default:\n      return state;\n  }\n}\n```",
+        "options": [
+        "It manages API requests for a counter service",
+        "It renders a counter component",
+        "It increments or decrements a count value in state based on dispatched actions",
+        "It dispatches INCREMENT and DECREMENT actions"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "It increments or decrements a count value in state based on dispatched actions",
+        "difficulty": "medium",
+        "explanation": "This reducer manages a simple counter state. It handles two action types: 'INCREMENT' which adds 1 to the count, and 'DECREMENT' which subtracts 1 from the count. For any other action type, it returns the current state unchanged.",
+        "hint": "Look at how the state changes in response to different action types."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "How do you access Redux state in a functional React component?",
+        "options": [
+        "By importing the state directly",
+        "By using the useSelector hook",
+        "By using this.props.state",
+        "By using the getState() method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "By using the useSelector hook",
+        "difficulty": "easy",
+        "explanation": "In functional components, Redux state is accessed using the useSelector hook from react-redux. This hook accepts a function that takes the Redux state as an argument and returns the part of state you want to access.",
+        "hint": "React-Redux provides hooks for functional components."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the purpose of the useDispatch hook in React-Redux?",
+        "options": [
+        "To create a new Redux store",
+        "To listen for state changes",
+        "To dispatch actions to the Redux store",
+        "To combine multiple reducers"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To dispatch actions to the Redux store",
+        "difficulty": "easy",
+        "explanation": "The useDispatch hook from react-redux returns a reference to the dispatch function from the Redux store. This function is used to dispatch actions to update the state.",
+        "hint": "This hook helps components trigger state changes."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What does the following code do in a React component?\n```javascript\nconst count = useSelector(state => state.counter.count);\nconst dispatch = useDispatch();\n\nconst handleIncrement = () => {\n  dispatch({ type: 'INCREMENT' });\n};\n```",
+        "options": [
+        "It creates a new Redux store with a counter",
+        "It retrieves the count value from Redux state and defines a function to increment it",
+        "It defines a new reducer for a counter",
+        "It creates a local state variable for counting"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It retrieves the count value from Redux state and defines a function to increment it",
+        "difficulty": "medium",
+        "explanation": "This code uses useSelector to extract the count value from the Redux state and useDispatch to get the dispatch function. The handleIncrement function dispatches an INCREMENT action to the store, which will be handled by a reducer to update the state.",
+        "hint": "Look at how the component is interacting with Redux state and actions."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is Redux middleware used for?",
+        "options": [
+        "For rendering React components",
+        "For handling side effects, async logic, and more between dispatching an action and reaching the reducer",
+        "For creating React context providers",
+        "For defining Redux actions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "For handling side effects, async logic, and more between dispatching an action and reaching the reducer",
+        "difficulty": "medium",
+        "explanation": "Redux middleware provides a third-party extension point between dispatching an action and the moment it reaches the reducer. Middleware is commonly used for logging, crash reporting, handling asynchronous requests, routing, and more.",
+        "hint": "Middleware lets you extend Redux's capabilities beyond simple synchronous updates."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is Redux Thunk used for?",
+        "options": [
+        "Combining multiple reducers",
+        "Creating Redux stores",
+        "Writing action creators that return functions instead of plain actions to handle async logic",
+        "Optimizing Redux performance"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Writing action creators that return functions instead of plain actions to handle async logic",
+        "difficulty": "medium",
+        "explanation": "Redux Thunk is middleware that allows you to write action creators that return a function instead of an action object. This function can perform async operations and dispatch actions when those operations complete, making it useful for API calls and other async tasks.",
+        "hint": "It helps with operations that can't be handled synchronously."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What does this Redux action creator do?\n```javascript\nfunction fetchUserData(userId) {\n  return function(dispatch) {\n    dispatch({ type: 'FETCH_USER_REQUEST' });\n    \n    return fetch(`/api/users/${userId}`)\n      .then(response => response.json())\n      .then(data => dispatch({ \n        type: 'FETCH_USER_SUCCESS', \n        payload: data \n      }))\n      .catch(error => dispatch({ \n        type: 'FETCH_USER_FAILURE', \n        error: error.message \n      }));\n  };\n}\n```",
+        "options": [
+        "It's a standard synchronous action creator",
+        "It's an async action creator using Redux Thunk to handle a user data fetch request",
+        "It's a Redux reducer for user data",
+        "It's a React component that fetches user data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It's an async action creator using Redux Thunk to handle a user data fetch request",
+        "difficulty": "hard",
+        "explanation": "This is a thunk action creator that returns a function instead of an action. The returned function dispatches actions at different stages of the API request: before the request (FETCH_USER_REQUEST), on success (FETCH_USER_SUCCESS), and on failure (FETCH_USER_FAILURE).",
+        "hint": "Notice that it returns a function that receives dispatch as an argument instead of returning a plain object."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the purpose of the combineReducers function in Redux?",
+        "options": [
+        "To dispatch multiple actions at once",
+        "To merge multiple components",
+        "To combine multiple reducer functions into a single reducer function",
+        "To connect React components to Redux"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To combine multiple reducer functions into a single reducer function",
+        "difficulty": "medium",
+        "explanation": "combineReducers is a utility function that turns an object whose values are different reducer functions into a single reducer function. This allows you to have multiple reducers that each manage a specific slice of your application state.",
+        "hint": "It helps with organizing larger Redux applications into manageable pieces."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the purpose of the Provider component in React-Redux?",
+        "options": [
+        "To create a Redux store",
+        "To make the Redux store available to all nested components",
+        "To connect to external API providers",
+        "To provide context between components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To make the Redux store available to all nested components",
+        "difficulty": "easy",
+        "explanation": "The Provider component from react-redux wraps your React application and makes the Redux store available to any nested components that need to access the Redux state or dispatch actions.",
+        "hint": "It's typically placed at the top level of your component tree."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the correct way to create a Redux store?",
+        "options": [
+        "new Redux.Store(reducer)",
+        "createStore(reducer)",
+        "makeStore(reducer)",
+        "Store.create(reducer)"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "createStore(reducer)",
+        "difficulty": "easy",
+        "explanation": "The correct way to create a Redux store is by using the createStore function from Redux, passing it a reducer function. In newer versions of Redux, configureStore from Redux Toolkit is recommended instead.",
+        "hint": "This function is provided by the Redux library itself."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is Redux Toolkit and why is it recommended?",
+        "options": [
+        "A collection of React components for Redux",
+        "A set of tools and simplified APIs for Redux development that reduces boilerplate code",
+        "A performance optimization package for Redux",
+        "A testing library for Redux applications"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A set of tools and simplified APIs for Redux development that reduces boilerplate code",
+        "difficulty": "medium",
+        "explanation": "Redux Toolkit is the official, opinionated toolset for efficient Redux development. It includes utilities to simplify common Redux use cases like store setup, creating reducers, immutable update logic, and even creates action creators automatically, significantly reducing boilerplate code.",
+        "hint": "It's the official recommended approach for writing Redux logic."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the purpose of the createSlice function in Redux Toolkit?",
+        "options": [
+        "To split the Redux store into multiple parts",
+        "To generate action creators and action types automatically based on reducer functions",
+        "To create middleware functions",
+        "To implement code-splitting in Redux applications"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To generate action creators and action types automatically based on reducer functions",
+        "difficulty": "medium",
+        "explanation": "createSlice is a function that accepts an initial state, an object of reducer functions, and a slice name, and automatically generates action creators and action types that correspond to the reducers and state. This simplifies the Redux workflow significantly.",
+        "hint": "It helps reduce the amount of Redux code you need to write manually."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What does this Redux Toolkit code do?\n```javascript\nconst counterSlice = createSlice({\n  name: 'counter',\n  initialState: { value: 0 },\n  reducers: {\n    increment: state => {\n      state.value += 1;\n    },\n    decrement: state => {\n      state.value -= 1;\n    },\n    incrementByAmount: (state, action) => {\n      state.value += action.payload;\n    }\n  }\n});\n\nexport const { increment, decrement, incrementByAmount } = counterSlice.actions;\n```",
+        "options": [
+        "It only creates a reducer function",
+        "It creates action creators but no reducer",
+        "It creates a slice of Redux state, with a reducer and action creators for incrementing and decrementing a counter",
+        "It creates a new Redux store"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "It creates a slice of Redux state, with a reducer and action creators for incrementing and decrementing a counter",
+        "difficulty": "hard",
+        "explanation": "This code uses Redux Toolkit's createSlice to create a 'counter' slice of state with an initial value of 0. It defines three reducer functions: increment, decrement, and incrementByAmount. Redux Toolkit automatically creates corresponding action creators, which are exported at the end.",
+        "hint": "Look at what createSlice returns and what's being exported."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "In Redux Toolkit, what does the following code do?\n```javascript\nstate.value += 1;\n```",
+        "options": [
+        "It violates Redux's immutability principle and will cause errors",
+        "It uses Immer behind the scenes to produce a new state object without mutating the original",
+        "It creates a side effect that will be ignored by Redux",
+        "It dispatches an action to update the state"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It uses Immer behind the scenes to produce a new state object without mutating the original",
+        "difficulty": "hard",
+        "explanation": "Redux Toolkit uses Immer internally, which allows you to write code that appears to mutate state directly, but actually produces a new immutable state object. This makes reducers much simpler to write while maintaining Redux's immutability requirements.",
+        "hint": "Redux Toolkit makes it easier to write immutable updates."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is Redux-Saga used for?",
+        "options": [
+        "For combining reducers",
+        "For handling side effects (like asynchronous operations) using generator functions",
+        "For connecting React components to Redux",
+        "For optimizing Redux store performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "For handling side effects (like asynchronous operations) using generator functions",
+        "difficulty": "hard",
+        "explanation": "Redux-Saga is middleware for handling side effects in Redux applications using generator functions. It's particularly well-suited for complex operations like API calls, worker threads, and other asynchronous flows that are difficult to handle with standard Redux or even Redux Thunk.",
+        "hint": "It's an alternative to Redux Thunk for handling async operations."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the difference between Redux and React's Context API?",
+        "options": [
+        "Redux is for global state while Context is only for component state",
+        "There is no difference; they serve identical purposes",
+        "Redux provides a more structured approach with actions, reducers, and middleware, while Context API is simpler but has fewer features",
+        "Context API is only for class components while Redux works with functional components"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Redux provides a more structured approach with actions, reducers, and middleware, while Context API is simpler but has fewer features",
+        "difficulty": "medium",
+        "explanation": "Both Redux and Context API can manage global state, but Redux offers a more structured approach with concepts like actions, reducers, and middleware. Context API is simpler and built into React, but lacks features like middleware for handling side effects, time-travel debugging, and the explicit state update patterns Redux enforces.",
+        "hint": "Think about the complexity and feature set differences."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is a selector in the context of Redux?",
+        "options": [
+        "A function that dispatches actions",
+        "A function that creates the Redux store",
+        "A function that extracts specific pieces of data from the store state",
+        "A React component that connects to Redux"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A function that extracts specific pieces of data from the store state",
+        "difficulty": "medium",
+        "explanation": "A selector is a function that accepts Redux state as an argument and returns data derived from that state. Selectors help encapsulate the state shape and can compute derived data, enabling Redux to store the minimal possible state.",
+        "hint": "These functions help components get exactly the data they need from the store."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is Reselect library used for in Redux applications?",
+        "options": [
+        "For combining multiple stores",
+        "For creating memoized selector functions that prevent unnecessary recalculations",
+        "For selecting which middleware to use",
+        "For selecting components to connect to Redux"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "For creating memoized selector functions that prevent unnecessary recalculations",
+        "difficulty": "hard",
+        "explanation": "Reselect is a library for creating memoized selector functions in Redux applications. Memoization helps prevent unnecessary recalculations when the input state hasn't changed, improving performance for derived data calculations.",
+        "hint": "It helps with performance optimization for computed values from state."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is wrong with the following Redux reducer code?\n```javascript\nfunction userReducer(state = { name: 'John', age: 25 }, action) {\n  switch (action.type) {\n    case 'UPDATE_NAME':\n      state.name = action.payload;\n      return state;\n    case 'UPDATE_AGE':\n      state.age = action.payload;\n      return state;\n    default:\n      return state;\n  }\n}\n```",
+        "options": [
+        "The reducer doesn't handle enough action types",
+        "The reducer is directly mutating the state object instead of returning a new state",
+        "The initial state should be in a separate variable",
+        "There's nothing wrong with this reducer"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The reducer is directly mutating the state object instead of returning a new state",
+        "difficulty": "medium",
+        "explanation": "This reducer violates Redux's core principle of immutability by directly modifying the state object. Redux requires that reducers never mutate state, but instead create a new state object with the updated values.",
+        "hint": "Redux requires state to be immutable."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the purpose of the useSelector hook's second argument?",
+        "options": [
+        "To specify which Redux store to use",
+        "To provide default values if the state is undefined",
+        "To customize the comparison function used to determine if the component should re-render",
+        "To transform the selected state before returning it"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To customize the comparison function used to determine if the component should re-render",
+        "difficulty": "hard",
+        "explanation": "The second argument to useSelector is an optional equality function. By default, useSelector uses strict === reference equality, but you can provide a custom comparison function like shallowEqual to prevent unnecessary re-renders when dealing with objects or arrays.",
+        "hint": "It affects when the component re-renders based on state changes."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What does the Redux DevTools extension allow you to do?",
+        "options": [
+        "Write Redux code more efficiently",
+        "Debug network requests",
+        "Inspect Redux state, action history, and time-travel debugging",
+        "Generate Redux components automatically"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Inspect Redux state, action history, and time-travel debugging",
+        "difficulty": "easy",
+        "explanation": "Redux DevTools is a browser extension that allows you to inspect the Redux store state, view a history of dispatched actions, and even travel back in time to previous states, making debugging Redux applications much easier.",
+        "hint": "It's a powerful tool for debugging Redux applications."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the role of the store.subscribe() method in Redux?",
+        "options": [
+        "To subscribe to API updates",
+        "To attach a listener that will be called whenever the state changes",
+        "To subscribe components to specific parts of the state",
+        "To subscribe to action dispatches"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To attach a listener that will be called whenever the state changes",
+        "difficulty": "medium",
+        "explanation": "store.subscribe() registers a callback that will be called whenever an action is dispatched and the state changes. This is used internally by React-Redux, but can also be used directly to create store state listeners.",
+        "hint": "It lets you know when something changes in the store."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the correct way to handle multiple related pieces of data in a Redux store?",
+        "options": [
+        "Create multiple stores, one for each data type",
+        "Create a new React context for each data type",
+        "Use a normalized state structure with entities and IDs",
+        "Store each piece in a separate global variable"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use a normalized state structure with entities and IDs",
+        "difficulty": "hard",
+        "explanation": "For related data like users, posts, comments, etc., Redux recommends using a normalized state structure where items are stored in objects keyed by their IDs, with separate arrays of IDs for ordering. This prevents duplication and makes updates more efficient.",
+        "hint": "This approach is inspired by database design principles."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the purpose of the \"action\" object in Redux?",
+        "options": [
+        "To execute state changes directly",
+        "To describe what changes should happen to the state",
+        "To create React components",
+        "To connect to external APIs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To describe what changes should happen to the state",
+        "difficulty": "easy",
+        "explanation": "Redux actions are plain JavaScript objects that describe what change should happen to the state. They don't directly change state themselves, but are processed by reducers which create a new state based on the action.",
+        "hint": "Actions are the 'what happened' part of Redux."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "When using Redux Toolkit, what's the purpose of the createAsyncThunk function?",
+        "options": [
+        "To create reducer functions",
+        "To generate action types automatically",
+        "To handle asynchronous operations with automatic loading, success, and error action dispatching",
+        "To optimize performance of Redux applications"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To handle asynchronous operations with automatic loading, success, and error action dispatching",
+        "difficulty": "hard",
+        "explanation": "createAsyncThunk generates a thunk that dispatches lifecycle actions (pending/fulfilled/rejected) based on the returned promise. This simplifies handling async operations like API calls by automatically creating and dispatching the appropriate actions at each stage.",
+        "hint": "It handles the three states of an async operation automatically."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "Which of the following is NOT a recommended way to structure Redux action types?",
+        "options": [
+        "domain/eventName (e.g., 'todos/todoAdded')",
+        "SCREAMING_SNAKE_CASE (e.g., 'ADD_TODO')",
+        "Using a random string for each action type",
+        "Using a Symbol as an action type"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using a random string for each action type",
+        "difficulty": "medium",
+        "explanation": "Using random strings for action types would make debugging extremely difficult, as actions wouldn't have consistent, recognizable types. The other options are all valid approaches, with domain/eventName being recommended by Redux Toolkit.",
+        "hint": "Think about what would make debugging and maintenance difficult."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "What is the purpose of the 'payload' property in a Redux action?",
+        "options": [
+        "It's required by Redux to identify the action",
+        "It contains data needed for the state update",
+        "It specifies which reducer should handle the action",
+        "It's used for authentication with Redux"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It contains data needed for the state update",
+        "difficulty": "easy",
+        "explanation": "The 'payload' property is a convention in Redux for including data with an action. While not strictly required by Redux (only 'type' is required), it's a standard way to pass along the data needed for the reducer to update the state appropriately.",
+        "hint": "It carries information needed to perform the state update."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Redux & State Management",
+        "questionText": "In the following Redux Toolkit extraReducers configuration, what will happen when fetchUser.fulfilled action is dispatched?\n```javascript\nextraReducers: (builder) => {\n  builder\n    .addCase(fetchUser.pending, (state) => {\n      state.status = 'loading';\n    })\n    .addCase(fetchUser.fulfilled, (state, action) => {\n      state.status = 'idle';\n      state.user = action.payload;\n    })\n    .addCase(fetchUser.rejected, (state, action) => {\n      state.status = 'failed';\n      state.error = action.error.message;\n    });\n}\n```",
+        "options": [
+        "Nothing, the configuration is incorrect",
+        "It will set status to 'idle' and update the user property with the payload data",
+        "It will throw an error because you can't use builder.addCase",
+        "It will dispatch another action automatically"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It will set status to 'idle' and update the user property with the payload data",
+        "difficulty": "hard",
+        "explanation": "When fetchUser.fulfilled action is dispatched, the corresponding reducer will run, setting the status to 'idle' and updating the user property in state with the data from action.payload. This is part of Redux Toolkit's createAsyncThunk pattern for handling async operations.",
+        "hint": "Look at the specific reducer defined for the fulfilled case."
+    },
 
     // Testing React Applications
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "Which testing library is most commonly paired with Jest for testing React components?",
+        "options": ["Enzyme", "React Testing Library", "Mocha", "Chai"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "React Testing Library",
+        "difficulty": "easy",
+        "explanation": "React Testing Library is currently the most commonly used library for testing React components. It encourages testing components based on how users interact with them rather than implementation details.",
+        "hint": "This library focuses on testing from a user's perspective rather than implementation details."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is the main purpose of Jest's snapshot testing?",
+        "options": ["To test API integration", "To verify component rendering hasn't changed unexpectedly", "To test performance", "To validate form submissions"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To verify component rendering hasn't changed unexpectedly",
+        "difficulty": "easy",
+        "explanation": "Snapshot testing captures the rendered output of a component and compares it to a previously saved 'snapshot'. This helps ensure that UI doesn't change unexpectedly between code changes.",
+        "hint": "It helps detect unintended changes in rendered component output."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What does the `render` function from React Testing Library return?",
+        "options": ["A Promise", "The component's props", "A collection of DOM querying utilities and rendered component", "Jest mock functions"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A collection of DOM querying utilities and rendered component",
+        "difficulty": "medium",
+        "explanation": "The `render` function returns an object with queries to find elements in the rendered component, along with other utilities for interacting with the rendered component.",
+        "hint": "It provides methods to query and interact with the rendered component."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "Which of the following is NOT a query method in React Testing Library?",
+        "options": ["getByText", "findByRole", "queryByLabel", "expectByTestId"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "expectByTestId",
+        "difficulty": "medium",
+        "explanation": "React Testing Library provides query methods in three categories: getBy, findBy, and queryBy. 'expectByTestId' is not a valid query method.",
+        "hint": "Think about the prefix patterns used in React Testing Library queries."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is the main difference between `getBy...` and `queryBy...` queries in React Testing Library?",
+        "options": ["getBy queries are synchronous, queryBy are asynchronous", "getBy queries throw an error when no element is found, queryBy return null", "getBy can only query by text, queryBy can query by any attribute", "getBy are for functional components, queryBy for class components"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "getBy queries throw an error when no element is found, queryBy return null",
+        "difficulty": "medium",
+        "explanation": "When an element isn't found, getBy queries throw an error, making them suitable for assertions about elements that should be present. queryBy queries return null, making them useful for asserting elements that should NOT be in the DOM.",
+        "hint": "Think about their behavior when an element doesn't exist."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What does the `fireEvent` object in React Testing Library do?",
+        "options": ["Prevents test errors", "Creates mock event handlers", "Simulates user interactions", "Checks component performance"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Simulates user interactions",
+        "difficulty": "easy",
+        "explanation": "The `fireEvent` object provides methods to simulate user interactions like clicks, form input, keyboard events, etc., allowing you to test how components respond to user behavior.",
+        "hint": "It helps test how components respond when users do things like clicking buttons."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "When using Jest, what's the purpose of the `beforeEach` function?",
+        "options": ["To run code before all tests in the file", "To run code before each individual test", "To define test prerequisites", "To initialize the testing environment"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To run code before each individual test",
+        "difficulty": "easy",
+        "explanation": "The `beforeEach` function runs before each test in a describe block, allowing you to set up a fresh testing environment for each test to avoid state sharing between tests.",
+        "hint": "It helps set up consistent conditions for each individual test case."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is the primary benefit of using `@testing-library/user-event` over `fireEvent`?",
+        "options": ["It's faster", "It more accurately simulates real user interactions", "It works with class components", "It supports animations"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It more accurately simulates real user interactions",
+        "difficulty": "medium",
+        "explanation": "`@testing-library/user-event` provides more realistic user event simulation than `fireEvent`. For example, `userEvent.type` will trigger input, keyDown, keyPress, and keyUp events just like a real user typing would, while `fireEvent.change` only triggers a single change event.",
+        "hint": "It creates events that more closely match what happens when a real person interacts with the page."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is `waitFor` used for in React Testing Library?",
+        "options": ["To pause test execution for a set time", "To wait for API responses", "To wait for assertions to pass within a timeout period", "To test loading states"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To wait for assertions to pass within a timeout period",
+        "difficulty": "medium",
+        "explanation": "`waitFor` allows you to wait for certain expectations to pass within a timeout period. This is useful for asynchronous operations where you don't know exactly when the UI will update.",
+        "hint": "It helps with testing asynchronous UI updates by repeatedly checking until a condition is met."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What does the `screen` object in React Testing Library provide?",
+        "options": ["A virtual DOM for testing", "Access to the browser window", "Pre-bound queries for the document body", "A mock of the React renderer"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Pre-bound queries for the document body",
+        "difficulty": "easy",
+        "explanation": "The `screen` object provides pre-bound queries that are automatically bound to document.body, making it convenient to query elements without having to store and use the return value from `render`.",
+        "hint": "It gives you a convenient way to search for elements in your rendered component."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "Which is the recommended query to use when testing accessibility in React?",
+        "options": ["getByTestId", "getByClassName", "getByRole", "getBySelector"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "getByRole",
+        "difficulty": "medium",
+        "explanation": "`getByRole` is recommended for testing accessibility because it queries elements by their ARIA role, promoting the creation of accessible components. It resembles how users using assistive technologies would interact with your app.",
+        "hint": "This query relates to how screen readers and other assistive technologies identify elements."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is a test fixture in the context of React testing?",
+        "options": ["A component reserved for testing", "A predefined set of data used for testing", "A testing utility in Jest", "A type of UI component"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A predefined set of data used for testing",
+        "difficulty": "medium",
+        "explanation": "A test fixture is a fixed state of the application or data used as a baseline for running tests. Fixtures help ensure tests are reliable and repeatable by providing consistent test data.",
+        "hint": "It's something you set up before testing to ensure consistent conditions."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is the purpose of Jest's `mock` function?",
+        "options": ["To render mock components", "To simulate browser events", "To create mock implementations of functions", "To bypass React's rendering process"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To create mock implementations of functions",
+        "difficulty": "medium",
+        "explanation": "Jest's `mock` function allows you to replace actual implementations with mock functions that you can track calls to, set return values for, and more. This is useful for isolating the code being tested.",
+        "hint": "It helps simulate certain behaviors without executing the actual code."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is the recommended way to test a component that uses React context?",
+        "options": ["Mock the context with Jest", "Use a real context provider in tests", "Avoid testing components with context", "Refactor to remove context dependency"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use a real context provider in tests",
+        "difficulty": "hard",
+        "explanation": "The recommended approach is to wrap the component under test with the actual context provider and provide test values. This ensures the component interacts with context correctly and maintains the component's actual implementation.",
+        "hint": "Think about how you would make context values available to a component in a real application."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What does the following test code do?\n```jsx\ntest('button click increments counter', async () => {\n  render(<Counter />);\n  const button = screen.getByRole('button', { name: /increment/i });\n  expect(screen.getByText('Count: 0')).toBeInTheDocument();\n  userEvent.click(button);\n  expect(screen.getByText('Count: 1')).toBeInTheDocument();\n});\n```",
+        "options": ["Tests if a button exists", "Tests if clicking a button increments a counter", "Tests if the counter starts at 0", "Tests if the Counter component renders"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Tests if clicking a button increments a counter",
+        "difficulty": "medium",
+        "explanation": "This test renders a Counter component, finds a button with 'increment' in its accessible name, verifies the initial count is 0, simulates a click on the button, and then checks if the count has increased to 1.",
+        "hint": "The test involves checking a value before and after a user interaction."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "When testing components that make API calls, what is the recommended approach?",
+        "options": ["Disable API calls during tests", "Use the real API in tests", "Mock the API responses", "Skip testing components with API calls"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Mock the API responses",
+        "difficulty": "medium",
+        "explanation": "When testing components that make API calls, it's best to mock the API responses. This makes tests faster, more reliable (not dependent on external services), and allows testing different scenarios (success, error, loading states) easily.",
+        "hint": "Think about how to make tests reliable and not dependent on external services."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "In Jest, what's the difference between `describe` and `it` (or `test`)?",
+        "options": ["No difference, they're aliases", "`describe` groups related tests, while `it` defines individual test cases", "`describe` is for unit tests, `it` is for integration tests", "`describe` is synchronous, `it` is asynchronous"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "`describe` groups related tests, while `it` defines individual test cases",
+        "difficulty": "easy",
+        "explanation": "`describe` is used to group related tests, providing organization and scope for setup/teardown functions. `it` (or its alias `test`) defines individual test cases that make specific assertions about your code.",
+        "hint": "One is for organization, the other defines actual test cases."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What will the following code output when run as a test?\n```jsx\ntest('async test', async () => {\n  await waitFor(() => {\n    expect(1 + 1).toBe(3);\n  });\n  console.log('Test completed');\n});\n```",
+        "options": ["'Test completed'", "Error: expect(2).toBe(3)", "Nothing, the test will time out", "Error: waitFor timed out"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Error: waitFor timed out",
+        "difficulty": "hard",
+        "explanation": "The test will fail with a timeout error from `waitFor`. Since 1+1 will never equal 3, the assertion will never pass, and `waitFor` will retry until it hits its timeout limit, then fail with a timeout error.",
+        "hint": "Consider what happens when an assertion inside waitFor never becomes true."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What does the `rerender` function do in React Testing Library?",
+        "options": ["Re-runs all tests", "Refreshes the browser page", "Re-renders a component with new props", "Resets the testing environment"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Re-renders a component with new props",
+        "difficulty": "medium",
+        "explanation": "The `rerender` function allows you to re-render the previously rendered component with different props. This is useful for testing how a component responds to prop changes without unmounting and remounting it.",
+        "hint": "It helps test how components react to changing input values."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is the purpose of the `cleanup` function in React Testing Library?",
+        "options": ["To reset mock functions", "To remove the rendered component from the DOM", "To clear test data", "To stop running tests"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To remove the rendered component from the DOM",
+        "difficulty": "medium",
+        "explanation": "`cleanup` unmounts components from the DOM and removes any components rendered via React Testing Library. It's automatically called after each test when using the React Testing Library setup with Jest, but can be called manually if needed.",
+        "hint": "It helps prevent test environment pollution between tests."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "Why might a test using `findBy` queries fail with a timeout error?",
+        "options": ["The element exists but takes too long to appear", "The element never appears in the DOM", "The test runner is configured incorrectly", "The component has an error"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The element never appears in the DOM",
+        "difficulty": "medium",
+        "explanation": "`findBy` queries are asynchronous and wait for an element to appear. If the element never appears in the DOM, the query will retry until it hits the timeout limit, then fail with a timeout error.",
+        "hint": "Think about what these queries are waiting for and what happens if that condition is never met."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is a common way to test a React component that uses Redux?",
+        "options": ["Avoid testing Redux components", "Test the Redux store separately from components", "Wrap components in a <Provider> with a test store", "Mock the connect HOC"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Wrap components in a <Provider> with a test store",
+        "difficulty": "hard",
+        "explanation": "When testing Redux-connected components, wrapping them in a Redux <Provider> with a test store allows you to test the component's interaction with Redux. You can create a test store with initial state and test how the component renders and responds to state changes.",
+        "hint": "The component needs access to the Redux store during testing, just like in the real application."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What does the `act` function do in React testing?",
+        "options": ["Simulates user actions", "Creates test actors", "Wraps code that causes React state updates", "Activates test mode"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Wraps code that causes React state updates",
+        "difficulty": "hard",
+        "explanation": "The `act` function ensures that all updates related to React component state and rendering are processed and applied before making assertions. It helps make tests more reliable by ensuring the DOM is updated before assertions are checked.",
+        "hint": "It helps when testing code that triggers React state updates, ensuring everything is processed properly."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "When testing a custom hook, what is the recommended approach?",
+        "options": ["Test the components that use the hook", "Use react-hooks-testing-library", "Can't test hooks directly", "Convert the hook to a class component"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use react-hooks-testing-library",
+        "difficulty": "hard",
+        "explanation": "The `@testing-library/react-hooks` library provides utilities for testing hooks directly without needing to render a component. It allows you to call hooks within a test context and test their behavior, state updates, and effects.",
+        "hint": "There's a specific library in the Testing Library family designed for this purpose."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "Which pattern is most effective for testing components that use React Router?",
+        "options": ["Mock the useHistory hook", "Mock the entire react-router-dom module", "Wrap components in a <MemoryRouter>", "Avoid testing routed components"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Wrap components in a <MemoryRouter>",
+        "difficulty": "hard",
+        "explanation": "When testing components that use React Router, wrapping them in a <MemoryRouter> provides the routing context they need. MemoryRouter stores history in memory (rather than using the browser's history) which makes it ideal for testing.",
+        "hint": "You need to provide a router context that doesn't depend on browser history."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is a test double in the context of testing?",
+        "options": ["Running the same test twice", "A testing approach where two developers test the same code", "A generic term for test objects that stand in for real dependencies", "A duplicate test file"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A generic term for test objects that stand in for real dependencies",
+        "difficulty": "hard",
+        "explanation": "Test doubles are objects that stand in for real dependencies during testing. They include mocks, stubs, fakes, and spies. They help isolate the code being tested by controlling the behavior of dependencies.",
+        "hint": "It's like a stunt double in movies - it stands in for something else during testing."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is Test-Driven Development (TDD) in the context of React?",
+        "options": ["Writing tests for existing components", "A testing framework for React", "Writing tests before implementing components", "Testing components in production"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Writing tests before implementing components",
+        "difficulty": "medium",
+        "explanation": "Test-Driven Development is a development methodology where you write tests before implementing the actual code. In React, this means writing tests for components, hooks, or utilities before creating them, then implementing the code to make those tests pass.",
+        "hint": "It follows a red-green-refactor cycle where failing tests come before working code."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is the primary goal of integration testing in React applications?",
+        "options": ["Test individual functions in isolation", "Test how components work together", "Test the application's performance", "Test the application's UI design"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Test how components work together",
+        "difficulty": "medium",
+        "explanation": "Integration testing focuses on testing how different parts of your application work together. In React, this often means testing multiple components that interact with each other, ensuring they integrate properly.",
+        "hint": "It tests the connections and interactions between different parts of your app."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "Which tool would you use for end-to-end testing of a React application?",
+        "options": ["Jest", "React Testing Library", "Cypress", "Enzyme"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Cypress",
+        "difficulty": "easy",
+        "explanation": "Cypress is a popular tool for end-to-end testing of web applications, including React apps. It runs tests in a real browser environment and can interact with your application just like a real user would.",
+        "hint": "This tool is specifically designed for testing the entire application flow in a real browser."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "What is a common issue when testing React components that use setTimeout or setInterval?",
+        "options": ["They cause memory leaks in tests", "Jest doesn't support timing functions", "Tests may finish before timeout callbacks execute", "They make tests run too slowly"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Tests may finish before timeout callbacks execute",
+        "difficulty": "hard",
+        "explanation": "When testing components that use setTimeout or setInterval, tests might complete before the scheduled callbacks execute, leading to false negatives. This is usually addressed by using Jest's timer mocks (jest.useFakeTimers()) to control time in tests.",
+        "hint": "Think about the asynchronous nature of these functions and how it might affect test execution."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Testing React Applications",
+        "questionText": "In the following code, what is the purpose of `{ name: /increment/i }` in the getByRole call?\n```jsx\nconst button = screen.getByRole('button', { name: /increment/i });\n```",
+        "options": ["To make the test case-insensitive", "To find a button with a name prop", "To find a button with accessible text matching 'increment'", "To find a button with ID 'increment'"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To find a button with accessible text matching 'increment'",
+        "difficulty": "medium",
+        "explanation": "The `name` option in getByRole refers to the accessible name of the element, which is typically the text content for buttons. The `/increment/i` is a case-insensitive regular expression that matches any button with text containing 'increment'.",
+        "hint": "This helps find elements based on what a user (or screen reader) would perceive as their label or name."
+    },
 
     // Performance Optimization
 
