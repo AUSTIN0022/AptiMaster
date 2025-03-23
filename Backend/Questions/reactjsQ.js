@@ -6259,7 +6259,382 @@ const reactJSQ = [
     },
 
     // Production Deployment
-    
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which of the following build commands generates production-ready files for a Create React App project?",
+        "options": ["npm start", "npm run build", "npm run dev", "npm run production"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "npm run build",
+        "difficulty": "easy",
+        "explanation": "The 'npm run build' command optimizes the build for production by minifying files, removing comments, and creating efficient production bundles.",
+        "hint": "This command creates a 'build' directory with optimized files."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which environment variable file has the highest priority in a Create React App project?",
+        "options": [".env", ".env.local", ".env.production", ".env.production.local"],
+        "correctOptionIndex": 3,
+        "correctOptionText": ".env.production.local",
+        "difficulty": "medium",
+        "explanation": "Environment variables are loaded in the following order: .env → .env.local → .env.production → .env.production.local, with later files taking precedence over earlier ones.",
+        "hint": "Environment-specific local files have the highest priority."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which of the following is NOT a benefit of using a Content Delivery Network (CDN) for deploying React applications?",
+        "options": ["Reduced latency", "Improved load times", "Server-side rendering", "DDoS protection"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Server-side rendering",
+        "difficulty": "medium",
+        "explanation": "CDNs distribute static content across multiple geographically dispersed servers to reduce latency and improve load times. They don't provide server-side rendering, which requires application servers running Node.js or similar.",
+        "hint": "CDNs primarily deal with static content distribution, not dynamic rendering."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is the purpose of setting up a CI/CD pipeline for a React application?",
+        "options": ["To automatically optimize images", "To automate testing and deployment processes", "To create documentation", "To monitor application performance"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To automate testing and deployment processes",
+        "difficulty": "easy",
+        "explanation": "CI/CD (Continuous Integration/Continuous Deployment) pipelines automate the process of testing code changes and deploying them to production, ensuring a more reliable and efficient workflow.",
+        "hint": "CI/CD is about automation of development workflows."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which file should you create at the root of your React project to configure routing on platforms like Netlify or Vercel for single-page applications?",
+        "options": ["routes.json", "_redirects", "vercel.json", "netlify.toml"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "_redirects",
+        "difficulty": "medium",
+        "explanation": "The '_redirects' file is used on Netlify to handle client-side routing in single-page applications. It ensures that all paths are redirected to the index.html file, allowing React Router to handle the routing.",
+        "hint": "This file helps solve the refresh 404 problem on static hosting providers."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What's the primary purpose of code splitting in a React application?",
+        "options": ["To organize code in different files", "To reduce initial bundle size and improve load time", "To make the code more readable", "To prevent syntax errors"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To reduce initial bundle size and improve load time",
+        "difficulty": "medium",
+        "explanation": "Code splitting allows you to split your code into various bundles which can then be loaded on demand, reducing the size of the initial bundle and improving the application's initial load time.",
+        "hint": "It helps with lazy-loading parts of your application that aren't immediately needed."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which of the following is NOT a valid method for implementing code splitting in React?",
+        "options": ["React.lazy() with Suspense", "import() syntax", "require.ensure()", "React.split()"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "React.split()",
+        "difficulty": "medium",
+        "explanation": "React.split() is not a real method. React supports code splitting through React.lazy() with Suspense, dynamic import() syntax, and the older require.ensure() method (in webpack).",
+        "hint": "Three of these are valid code splitting techniques, but one doesn't exist in React."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What does the following code accomplish in a React application?\n\nconst ProfilePage = React.lazy(() => import('./ProfilePage'));\n\nfunction MyApp() {\n  return (\n    <React.Suspense fallback={<Spinner />}>\n      <ProfilePage />\n    </React.Suspense>\n  );\n}",
+        "options": ["Server-side rendering", "Code splitting with lazy loading", "Error boundary implementation", "Memoization of the ProfilePage component"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Code splitting with lazy loading",
+        "difficulty": "hard",
+        "explanation": "This code implements code splitting using React.lazy(), which loads the ProfilePage component only when it's needed. The Suspense component provides a fallback UI (Spinner) while the component is loading.",
+        "hint": "Look at how the ProfilePage component is being imported and rendered."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which environment variable prefix is required for Create React App to expose variables to the browser?",
+        "options": ["APP_", "BROWSER_", "REACT_APP_", "PUBLIC_"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "REACT_APP_",
+        "difficulty": "easy",
+        "explanation": "In Create React App, only environment variables that start with 'REACT_APP_' will be exposed to your JavaScript code in the browser.",
+        "hint": "This prefix is specific to Create React App and helps prevent accidental exposure of sensitive environment variables."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is the purpose of a web server's 'gzip' or 'brotli' compression in the context of React deployment?",
+        "options": ["To compress images for faster loading", "To reduce the size of JavaScript and CSS files sent to the browser", "To compress database storage", "To minify React code during build"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To reduce the size of JavaScript and CSS files sent to the browser",
+        "difficulty": "medium",
+        "explanation": "Web servers use compression algorithms like gzip or brotli to compress text-based resources (HTML, CSS, JavaScript) before sending them to the browser, reducing bandwidth usage and improving load times.",
+        "hint": "This happens at the HTTP response level, not during the build process."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is the purpose of the 'source-map-explorer' tool in a React project?",
+        "options": ["To create visual representations of your application routes", "To analyze and visualize the size of bundled files", "To detect memory leaks", "To map API endpoints"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To analyze and visualize the size of bundled files",
+        "difficulty": "hard",
+        "explanation": "source-map-explorer analyzes JavaScript bundles using source maps. It helps you understand what code is taking up space in your bundle, which is useful for optimizing bundle size.",
+        "hint": "This tool helps you identify large dependencies that might be bloating your application."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which of the following is NOT a common hosting platform for React applications?",
+        "options": ["Netlify", "Vercel", "MongoDB Atlas", "Firebase Hosting"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "MongoDB Atlas",
+        "difficulty": "easy",
+        "explanation": "MongoDB Atlas is a database-as-a-service platform for MongoDB, not a hosting platform for web applications. Netlify, Vercel, and Firebase Hosting are all popular platforms for hosting React applications.",
+        "hint": "Three of these are web application hosting platforms, while one is primarily for a different purpose."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is the primary benefit of implementing HTTP/2 on your server when deploying a React application?",
+        "options": ["Better SEO rankings", "Multiplexed connections reducing latency", "Automatic SSL encryption", "Increased server CPU utilization"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Multiplexed connections reducing latency",
+        "difficulty": "hard",
+        "explanation": "HTTP/2 allows multiple requests and responses to be sent over a single connection simultaneously (multiplexing), which significantly reduces latency compared to HTTP/1.1, especially for applications that load many resources.",
+        "hint": "This protocol feature helps overcome the 'head-of-line blocking' problem in HTTP/1.1."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What information does the following script provide?\n\nnpx source-map-explorer 'build/static/js/*.js'",
+        "options": ["Testing coverage information", "Bundle size analysis", "Server response times", "Dependency tree visualization"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Bundle size analysis",
+        "difficulty": "medium",
+        "explanation": "This command uses source-map-explorer to analyze JavaScript bundles in the build directory, showing a visualization of what's contributing to your bundle size, which helps identify large dependencies.",
+        "hint": "This tool helps detect what might be making your JavaScript bundles too large."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which of the following headers should be set to prevent clickjacking attacks on your deployed React application?",
+        "options": ["X-Content-Type-Options", "X-Frame-Options", "Content-Security-Policy", "X-XSS-Protection"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "X-Frame-Options",
+        "difficulty": "medium",
+        "explanation": "The X-Frame-Options header prevents your page from being displayed in a frame or iframe, which helps protect against clickjacking attacks where malicious sites embed your site.",
+        "hint": "This header controls whether a browser should be allowed to render a page in a <frame>, <iframe>, <embed> or <object>."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is the purpose of setting up a Content Security Policy (CSP) for a deployed React application?",
+        "options": ["To improve SEO rankings", "To prevent Cross-Site Scripting (XSS) attacks", "To reduce server load", "To implement authentication"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To prevent Cross-Site Scripting (XSS) attacks",
+        "difficulty": "medium",
+        "explanation": "A Content Security Policy helps prevent XSS attacks by specifying which dynamic resources are allowed to load, restricting inline scripts, and controlling where scripts can be loaded from.",
+        "hint": "CSP is a security feature that helps mitigate certain types of attacks by controlling resource loading."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which AWS service is MOST suitable for hosting a static React application?",
+        "options": ["EC2", "Lambda", "S3 with CloudFront", "RDS"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "S3 with CloudFront",
+        "difficulty": "medium",
+        "explanation": "S3 (Simple Storage Service) is ideal for hosting static files, and when combined with CloudFront (CDN), it provides fast, secure, and cost-effective hosting for static React applications.",
+        "hint": "This combination provides storage for static files and a global content delivery network."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What does the following command do in a Docker-based React deployment?\n\ndocker build -t my-react-app:latest .",
+        "options": ["Starts a local development server", "Creates a Docker image from your Dockerfile", "Uploads your React app to Docker Hub", "Installs Docker dependencies"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creates a Docker image from your Dockerfile",
+        "difficulty": "medium",
+        "explanation": "The 'docker build' command creates a Docker image based on the instructions in your Dockerfile. The '-t' flag tags the image with a name ('my-react-app') and version ('latest').",
+        "hint": "This is the first step in containerizing your application before running it."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is a key advantage of using Docker for deploying React applications?",
+        "options": ["It provides built-in server-side rendering", "It ensures consistency across different environments", "It automatically optimizes your React code", "It provides free SSL certificates"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It ensures consistency across different environments",
+        "difficulty": "easy",
+        "explanation": "Docker containers package your application with all its dependencies, ensuring that it runs the same way in every environment, from development to staging to production.",
+        "hint": "Docker helps solve the 'it works on my machine' problem."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which of the following is NOT a valid approach for handling client-side routing in a deployed static React application?",
+        "options": [
+        "Configure the server to return index.html for all routes",
+        "Use HashRouter instead of BrowserRouter",
+        "Create a _redirects file for Netlify",
+        "Use window.location.pathname directly instead of a router"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Use window.location.pathname directly instead of a router",
+        "difficulty": "hard",
+        "explanation": "While technically possible, using window.location.pathname directly instead of a router library is not a recommended approach for handling client-side routing in React applications. It lacks important features like history management, nested routes, and code splitting support.",
+        "hint": "Three of these are standard solutions for client-side routing in deployed React applications."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is the purpose of the PUBLIC_URL environment variable in a Create React App project?",
+        "options": [
+        "To specify the domain name for API requests",
+        "To define the base URL for all relative URLs in the HTML",
+        "To set the URL for the public API documentation",
+        "To configure the URL for social media sharing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To define the base URL for all relative URLs in the HTML",
+        "difficulty": "medium",
+        "explanation": "PUBLIC_URL is used to specify the base URL for all relative URLs in your HTML files (like paths to CSS and JavaScript files). This is particularly useful when deploying to a subdirectory or using a CDN.",
+        "hint": "This environment variable affects how asset paths are resolved in the build output."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "In a multi-environment deployment pipeline for React, what is the main purpose of a staging environment?",
+        "options": [
+        "To develop new features",
+        "To test changes in a production-like setting before actual deployment",
+        "To host the documentation",
+        "To back up the production environment"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To test changes in a production-like setting before actual deployment",
+        "difficulty": "easy",
+        "explanation": "A staging environment closely mimics the production environment and allows teams to test changes, detect issues, and verify behaviors before deploying to the actual production environment that users interact with.",
+        "hint": "This environment serves as a final checkpoint before changes reach end users."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is a blue-green deployment strategy in the context of React applications?",
+        "options": [
+        "A color scheme for your application UI",
+        "A technique where you maintain two identical production environments with only one active at a time",
+        "A method for separating development and production code",
+        "A way to visually highlight code changes in pull requests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A technique where you maintain two identical production environments with only one active at a time",
+        "difficulty": "hard",
+        "explanation": "Blue-green deployment involves maintaining two identical production environments. One (blue) serves production traffic while you deploy to the other (green). Once green is verified, you switch traffic to it, minimizing downtime and risk.",
+        "hint": "This strategy reduces downtime and risk during deployments by providing a quick rollback option."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What does the following Netlify configuration file do?\n\n# netlify.toml\n[[redirects]]\n  from = \"/*\"\n  to = \"/index.html\"\n  status = 200",
+        "options": [
+        "Redirects all 404 errors to the homepage",
+        "Configures server-side rendering",
+        "Handles client-side routing by sending all requests to index.html",
+        "Sets up automatic HTTPS"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Handles client-side routing by sending all requests to index.html",
+        "difficulty": "medium",
+        "explanation": "This Netlify configuration redirects all routes to index.html with a 200 status code, enabling client-side routing in single-page applications (SPAs) like React with React Router.",
+        "hint": "This configuration solves the problem of refreshing pages on routes other than the root in SPAs."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which tool in the React ecosystem can help you generate static HTML files for each route, improving SEO and initial load performance?",
+        "options": ["React Router", "Next.js", "Redux", "styled-components"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Next.js",
+        "difficulty": "medium",
+        "explanation": "Next.js provides static site generation (SSG) capabilities, allowing you to pre-render React pages at build time into HTML files. This improves SEO and initial load performance compared to client-side rendering.",
+        "hint": "This framework extends React with server-side rendering and static site generation features."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What is a key benefit of implementing route-based code splitting in a React application?",
+        "options": [
+        "It improves SEO rankings",
+        "It reduces the initial load time by loading only necessary code",
+        "It simplifies the development process",
+        "It automatically fixes routing errors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It reduces the initial load time by loading only necessary code",
+        "difficulty": "medium",
+        "explanation": "Route-based code splitting loads JavaScript only for the current route, reducing the initial bundle size and improving the application's startup time. Users only download the code they need for the current view.",
+        "hint": "This technique is particularly valuable for large applications with many routes."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "What does the following GitHub Actions workflow accomplish?\n\nname: Deploy\non:\n  push:\n    branches: [ main ]\njobs:\n  build-and-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - name: Install Dependencies\n        run: npm ci\n      - name: Build\n        run: npm run build\n      - name: Deploy to Netlify\n        uses: netlify/actions/cli@master\n        with:\n          args: deploy --prod\n        env:\n          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}\n          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}",
+        "options": [
+        "Sets up continuous testing for pull requests",
+        "Automatically deploys the main branch to Netlify when changes are pushed",
+        "Creates a new Netlify site for each commit",
+        "Builds the application locally without deployment"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Automatically deploys the main branch to Netlify when changes are pushed",
+        "difficulty": "hard",
+        "explanation": "This GitHub Actions workflow automates the deployment process to Netlify. When code is pushed to the main branch, it checks out the code, installs dependencies, builds the project, and deploys it to Netlify using authentication tokens.",
+        "hint": "This is an example of a CI/CD pipeline that automates the build and deployment process."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which of the following is TRUE about environment variables in a production React application?",
+        "options": [
+        "They can be changed after the application is built and deployed",
+        "They are automatically encrypted in the browser",
+        "They are embedded in the bundle at build time and cannot be changed without rebuilding",
+        "They are stored in cookies for persistence"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "They are embedded in the bundle at build time and cannot be changed without rebuilding",
+        "difficulty": "hard",
+        "explanation": "In a React application, environment variables are embedded in the JavaScript bundle at build time. Once the application is built, these values cannot be changed without rebuilding the application, unlike server-side applications where environment variables can be changed on the server.",
+        "hint": "This is an important consideration when deploying React applications to different environments."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "Which feature of webpack is MOST directly responsible for creating optimized production builds in React applications?",
+        "options": ["Hot Module Replacement", "Tree Shaking", "Code Splitting", "DevServer"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Tree Shaking",
+        "difficulty": "hard",
+        "explanation": "Tree Shaking is a term for dead code elimination. It removes unused code from your final bundle by identifying and eliminating code that isn't actually used/imported, resulting in smaller production builds.",
+        "hint": "This feature is named after the process of shaking a tree to remove dead leaves."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Production Deployment",
+        "questionText": "In a containerized React application deployment, what is the primary purpose of a multi-stage Dockerfile?",
+        "options": [
+        "To deploy to multiple environments simultaneously",
+        "To create smaller production images by separating build and runtime environments",
+        "To test the application in multiple browsers",
+        "To support multiple versions of React"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To create smaller production images by separating build and runtime environments",
+        "difficulty": "hard",
+        "explanation": "Multi-stage Dockerfiles use multiple FROM statements, where one stage builds the application (including all build dependencies), and a second stage copies only the built artifacts into a clean, minimal production image, resulting in much smaller images.",
+        "hint": "This approach helps avoid including unnecessary build tools and dependencies in the final production container."
+    },
+
     
 ]
 
