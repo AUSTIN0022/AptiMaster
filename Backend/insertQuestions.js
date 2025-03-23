@@ -25,18 +25,21 @@ const insertQuestions = async () => {
     //   }
     //   console.log("Quantitiatvie Questions inserted successfully!");
 
+    // C Questions
      for (const questionData of CQuestions) {
         const question = new Questions(questionData);
         await question.save(); // This will trigger the hooks
       }
       console.log("C Questions inserted successfully!");
 
+      // JavaScript Questions
       for (const questionData of JSQuestions) {
         const question = new Questions(questionData);
         await question.save(); 
       }
       console.log("JavaScript Questions inserted successfully!");
       
+      // Python Questions 
       for (const questionData of pythonQuestions) {
         const question = new Questions(questionData);
         await question.save();
