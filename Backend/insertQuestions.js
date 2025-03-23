@@ -4,6 +4,7 @@ import { Questions } from "./Database/schema.js";
 
 // Import all question sets
 import CQuestions from './Questions/cQ.js';
+import JavaQuestions from './Questions/javaQ.js';
 import JSQuestions from './Questions/javascriptQ.js';
 import mongoDBQuestions from './Questions/mongoDBQ.js';
 import nodeJSQuestions from './Questions/nodejsQ.js';
@@ -29,6 +30,7 @@ async function insertQuestions() {
     // Define all question sets with their names for better logging
     const questionSets = [
       { name: 'C', data: CQuestions },
+      { name: 'Java', data: JavaQuestions },
       { name: 'JavaScript', data: JSQuestions },
       { name: 'Python', data: pythonQuestions },
       { name: 'TypeScript', data: TSQuestions },
