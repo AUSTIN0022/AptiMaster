@@ -1,4 +1,4 @@
-const reactJSQ = [
+const reactJSQuestions = [
 
     // Introduction to React
     {
@@ -6638,4 +6638,4 @@ const reactJSQ = [
     
 ]
 
-export default reactJSQ;
+export default reactJSQuestions;

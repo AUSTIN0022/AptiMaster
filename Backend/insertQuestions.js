@@ -1,67 +1,61 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { Questions } from "./Database/schema.js";
+
+// Import all question sets
 import CQuestions from './Questions/cQ.js';
 import JSQuestions from './Questions/javascriptQ.js';
+import mongoDBQuestions from './Questions/mongoDBQ.js';
+import nodeJSQuestions from './Questions/nodejsQ.js';
 import pythonQuestions from './Questions/pythonQ.js';
+import reactJSQuestions from './Questions/reactjsQ.js';
+import SQLQuestions from './Questions/sqlQ.js';
+import TSQuestions from './Questions/typeScriptQ.js';
+
+// Load environment variables
 dotenv.config();
 
+// Main function using async/await pattern
+async function insertQuestions() {
+  try {
+    // Connect to MongoDB
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("Connected to MongoDB");
+    
+    // Clear existing questions
+    await Questions.deleteMany({});
+    console.log("Cleared Questions Collections");
 
-// MongoDB Connection String
-mongoose.connect(process.env.MONGO_URI);
-console.log("Connected to MongoDB");
+    // Define all question sets with their names for better logging
+    const questionSets = [
+      { name: 'C', data: CQuestions },
+      { name: 'JavaScript', data: JSQuestions },
+      { name: 'Python', data: pythonQuestions },
+      { name: 'TypeScript', data: TSQuestions },
+      { name: 'SQL', data: SQLQuestions },
+      { name: 'Node.js', data: nodeJSQuestions },
+      { name: 'MongoDB', data: mongoDBQuestions },
+      { name: 'React.js', data: reactJSQuestions }
+    ];
 
-const insertQuestions = async () => {
-    try {
-
-        await Questions.deleteMany({});
-
-        console.log("Cleared Questions Collections");
-
-
-    //   for (const questionData of questions) {
-    //     const question = new Questions(questionData);
-    //     await question.save(); // This will trigger the hooks
-    //   }
-    //   console.log("Quantitiatvie Questions inserted successfully!");
-
-    // C Questions
-     for (const questionData of CQuestions) {
-        const question = new Questions(questionData);
-        await question.save(); // This will trigger the hooks
+    // Use insertMany for better performance
+    for (const set of questionSets) {
+      if (set.data && set.data.length > 0) {
+        await Questions.insertMany(set.data);
+        console.log(`${set.name} Questions inserted successfully!`);
+      } else {
+        console.log(`No questions found for ${set.name}`);
       }
-      console.log("C Questions inserted successfully!");
-
-      // JavaScript Questions
-      for (const questionData of JSQuestions) {
-        const question = new Questions(questionData);
-        await question.save(); 
-      }
-      console.log("JavaScript Questions inserted successfully!");
-      
-      // Python Questions 
-      for (const questionData of pythonQuestions) {
-        const question = new Questions(questionData);
-        await question.save();
-      }
-      console.log("Python Questions inserted successfully!");
-      
-      // TypeScript Questions
-
-      // SQL Questions
-
-      // DataBase Systems
-
-      // 
-
-    } catch (err) {
-      console.error("Error inserting questions:", err);
-    } finally {
-      await mongoose.disconnect();
-      console.log("Disconnected from MongoDB");
     }
 
-  };
+    console.log("All questions inserted successfully!");
+  } catch (err) {
+    console.error("Error inserting questions:", err);
+  } finally {
+    await mongoose.disconnect();
+    console.log("Disconnected from MongoDB");
+  }
+}
 
-// Call the function
+// Execute the function
 insertQuestions();

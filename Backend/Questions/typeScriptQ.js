@@ -1,4 +1,4 @@
-const typeScriptQuestions = [
+const TSQuestions = [
     // TypeScript Basics
     {
         "topic": "67d6b45a953bd3a26da2ad86",
@@ -5697,4 +5697,4 @@ const typeScriptQuestions = [
 ]
 
 
-export default typeScriptQuestions;
+export default TSQuestions;
