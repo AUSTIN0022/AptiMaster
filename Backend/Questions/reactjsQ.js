@@ -5359,11 +5359,907 @@ const reactJSQ = [
     },
 
     // Server-side Rendering
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the primary benefit of Server-Side Rendering in React applications?",
+        "options": [
+        "Reducing server load",
+        "Improved initial load performance and SEO",
+        "Simplifying component development",
+        "Eliminating the need for client-side JavaScript"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improved initial load performance and SEO",
+        "difficulty": "easy",
+        "explanation": "Server-Side Rendering improves initial page load performance by delivering pre-rendered HTML to the client, which also makes content immediately available for search engine crawlers, enhancing SEO.",
+        "hint": "Think about what users and search engines see when they first request a page."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "Which of the following is NOT a React framework that supports SSR?",
+        "options": [
+        "Next.js",
+        "Gatsby",
+        "Create React App",
+        "Remix"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Create React App",
+        "difficulty": "easy",
+        "explanation": "Create React App is a toolchain for setting up React projects, but it does not support Server-Side Rendering out of the box. Next.js, Gatsby, and Remix all provide built-in SSR capabilities.",
+        "hint": "Which option is primarily focused on client-side rendering?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "In Next.js, which file is used to define server-side rendering logic for a specific route?",
+        "options": [
+        "pages/[route].server.js",
+        "pages/[route].ssr.js",
+        "pages/[route].js",
+        "server/[route].js"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "pages/[route].js",
+        "difficulty": "easy",
+        "explanation": "In Next.js, any component exported from a file in the 'pages' directory automatically becomes a route and can implement server-side rendering through functions like getServerSideProps or getStaticProps.",
+        "hint": "Next.js uses a file-system based routing system."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What function is used in Next.js to fetch data on each request for server-side rendering?",
+        "options": [
+        "getStaticProps()",
+        "getServerSideProps()",
+        "fetchServerData()",
+        "useServerEffect()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "getServerSideProps()",
+        "difficulty": "easy",
+        "explanation": "getServerSideProps() is a Next.js function that runs on every request, fetching data on the server before rendering the page, enabling true server-side rendering.",
+        "hint": "Which function name explicitly references server-side props?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "Which of the following is NOT a benefit of Static Site Generation (SSG) compared to Server-Side Rendering (SSR)?",
+        "options": [
+        "Better performance for unchanged content",
+        "Lower server costs",
+        "Ability to update content without rebuilding",
+        "Improved security"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Ability to update content without rebuilding",
+        "difficulty": "medium",
+        "explanation": "Static Site Generation requires rebuilding the site when content changes, unlike SSR which can render the latest content on each request. This is a limitation of SSG, not a benefit compared to SSR.",
+        "hint": "Think about what happens when your content changes with each approach."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is hydration in the context of React server-side rendering?",
+        "options": [
+        "The process of optimizing server performance",
+        "Adding styling to server-rendered components",
+        "Attaching event listeners to server-rendered HTML",
+        "Refreshing the server cache"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Attaching event listeners to server-rendered HTML",
+        "difficulty": "medium",
+        "explanation": "Hydration is the process where React attaches event listeners to the server-rendered HTML once it loads in the browser, making the static HTML interactive without re-rendering the entire DOM.",
+        "hint": "What makes a static HTML page become interactive?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What happens if you use browser-specific APIs like 'window' or 'document' in component code that gets server-rendered?",
+        "options": [
+        "The server will automatically polyfill these APIs",
+        "It will cause runtime errors during server rendering",
+        "Next.js will automatically skip those parts during SSR",
+        "It will work fine but show warnings in the console"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It will cause runtime errors during server rendering",
+        "difficulty": "medium",
+        "explanation": "Browser-specific APIs like 'window' or 'document' don't exist in the server environment, so using them directly in component code that's rendered on the server will cause runtime errors.",
+        "hint": "Consider the different JavaScript environments on server versus browser."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the main difference between getStaticProps() and getServerSideProps() in Next.js?",
+        "options": [
+        "getStaticProps() runs at build time, while getServerSideProps() runs on each request",
+        "getStaticProps() supports API calls, while getServerSideProps() doesn't",
+        "getStaticProps() is for client components, while getServerSideProps() is for server components",
+        "getStaticProps() provides more data, while getServerSideProps() is more limited"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "getStaticProps() runs at build time, while getServerSideProps() runs on each request",
+        "difficulty": "medium",
+        "explanation": "getStaticProps() runs at build time and generates static HTML, making it ideal for content that doesn't change often. getServerSideProps() runs on each request, enabling server-side rendering with fresh data every time.",
+        "hint": "When does each function execute during the application lifecycle?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "In Next.js, what is Incremental Static Regeneration (ISR)?",
+        "options": [
+        "A technique for optimizing client-side rendering",
+        "A way to partially update server-side rendered pages",
+        "A method to regenerate static pages after deployment without rebuilding the entire site",
+        "A database caching strategy for faster data retrieval"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A method to regenerate static pages after deployment without rebuilding the entire site",
+        "difficulty": "medium",
+        "explanation": "Incremental Static Regeneration allows Next.js to regenerate individual static pages on-demand after they've been deployed, combining the benefits of static generation (performance) with the ability to update content over time.",
+        "hint": "Think about refreshing static content without a full rebuild."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What can cause hydration errors in React SSR applications?",
+        "options": [
+        "Using too many components",
+        "Differences between server-rendered HTML and client React tree",
+        "Slow network connections",
+        "Using too many CSS styles"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Differences between server-rendered HTML and client React tree",
+        "difficulty": "medium",
+        "explanation": "Hydration errors occur when the React component tree that the client tries to attach to doesn't match the HTML structure that was rendered on the server, which can happen with dynamic content or when using browser-specific logic incorrectly.",
+        "hint": "What happens when the client and server render different content?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the correct way to safely access browser APIs in a Next.js component that gets server-rendered?",
+        "options": [
+        "Use a polyfill for all browser APIs",
+        "Add a try/catch around all browser API calls",
+        "Use useEffect or componentDidMount hooks for browser-only code",
+        "Import a server-side version of the browser APIs"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Use useEffect or componentDidMount hooks for browser-only code",
+        "difficulty": "medium",
+        "explanation": "useEffect and componentDidMount hooks only run on the client after the component has mounted, so they're safe places to put browser-specific code in components that also get server-rendered.",
+        "hint": "Which React features only execute on the client side?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What does the following Next.js code primarily achieve?\n```javascript\nexport async function getStaticPaths() {\n  return {\n    paths: [\n      { params: { id: '1' } },\n      { params: { id: '2' } }\n    ],\n    fallback: 'blocking'\n  }\n}\n```",
+        "options": [
+        "It defines server-side routes for API endpoints",
+        "It pre-renders specific dynamic routes at build time",
+        "It creates a caching strategy for specific resources",
+        "It sets up redirects for legacy URLs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It pre-renders specific dynamic routes at build time",
+        "difficulty": "medium",
+        "explanation": "The getStaticPaths function tells Next.js which dynamic routes (with params id: '1' and id: '2') should be pre-rendered at build time. The 'blocking' fallback means other paths will be server-rendered on first request.",
+        "hint": "This function is used with dynamic routes and static generation."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the 'fallback' property in getStaticPaths used for in Next.js?",
+        "options": [
+        "To provide a default page when routes don't match",
+        "To configure error handling for failed data fetching",
+        "To determine what happens with paths not generated at build time",
+        "To set up a redirects system for deprecated routes"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To determine what happens with paths not generated at build time",
+        "difficulty": "medium",
+        "explanation": "The 'fallback' property controls what happens when a user requests a page that wasn't pre-rendered at build time. Options include false (404 error), true (render fallback UI, then generate page), or 'blocking' (server-render on first request).",
+        "hint": "Think about dynamic paths that weren't specified explicitly in getStaticPaths."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What does the 'revalidate' property do in Next.js getStaticProps?",
+        "options": [
+        "Validates user input on forms",
+        "Checks data integrity from APIs",
+        "Enables automatic re-generation of static pages after a specific time period",
+        "Verifies component prop types at runtime"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Enables automatic re-generation of static pages after a specific time period",
+        "difficulty": "medium",
+        "explanation": "The 'revalidate' property in getStaticProps enables Incremental Static Regeneration, allowing Next.js to regenerate the static page after the specified number of seconds, keeping content fresh without rebuilding the entire site.",
+        "hint": "How can static content be updated without a full site rebuild?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the purpose of Next.js's 'getInitialProps' and why is it considered legacy?",
+        "options": [
+        "It's for client-side data fetching and is legacy because it's slower than useEffect",
+        "It's for server-side rendering and is legacy because newer APIs provide better granularity",
+        "It's for route configuration and is legacy because file-based routing is now preferred",
+        "It's for CSS-in-JS and is legacy because CSS Modules are now recommended"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It's for server-side rendering and is legacy because newer APIs provide better granularity",
+        "difficulty": "hard",
+        "explanation": "getInitialProps was Next.js's original data fetching method for SSR, but it's now considered legacy because newer methods like getStaticProps and getServerSideProps provide more granular control over rendering strategies and better performance optimizations.",
+        "hint": "Consider how this function compares to the newer data fetching methods."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What problem does this Next.js code solve?\n```javascript\nimport dynamic from 'next/dynamic'\n\nconst ClientOnlyComponent = dynamic(\n  () => import('../components/ClientComponent'),\n  { ssr: false }\n)\n```",
+        "options": [
+        "It delays loading of large components to improve performance",
+        "It prevents server-side rendering of components that use browser-only APIs",
+        "It encrypts sensitive component code on the server",
+        "It creates a separate bundle for mobile devices"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It prevents server-side rendering of components that use browser-only APIs",
+        "difficulty": "hard",
+        "explanation": "This code uses Next.js's dynamic imports with the { ssr: false } option to prevent a component from being rendered on the server. This is useful for components that rely on browser-only APIs (like window or document) that would cause errors during server rendering.",
+        "hint": "What would happen if a component that uses browser APIs was rendered on the server?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "In a Next.js application, what's the difference between using getStaticProps with a revalidate value versus using getServerSideProps?",
+        "options": [
+        "There's no real difference; they're just alternative syntaxes",
+        "getStaticProps with revalidate serves cached content until revalidation, while getServerSideProps renders fresh on every request",
+        "getStaticProps with revalidate works only with API routes, while getServerSideProps works with page routes",
+        "getStaticProps with revalidate is client-side only, while getServerSideProps is server-side only"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "getStaticProps with revalidate serves cached content until revalidation, while getServerSideProps renders fresh on every request",
+        "difficulty": "hard",
+        "explanation": "getStaticProps with revalidate implements Incremental Static Regeneration, serving cached static HTML until the revalidation period expires, then regenerating in the background. getServerSideProps always renders fresh content on each request, making it more dynamic but potentially slower.",
+        "hint": "Consider the caching behavior and when the rendering happens in each approach."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the primary challenge of managing state in server-rendered React applications?",
+        "options": [
+        "Server-side code can't access the Redux store",
+        "React hooks don't work in server environments",
+        "Initial state on the server must match what the client will hydrate",
+        "Server-rendered components can't use the Context API"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Initial state on the server must match what the client will hydrate",
+        "difficulty": "hard",
+        "explanation": "In server-rendered React apps, the state used during server rendering must match the initial state used for hydration on the client. If they don't match, React will warn about hydration mismatches and may need to re-render components, defeating some of the benefits of SSR.",
+        "hint": "Think about what happens during the hydration process if states don't align."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the correct way to handle cookies or authentication in getServerSideProps?",
+        "options": [
+        "Use the document.cookie API directly",
+        "Access the request object and its cookies property",
+        "Import a cookie library in the component",
+        "Use window.localStorage to retrieve auth tokens"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Access the request object and its cookies property",
+        "difficulty": "hard",
+        "explanation": "In getServerSideProps, you have access to the request object which contains headers and cookies. You can access cookies through request.cookies to handle authentication or other cookie-based functionality on the server.",
+        "hint": "getServerSideProps receives a context parameter with HTTP-related objects."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the purpose of the '_document.js' file in Next.js?",
+        "options": [
+        "To define global CSS styles",
+        "To customize the server-rendered HTML structure",
+        "To configure API routes",
+        "To set up client-side routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To customize the server-rendered HTML structure",
+        "difficulty": "hard",
+        "explanation": "The '_document.js' file in Next.js allows you to customize the server-rendered HTML document structure, including elements like <html>, <head>, and <body>. It's commonly used to add language attributes, custom fonts, or third-party scripts that need to be present in the initial HTML.",
+        "hint": "Think about the HTML that wraps your entire React application."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "Which of the following is a key disadvantage of Server-Side Rendering compared to Client-Side Rendering?",
+        "options": [
+        "Poorer SEO performance",
+        "Slower initial page load",
+        "Higher server load and cost",
+        "Less interactive user interfaces"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Higher server load and cost",
+        "difficulty": "hard",
+        "explanation": "Server-Side Rendering requires more server resources since the server has to render the full page HTML for each request, rather than sending a minimal HTML file and letting the client handle rendering. This can lead to higher server costs, especially for high-traffic applications.",
+        "hint": "Consider where the computational work happens in each approach."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the concept of 'streaming SSR' in modern React frameworks?",
+        "options": [
+        "Using video streams alongside React components",
+        "Progressively sending HTML chunks to the client as they're generated",
+        "A technique for streaming data between server and client during hydration",
+        "A method for streaming CSS assets to improve rendering performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Progressively sending HTML chunks to the client as they're generated",
+        "difficulty": "hard",
+        "explanation": "Streaming SSR allows the server to send HTML chunks to the client as they become available, rather than waiting for the entire page to render. This improves Time To First Byte and allows the browser to start processing parts of the page earlier, improving perceived performance.",
+        "hint": "How might you improve the delivery of server-rendered content without waiting for everything to complete?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "Which statement about React 18's Suspense with SSR is correct?",
+        "options": [
+        "It's only available in client-side rendering",
+        "It allows selective hydration of different parts of the page",
+        "It's primarily used for code-splitting in SSR",
+        "It requires Redux to function properly"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It allows selective hydration of different parts of the page",
+        "difficulty": "hard",
+        "explanation": "React 18 introduced Suspense-enabled SSR, which allows for selective hydration of different parts of the page. This means less important parts can be hydrated later, letting critical UI become interactive faster, improving user experience.",
+        "hint": "What new capability does Suspense bring to the hydration process?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What does this Next.js code accomplish?\n```javascript\nexport default function MyPage({ products }) {\n  return <ProductList products={products} />;\n}\n\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/products');\n  const products = await res.json();\n  \n  return {\n    props: { products },\n    revalidate: 60\n  };\n}\n```",
+        "options": [
+        "Client-side fetching of products every 60 seconds",
+        "Server-side rendering of products on each request",
+        "Static generation with data revalidation every 60 seconds",
+        "API route creation for product data"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Static generation with data revalidation every 60 seconds",
+        "difficulty": "hard",
+        "explanation": "This code implements Incremental Static Regeneration (ISR) in Next.js. It statically generates the page with product data at build time, then revalidates and regenerates the page in the background at most once every 60 seconds if the page is requested.",
+        "hint": "Look closely at the revalidate property and what it controls."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is the purpose of Next.js's 'next/script' component?",
+        "options": [
+        "To optimize JavaScript bundle size",
+        "To control how external scripts load with SSR",
+        "To transform JSX into JavaScript",
+        "To enable TypeScript support"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To control how external scripts load with SSR",
+        "difficulty": "hard",
+        "explanation": "The 'next/script' component in Next.js provides control over how external scripts are loaded and executed in an SSR context. It offers options like 'beforeInteractive', 'afterInteractive', and 'lazyOnload' to optimize when scripts load relative to page rendering and hydration.",
+        "hint": "Consider the challenges of loading third-party scripts in a server-rendered application."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "In Next.js, what is the primary difference between 'pages' and 'app' directory for routing?",
+        "options": [
+        "The 'pages' directory is for static pages, while 'app' is for dynamic pages",
+        "The 'pages' directory uses the older Pages Router, while 'app' uses the newer App Router with RSC support",
+        "The 'pages' directory is for client components, while 'app' is for server components",
+        "There is no difference; they're alternative naming conventions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The 'pages' directory uses the older Pages Router, while 'app' uses the newer App Router with RSC support",
+        "difficulty": "hard",
+        "explanation": "Next.js 13+ introduced the App Router using the 'app' directory, which supports React Server Components, parallel routes, and other advanced features. The 'pages' directory uses the original Pages Router, which has a different routing system and data fetching approach.",
+        "hint": "This relates to a major architectural change introduced in Next.js 13."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What is a React Server Component and how does it differ from traditional SSR?",
+        "options": [
+        "Server Components run on both client and server; traditional SSR only runs on the server",
+        "Server Components are just a marketing term for traditional SSR with no technical differences",
+        "Server Components never hydrate on the client; traditional SSR components render on server then hydrate on client",
+        "Server Components only work with GraphQL; traditional SSR works with any data source"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Server Components never hydrate on the client; traditional SSR components render on server then hydrate on client",
+        "difficulty": "hard",
+        "explanation": "React Server Components represent a fundamental shift from traditional SSR. They execute exclusively on the server and stream their output to the client without JavaScript, eliminating hydration costs. Traditional SSR renders on the server but still sends component JavaScript for client-side hydration.",
+        "hint": "Think about what happens with the JavaScript for each component type."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "What technique does this Next.js code implement?\n```javascript\nimport { useRouter } from 'next/router'\n\nexport default function Page({ fallback }) {\n  const router = useRouter()\n  \n  // If the page is not yet generated, this will be displayed initially\n  if (router.isFallback) {\n    return <LoadingComponent />\n  }\n\n  // Normal render\n  return <ProductDetails {...fallback} />\n}\n```",
+        "options": [
+        "Server-side error handling",
+        "Client-side routing with transitions",
+        "Fallback UI for Incremental Static Generation",
+        "Suspense-based code splitting"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Fallback UI for Incremental Static Generation",
+        "difficulty": "hard",
+        "explanation": "This code implements a fallback UI for Incremental Static Generation in Next.js. When getStaticPaths has fallback: true and a user visits a path not generated at build time, router.isFallback will be true, allowing you to show a loading state while the page is generated on-demand.",
+        "hint": "What does router.isFallback indicate in Next.js?"
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Server-Side Rendering",
+        "questionText": "In Next.js with App Router, what's the difference between a Client Component and a Server Component?",
+        "options": [
+        "Client Components only render on the client; Server Components render on both server and client",
+        "Client Components can use hooks and interactivity; Server Components cannot use React hooks or browser APIs",
+        "Client Components handle routing; Server Components handle data fetching",
+        "There's no difference; they're just naming conventions for organizational purposes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Client Components can use hooks and interactivity; Server Components cannot use React hooks or browser APIs",
+        "difficulty": "hard",
+        "explanation": "In Next.js App Router, Server Components render only on the server and can access server resources directly but cannot use React hooks or browser APIs. Client Components are marked with 'use client' directive, can use React hooks and browser APIs, and enable interactivity.",
+        "hint": "Consider what capabilities are unique to each component type in terms of React features."
+    },
 
     // Advanced Patterns
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the primary purpose of the Render Props pattern in React?",
+        "options": [
+        "To optimize component rendering performance",
+        "To share code between components by passing a function as a prop",
+        "To create consistent styling across components",
+        "To manage global state without using Redux"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To share code between components by passing a function as a prop",
+        "difficulty": "easy",
+        "explanation": "The Render Props pattern allows components to share code by passing a function prop that returns a React element. This pattern enables the sharing of state and behavior without using inheritance or duplicating code.",
+        "hint": "Think about how this pattern allows for code reuse between components."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "Which React pattern uses components as children of a wrapper component to create a cohesive API?",
+        "options": [
+        "Higher-Order Components",
+        "Render Props",
+        "Compound Components",
+        "Container-Presenter Pattern"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Compound Components",
+        "difficulty": "easy",
+        "explanation": "Compound Components is a pattern where components are designed to work together, with a parent component managing shared state and providing context to child components that are usually used together to create a cohesive component API.",
+        "hint": "This pattern is often used for complex UI elements like tabs, select dropdowns, or accordions."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is a Higher-Order Component (HOC) in React?",
+        "options": [
+        "A component that renders faster than regular components",
+        "A function that takes a component and returns a new enhanced component",
+        "A component that uses the newest React features",
+        "A component that can render both on server and client"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A function that takes a component and returns a new enhanced component",
+        "difficulty": "easy",
+        "explanation": "A Higher-Order Component is a function that takes a component as input and returns a new component with enhanced functionality. This pattern is used for cross-cutting concerns like adding authentication, data fetching, or logging capabilities to multiple components.",
+        "hint": "Think about component composition and how functionality can be wrapped around existing components."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "In the following code snippet, what pattern is being implemented?\n```jsx\nfunction withUser(Component) {\n  return function(props) {\n    const user = useContext(UserContext);\n    return <Component user={user} {...props} />;\n  };\n}\n\nconst ProfilePage = withUser(UserProfile);\n```",
+        "options": [
+        "Render Props",
+        "Higher-Order Component",
+        "Compound Component",
+        "Custom Hook"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Higher-Order Component",
+        "difficulty": "easy",
+        "explanation": "This code implements the Higher-Order Component (HOC) pattern. The 'withUser' function takes a component as an argument and returns a new component that adds user data from context to the wrapped component's props.",
+        "hint": "Look at the function signature and what it returns."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the primary benefit of using Custom Hooks over Render Props or HOCs?",
+        "options": [
+        "Custom Hooks run faster than other patterns",
+        "Custom Hooks work with class components",
+        "Custom Hooks result in cleaner component trees and better composition",
+        "Custom Hooks automatically memoize their results"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Custom Hooks result in cleaner component trees and better composition",
+        "difficulty": "medium",
+        "explanation": "Custom Hooks provide a cleaner way to share stateful logic between components compared to HOCs or Render Props. They don't create extra components in the tree, allow for better composition of multiple hooks, and result in more readable component code.",
+        "hint": "Think about what happens to the component tree with each pattern."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What pattern is demonstrated in this code?\n```jsx\nfunction Mouse(props) {\n  const [position, setPosition] = useState({ x: 0, y: 0 });\n  \n  useEffect(() => {\n    const handleMouseMove = (event) => {\n      setPosition({ x: event.clientX, y: event.clientY });\n    };\n    \n    window.addEventListener('mousemove', handleMouseMove);\n    return () => window.removeEventListener('mousemove', handleMouseMove);\n  }, []);\n  \n  return props.render(position);\n}\n\n// Usage\n<Mouse render={position => (\n  <p>Mouse position: {position.x}, {position.y}</p>\n)} />\n```",
+        "options": [
+        "Higher-Order Component",
+        "Render Props",
+        "Compound Component",
+        "Container/Presenter Pattern"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Render Props",
+        "difficulty": "medium",
+        "explanation": "This code demonstrates the Render Props pattern. The Mouse component tracks mouse position state and passes it to a function provided via props.render, allowing the parent component to determine what to render with that data.",
+        "hint": "Notice how the component receives a function through props that determines what to render."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the main disadvantage of using multiple Higher-Order Components to compose functionality?",
+        "options": [
+        "They make debugging more difficult with deep component nesting",
+        "They require class components and cannot be used with hooks",
+        "They always cause performance issues",
+        "They cannot share data between each other"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "They make debugging more difficult with deep component nesting",
+        "difficulty": "medium",
+        "explanation": "Using multiple Higher-Order Components leads to 'wrapper hell' or deep component nesting, which makes debugging more difficult as error traces become harder to follow, and it can be unclear which HOC is providing which props.",
+        "hint": "Consider what happens to your component tree when you apply multiple HOCs to a component."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "Which pattern is being implemented in this code?\n```jsx\nconst Tabs = ({ children, defaultIndex = 0 }) => {\n  const [activeIndex, setActiveIndex] = useState(defaultIndex);\n  \n  const context = {\n    activeIndex,\n    setActiveIndex\n  };\n  \n  return (\n    <TabsContext.Provider value={context}>\n      <div className=\"tabs\">{children}</div>\n    </TabsContext.Provider>\n  );\n};\n\nTabs.Tab = ({ children, index }) => {\n  const { activeIndex, setActiveIndex } = useContext(TabsContext);\n  \n  return (\n    <div \n      className={`tab ${activeIndex === index ? 'active' : ''}`}\n      onClick={() => setActiveIndex(index)}\n    >\n      {children}\n    </div>\n  );\n};\n\nTabs.Panel = ({ children, index }) => {\n  const { activeIndex } = useContext(TabsContext);\n  \n  return activeIndex === index ? (\n    <div className=\"panel\">{children}</div>\n  ) : null;\n};\n```",
+        "options": [
+        "Higher-Order Component",
+        "Render Props",
+        "Compound Components",
+        "State Reducer"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Compound Components",
+        "difficulty": "medium",
+        "explanation": "This code implements the Compound Components pattern. The Tabs component and its associated Tab and Panel components work together, sharing state through context. The parent Tabs component manages state while child components (accessed as Tabs.Tab and Tabs.Panel) consume the context.",
+        "hint": "Look at how the components are structured as properties on a parent component and share context."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the State Reducer pattern in React?",
+        "options": [
+        "A way to replace Redux with React's built-in state management",
+        "A pattern that allows consumers to customize a component's state logic by providing a reducer function",
+        "A method to reduce the initial state size for performance optimization",
+        "A technique for combining multiple useState hooks into a single state object"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A pattern that allows consumers to customize a component's state logic by providing a reducer function",
+        "difficulty": "medium",
+        "explanation": "The State Reducer pattern gives consumers control over a component's internal state management by allowing them to provide a custom reducer function. This enables them to intercept and modify state updates, adding custom logic or overriding default behavior while preserving the component's core functionality.",
+        "hint": "Think about how this pattern gives control to component consumers rather than keeping all state logic internal."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the primary purpose of the Container/Presenter pattern (also known as Smart/Dumb components)?",
+        "options": [
+        "To improve performance by reducing re-renders",
+        "To separate data fetching and state management from presentation logic",
+        "To create responsive components that adapt to different screen sizes",
+        "To implement code-splitting for faster initial loads"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To separate data fetching and state management from presentation logic",
+        "difficulty": "medium",
+        "explanation": "The Container/Presenter pattern separates components into two types: containers that handle data fetching and state management, and presentational components that focus on how things look. This separation of concerns makes components more reusable and easier to test.",
+        "hint": "This pattern is about separation of concerns between different aspects of component functionality."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "In the Context Module Function pattern, where should complex state update logic be placed?",
+        "options": [
+        "Inside useEffect hooks in consumer components",
+        "In separate reducer functions outside of components",
+        "Inside dedicated functions exported from the context module",
+        "In event handler functions within the component"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Inside dedicated functions exported from the context module",
+        "difficulty": "medium",
+        "explanation": "The Context Module Function pattern places complex state update logic in dedicated functions that are exported from the same module as the context provider. This encapsulates the implementation details of state updates while providing a clean API for consumers to call.",
+        "hint": "This pattern is about abstracting away complex state logic from both providers and consumers."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What pattern is demonstrated in this code?\n```jsx\n// Usage\nfunction App() {\n  return (\n    <Select \n      items={['Apple', 'Orange', 'Banana']}\n      onSelect={item => console.log(item)}\n    >\n      <Select.Trigger className=\"trigger\" />\n      <Select.Menu>\n        {(item) => <Select.Item value={item}>{item}</Select.Item>}\n      </Select.Menu>\n    </Select>\n  );\n}\n```",
+        "options": [
+        "Higher-Order Component",
+        "Controlled Component",
+        "Compound Component with Render Props",
+        "Container/Presenter Pattern"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Compound Component with Render Props",
+        "difficulty": "medium",
+        "explanation": "This code demonstrates a combination of Compound Components and Render Props patterns. It uses Compound Components structure with Select.Trigger and Select.Menu as related components, while also using a render prop function within Select.Menu to render each item.",
+        "hint": "Look at both how the components are structured as properties and how some components receive functions that render content."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the Props Getters pattern (also known as Prop Collection)?",
+        "options": [
+        "A way to dynamically fetch props from an API",
+        "A pattern that provides functions that return props to apply to specific elements",
+        "A method to validate component props against a schema",
+        "A technique to combine props from multiple HOCs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A pattern that provides functions that return props to apply to specific elements",
+        "difficulty": "hard",
+        "explanation": "The Props Getters pattern provides functions (often named like getButtonProps, getInputProps) that return collections of props to be spread onto specific elements. This pattern allows components to expose the right props for different elements while allowing users to extend or override them.",
+        "hint": "This pattern is commonly used in headless UI libraries to provide both correct behavior and customization options."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What pattern is demonstrated by this code?\n```jsx\nfunction useToggle(initialState = false) {\n  const [state, setState] = useState(initialState);\n  \n  const toggle = useCallback(() => {\n    setState(s => !s);\n  }, []);\n  \n  const getTogglerProps = useCallback(({ onClick, ...props } = {}) => ({\n    'aria-pressed': state,\n    onClick: callAll(toggle, onClick),\n    ...props\n  }), [state, toggle]);\n  \n  return {\n    on: state,\n    toggle,\n    getTogglerProps\n  };\n}\n\n// Usage\nfunction App() {\n  const { on, getTogglerProps } = useToggle();\n  return (\n    <div>\n      <button {...getTogglerProps()}>Toggle: {on ? 'ON' : 'OFF'}</button>\n      <button {...getTogglerProps({ 'aria-label': 'custom toggler' })}>Custom</button>\n    </div>\n  );\n}\n```",
+        "options": [
+        "Compound Components",
+        "Controlled Components",
+        "Props Getters / Prop Collections",
+        "State Reducer"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Props Getters / Prop Collections",
+        "difficulty": "hard",
+        "explanation": "This code demonstrates the Props Getters pattern. The useToggle hook returns a getTogglerProps function that provides a collection of props to be spread onto elements. It handles merging user-provided props with the internal functionality, allowing for customization while maintaining the core toggle behavior.",
+        "hint": "Notice how the hook returns a function that generates props to be spread onto elements."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the Control Props pattern in React?",
+        "options": [
+        "A way to control which props are passed to child components",
+        "A pattern where a component allows external control of its state via props",
+        "A method to validate props before they're used",
+        "A technique to optimize prop updates for better performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A pattern where a component allows external control of its state via props",
+        "difficulty": "hard",
+        "explanation": "The Control Props pattern allows components to be either internally controlled (managing their own state) or externally controlled (having their state managed by a parent component through props). This is similar to controlled vs. uncontrolled form inputs but applied to complex components.",
+        "hint": "This pattern is an extension of React's controlled vs. uncontrolled input concept to more complex components."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the State Initializer pattern?",
+        "options": [
+        "A way to set default state values in class components",
+        "A pattern allowing consumers to set initial state and reset to that state later",
+        "A method to initialize state from localStorage or other persistent storage",
+        "A technique to generate initial state based on props"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A pattern allowing consumers to set initial state and reset to that state later",
+        "difficulty": "hard",
+        "explanation": "The State Initializer pattern allows components or hooks to accept initial state values from consumers and provides a way to reset state back to those initial values. This is useful for components that need to be reset to a fresh state, like forms or wizards.",
+        "hint": "This pattern involves both setting initial values and providing a reset mechanism."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What React pattern is being implemented in this code?\n```jsx\nfunction useToggle({\n  initialOn = false,\n  reducer = (state, action) => {\n    switch (action.type) {\n      case 'toggle': return { on: !state.on };\n      case 'reset': return { on: action.initialState };\n      default: return state;\n    }\n  }\n} = {}) {\n  const initialState = { on: initialOn };\n  const [state, dispatch] = useReducer(reducer, initialState);\n  \n  const toggle = () => dispatch({ type: 'toggle' });\n  const reset = () => dispatch({ type: 'reset', initialState: initialOn });\n  \n  return [state.on, { toggle, reset }];\n}\n```",
+        "options": [
+        "Custom Hook",
+        "Control Props",
+        "State Reducer",
+        "Props Getters"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "State Reducer",
+        "difficulty": "hard",
+        "explanation": "This code implements the State Reducer pattern. It allows consumers to provide a custom reducer function that can override or extend the default state update logic of the toggle component, giving them control over how state transitions work.",
+        "hint": "Notice how the component accepts an optional custom reducer that can override the default behavior."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What pattern is being implemented in this code?\n```jsx\nfunction useCounter(initialCount = 0) {\n  const [count, setCount] = useState(initialCount);\n  \n  const increment = () => setCount(c => c + 1);\n  const decrement = () => setCount(c => c - 1);\n  const reset = () => setCount(initialCount);\n  \n  return {\n    count,\n    increment,\n    decrement,\n    reset\n  };\n}\n\nfunction CounterDisplay() {\n  const counter = useCounter(10);\n  \n  return (\n    <div>\n      <div>Count: {counter.count}</div>\n      <button onClick={counter.increment}>+</button>\n      <button onClick={counter.decrement}>-</button>\n      <button onClick={counter.reset}>Reset</button>\n    </div>\n  );\n}\n```",
+        "options": [
+        "Higher-Order Component",
+        "Render Props",
+        "Custom Hook with State Initializer",
+        "Container/Presenter Pattern"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Custom Hook with State Initializer",
+        "difficulty": "hard",
+        "explanation": "This code implements a Custom Hook with the State Initializer pattern. The useCounter hook accepts an initialCount parameter to set the initial state and provides a reset function that returns to that initial state, allowing the component to be reset to its starting condition.",
+        "hint": "Notice how the initial value is both used to set the first state and to reset back to later."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the purpose of the Context Module Function pattern?",
+        "options": [
+        "To optimize context performance with memoization",
+        "To include non-React code in context providers",
+        "To expose actions that encapsulate complex state updates without exposing the implementation details",
+        "To create isolated context instances for different parts of the application"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To expose actions that encapsulate complex state updates without exposing the implementation details",
+        "difficulty": "hard",
+        "explanation": "The Context Module Function pattern encapsulates complex state update logic in functions exported from a context module rather than exposing dispatch or setState directly. This creates a cleaner API for consumers, hides implementation details, and centralizes related logic in one place.",
+        "hint": "This pattern is about creating a clean API for updating context state without exposing how those updates happen."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "In the following code snippet, what pattern is being implemented?\n```jsx\nfunction App() {\n  const [counter, setCounter] = useState(0);\n  \n  // External control of the component's state\n  const handleIncrement = () => setCounter(counter + 1);\n  \n  return (\n    <Counter \n      value={counter} \n      onChange={setCounter} \n      onIncrement={handleIncrement}\n    />\n  );\n}\n\nfunction Counter({ value, onChange, onIncrement }) {\n  // Component renders based on external state\n  return (\n    <div>\n      <p>Count: {value}</p>\n      <button onClick={onIncrement}>Increment</button>\n      <button onClick={() => onChange(value - 1)}>Decrement</button>\n    </div>\n  );\n}\n```",
+        "options": [
+        "Compound Components",
+        "Control Props",
+        "State Reducer",
+        "Render Props"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Control Props",
+        "difficulty": "hard",
+        "explanation": "This code implements the Control Props pattern. The Counter component doesn't maintain its own state; instead, its state (value) is controlled externally by the parent App component through props, similar to how controlled form inputs work in React.",
+        "hint": "Think about the relationship between the parent and child component regarding who controls the state."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the Headless Component pattern?",
+        "options": [
+        "Components that don't render any UI elements",
+        "Components that generate only HTML without CSS",
+        "Components that provide behavior and state but let consumers control rendering",
+        "Components that run server-side without client-side rendering"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Components that provide behavior and state but let consumers control rendering",
+        "difficulty": "hard",
+        "explanation": "Headless Components separate behavior from presentation by providing functionality and state management without rendering specific UI elements. They let consumers decide exactly how to render the UI while handling the complex behavior, often using render props or custom hooks to expose their state and actions.",
+        "hint": "Think about a component that handles all the behavior but doesn't make assumptions about appearance."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What pattern is demonstrated in this code?\n```jsx\nconst MenuButton = React.forwardRef(function MenuButton(props, ref) {\n  return <button {...props} ref={ref} />;\n});\n\nconst Menu = React.forwardRef(function Menu({ children, ...props }, ref) {\n  return (\n    <div role=\"menu\" {...props} ref={ref}>\n      {children}\n    </div>\n  );\n});\n\nconst MenuItem = React.forwardRef(function MenuItem(props, ref) {\n  return <div role=\"menuitem\" tabIndex={-1} {...props} ref={ref} />;\n});\n\n// Export the individual components\nexport { MenuButton, Menu, MenuItem };\n```",
+        "options": [
+        "Compound Component with Forward Refs",
+        "Higher-Order Component",
+        "Component Collection",
+        "Polymorphic Component"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Compound Component with Forward Refs",
+        "difficulty": "hard",
+        "explanation": "This code demonstrates the Compound Component pattern with the addition of forwarded refs. Each component in the menu system (MenuButton, Menu, MenuItem) is designed to work together but they're exported individually rather than as properties on a parent component, allowing for more flexibility in imports and usage.",
+        "hint": "Notice how the components are designed to work together as a cohesive system but with ref forwarding added."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the purpose of the \"as\" prop in Polymorphic Components?",
+        "options": [
+        "To conditionally render a component based on a boolean value",
+        "To change the underlying HTML element or component that gets rendered",
+        "To specify which prop should be used as the component key",
+        "To define the component's animation type"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To change the underlying HTML element or component that gets rendered",
+        "difficulty": "hard",
+        "explanation": "The \"as\" prop in Polymorphic Components allows consumers to change what HTML element or React component is ultimately rendered while keeping the same props and behaviors. This enables greater flexibility in how components are used across different contexts.",
+        "hint": "This pattern is about changing the rendered element type while maintaining the same functionality."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What is the primary issue with the following code using the Render Props pattern?\n```jsx\n<MouseTracker>\n  {(mousePosition) => (\n    <WindowSize>\n      {(windowSize) => (\n        <ThemeContext.Consumer>\n          {(theme) => (\n            <UserData>\n              {(userData) => (\n                <div>/* Deeply nested component */</div>\n              )}\n            </UserData>\n          )}\n        </ThemeContext.Consumer>\n      )}\n    </WindowSize>\n  )}\n</MouseTracker>\n```",
+        "options": [
+        "Performance issues due to excessive re-rendering",
+        "The Render Props components cannot share data",
+        "Callback hell or pyramid of doom",
+        "The code will not compile due to syntax errors"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Callback hell or pyramid of doom",
+        "difficulty": "hard",
+        "explanation": "This code demonstrates the primary drawback of extensively using the Render Props pattern: it can lead to deeply nested callback functions (known as callback hell or the pyramid of doom), making the code harder to read and maintain as more render prop components are composed together.",
+        "hint": "Look at the structure of the nested callbacks and how it affects readability."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "Which pattern would be most appropriate for implementing a complex form with custom validation, submission handling, and field state management?",
+        "options": [
+        "Compound Components",
+        "Controlled Components",
+        "Custom Hook with State Reducer and Props Getters",
+        "Higher-Order Components"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Custom Hook with State Reducer and Props Getters",
+        "difficulty": "hard",
+        "explanation": "For complex forms, a Custom Hook combining State Reducer and Props Getters patterns provides the most flexibility. The State Reducer allows custom validation and form logic, while Props Getters provide the right props for form elements. This approach encapsulates form complexity while giving consumers control over behavior and rendering.",
+        "hint": "Think about which pattern would provide both the necessary abstraction for complex behavior and flexibility for consumers."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "What pattern is demonstrated in this code?\n```jsx\nconst Box = ({ as: Component = 'div', ...props }) => {\n  return <Component {...props} />;\n};\n\n// Usage\n<Box as=\"button\" onClick={handleClick}>Click Me</Box>\n<Box as={Link} to=\"/home\">Home</Box>\n```",
+        "options": [
+        "Higher-Order Component",
+        "Polymorphic Component",
+        "Compound Component",
+        "Factory Component"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Polymorphic Component",
+        "difficulty": "hard",
+        "explanation": "This code demonstrates the Polymorphic Component pattern. The Box component accepts an 'as' prop that determines what HTML element or React component gets rendered, allowing it to adapt its rendering while maintaining consistent props handling and behavior.",
+        "hint": "Look at how the component can change what element type it renders based on props."
+    },
+    {
+        "topic": "67defd0ce107cf2e3745af6b",
+        "module": "Advanced Patterns",
+        "questionText": "When implementing a State Reducer pattern, how can you give component consumers the ability to modify behavior while preserving default functionality?",
+        "options": [
+        "By exposing the component's internal state through props",
+        "By allowing consumers to pass a custom reducer function that receives the default reducer's result",
+        "By using higher-order components to wrap the base component",
+        "By implementing the observer pattern to notify consumers of state changes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "By allowing consumers to pass a custom reducer function that receives the default reducer's result",
+        "difficulty": "hard",
+        "explanation": "To preserve default functionality while allowing customization in a State Reducer pattern, you can provide a mechanism where consumer-provided reducers can access the result of the default reducer for each action. This allows them to override specific cases while falling back to default behavior for others.",
+        "hint": "Think about how you could chain reducers together to allow customization without completely replacing the default logic."
+    },
 
     // Production Deployment
-
+    
     
 ]
 

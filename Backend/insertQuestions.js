@@ -46,6 +46,14 @@ const insertQuestions = async () => {
       }
       console.log("Python Questions inserted successfully!");
       
+      // TypeScript Questions
+
+      // SQL Questions
+
+      // DataBase Systems
+
+      // 
+
     } catch (err) {
       console.error("Error inserting questions:", err);
     } finally {
