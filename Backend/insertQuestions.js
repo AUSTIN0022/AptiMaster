@@ -5,6 +5,7 @@ import { Questions } from "./Database/schema.js";
 // Import all question sets
 import AngularQuestions from './Questions/angularQ.js';
 import CQuestions from './Questions/cQ.js';
+import DBSysQuestions from './Questions/databaseSystemQ.js';
 import JavaQuestions from './Questions/javaQ.js';
 import JSQuestions from './Questions/javascriptQ.js';
 import mongoDBQuestions from './Questions/mongoDBQ.js';
@@ -35,6 +36,7 @@ async function insertQuestions() {
       { name: 'Python', data: pythonQuestions },
       { name: 'TypeScript', data: TSQuestions },
       { name: 'SQL', data: SQLQuestions },
+      { name: 'Database Systems', data: DBSysQuestions},
       { name: 'Node.js', data: nodeJSQuestions },
       { name: 'MongoDB', data: mongoDBQuestions },
       { name: 'React.js', data: reactJSQuestions },

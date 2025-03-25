@@ -4,7 +4,7 @@ import { Topics } from '../Database/schema.js';
 
 
 // Run every day at midnight
-cron.schedule('44 19 * * *', async () => {
+cron.schedule('8 23 * * *', async () => {
   console.log('Running scheduled task: recalculateAllCounts');
   try {
     await Topics.recalculateAllCounts();
