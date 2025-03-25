@@ -1401,9 +1401,938 @@ const DBSysQuestions = [
     },
 
     // Normalization
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the primary goal of database normalization?",
+        "options": [
+            "To increase database performance",
+            "To minimize data redundancy and dependency",
+            "To create more complex database structures",
+            "To limit the number of tables in a database"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To minimize data redundancy and dependency",
+        "difficulty": "easy",
+        "explanation": "Normalization aims to organize data to reduce redundancy and improve data integrity by breaking down larger tables into smaller, more focused tables.",
+        "hint": "Think about creating a more efficient and organized data structure"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the lowest level of normalization called?",
+        "options": [
+            "Zero Normal Form (0NF)",
+            "First Normal Form (1NF)",
+            "Second Normal Form (2NF)",
+            "Base Normal Form"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Zero Normal Form (0NF)",
+        "difficulty": "easy",
+        "explanation": "Zero Normal Form (0NF) represents an unnormalized table with no specific structure or removal of redundancies.",
+        "hint": "Think of the most basic, unorganized data representation"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the primary characteristic of First Normal Form (1NF)?",
+        "options": [
+            "No repeating groups of columns",
+            "All non-key attributes are fully functionally dependent on the primary key",
+            "No partial dependencies exist",
+            "No transitive dependencies exist"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "No repeating groups of columns",
+        "difficulty": "medium",
+        "explanation": "In 1NF, each column contains atomic (indivisible) values, and there are no repeating groups of columns. Each intersection of a row and column contains a single value.",
+        "hint": "Ensure each cell contains a single, unique value"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What defines a functional dependency?",
+        "options": [
+            "A relationship between tables",
+            "A relationship where one attribute determines the value of another",
+            "A way to create primary keys",
+            "A method of joining tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A relationship where one attribute determines the value of another",
+        "difficulty": "medium",
+        "explanation": "Functional dependency occurs when the value of one attribute (or set of attributes) uniquely determines the value of another attribute.",
+        "hint": "Think of a deterministic relationship between attributes"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is a partial dependency?",
+"options": [
+            "A dependency involving multiple tables",
+            "A dependency where an attribute depends on only part of a composite key",
+            "A complete functional dependency",
+            "A dependency between primary keys"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A dependency where an attribute depends on only part of a composite key",
+        "difficulty": "hard",
+        "explanation": "A partial dependency occurs when a non-key attribute depends on only part of a composite key, violating Second Normal Form (2NF).",
+        "hint": "Consider scenarios with composite keys and their subset dependencies"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the main requirement for Second Normal Form (2NF)?",
+        "options": [
+            "No repeating groups",
+            "All non-key attributes must be fully functionally dependent on the primary key",
+            "No transitive dependencies",
+            "Atomic values in each column"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "All non-key attributes must be fully functionally dependent on the primary key",
+        "difficulty": "hard",
+        "explanation": "In 2NF, the table must be in 1NF, and all non-key attributes must depend on the entire primary key, not just part of it.",
+        "hint": "Consider complete dependency of attributes on the primary key"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is a transitive dependency?",
+        "options": [
+            "A dependency between primary keys",
+            "A dependency where a non-key attribute depends on another non-key attribute",
+            "A direct functional dependency",
+            "A dependency involving multiple tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A dependency where a non-key attribute depends on another non-key attribute",
+        "difficulty": "hard",
+        "explanation": "A transitive dependency occurs when a non-key attribute depends on another non-key attribute, violating Third Normal Form (3NF).",
+        "hint": "Think of indirect dependencies between attributes"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What are the key requirements for Third Normal Form (3NF)?",
+        "options": [
+            "No repeating groups and atomic values",
+            "No partial dependencies and full functional dependency",
+            "No transitive dependencies and all non-key attributes depend directly on the primary key",
+            "Minimizing the number of tables"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "No transitive dependencies and all non-key attributes depend directly on the primary key",
+        "difficulty": "hard",
+        "explanation": "3NF requires the table to be in 2NF and have no transitive dependencies, ensuring all non-key attributes depend directly on the primary key.",
+        "hint": "Eliminate indirect dependencies between attributes"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is Boyce-Codd Normal Form (BCNF)?",
+        "options": [
+            "A stricter version of 2NF",
+            "A relaxed version of 3NF",
+            "A more rigorous version of 3NF that addresses certain dependency issues",
+            "An alternative to normalization"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A more rigorous version of 3NF that addresses certain dependency issues",
+        "difficulty": "hard",
+        "explanation": "BCNF is a stronger version of 3NF that eliminates more anomalies by ensuring that every determinant is a candidate key.",
+        "hint": "Consider a more strict approach to functional dependencies"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What problem does normalization help solve in database design?",
+        "options": [
+            "Increasing database storage requirements",
+            "Data redundancy and update anomalies",
+            "Improving query complexity",
+            "Limiting the number of tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data redundancy and update anomalies",
+        "difficulty": "easy",
+        "explanation": "Normalization helps reduce data redundancy, minimize update anomalies, and improve data integrity by organizing data into more focused tables.",
+        "hint": "Think about maintaining consistent and efficient data storage"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is an update anomaly in database context?",
+        "options": [
+            "A problem with database performance",
+            "An issue where updating data in one place requires multiple updates",
+            "A security vulnerability",
+            "A query optimization problem"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An issue where updating data in one place requires multiple updates",
+        "difficulty": "medium",
+        "explanation": "An update anomaly occurs when updating a piece of data requires multiple changes across different rows or tables due to data redundancy.",
+        "hint": "Consider scenarios where data duplication complicates updates"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is an insertion anomaly?",
+        "options": [
+            "A problem with adding new records to a database",
+            "An issue with primary key generation",
+            "A constraint violation",
+            "A performance limitation"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A problem with adding new records to a database",
+        "difficulty": "medium",
+        "explanation": "An insertion anomaly occurs when it's impossible to add a new record to a table without the presence of other related data.",
+        "hint": "Think about difficulties in inserting new data due to table design"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is a deletion anomaly?",
+        "options": [
+            "An error in deleting database records",
+            "Losing important information when deleting a record",
+            "A constraint violation during deletion",
+            "A performance issue with delete operations"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Losing important information when deleting a record",
+        "difficulty": "medium",
+        "explanation": "A deletion anomaly happens when deleting a record results in the unintentional loss of other important information stored in the same table.",
+        "hint": "Consider scenarios where deleting one record removes unrelated data"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What does the term 'candidate key' mean?",
+        "options": [
+            "A potential primary key that could uniquely identify a record",
+            "A key used for indexing",
+            "A foreign key in another table",
+            "A composite key"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A potential primary key that could uniquely identify a record",
+        "difficulty": "medium",
+        "explanation": "A candidate key is a column or set of columns that can uniquely identify a record and could potentially serve as a primary key.",
+        "hint": "Think of alternative ways to uniquely identify records"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the primary difference between a candidate key and a primary key?",
+        "options": [
+            "Candidate keys cannot be used for identification",
+            "A primary key is selected from candidate keys",
+            "Candidate keys are always composite",
+            "Primary keys always have multiple columns"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A primary key is selected from candidate keys",
+        "difficulty": "medium",
+        "explanation": "A primary key is chosen from the set of candidate keys as the main unique identifier for a table, while candidate keys are potential unique identifiers.",
+        "hint": "Consider how one key is selected from multiple options"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the purpose of creating a surrogate key?",
+        "options": [
+            "To replace all natural keys",
+            "To provide a unique identifier when no natural key exists",
+            "To improve database performance",
+            "To create more complex primary keys"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To provide a unique identifier when no natural key exists",
+        "difficulty": "medium",
+        "explanation": "A surrogate key is an artificial key added to a table when no natural key can uniquely and consistently identify records.",
+        "hint": "Think of a synthetic identifier for unique record tracking"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What characterizes a natural key?",
+        "options": [
+            "An artificially created key",
+            "A key based on existing data attributes",
+            "A key that changes frequently",
+            "A key used only in complex databases"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A key based on existing data attributes",
+        "difficulty": "medium",
+        "explanation": "A natural key is a key derived from existing data attributes that can uniquely identify a record without additional synthetic identifiers.",
+        "hint": "Consider keys that emerge from the data itself"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the main goal of Fourth Normal Form (4NF)?",
+        "options": [
+            "Eliminating all possible dependencies",
+            "Addressing multi-valued dependencies",
+            "Reducing table complexity",
+            "Minimizing storage requirements"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Addressing multi-valued dependencies",
+        "difficulty": "hard",
+        "explanation": "Fourth Normal Form (4NF) addresses multi-valued dependencies, ensuring that no table contains two or more independent multi-valued facts about an entity.",
+        "hint": "Consider scenarios with multiple independent multi-valued attributes"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is a multi-valued dependency?",
+        "options": [
+            "A dependency involving multiple tables",
+            "A relationship where one attribute determines multiple values of another",
+            "A complex functional dependency",
+            "A dependency between non-key attributes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A relationship where one attribute determines multiple values of another",
+        "difficulty": "hard",
+        "explanation": "A multi-valued dependency occurs when one attribute determines a set of values for another attribute, independent of other attributes.",
+        "hint": "Think of scenarios with multiple independent values"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What problem does Fifth Normal Form (5NF) address?",
+        "options": [
+            "Multi-valued dependencies",
+            "Join dependencies",
+            "Transitive dependencies",
+            "Partial dependencies"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Join dependencies",
+        "difficulty": "hard",
+        "explanation": "Fifth Normal Form (5NF), also called Project-Join Normal Form, addresses join dependencies by ensuring that every join dependency in a table is implied by the candidate keys.",
+        "hint": "Consider complex scenarios involving table decomposition"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is a canonical cover in normalization?",
+        "options": [
+            "A set of all possible keys in a table",
+            "A minimal set of functional dependencies",
+            "A complete normalization strategy",
+            "A method of key generation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A minimal set of functional dependencies",
+        "difficulty": "hard",
+        "explanation": "A canonical cover is the minimal set of functional dependencies that is equivalent to the original set of functional dependencies, with redundant dependencies removed.",
+        "hint": "Think of simplifying and reducing functional dependencies"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the primary benefit of normalization beyond reducing redundancy?",
+        "options": [
+            "Increasing database complexity",
+            "Improving data integrity and reducing anomalies",
+            "Limiting query capabilities",
+            "Reducing database performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improving data integrity and reducing anomalies",
+        "difficulty": "easy",
+        "explanation": "Normalization helps maintain data integrity by reducing update, insertion, and deletion anomalies, ensuring consistent and accurate data storage.",
+        "hint": "Consider the long-term maintenance of database quality"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What does denormalization typically involve?",
+        "options": [
+            "Completely removing normalization",
+            "Intentionally introducing redundancy for performance",
+            "Eliminating all functional dependencies",
+            "Reducing the number of tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Intentionally introducing redundancy for performance",
+        "difficulty": "medium",
+        "explanation": "Denormalization is a strategy of deliberately introducing redundancy into a database design to improve read performance, typically in data warehousing and reporting systems.",
+        "hint": "Think of trade-offs between normalization and query speed"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is a key characteristic of a functionally dependent attribute?",
+        "options": [
+            "It can exist independently of other attributes",
+            "Its value is determined by the value of another attribute",
+            "It always serves as a primary key",
+            "It cannot be part of a composite key"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Its value is determined by the value of another attribute",
+        "difficulty": "medium",
+        "explanation": "A functionally dependent attribute has its value uniquely determined by the value of another attribute or set of attributes.",
+        "hint": "Consider a deterministic relationship between attributes"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "Why might a database designer choose not to fully normalize a database?",
+        "options": [
+            "To increase data redundancy",
+            "To improve query performance",
+            "To create more complex data structures",
+            "To violate data integrity rules"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To improve query performance",
+        "difficulty": "hard",
+        "explanation": "Complete normalization can sometimes lead to complex joins and reduced query performance, so designers may intentionally denormalize to optimize read operations.",
+        "hint": "Consider the balance between data organization and system efficiency"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What does a dependency preservation property ensure?",
+        "options": [
+            "All functional dependencies are maintained after decomposition",
+            "Tables are always in the highest normal form",
+            "No data is lost during normalization",
+            "Minimal number of tables are created"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "All functional dependencies are maintained after decomposition",
+        "difficulty": "hard",
+        "explanation": "Dependency preservation ensures that all original functional dependencies can be reconstructed or maintained after decomposing a table into multiple smaller tables.",
+        "hint": "Think about maintaining the original data relationships"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is an Armstrong's Axiom in functional dependency?",
+"options": [
+            "A rule for creating primary keys",
+            "A set of inference rules for deriving functional dependencies",
+            "A method of key generation",
+            "A normalization technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A set of inference rules for deriving functional dependencies",
+        "difficulty": "hard",
+        "explanation": "Armstrong's Axioms are a set of sound and complete inference rules used to derive all functional dependencies in a relational database.",
+        "hint": "Consider logical rules for understanding attribute relationships"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What distinguishes a strong entity from a weak entity in normalization?",
+        "options": [
+            "Strong entities have more attributes",
+            "Strong entities can be uniquely identified without depending on other entities",
+            "Weak entities have more relationships",
+            "Strong entities always have composite keys"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Strong entities can be uniquely identified without depending on other entities",
+        "difficulty": "medium",
+        "explanation": "A strong entity has a primary key and can be uniquely identified independently, while a weak entity depends on another entity for its identification.",
+        "hint": "Think about self-sufficiency in identification"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Normalization",
+        "questionText": "What is the primary purpose of creating a junction table during normalization?",
+        "options": [
+            "To increase database complexity",
+            "To resolve Many-to-Many relationships",
+            "To reduce the number of tables",
+            "To create additional dependencies"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To resolve Many-to-Many relationships",
+        "difficulty": "medium",
+        "explanation": "A junction table (or associative entity) is created to break down Many-to-Many relationships into two One-to-Many relationships, facilitating proper database normalization.",
+        "hint": "Consider how complex relationships are simplified"
+    },
 
     // SQL Fundamentals
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does SQL stand for?",
+        "options": [
+            "Structured Query Language",
+            "Simple Query Language",
+            "Sequential Query Language",
+            "Systematic Query Language"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Structured Query Language",
+        "difficulty": "easy",
+        "explanation": "SQL stands for Structured Query Language, which is a standard language for managing and manipulating relational databases.",
+        "hint": "Think about what the acronym represents in database management"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which SQL command is used to retrieve data from a database?",
+        "options": [
+            "OPEN",
+            "GET",
+            "SELECT",
+            "FETCH"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "SELECT",
+        "difficulty": "easy",
+        "explanation": "The SELECT statement is used to retrieve data from one or more tables in a database.",
+        "hint": "This command begins most data retrieval queries"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What is the purpose of the WHERE clause in a SQL query?",
+        "options": [
+            "To sort results",
+            "To filter rows based on a condition",
+            "To group data",
+            "To join tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To filter rows based on a condition",
+        "difficulty": "easy",
+        "explanation": "The WHERE clause allows you to specify conditions to filter the rows returned in a query result set.",
+        "hint": "Think about narrowing down your data based on specific criteria"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which keyword is used to sort query results in ascending order?",
+        "options": [
+            "SORT",
+            "ORDER",
+            "ARRANGE",
+            "ASC"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "ASC",
+        "difficulty": "easy",
+        "explanation": "The ASC keyword is used with ORDER BY to sort results in ascending order. It is optional as ascending is the default sorting direction.",
+        "hint": "This is a modifier used with the ORDER BY clause"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does the DISTINCT keyword do in a SELECT statement?",
+        "options": [
+            "Counts unique values",
+            "Removes duplicate rows",
+            "Sorts values",
+            "Groups values"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Removes duplicate rows",
+        "difficulty": "medium",
+        "explanation": "DISTINCT removes duplicate rows from the result set, returning only unique values.",
+        "hint": "Think about eliminating repeated entries in your query results"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which SQL clause is used to combine the result set of two or more SELECT statements?",
+        "options": [
+            "MERGE",
+            "JOIN",
+            "UNION",
+            "COMBINE"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "UNION",
+        "difficulty": "medium",
+        "explanation": "The UNION clause is used to combine the result sets of two or more SELECT statements, removing duplicate rows by default.",
+        "hint": "This combines rows from multiple queries vertically"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What is the primary key in a database table?",
+        "options": [
+            "A key that locks the table",
+            "A unique identifier for each record",
+            "A foreign key in another table",
+            "A key used for sorting"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A unique identifier for each record",
+        "difficulty": "medium",
+        "explanation": "A primary key is a column or set of columns that uniquely identifies each row in a database table.",
+        "hint": "Think about what makes each record in a table distinctly identifiable"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which aggregate function returns the total number of rows in a group?",
+        "options": [
+            "TOTAL",
+            "SUM",
+            "COUNT",
+            "ROWS"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "COUNT",
+        "difficulty": "medium",
+        "explanation": "The COUNT() function returns the number of rows that matches the specified criteria.",
+        "hint": "This function helps you count the number of records in a query result"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does the GROUP BY clause do?",
+        "options": [
+            "Sorts data",
+            "Groups rows that have the same values",
+            "Filters out duplicate rows",
+            "Joins multiple tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Groups rows that have the same values",
+        "difficulty": "medium",
+        "explanation": "The GROUP BY clause groups rows that have the same values in specified columns, typically used with aggregate functions.",
+        "hint": "Used when you want to perform calculations on groups of rows"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which JOIN type returns all rows when there is a match in either the left or right table?",
+        "options": [
+            "INNER JOIN",
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "FULL OUTER JOIN"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "FULL OUTER JOIN",
+        "difficulty": "medium",
+        "explanation": "FULL OUTER JOIN returns all rows when there is a match in either the left or right table, filling with NULL where no match exists.",
+        "hint": "Think about a join that includes all records from both tables"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What is the purpose of the HAVING clause?",
+        "options": [
+            "To filter individual rows",
+            "To filter groups created by GROUP BY",
+            "To sort results",
+            "To count rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To filter groups created by GROUP BY",
+        "difficulty": "medium",
+        "explanation": "The HAVING clause is used to filter groups of rows created by the GROUP BY clause, similar to WHERE but applied after grouping.",
+        "hint": "Used with aggregate functions to filter grouped results"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which statement is used to modify existing data in a table?",
+        "options": [
+            "MODIFY",
+            "CHANGE",
+            "UPDATE",
+            "ALTER"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "UPDATE",
+        "difficulty": "medium",
+        "explanation": "The UPDATE statement is used to modify existing records in a table, allowing you to change column values.",
+        "hint": "This command changes data within an existing record"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does the IN operator do in a WHERE clause?",
+        "options": [
+            "Checks for a range of values",
+            "Checks if a value matches any value in a list",
+            "Checks for NULL values",
+            "Checks for exact matches"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Checks if a value matches any value in a list",
+        "difficulty": "medium",
+        "explanation": "The IN operator allows you to specify multiple values in a WHERE clause, checking if a value matches any of those values.",
+        "hint": "Provides a shorthand for multiple OR conditions"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which SQL command is used to create a new table?",
+        "options": [
+            "MAKE TABLE",
+            "CREATE TABLE",
+            "NEW TABLE",
+            "ADD TABLE"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "CREATE TABLE",
+        "difficulty": "easy",
+        "explanation": "The CREATE TABLE statement is used to create a new table in a database, defining its columns and their data types.",
+        "hint": "This command establishes a new database table structure"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does the LIKE operator do in a WHERE clause?",
+        "options": [
+            "Checks for exact matches",
+            "Performs pattern matching with wildcard characters",
+            "Checks for NULL values",
+            "Compares two values"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Performs pattern matching with wildcard characters",
+        "difficulty": "medium",
+        "explanation": "The LIKE operator is used to search for a specified pattern in a column, using wildcard characters like % and _.",
+        "hint": "Used for searching with partial string matches"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which clause is used to limit the number of rows returned in a query?",
+        "options": [
+            "REDUCE",
+            "LIMIT",
+            "TOP",
+            "BOTTOM"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "LIMIT",
+        "difficulty": "medium",
+        "explanation": "The LIMIT clause is used to specify the maximum number of rows to return in a query result set.",
+        "hint": "Controls the number of records displayed in your query"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What is a foreign key?",
+        "options": [
+            "A key used to lock a table",
+            "A primary key in another table",
+            "A unique identifier for a table",
+            "A key used for sorting"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A primary key in another table",
+        "difficulty": "medium",
+        "explanation": "A foreign key is a column that references the primary key of another table, establishing a link between two tables.",
+        "hint": "Represents a relationship between two database tables"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which keyword is used to remove all rows from a table without deleting the table structure?",
+        "options": [
+            "DELETE",
+            "DROP",
+            "TRUNCATE",
+            "REMOVE"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "TRUNCATE",
+        "difficulty": "medium",
+        "explanation": "TRUNCATE removes all rows from a table, but keeps the table structure intact, which is faster than DELETE for removing all records.",
+        "hint": "Quickly removes all data while preserving table definition"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does the ALTER TABLE statement do?",
+        "options": [
+            "Deletes a table",
+            "Modifies the structure of an existing table",
+            "Creates a new table",
+            "Renames a table"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Modifies the structure of an existing table",
+        "difficulty": "medium",
+        "explanation": "The ALTER TABLE statement is used to add, modify, or delete columns in an existing table, or to add or drop constraints.",
+        "hint": "Used to change table structure after initial creation"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which aggregate function returns the average value of a numeric column?",
+        "options": [
+            "MEAN",
+            "MEDIAN",
+            "AVG",
+            "AVERAGE"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "AVG",
+        "difficulty": "easy",
+        "explanation": "The AVG() function calculates the average of all non-NULL values in a numeric column.",
+        "hint": "Computes the arithmetic mean of a set of values"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What is a subquery?",
+        "options": [
+            "A query that joins multiple tables",
+            "A query nested inside another SQL query",
+            "A query that creates a new table",
+            "A query that updates multiple rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A query nested inside another SQL query",
+        "difficulty": "hard",
+        "explanation": "A subquery is a query nested inside another SQL query, allowing complex data retrieval by using the result of one query as a condition for another.",
+        "hint": "A query within a query, used to perform more complex data selections"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does the AS keyword do in SQL?",
+        "options": [
+            "Creates a new table",
+            "Renames a column or table",
+            "Sorts results",
+            "Filters rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Renames a column or table",
+        "difficulty": "easy",
+        "explanation": "The AS keyword is used to give an alias (temporary name) to a table or column in a query, making the output more readable.",
+        "hint": "Provides a way to rename columns or tables in a query result"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which JOIN type returns only matching rows between two tables?",
+        "options": [
+            "OUTER JOIN",
+            "CROSS JOIN",
+            "INNER JOIN",
+            "NATURAL JOIN"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "INNER JOIN",
+        "difficulty": "medium",
+        "explanation": "INNER JOIN returns only the rows that have matching values in both tables based on the join condition.",
+        "hint": "Returns records with matching values in both tables"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What is the primary purpose of the ORDER BY clause?",
+        "options": [
+            "To filter rows",
+            "To group rows",
+            "To sort query results",
+            "To count rows"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To sort query results",
+        "difficulty": "easy",
+        "explanation": "The ORDER BY clause is used to sort the result set in ascending or descending order based on specified columns.",
+        "hint": "Arranges query results in a specific sequence"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which function returns the highest value in a set of values?",
+        "options": [
+            "MAXIMUM",
+            "TOP",
+            "MAX",
+            "HIGHEST"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "MAX",
+        "difficulty": "easy",
+        "explanation": "The MAX() function returns the highest value in a set of values in a specified column.",
+        "hint": "Finds the maximum value in a column"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does the NOT NULL constraint do?",
+        "options": [
+            "Prevents duplicate values",
+            "Ensures a column cannot have a NULL value",
+            "Creates a primary key",
+            "Sorts values"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ensures a column cannot have a NULL value",
+        "difficulty": "medium",
+        "explanation": "The NOT NULL constraint ensures that a column cannot have a NULL (empty) value, requiring a valid input.",
+        "hint": "Prevents empty or undefined values in a column"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "Which statement is used to remove a table from a database?",
+        "options": [
+            "REMOVE TABLE",
+            "DELETE TABLE",
+            "DROP TABLE",
+            "DESTROY TABLE"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "DROP TABLE",
+        "difficulty": "easy",
+        "explanation": "The DROP TABLE statement is used to completely remove a table and its data from a database.",
+        "hint": "Permanently deletes a table and its structure"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What does the EXISTS operator do in a subquery?",
+        "options": [
+            "Checks if a subquery returns any rows",
+            "Counts the number of rows in a subquery",
+            "Joins two tables",
+            "Sorts subquery results"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Checks if a subquery returns any rows",
+        "difficulty": "hard",
+        "explanation": "The EXISTS operator returns true if the subquery returns one or more rows, useful for checking the existence of records that meet certain conditions.",
+        "hint": "Validates the presence of rows meeting specific criteria"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "SQL Fundamentals",
+        "questionText": "What is the difference between DELETE and TRUNCATE?",
+        "options": [
+            "They are exactly the same",
+            "DELETE removes specific rows, TRUNCATE removes all rows",
+            "TRUNCATE removes specific rows, DELETE removes all rows",
+            "They are used for different data types"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "DELETE removes specific rows, TRUNCATE removes all rows",
+        "difficulty": "hard",
+        "explanation": "DELETE can remove specific rows based on a condition, while TRUNCATE removes all rows from a table. DELETE is slower and can be rolled back, TRUNCATE is faster and cannot be rolled back.",
+        "hint": "Consider the scope and performance of row removal"
+    },
 
+    
     // Advanced SQL
 
     // Transaction Management
