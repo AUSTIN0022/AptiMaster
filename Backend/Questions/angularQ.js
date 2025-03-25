@@ -5590,10 +5590,1354 @@ const myTheme = createTheme({
     },
 
     // Testing Angular Applications
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the primary testing framework used in Angular applications?",
+        "options": [
+            "Mocha",
+            "Jest",
+            "Jasmine",
+            "Karma"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Jasmine",
+        "difficulty": "easy",
+        "explanation": "Jasmine is the default testing framework for Angular applications, providing a behavior-driven development approach to writing tests.",
+        "hint": "This framework comes pre-configured in Angular CLI projects."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the purpose of TestBed in Angular testing?",
+        "options": [
+            "To create mock services",
+            "To configure and create a testing module",
+            "To run end-to-end tests",
+            "To handle routing in tests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To configure and create a testing module",
+        "difficulty": "medium",
+        "explanation": "TestBed is a utility in Angular testing that helps create a dynamic testing module with configured providers, declarations, and imports for unit testing.",
+        "hint": "Think of TestBed as a way to set up an isolated testing environment."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the primary difference between a unit test and an integration test in Angular?",
+        "options": [
+            "Unit tests check individual components, while integration tests verify interactions between components",
+            "Unit tests are slower than integration tests",
+            "Unit tests require more setup",
+            "Integration tests are only for backend testing"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Unit tests check individual components, while integration tests verify interactions between components",
+        "difficulty": "medium",
+        "explanation": "Unit tests focus on testing individual units of code in isolation, while integration tests verify how different parts of the application work together.",
+        "hint": "Consider the scope and complexity of what is being tested."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "Which method is used to create a mock service in Angular testing?",
+        "options": [
+            "createSpyObj()",
+            "mockService()",
+            "jasmine.createSpy()",
+            "jest.mock()"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "createSpyObj()",
+        "difficulty": "medium",
+        "explanation": "`jasmine.createSpyObj()` is used to create a mock object with predefined spy methods for testing services and dependencies.",
+        "hint": "This method helps create fake objects with trackable methods."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the purpose of the 'async' testing utility in Angular?",
+        "options": [
+            "To make tests run faster",
+            "To handle asynchronous operations in tests",
+            "To simulate network requests",
+            "To create mock services"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To handle asynchronous operations in tests",
+        "difficulty": "hard",
+        "explanation": "The 'async' utility helps manage asynchronous operations in tests, allowing proper handling of Promises, Observables, and other async code.",
+        "hint": "Used for testing time-dependent or async operations."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "Which decorator is used to define a test suite in Jasmine?",
+        "options": [
+            "@TestSuite",
+            "describe()",
+            "@Test",
+            "it()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "describe()",
+        "difficulty": "easy",
+        "explanation": "`describe()` is used to group related test specs together, creating a test suite in Jasmine.",
+        "hint": "This function groups related test cases."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the primary purpose of Angular's HttpClientTestingModule?",
+        "options": [
+            "To replace actual HTTP calls with mock responses",
+            "To improve network performance",
+            "To create HTTP services",
+            "To handle routing"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To replace actual HTTP calls with mock responses",
+        "difficulty": "medium",
+        "explanation": "HttpClientTestingModule provides utilities to mock HTTP requests and responses, allowing testing of HTTP-related code without making actual network calls.",
+        "hint": "This module helps simulate backend interactions in tests."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What does the 'expect' function do in Jasmine?",
+        "options": [
+            "Creates a new test",
+            "Defines test assertions",
+            "Mocks a service",
+            "Handles asynchronous operations"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Defines test assertions",
+        "difficulty": "easy",
+        "explanation": "The 'expect' function in Jasmine is used to make assertions about values in a test, checking if they meet specific conditions.",
+        "hint": "Used to verify expected outcomes in tests."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is code coverage in Angular testing?",
+        "options": [
+            "A metric measuring the number of lines of code",
+            "A measure of how much of the code is executed by tests",
+            "A way to optimize application performance",
+            "A method of securing code"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A measure of how much of the code is executed by tests",
+        "difficulty": "medium",
+        "explanation": "Code coverage measures the percentage of code lines, branches, and conditions that are executed during testing, helping identify untested parts of the application.",
+        "hint": "Indicates how thoroughly your code is being tested."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the purpose of 'fixture.detectChanges()' in component testing?",
+        "options": [
+            "To create a new component",
+            "To trigger change detection manually in tests",
+            "To reset component state",
+            "To mock component methods"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To trigger change detection manually in tests",
+        "difficulty": "medium",
+        "explanation": "`fixture.detectChanges()` manually triggers Angular's change detection mechanism in tests, updating the component view after data changes.",
+        "hint": "Simulates Angular's automatic change detection process."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is a spy in Angular testing?",
+        "options": [
+            "A tool for network monitoring",
+            "A test double that tracks method calls",
+            "A performance optimization technique",
+            "A security feature"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A test double that tracks method calls",
+        "difficulty": "medium",
+        "explanation": "A spy is a test double that wraps a method, allowing you to track its calls, arguments, and return values without changing the original implementation.",
+        "hint": "Used to verify method interactions without modifying original behavior."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "Which method is used to create a component fixture in Angular testing?",
+        "options": [
+            "createComponent()",
+            "TestBed.createComponent()",
+            "ComponentFixture.create()",
+            "Angular.createFixture()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "TestBed.createComponent()",
+        "difficulty": "easy",
+        "explanation": "`TestBed.createComponent()` creates a test fixture for a component, allowing detailed testing of component behavior and rendering.",
+        "hint": "Used to instantiate a component for testing."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the purpose of 'beforeEach()' in Jasmine?",
+        "options": [
+            "To define the final test condition",
+            "To run code before each test spec",
+            "To create mock services",
+            "To handle test failures"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To run code before each test spec",
+        "difficulty": "easy",
+        "explanation": "`beforeEach()` is a setup function that runs before each test spec, allowing you to reset test conditions and create a consistent starting point.",
+        "hint": "Ensures a clean slate before each individual test."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the primary tool used for running Angular tests?",
+        "options": [
+            "Selenium",
+            "Protractor",
+            "Karma",
+            "WebdriverIO"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Karma",
+        "difficulty": "easy",
+        "explanation": "Karma is the test runner used in Angular CLI projects, capable of running tests in multiple browsers and generating code coverage reports.",
+        "hint": "The default test runner for Angular applications."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is component shallow testing?",
+        "options": [
+            "Testing only the component's template",
+            "Testing a component in isolation without rendering child components",
+            "Testing backend services",
+            "Testing entire application flows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Testing a component in isolation without rendering child components",
+        "difficulty": "hard",
+        "explanation": "Shallow testing focuses on testing a component in isolation by preventing child components from being rendered, allowing more focused unit testing.",
+        "hint": "Concentrates on the specific component being tested."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the purpose of 'NO_ERRORS_SCHEMA' in Angular testing?",
+        "options": [
+            "To disable all error checking",
+            "To ignore unknown elements and attributes in templates",
+            "To create mock components",
+            "To handle routing errors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To ignore unknown elements and attributes in templates",
+        "difficulty": "hard",
+        "explanation": "`NO_ERRORS_SCHEMA` tells Angular's compiler to ignore unknown elements and attributes during testing, useful for shallow testing or when not testing child components.",
+        "hint": "Helps in isolating component testing by suppressing template validation."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What does the 'done()' callback indicate in asynchronous testing?",
+        "options": [
+            "A method to create async tests",
+            "A signal that an async test is complete",
+            "A way to mock async operations",
+            "A method to handle errors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A signal that an async test is complete",
+        "difficulty": "medium",
+        "explanation": "The 'done()' callback in Jasmine is used in async tests to signal when an asynchronous operation has completed, preventing the test from timing out.",
+        "hint": "Helps manage the completion of async test scenarios."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the purpose of Angular's TestBed.overrideComponent() method?",
+        "options": [
+            "To create new components",
+            "To modify component configuration during testing",
+            "To handle routing",
+            "To create mock services"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To modify component configuration during testing",
+        "difficulty": "hard",
+        "explanation": "`TestBed.overrideComponent()` allows dynamically changing a component's metadata during testing, such as replacing templates or providers.",
+        "hint": "Provides flexibility in configuring components for specific test scenarios."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is end-to-end (e2e) testing in Angular?",
+        "options": [
+            "Testing individual component methods",
+            "Testing the entire application workflow from user perspective",
+            "Mocking backend services",
+            "Performance testing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Testing the entire application workflow from user perspective",
+        "difficulty": "medium",
+        "explanation": "End-to-end testing simulates real user scenarios by testing the complete application flow, typically using tools like Protractor to interact with the application.",
+        "hint": "Tests the application as a complete, integrated system."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is a test harness in Angular?",
+        "options": [
+            "A testing framework",
+            "A utility for creating test-friendly component instances",
+            "A performance testing tool",
+            "A method to mock services"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A utility for creating test-friendly component instances",
+        "difficulty": "hard",
+        "explanation": "A test harness is a utility that helps create component instances with controlled environments, making it easier to test components in isolation.",
+        "hint": "Provides a controlled testing environment for components."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What does the 'it()' function represent in Jasmine?",
+        "options": [
+            "A test suite",
+            "An individual test specification",
+            "A setup method",
+            "An error handler"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An individual test specification",
+        "difficulty": "easy",
+        "explanation": "`it()` defines an individual test specification (spec) within a test suite, representing a specific test case or behavior to be verified.",
+        "hint": "Represents a single test case or behavior check."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the primary purpose of using 'fixture.nativeElement' in component testing?",
+        "options": [
+            "To create new DOM elements",
+            "To query and interact with the component's rendered DOM",
+            "To mock component methods",
+            "To handle routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To query and interact with the component's rendered DOM",
+        "difficulty": "medium",
+        "explanation": "`fixture.nativeElement` provides direct access to the component's rendered DOM, allowing querying and interaction for testing template and rendering behaviors.",
+        "hint": "Allows DOM-level interactions in component tests."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is a stub in Angular testing?",
+        "options": [
+            "A performance optimization technique",
+            "A fake implementation of a method or service",
+            "A testing framework",
+            "A security feature"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A fake implementation of a method or service",
+        "difficulty": "medium",
+        "explanation": "A stub is a simple fake implementation of a method or service that returns predefined values, used to isolate the code being tested.",
+        "hint": "Provides controlled, predictable behavior for testing."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the purpose of 'afterEach()' in Jasmine?",
+        "options": [
+            "To run code before each test",
+            "To run code after each test spec for cleanup",
+            "To define test conditions",
+            "To handle test failures"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To run code after each test spec for cleanup",
+        "difficulty": "easy",
+        "explanation": "`afterEach()` is a teardown function that runs after each test spec, allowing cleanup of test resources and resetting test conditions.",
+        "hint": "Ensures a clean state after each individual test."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What does code coverage report typically include?",
+        "options": [
+            "Performance metrics",
+            "Percentage of code lines, branches, and functions tested",
+            "Security vulnerabilities",
+            "Deployment information"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Percentage of code lines, branches, and functions tested",
+        "difficulty": "medium",
+        "explanation": "A code coverage report shows the percentage of code lines, conditional branches, and functions that have been executed during testing.",
+        "hint": "Provides insights into test completeness."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the primary tool for end-to-end testing in Angular applications?",
+        "options": [
+            "Selenium",
+            "Cypress",
+            "Protractor",
+            "WebdriverIO"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Protractor",
+        "difficulty": "easy",
+        "explanation": "Protractor was the default end-to-end testing tool for Angular, though modern Angular projects are moving towards Cypress for e2e testing.",
+        "hint": "Historically the primary e2e testing framework for Angular."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the purpose of Angular's 'ComponentFixture'?",
+        "options": [
+            "To create new components",
+            "To provide a test wrapper around a component for testing",
+            "To handle routing",
+            "To optimize performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To provide a test wrapper around a component for testing",
+        "difficulty": "medium",
+        "explanation": "ComponentFixture is a test harness that wraps a component, providing methods to interact with and test the component's behavior and rendering.",
+        "hint": "Offers utilities for comprehensive component testing."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Testing Angular Applications",
+        "questionText": "What is the recommended approach for testing services with dependencies?",
+        "options": [
+            "Avoid testing services with dependencies",
+            "Use dependency injection and mock services",
+            "Test only the main service method",
+            "Ignore service dependencies"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use dependency injection and mock services",
+        "difficulty": "hard",
+        "explanation": "When testing services with dependencies, use Angular's dependency injection to provide mock implementations of those dependencies.",
+        "hint": "Isolate the service being tested by mocking its dependencies."
+    },
 
     // Performance Optimization
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the primary purpose of OnPush change detection strategy?",
+        "options": [
+            "To increase rendering speed",
+            "To manually trigger change detection",
+            "To disable change detection completely", 
+            "To optimize memory usage"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To increase rendering speed",
+        "difficulty": "medium",
+        "explanation": "OnPush change detection strategy improves performance by reducing the number of change detection cycles. It only checks for changes when input references change or when explicitly triggered.",
+        "hint": "OnPush minimizes unnecessary change detection cycles"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "Which decorator is used to mark a component for OnPush change detection?",
+        "options": [
+            "@Injectable()",
+            "@ChangeDetection()",
+            "@Component({ changeDetection: ChangeDetectionStrategy.OnPush })",
+            "@Performance()"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "@Component({ changeDetection: ChangeDetectionStrategy.OnPush })",
+        "difficulty": "easy",
+        "explanation": "The @Component decorator with changeDetection set to ChangeDetectionStrategy.OnPush enables the OnPush change detection strategy for a component.",
+        "hint": "Look for the change detection configuration in the component decorator"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is Ahead-of-Time (AOT) compilation in Angular?",
+        "options": [
+            "A runtime compilation technique",
+            "A method to compile TypeScript to JavaScript",
+            "Compiling Angular templates during build time",
+            "A way to optimize network requests"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Compiling Angular templates during build time",
+        "difficulty": "medium",
+        "explanation": "AOT compilation converts Angular HTML templates and TypeScript code into efficient JavaScript code during the build process, before the browser downloads and runs that code.",
+        "hint": "AOT happens before the application is served to the browser"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the primary benefit of using trackBy with *ngFor?",
+        "options": [
+            "To improve rendering performance",
+            "To add custom styling to list items",
+            "To filter list items",
+            "To sort list items"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To improve rendering performance",
+        "difficulty": "easy",
+        "explanation": "trackBy helps Angular identify which items have changed in a list, reducing unnecessary DOM manipulations and improving performance when list items are updated.",
+        "hint": "trackBy minimizes re-rendering of list items"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "Which method can be used to manually trigger change detection?",
+        "options": [
+            "detectChanges()",
+            "checkChanges()",
+            "runChangeDetection()",
+            "triggerUpdate()"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "detectChanges()",
+        "difficulty": "medium",
+        "explanation": "ChangeDetectorRef.detectChanges() manually triggers change detection for a specific component and its children.",
+        "hint": "This method is part of the ChangeDetectorRef service"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What does lazy loading help achieve in Angular?",
+        "options": [
+            "Faster initial page load",
+            "Reduced application bundle size",
+            "Improved runtime performance",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "All of the above",
+        "difficulty": "medium",
+        "explanation": "Lazy loading allows modules to be loaded on demand, which reduces initial bundle size, improves initial page load time, and can enhance overall application performance.",
+        "hint": "Lazy loading loads modules only when they are needed"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the purpose of the pure pipe?",
+        "options": [
+            "To transform data without caching",
+            "To cache transformation results",
+            "To create side effects",
+            "To modify input data directly"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To cache transformation results",
+        "difficulty": "medium",
+        "explanation": "Pure pipes cache their results and only re-compute when the input arguments change, which helps improve performance by avoiding unnecessary transformations.",
+        "hint": "Pure pipes are efficient for repeated transformations"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "Which Angular CLI command generates a production build with optimization?",
+        "options": [
+            "ng serve --prod",
+            "ng build",
+            "ng build --prod",
+            "ng optimize"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "ng build --prod",
+        "difficulty": "easy",
+        "explanation": "ng build --prod creates an optimized production build with minification, tree-shaking, and AOT compilation.",
+        "hint": "The --prod flag enables multiple optimization techniques"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is tree-shaking in Angular?",
+        "options": [
+            "A method to remove unused CSS",
+            "Eliminating unused JavaScript code",
+            "Optimizing component rendering",
+            "Reducing template complexity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Eliminating unused JavaScript code",
+        "difficulty": "medium",
+        "explanation": "Tree-shaking is a build optimization technique that removes unused code from the final bundle, reducing the overall application size.",
+        "hint": "Tree-shaking helps reduce bundle size by removing unused modules"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "How can you prevent unnecessary re-renders in a component?",
+        "options": [
+            "Using pure pipes",
+            "Implementing OnPush change detection",
+            "Using async pipe",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "All of the above",
+        "difficulty": "hard",
+        "explanation": "Pure pipes, OnPush change detection, and async pipe can all help prevent unnecessary re-renders by optimizing change detection and data binding.",
+        "hint": "Multiple techniques can work together to optimize rendering"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the purpose of ngIf with an else condition?",
+        "options": [
+            "To improve performance",
+            "To conditionally render DOM elements",
+            "To create complex animations",
+            "To validate form inputs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To conditionally render DOM elements",
+        "difficulty": "easy",
+        "explanation": "ngIf removes or creates DOM elements based on a condition, which can help improve performance by not rendering unnecessary elements.",
+        "hint": "ngIf completely removes elements from the DOM"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "Which RxJS operator is best for handling large data streams efficiently?",
+        "options": [
+            "map",
+            "filter",
+            "debounceTime",
+            "switchMap"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "debounceTime",
+        "difficulty": "medium",
+        "explanation": "debounceTime helps manage performance by delaying event processing, which is useful for scenarios like search inputs to reduce unnecessary API calls.",
+        "hint": "This operator helps control the rate of event processing"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What does the async pipe do in terms of performance?",
+        "options": [
+            "Manually triggers change detection",
+            "Automatically handles subscription and unsubscription",
+            "Increases rendering complexity",
+            "Disables change detection"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Automatically handles subscription and unsubscription",
+        "difficulty": "medium",
+        "explanation": "The async pipe automatically manages Observable subscriptions and unsubscribes when the component is destroyed, preventing memory leaks.",
+        "hint": "Async pipe simplifies Observable handling in templates"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the primary purpose of zone.js in Angular?",
+        "options": [
+            "To manage dependency injection",
+            "To track asynchronous operations",
+            "To compile TypeScript",
+            "To handle routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To track asynchronous operations",
+        "difficulty": "hard",
+        "explanation": "zone.js tracks asynchronous operations and automatically triggers change detection when these operations complete, simplifying performance management.",
+        "hint": "Zone.js is crucial for Angular's change detection mechanism"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "How can you optimize Angular animations?",
+        "options": [
+            "Disable all animations",
+            "Use @angular/animations",
+            "Implement will-change CSS property",
+            "Use translate3d for GPU acceleration"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Use translate3d for GPU acceleration",
+        "difficulty": "hard",
+        "explanation": "Using translate3d triggers GPU acceleration, which can significantly improve animation performance by offloading rendering to the graphics processor.",
+        "hint": "GPU acceleration can reduce CPU load during animations"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the recommended approach for handling large lists in Angular?",
+        "options": [
+            "Virtual scrolling",
+            "Loading all items at once",
+            "Using multiple *ngFor loops",
+            "Disabling change detection"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Virtual scrolling",
+        "difficulty": "medium",
+        "explanation": "Virtual scrolling renders only the visible items in a list, significantly improving performance for large datasets by reducing DOM elements.",
+        "hint": "Virtual scrolling renders only visible list items"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "Which method can be used to run change detection outside Angular's zone?",
+        "options": [
+            "runOutsideAngular()",
+            "ngZone.run()",
+            "ngZone.runOutsideAngular()",
+            "changeDetectorRef.detach()"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "ngZone.runOutsideAngular()",
+        "difficulty": "hard",
+        "explanation": "ngZone.runOutsideAngular() allows executing code without triggering change detection, which can improve performance for non-UI operations.",
+        "hint": "This method prevents unnecessary change detection cycles"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What does the @Component decorator's changeDetection property do?",
+        "options": [
+            "Changes component's rendering speed",
+            "Configures change detection strategy",
+            "Enables two-way data binding",
+            "Manages component lifecycle"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Configures change detection strategy",
+        "difficulty": "easy",
+        "explanation": "The changeDetection property allows you to specify the change detection strategy for a component, such as Default or OnPush.",
+        "hint": "This property controls how and when change detection occurs"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "Which tool can help analyze Angular application performance?",
+        "options": [
+            "Angular CLI Profiler",
+            "Chrome DevTools Performance tab",
+            "Lighthouse",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "All of the above",
+        "difficulty": "medium",
+        "explanation": "Various tools like Chrome DevTools, Lighthouse, and Angular CLI can help profile and analyze Angular application performance.",
+        "hint": "Multiple tools offer insights into application performance"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the primary benefit of using resolvers in routing?",
+        "options": [
+            "To improve navigation speed",
+            "To prevent unauthorized access",
+            "To prefetch data before route activation",
+            "To simplify route configuration"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To prefetch data before route activation",
+        "difficulty": "medium",
+        "explanation": "Resolvers allow you to fetch data before a route is activated, improving perceived performance by loading data in advance.",
+        "hint": "Resolvers prepare data before component rendering"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "How can you reduce bundle size in an Angular application?",
+        "options": [
+            "Using lazy loading",
+            "Removing unused imports",
+            "Enabling AOT compilation",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "All of the above",
+        "difficulty": "hard",
+        "explanation": "Lazy loading, removing unused imports, and AOT compilation can all contribute to reducing the overall bundle size of an Angular application.",
+        "hint": "Multiple techniques can help minimize bundle size"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the purpose of the trackBy function in *ngFor?",
+        "options": [
+            "To sort list items",
+            "To uniquely identify list items",
+            "To filter list items",
+            "To add custom styling"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To uniquely identify list items",
+        "difficulty": "easy",
+        "explanation": "The trackBy function helps Angular identify unique items in a list, allowing more efficient rendering and updates.",
+        "hint": "trackBy improves performance when list items change"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "Which strategy can help reduce change detection overhead?",
+        "options": [
+            "Increasing change detection frequency",
+            "Using immutable data structures",
+            "Disabling change detection completely",
+            "Manually calling change detection on every update"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using immutable data structures",
+        "difficulty": "hard",
+        "explanation": "Immutable data structures make it easier for Angular to detect changes efficiently, reducing change detection overhead.",
+        "hint": "Immutability simplifies change tracking"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What does the ngDoCheck lifecycle hook indicate about performance?",
+        "options": [
+            "It improves rendering speed",
+            "It can cause performance issues if overused",
+            "It disables change detection",
+            "It only works with OnPush strategy"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It can cause performance issues if overused",
+        "difficulty": "hard",
+        "explanation": "ngDoCheck is called on every change detection cycle and can be performance-intensive if not implemented carefully.",
+        "hint": "Frequent custom change detection can impact performance"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is the recommended approach for handling expensive computations?",
+        "options": [
+            "Perform in component constructor",
+            "Use memoization",
+            "Run in every change detection cycle",
+            "Disable change detection"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use memoization",
+        "difficulty": "hard",
+        "explanation": "Memoization caches computation results, avoiding redundant calculations and improving performance.",
+        "hint": "Memoization prevents repeated expensive computations"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What does enableProdMode() do in Angular?",
+        "options": [
+            "Enables additional debugging features",
+            "Disables development-specific checks",
+            "Increases rendering performance",
+            "Configures production environment"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Disables development-specific checks",
+        "difficulty": "medium",
+        "explanation": "enableProdMode() disables development-specific checks and warnings, improving overall application performance.",
+        "hint": "This method optimizes the application for production"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "Which RxJS operator is most efficient for handling concurrent requests?",
+        "options": [
+            "mergeMap",
+            "concatMap",
+            "switchMap",
+            "exhaustMap"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "switchMap",
+        "difficulty": "hard",
+        "explanation": "switchMap cancels previous ongoing requests when a new request is made, preventing unnecessary network calls and improving performance.",
+        "hint": "This operator is great for scenarios like search inputs"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Performance Optimization",
+        "questionText": "What is a primary benefit of using web workers in Angular?",
+        "options": [
+            "Improving UI responsiveness",
+            "Reducing bundle size",
+            "Enabling server-side rendering",
+            "Implementing microservices"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Improving UI responsiveness",
+        "difficulty": "hard",
+        "explanation": "Web workers allow computationally intensive tasks to run in background threads, preventing UI thread blocking and maintaining application responsiveness.",
+        "hint": "Web workers offload heavy computations from the main thread"
+    },
 
     // Advance Angular Concepts
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is Angular Universal and its primary purpose?",
+        "options": [
+            "A state management library",
+            "Server-side rendering solution",
+            "Advanced routing mechanism",
+            "Dependency injection framework"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Server-side rendering solution",
+        "difficulty": "medium",
+        "explanation": "Angular Universal enables server-side rendering (SSR), allowing Angular applications to generate on the server, improving initial load performance and SEO.",
+        "hint": "SSR helps with initial page load and search engine indexing"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does the @Inject() decorator primarily do?",
+        "options": [
+            "Create new dependencies",
+            "Manually inject services",
+            "Resolve token dependencies",
+            "Mark a service as injectable"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Resolve token dependencies",
+        "difficulty": "hard",
+        "explanation": "@Inject() is used to resolve dependency injection tokens, especially when the type cannot be inferred automatically or for non-class dependencies.",
+        "hint": "Used for complex dependency injection scenarios"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is a Progressive Web App (PWA) in Angular context?",
+        "options": [
+            "A mobile-only application",
+            "Web app with native-like capabilities",
+            "A backend framework",
+            "A testing methodology"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Web app with native-like capabilities",
+        "difficulty": "medium",
+        "explanation": "PWAs in Angular provide native-like experiences with features like offline support, push notifications, and home screen installation.",
+        "hint": "Bridges the gap between web and mobile applications"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does the providedIn property in @Injectable() specify?",
+        "options": [
+            "Service instantiation scope",
+            "Dependency injection method",
+            "Service lifecycle",
+            "Component binding"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Service instantiation scope",
+        "difficulty": "medium",
+        "explanation": "The providedIn property determines the scope of service instantiation, such as 'root' for application-wide singleton or specific module scopes.",
+        "hint": "Controls how and where a service is instantiated"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is a dynamic component in Angular?",
+        "options": [
+            "A component that changes color",
+            "A component created programmatically at runtime",
+            "A component with dynamic routing",
+            "A component with complex animations"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A component created programmatically at runtime",
+        "difficulty": "hard",
+        "explanation": "Dynamic components are instantiated programmatically using ComponentFactoryResolver, allowing components to be created and added to the DOM dynamically.",
+        "hint": "Created and manipulated through code at runtime"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of ContentChild and ContentChildren decorators?",
+        "options": [
+            "To style component content",
+            "To query projected content in a component",
+            "To create dynamic content",
+            "To manage routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To query projected content in a component",
+        "difficulty": "hard",
+        "explanation": "ContentChild and ContentChildren allow components to query and interact with content projected into them using ng-content.",
+        "hint": "Used for accessing projected content within a component"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does the @HostListener decorator do?",
+        "options": [
+            "Listens to host element events",
+            "Manages component lifecycle",
+            "Creates event bindings",
+            "Handles dependency injection"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Listens to host element events",
+        "difficulty": "medium",
+        "explanation": "@HostListener allows a directive or component to listen to and handle events on its host element.",
+        "hint": "Binds event handlers directly to the host element"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of Angular Ivy renderer?",
+        "options": [
+            "To improve compilation speed",
+            "To enhance runtime performance",
+            "To simplify template syntax",
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "All of the above",
+        "difficulty": "hard",
+        "explanation": "Ivy is Angular's next-generation compilation and rendering pipeline that improves compilation speed, runtime performance, and enables more intuitive template syntax.",
+        "hint": "Significant improvement over the previous rendering engine"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does the ReflectiveInjector do in Angular?",
+        "options": [
+            "Creates component instances",
+            "Resolves dependencies at runtime",
+            "Manages change detection",
+            "Handles routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Resolves dependencies at runtime",
+        "difficulty": "hard",
+        "explanation": "ReflectiveInjector is a dependency injection mechanism that resolves and creates dependencies dynamically at runtime.",
+        "hint": "Used for complex dependency injection scenarios"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the primary use of @ViewChild decorator?",
+        "options": [
+            "To query template reference variables",
+            "To manage component lifecycle",
+            "To create dynamic views",
+            "To handle routing"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To query template reference variables",
+        "difficulty": "medium",
+        "explanation": "@ViewChild allows a component to query and access child components, directives, or DOM elements within its template.",
+        "hint": "Provides access to child elements in the component's view"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is Angular Elements?",
+        "options": [
+            "A testing framework",
+            "Custom web components using Angular",
+            "A routing mechanism",
+            "A state management solution"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Custom web components using Angular",
+        "difficulty": "medium",
+        "explanation": "Angular Elements allows creating custom web components that can be used in non-Angular applications or frameworks.",
+        "hint": "Enables Angular components as standalone web components"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does the @Optional() decorator do in dependency injection?",
+        "options": [
+            "Makes a dependency mandatory",
+            "Allows a dependency to be undefined",
+            "Creates optional services",
+            "Manages service lifecycles"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Allows a dependency to be undefined",
+        "difficulty": "hard",
+        "explanation": "@Optional() allows a dependency to be undefined without throwing an error, providing more flexibility in dependency injection.",
+        "hint": "Prevents errors when a dependency might not exist"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of zone.js in Angular?",
+        "options": [
+            "To manage component rendering",
+            "To track and trigger change detection",
+            "To handle routing",
+            "To create services"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To track and trigger change detection",
+        "difficulty": "hard",
+        "explanation": "zone.js tracks asynchronous operations and automatically triggers Angular's change detection mechanism.",
+        "hint": "Manages change detection for async operations"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the Renderer2 in Angular?",
+        "options": [
+            "A rendering engine",
+            "An abstraction for DOM manipulation",
+            "A change detection strategy",
+            "A template compiler"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An abstraction for DOM manipulation",
+        "difficulty": "medium",
+        "explanation": "Renderer2 provides a platform-agnostic way to manipulate elements, supporting server-side rendering and more flexible DOM interactions.",
+        "hint": "Allows cross-platform DOM manipulation"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does the @Self() decorator do in dependency injection?",
+        "options": [
+            "Injects dependencies from the current injector",
+            "Creates a new injector",
+            "Manages service lifecycles",
+            "Handles component creation"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Injects dependencies from the current injector",
+        "difficulty": "hard",
+        "explanation": "@Self() forces the injector to look for the dependency only in the local injector, preventing searching in parent injectors.",
+        "hint": "Restricts dependency lookup to the current injector"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is Angular's Dependency Injection Hierarchical System?",
+        "options": [
+            "A flat injection model",
+            "A tree-like injection model",
+            "A global injection mechanism",
+            "A component-specific injection"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A tree-like injection model",
+        "difficulty": "hard",
+        "explanation": "Angular's DI system follows a hierarchical, tree-like structure where child components can access services from parent injectors.",
+        "hint": "Services can be inherited down the component tree"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of @Host() decorator?",
+        "options": [
+            "To create host components",
+            "To limit service lookup to the closest host component",
+            "To manage routing",
+            "To create dynamic components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To limit service lookup to the closest host component",
+        "difficulty": "hard",
+        "explanation": "@Host() prevents looking for a dependency beyond the closest host component, useful for creating component-specific service boundaries.",
+        "hint": "Restricts service lookup to the immediate host"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What are Standalone Components in Angular?",
+        "options": [
+            "Components that cannot be imported",
+            "Components that can be used without NgModule",
+            "Components with special routing",
+            "Components with unique rendering"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Components that can be used without NgModule",
+        "difficulty": "medium",
+        "explanation": "Standalone components can be used directly without being declared in an NgModule, simplifying module management.",
+        "hint": "Introduced to reduce boilerplate module configuration"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of HttpInterceptor?",
+        "options": [
+            "To modify HTTP requests and responses",
+            "To create HTTP services",
+            "To handle HTTP errors",
+            "To configure HTTP client"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To modify HTTP requests and responses",
+        "difficulty": "medium",
+        "explanation": "HttpInterceptor allows intercepting and transforming HTTP requests and responses globally, useful for adding headers, handling errors, or logging.",
+        "hint": "Provides a way to modify HTTP communication"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does the @SkipSelf() decorator do?",
+        "options": [
+            "Skips dependency injection",
+            "Skips the local injector when resolving dependencies",
+            "Creates a new injector",
+            "Manages component lifecycle"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Skips the local injector when resolving dependencies",
+        "difficulty": "hard",
+        "explanation": "@SkipSelf() forces the injector to look for a dependency in parent injectors, skipping the current injector.",
+        "hint": "Used for complex dependency injection scenarios"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of NgZone in Angular?",
+        "options": [
+            "To create new zones",
+            "To run code outside Angular's change detection",
+            "To manage component zones",
+            "To handle routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To run code outside Angular's change detection",
+        "difficulty": "hard",
+        "explanation": "NgZone allows running code outside Angular's change detection zone, useful for performance optimization and preventing unnecessary change detection cycles.",
+        "hint": "Provides control over change detection triggering"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What are Route Resolvers in Angular?",
+        "options": [
+            "A routing configuration method",
+            "A way to fetch data before route activation",
+            "A navigation guard",
+            "A dynamic routing mechanism"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A way to fetch data before route activation",
+        "difficulty": "medium",
+        "explanation": "Route Resolvers allow fetching data before a route is activated, ensuring data is available when the component loads.",
+        "hint": "Preloads data for a route"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of @Component({ changeDetection: ChangeDetectionStrategy.OnPush })?",
+        "options": [
+            "To disable change detection",
+            "To optimize change detection performance",
+            "To manually trigger change detection",
+            "To create dynamic components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To optimize change detection performance",
+        "difficulty": "medium",
+        "explanation": "OnPush change detection strategy improves performance by reducing the number of change detection cycles, checking only when input references change.",
+        "hint": "Minimizes unnecessary change detection runs"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the primary use of APP_INITIALIZER?",
+        "options": [
+            "To initialize application services",
+            "To run code before application startup",
+            "To configure routing",
+            "To manage dependency injection"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To run code before application startup",
+        "difficulty": "hard",
+        "explanation": "APP_INITIALIZER allows running initialization logic before the application starts, such as loading configuration or performing initial setup.",
+        "hint": "Executes startup tasks before app initialization"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does Angular's Dependency Injection Token represent?",
+        "options": [
+            "A service identifier",
+            "A unique way to provide dependencies",
+            "A routing configuration",
+            "A change detection strategy"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A unique way to provide dependencies",
+        "difficulty": "hard",
+        "explanation": "Dependency Injection Tokens provide a unique way to register and retrieve dependencies, especially for non-class dependencies.",
+        "hint": "Enables flexible dependency injection"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of the @Directive() decorator?",
+        "options": [
+            "To create components",
+            "To define custom directives",
+            "To manage routing",
+            "To handle event binding"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To define custom directives",
+        "difficulty": "medium",
+        "explanation": "@Directive() allows creating custom directives to extend HTML's capabilities by adding behavior to elements.",
+        "hint": "Used to create reusable DOM manipulations"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What does the async pipe do in terms of memory management?",
+        "options": [
+            "Increases memory usage",
+            "Automatically manages Observable subscriptions",
+            "Disables memory management",
+            "Creates memory leaks"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Automatically manages Observable subscriptions",
+        "difficulty": "medium",
+        "explanation": "The async pipe automatically subscribes and unsubscribes from Observables, preventing memory leaks in Angular applications.",
+        "hint": "Simplifies Observable subscription handling"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Advanced Angular Concepts",
+        "questionText": "What is the purpose of NgModules in Angular?",
+        "options": [
+            "To create components",
+            "To organize and configure application parts",
+            "To handle routing",
+            "To manage services"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To organize and configure application parts",
+        "difficulty": "easy",
+        "explanation": "NgModules provide a way to organize and configure Angular applications by grouping related components, directives, pipes, and services.",
+        "hint": "Provides modularity and organization"
+    },
 
 ]
 
