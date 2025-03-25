@@ -4,7 +4,7 @@ import { Leaderboard } from '../Database/schema.js';
 
 
 // Run every day at midnight
-cron.schedule('* * * * *', async () => {
+cron.schedule('41 19 * * *', async () => {
     console.log('\nRunning scheduled task: recalculateAllRanks');
   try {
     await Leaderboard.recalculateAllRanks();

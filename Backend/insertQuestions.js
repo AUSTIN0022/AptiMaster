@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import { Questions } from "./Database/schema.js";
 
 // Import all question sets
+import AngularQuestions from './Questions/angularQ.js';
 import CQuestions from './Questions/cQ.js';
 import JavaQuestions from './Questions/javaQ.js';
 import JSQuestions from './Questions/javascriptQ.js';
@@ -13,13 +14,12 @@ import reactJSQuestions from './Questions/reactjsQ.js';
 import SQLQuestions from './Questions/sqlQ.js';
 import TSQuestions from './Questions/typeScriptQ.js';
 
-// Load environment variables
 dotenv.config();
 
-// Main function using async/await pattern
+
 async function insertQuestions() {
   try {
-    // Connect to MongoDB
+  
     await mongoose.connect(process.env.MONGO_URI);
     console.log("Connected to MongoDB");
     
@@ -37,7 +37,8 @@ async function insertQuestions() {
       { name: 'SQL', data: SQLQuestions },
       { name: 'Node.js', data: nodeJSQuestions },
       { name: 'MongoDB', data: mongoDBQuestions },
-      { name: 'React.js', data: reactJSQuestions }
+      { name: 'React.js', data: reactJSQuestions },
+      { name: 'Angular', data: AngularQuestions }
     ];
 
     // Use insertMany for better performance
