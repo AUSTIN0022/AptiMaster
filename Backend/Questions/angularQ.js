@@ -5124,6 +5124,470 @@ const myTheme = createTheme({
         "hint": "Supports nested menus and various interaction patterns."
     },
     // State Management
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the primary purpose of NgRx Store in Angular?",
+        "options": [
+            "To manage component styling",
+            "To create a centralized state management solution",
+            "To handle routing",
+            "To implement HTTP interceptors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To create a centralized state management solution",
+        "difficulty": "easy",
+        "explanation": "NgRx Store provides a centralized, predictable state container for managing application state using Redux principles.",
+        "hint": "Think of it as a single source of truth for your application's data."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "Which of the following is NOT a core component of NgRx?",
+        "options": [
+            "Actions",
+            "Reducers",
+            "Selectors",
+            "Controllers"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Controllers",
+        "difficulty": "easy",
+        "explanation": "NgRx core components are Actions, Reducers, Selectors, Effects, and Store. Controllers are not a part of the NgRx architecture.",
+        "hint": "Look for the standard Redux-like pattern in state management."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What does an Action represent in NgRx?",
+        "options": [
+            "A function that changes the state",
+            "A method to retrieve state",
+            "An immutable description of a state change",
+            "A component lifecycle hook"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "An immutable description of a state change",
+        "difficulty": "medium",
+        "explanation": "Actions in NgRx are plain JavaScript objects that describe an intention to change the state, without directly mutating it.",
+        "hint": "Actions are like messages that tell the reducer what should happen."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the primary responsibility of a Reducer in NgRx?",
+        "options": [
+            "To create new components",
+            "To handle HTTP requests",
+            "To specify how the application's state changes in response to actions",
+            "To manage component lifecycle"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To specify how the application's state changes in response to actions",
+        "difficulty": "medium",
+        "explanation": "Reducers are pure functions that take the current state and an action, and return a new state based on that action.",
+        "hint": "Reducers are pure functions that determine state transitions."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the purpose of NgRx Selectors?",
+        "options": [
+            "To create new actions",
+            "To filter and transform state data for components",
+            "To modify the application state",
+            "To handle routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To filter and transform state data for components",
+        "difficulty": "medium",
+        "explanation": "Selectors provide a way to efficiently select and derive data from the store, allowing components to access specific pieces of state.",
+        "hint": "Think of selectors as query methods for your application state."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is a pure function in the context of Redux/NgRx?",
+        "options": [
+            "A function that always returns undefined",
+            "A function with side effects",
+            "A function that returns the same output for the same input without modifying external state",
+            "A function that can only be used in reducers"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A function that returns the same output for the same input without modifying external state",
+        "difficulty": "hard",
+        "explanation": "Pure functions are predictable and have no side effects. In NgRx, reducers must be pure functions to ensure state predictability.",
+        "hint": "Pure functions are deterministic and do not modify external state or have observable side effects."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What does the @ngrx/effects library help you manage?",
+        "options": [
+            "Component styling",
+            "Side effects like async operations",
+            "HTTP request interceptors",
+            "Component lifecycle hooks"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Side effects like async operations",
+        "difficulty": "medium",
+        "explanation": "NgRx Effects help manage side effects in the application, such as API calls, without modifying the reducers.",
+        "hint": "Effects handle operations that are not pure state transformations."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "Which method is used to dispatch an action in NgRx?",
+        "options": [
+            "emit()",
+            "dispatch()",
+            "send()",
+            "trigger()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "dispatch()",
+        "difficulty": "easy",
+        "explanation": "The `dispatch()` method is used to send actions to the NgRx store, triggering state changes.",
+        "hint": "This method is called on the Store service to send actions."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the recommended way to handle complex state transformations in NgRx?",
+        "options": [
+            "Using multiple reducers",
+            "Modifying state directly",
+            "Creating multiple stores",
+            "Using component methods"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using multiple reducers",
+        "difficulty": "hard",
+        "explanation": "NgRx recommends using multiple reducers and combining them with `combineReducers()` to manage complex state structures.",
+        "hint": "Break down complex state into smaller, manageable pieces."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What does the `createFeatureSelector` method help you do?",
+        "options": [
+            "Create new actions",
+            "Select a specific feature's state from the global store",
+            "Create a new reducer",
+            "Handle HTTP requests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Select a specific feature's state from the global store",
+        "difficulty": "medium",
+        "explanation": "`createFeatureSelector` allows you to select a specific slice of state corresponding to a feature module.",
+        "hint": "This method helps in accessing feature-specific state branches."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is memoization in the context of NgRx Selectors?",
+        "options": [
+            "A way to create actions",
+            "Caching selector results to improve performance",
+            "A method to modify state",
+            "Creating multiple stores"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Caching selector results to improve performance",
+        "difficulty": "hard",
+        "explanation": "Memoization in NgRx Selectors helps cache and reuse selector results, preventing unnecessary computations.",
+        "hint": "Think of it as an optimization technique for selector performance."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the primary benefit of using NgRx compared to simple services?",
+        "options": [
+            "Faster development time",
+            "Reduced code complexity",
+            "Predictable state management with unidirectional data flow",
+            "Less memory usage"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Predictable state management with unidirectional data flow",
+        "difficulty": "medium",
+        "explanation": "NgRx provides a predictable state container with a clear, unidirectional data flow, making state changes more manageable and traceable.",
+        "hint": "Consider the benefits of a centralized, immutable state approach."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the purpose of the `props()` method in NgRx Actions?",
+        "options": [
+            "To create component properties",
+            "To define additional metadata for an action",
+            "To handle routing",
+            "To modify state"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To define additional metadata for an action",
+        "difficulty": "hard",
+        "explanation": "`props()` allows you to add additional metadata or payload to an action, providing more context for state changes.",
+        "hint": "Think of props as additional information carried by an action."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "Which Angular decorator is used to register NgRx Effects?",
+        "options": [
+            "@Effect()",
+            "@Injectable()",
+            "@NgModule()",
+            "@Effect"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "@Effect()",
+        "difficulty": "easy",
+        "explanation": "The `@Effect()` decorator is used to mark methods in an Effect class that should be listened to by the NgRx Effects system.",
+        "hint": "This decorator is specific to NgRx Effects."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the primary purpose of the NgRx Store DevTools?",
+        "options": [
+            "To create new components",
+            "To debug and track state changes",
+            "To handle HTTP requests",
+            "To optimize application performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To debug and track state changes",
+        "difficulty": "medium",
+        "explanation": "NgRx Store DevTools provide a way to inspect and debug state changes, action history, and time-travel debugging.",
+        "hint": "Think of it as a debugging tool for state management."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What does the `@ngrx/store-devtools` package provide?",
+        "options": [
+            "Performance monitoring tools",
+            "Development tools for inspecting and debugging store state",
+            "Server-side rendering support",
+            "Component testing utilities"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Development tools for inspecting and debugging store state",
+        "difficulty": "medium",
+        "explanation": "The `@ngrx/store-devtools` package provides browser extensions and tools for monitoring and debugging NgRx store state.",
+        "hint": "This package helps developers understand state changes during development."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the recommended approach for handling complex state in large applications?",
+        "options": [
+            "Using a single, large reducer",
+            "Creating multiple stores",
+            "Using feature modules with their own state",
+            "Avoiding state management entirely"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using feature modules with their own state",
+        "difficulty": "hard",
+        "explanation": "In large Angular applications, it's recommended to use feature modules with their own state, which can be combined into a global store.",
+        "hint": "Think modular and break down state into manageable pieces."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What does the `createAction()` function from @ngrx/store do?",
+        "options": [
+            "Creates a new component",
+            "Generates a typed action creator",
+            "Modifies the application state",
+            "Handles routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Generates a typed action creator",
+        "difficulty": "medium",
+        "explanation": "`createAction()` helps create type-safe action creators with optional payload, improving type checking in NgRx.",
+        "hint": "This function helps create strongly-typed actions."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "How do NgRx Selectors support performance optimization?",
+        "options": [
+            "By reducing the number of components",
+            "Through memoization and avoiding unnecessary computations",
+            "By minimizing HTTP requests",
+            "By reducing state size"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Through memoization and avoiding unnecessary computations",
+        "difficulty": "hard",
+        "explanation": "NgRx Selectors use memoization to cache results and prevent redundant calculations, improving overall application performance.",
+        "hint": "Selectors can cache and reuse computation results."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the purpose of the `on()` method in reducer configuration?",
+        "options": [
+            "To create new actions",
+            "To handle component events",
+            "To define how specific actions modify the state",
+            "To manage routing"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To define how specific actions modify the state",
+        "difficulty": "medium",
+        "explanation": "The `on()` method is used in reducer configuration to specify how particular actions should transform the state.",
+        "hint": "This method maps actions to state transformation logic."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is an anti-pattern in NgRx state management?",
+        "options": [
+            "Using multiple reducers",
+            "Modifying state directly in a reducer",
+            "Creating feature modules",
+            "Using selectors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Modifying state directly in a reducer",
+        "difficulty": "hard",
+        "explanation": "Directly mutating state in a reducer is an anti-pattern. Reducers should always return a new state object to maintain immutability.",
+        "hint": "Immutability is key in NgRx state management."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the primary role of NgRx Effects in handling asynchronous operations?",
+        "options": [
+            "To replace HTTP services",
+            "To listen for actions and perform side effects",
+            "To manage component lifecycle",
+            "To handle routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To listen for actions and perform side effects",
+        "difficulty": "medium",
+        "explanation": "NgRx Effects listen for specific actions and perform side effects like API calls, without modifying the reducers directly.",
+        "hint": "Effects handle async logic outside of components and reducers."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What does the term 'lifting state' mean in NgRx?",
+        "options": [
+            "Creating a new store",
+            "Moving component-specific state to the global store",
+            "Optimizing state performance",
+            "Handling routing state"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Moving component-specific state to the global store",
+        "difficulty": "hard",
+        "explanation": "'Lifting state' refers to moving local component state to the centralized NgRx store for better state management and sharing.",
+        "hint": "Consider moving isolated state to a more global, accessible location."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the purpose of the `createReducer()` function?",
+        "options": [
+            "To create new components",
+            "To define the initial state and handle state transitions",
+            "To manage HTTP requests",
+            "To handle routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To define the initial state and handle state transitions",
+        "difficulty": "medium",
+        "explanation": "`createReducer()` helps define the initial state and specify how different actions modify that state using the `on()` method.",
+        "hint": "This function sets up the state transformation logic."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "How do you handle error states in NgRx Effects?",
+        "options": [
+            "By ignoring errors",
+            "Using the `catchError` operator from RxJS",
+            "Modifying the reducer directly",
+            "Creating a new store"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using the `catchError` operator from RxJS",
+        "difficulty": "hard",
+        "explanation": "In NgRx Effects, the `catchError` RxJS operator is used to handle and dispatch error actions when async operations fail.",
+        "hint": "RxJS operators help manage error scenarios in Effects."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is a key benefit of using NgRx for state management?",
+        "options": [
+            "Reduced application complexity",
+            "Automatic performance optimization",
+            "Predictable state changes and easier debugging",
+            "Elimination of all async operations"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Predictable state changes and easier debugging",
+        "difficulty": "medium",
+        "explanation": "NgRx provides a predictable state management approach with clear action flows, making it easier to track and debug state changes.",
+        "hint": "Consider the advantages of a structured, unidirectional state management approach."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What is the recommended way to handle form state in NgRx?",
+        "options": [
+            "Using component local state",
+            "Creating a dedicated form state in the store",
+            "Avoiding state management for forms",
+            "Using only template-driven forms"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creating a dedicated form state in the store",
+        "difficulty": "hard",
+        "explanation": "For complex forms, it's recommended to create a dedicated form state in the NgRx store to manage form data and validation centrally.",
+        "hint": "Consider centralizing form-related state for better management."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "What does the term 'action creator' mean in NgRx?",
+        "options": [
+            "A method to create new components",
+            "A function that returns an action object",
+            "A way to modify the store directly",
+            "A method to handle routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A function that returns an action object",
+        "difficulty": "medium",
+        "explanation": "An action creator is a function that returns a standardized action object, providing a consistent way to create actions in NgRx.",
+        "hint": "Action creators help create type-safe, structured actions."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "State Management",
+        "questionText": "How can you optimize performance in large NgRx applications?",
+        "options": [
+            "Using a single, large reducer",
+            "Avoiding state management",
+            "Using feature modules, memoized selectors, and OnPush change detection",
+            "Increasing the number of actions"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using feature modules, memoized selectors, and OnPush change detection",
+        "difficulty": "hard",
+        "explanation": "Performance optimization in large NgRx applications involves using feature modules, memoized selectors, and OnPush change detection strategy.",
+        "hint": "Consider modular design and efficient rendering techniques."
+    },
 
     // Testing Angular Applications
 
