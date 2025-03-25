@@ -2027,9 +2027,898 @@ const AngularQuestions = [
         "explanation": "The standard way to create a service is to define a TypeScript class and decorate it with @Injectable.",
         "hint": "Think about a simple class with a decorator"
     },
+
     // RxJS & Observables
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is an Observable in RxJS?",
+        "options": [
+            "A way to handle synchronous data",
+            "A stream of values that can be observed over time",
+            "A method to create static arrays",
+            "A type of event listener"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A stream of values that can be observed over time",
+        "difficulty": "easy",
+        "explanation": "An Observable is a core concept in RxJS that represents a stream of values or events that can be observed over time, allowing for complex async operations.",
+        "hint": "Think of it as a collection of future values"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What method creates an Observable from a single value?",
+        "options": ["from()", "of()", "create()", "interval()"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "of()",
+        "difficulty": "easy",
+        "explanation": "The of() operator creates an Observable that emits the specified value(s) and then completes.",
+        "hint": "Used to create an Observable from a single or multiple static values"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the difference between map() and switchMap()?",
+        "options": [
+            "They are exactly the same",
+            "map() transforms values, switchMap() switches to a new Observable",
+            "map() is for arrays, switchMap() is for Observables",
+            "switchMap() only works with HTTP requests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "map() transforms values, switchMap() switches to a new Observable",
+        "difficulty": "medium",
+        "explanation": "map() transforms the emitted values, while switchMap() allows switching to a new Observable, canceling the previous inner Observable subscription.",
+        "hint": "Think about transformation vs. switching Observables"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "How do you unsubscribe from an Observable?",
+        "options": [
+            "Using .unsubscribe() method",
+            "It automatically unsubscribes",
+            "By calling .complete()",
+            "Observables cannot be unsubscribed"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using .unsubscribe() method",
+        "difficulty": "easy",
+        "explanation": "Subscriptions can be manually unsubscribed using the .unsubscribe() method to prevent memory leaks.",
+        "hint": "Prevent memory leaks by manually closing subscriptions"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the catchError operator do?",
+        "options": [
+            "Prevents all errors",
+            "Handles and transforms error events",
+            "Stops the Observable completely",
+            "Creates new errors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Handles and transforms error events",
+        "difficulty": "medium",
+        "explanation": "catchError allows you to handle errors in an Observable stream by catching and potentially returning a new Observable or throwing an error.",
+        "hint": "Used for error handling and recovery in Observable streams"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the purpose of the takeUntil operator?",
+        "options": [
+            "To take only specific values",
+            "To stop an Observable when another Observable emits",
+            "To limit Observable emissions",
+            "To create a new Observable"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To stop an Observable when another Observable emits",
+        "difficulty": "medium",
+        "explanation": "takeUntil allows you to automatically complete an Observable when another 'notifier' Observable emits a value, useful for cleaning up subscriptions.",
+        "hint": "Helps with automatic subscription management"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the difference between concat() and merge()?",
+        "options": [
+            "They are exactly the same",
+            "concat() subscribes to Observables sequentially, merge() subscribes concurrently",
+            "concat() is only for arrays",
+            "merge() only works with HTTP requests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "concat() subscribes to Observables sequentially, merge() subscribes concurrently",
+        "difficulty": "hard",
+        "explanation": "concat() subscribes to Observables one after another, emitting values in sequence, while merge() subscribes to multiple Observables concurrently.",
+        "hint": "Think about sequential vs. parallel Observable emissions"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the debounceTime operator do?",
+        "options": [
+            "Completely stops Observable emissions",
+            "Delays Observable emissions by a fixed time",
+            "Waits for a pause in emissions before emitting the last value",
+            "Increases Observable performance"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Waits for a pause in emissions before emitting the last value",
+        "difficulty": "medium",
+        "explanation": "debounceTime waits for a specified time of silence before emitting the most recent value, useful for reducing unnecessary operations like search input.",
+        "hint": "Used to limit rapid successive events"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is a Subject in RxJS?",
+        "options": [
+            "A type of error handling",
+            "An Observable that can multicast values to many Observers",
+            "A way to create static values",
+            "A method to stop Observables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An Observable that can multicast values to many Observers",
+        "difficulty": "medium",
+        "explanation": "A Subject is both an Observable and an Observer, allowing it to multicast values to multiple subscribers.",
+        "hint": "Think of it as a central communication hub"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the switchMap operator typically used for?",
+        "options": [
+            "To create new Observables",
+            "To handle HTTP requests and cancel previous requests",
+            "To merge multiple Observables",
+            "To filter Observable values"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To handle HTTP requests and cancel previous requests",
+        "difficulty": "medium",
+        "explanation": "switchMap is commonly used in HTTP scenarios to switch to a new Observable and automatically cancel the previous subscription.",
+        "hint": "Useful for scenarios like search-as-you-type"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the difference between Observable and Promise?",
+        "options": [
+            "They are exactly the same",
+            "Observables can be canceled, Promises cannot",
+            "Promises are more powerful",
+            "Observables only work in Angular"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Observables can be canceled, Promises cannot",
+        "difficulty": "medium",
+        "explanation": "Observables can be canceled and can emit multiple values, while Promises resolve once and cannot be canceled.",
+        "hint": "Think about single vs. multiple value streams"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the shareReplay operator do?",
+        "options": [
+            "Stops Observable emissions",
+            "Shares the source Observable with multiple subscribers and replays recent values",
+            "Creates multiple copies of an Observable",
+            "Increases Observable performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Shares the source Observable with multiple subscribers and replays recent values",
+        "difficulty": "hard",
+        "explanation": "shareReplay allows multiple subscribers to share the same Observable execution and replay a specified number of previous emissions.",
+        "hint": "Useful for caching and preventing multiple unnecessary network requests"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the purpose of the combineLatest operator?",
+
+"options": [
+            "To combine the last values from multiple Observables",
+            "To merge Observables completely",
+            "To stop Observable emissions",
+            "To create a new Observable"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To combine the last values from multiple Observables",
+        "difficulty": "medium",
+        "explanation": "combineLatest emits an array of the latest values from multiple Observables whenever any of them emit a new value.",
+        "hint": "Used when you need to work with multiple Observables simultaneously"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is a Cold Observable?",
+        "options": [
+            "An Observable that doesn't emit values",
+            "An Observable that starts producing values when subscribed",
+            "A frozen Observable",
+            "An Observable with no subscribers"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An Observable that starts producing values when subscribed",
+        "difficulty": "hard",
+        "explanation": "A Cold Observable creates a new execution for each subscriber, typically used for data sources like HTTP requests.",
+        "hint": "Think about lazy initialization of data streams"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the exhaustMap operator do?",
+
+"options": [
+            "Combines all Observable values",
+            "Ignores new Observable sources while the current one is active",
+            "Creates new Observables constantly",
+            "Stops all Observable emissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ignores new Observable sources while the current one is active",
+        "difficulty": "hard",
+        "explanation": "exhaustMap switches to a new Observable but ignores subsequent source values until the current inner Observable completes.",
+        "hint": "Prevents overlapping Observable executions"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "How do you create an Observable from scratch?",
+        "options": [
+            "Using new Observable() constructor",
+            "Using of() method",
+            "Using from() method",
+            "It's not possible"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using new Observable() constructor",
+        "difficulty": "medium",
+        "explanation": "You can create a custom Observable using the new Observable() constructor and defining the subscription logic.",
+        "hint": "Define your own emission and completion logic"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the primary purpose of the tap operator?",
+        "options": [
+            "To transform Observable values",
+            "To perform side effects without modifying the value",
+            "To filter Observable values",
+            "To stop Observable emissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To perform side effects without modifying the value",
+        "difficulty": "easy",
+        "explanation": "tap allows you to perform side effects like logging or debugging without modifying the emitted values.",
+        "hint": "Used for debugging and logging in Observable streams"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is a Hot Observable?",
+        "options": [
+            "An Observable that's always active",
+            "An Observable that produces values independently of subscribers",
+            "A fast Observable",
+            "An Observable with many subscribers"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An Observable that produces values independently of subscribers",
+        "difficulty": "hard",
+        "explanation": "A Hot Observable produces values regardless of subscriptions, like a live data stream or WebSocket.",
+        "hint": "Think about continuous data sources"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the filter operator do?",
+        "options": [
+            "Transforms Observable values",
+            "Stops all Observable emissions",
+            "Selects values that meet a specific condition",
+            "Merges multiple Observables"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Selects values that meet a specific condition",
+        "difficulty": "easy",
+        "explanation": "filter allows you to select only the values that pass a test implemented by a provided function.",
+        "hint": "Similar to Array.filter() method"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the purpose of the forkJoin operator?",
+        "options": [
+            "To create a new Observable",
+            "To wait for multiple Observables to complete and emit their last values",
+            "To merge Observables immediately",
+            "To stop Observable emissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To wait for multiple Observables to complete and emit their last values",
+        "difficulty": "medium",
+        "explanation": "forkJoin waits for all provided Observables to complete and then emits an array of their final values.",
+        "hint": "Useful for parallel async operations"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the interval() operator create?",
+        "options": [
+            "A one-time Observable",
+            "An Observable that emits sequential numbers at a specified interval",
+            "A random number Observable",
+            "A static number Observable"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An Observable that emits sequential numbers at a specified interval",
+        "difficulty": "easy",
+        "explanation": "interval() creates an Observable that emits incremental numbers at specified time intervals.",
+        "hint": "Think about a timer that continuously emits values"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the primary difference between BehaviorSubject and Subject?",
+        "options": [
+            "They are exactly the same",
+            "BehaviorSubject requires an initial value and remembers the current value",
+            "BehaviorSubject cannot be used in Observables",
+            "Subject is more powerful"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "BehaviorSubject requires an initial value and remembers the current value",
+        "difficulty": "medium",
+        "explanation": "BehaviorSubject requires an initial value and always emits its current value to new subscribers.",
+        "hint": "Maintains state and provides the most recent value"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the retry() operator do?",
+        "options": [
+            "Stops Observable execution",
+            "Retries an Observable a specified number of times if it fails",
+            "Creates a new Observable",
+            "Prevents all errors"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Retries an Observable a specified number of times if it fails",
+        "difficulty": "medium",
+        "explanation": "retry() allows you to automatically resubscribe to an Observable if it encounters an error, with an optional retry count.",
+        "hint": "Useful for handling transient network errors"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is the purpose of the withLatestFrom operator?",
+        "options": [
+            "To create a new Observable",
+            "To combine the latest values from multiple Observables",
+            "To stop Observable emissions",
+            "To merge Observables completely"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To combine the latest values from multiple Observables",
+        "difficulty": "hard",
+        "explanation": "withLatestFrom combines the source Observable with other Observables, emitting when the source Observable emits, using the latest values from other Observables.",
+        "hint": "Similar to combineLatest, but with different emission rules"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What is a ReplaySubject?",
+        "options": [
+            "A Subject that never emits values",
+            "A Subject that replays a specified number of previous values to new subscribers",
+            "A Subject that only emits the first value",
+            "A Subject that merges multiple Observables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A Subject that replays a specified number of previous values to new subscribers",
+        "difficulty": "hard",
+        "explanation": "ReplaySubject allows you to specify how many previous values should be replayed to new subscribers.",
+        "hint": "Provides a buffer of previous emissions"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "What does the concatMap operator do?",
+        "options": [
+            "Merges Observables immediately",
+            "Maps values and subscribes to inner Observables sequentially",
+            "Creates new Observables constantly",
+            "Stops Observable emissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Maps values and subscribes to inner Observables sequentially",
+        "difficulty": "hard",
+        "explanation": "concatMap maps values to inner Observables and subscribes to them sequentially, waiting for each to complete before moving to the next.",
+        "hint": "Ensures ordered execution of inner Observables"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "RxJS & Observables",
+        "questionText": "How do you complete an Observable?",
+        "options": [
+            "Using .unsubscribe()",
+            "Using .complete() method",
+            "Automatically after emitting all values",
+            "It's not possible to manually complete"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using .complete() method",
+        "difficulty": "easy",
+        "explanation": "When creating custom Observables, you can call .complete() to signal the end of value emissions.",
+        "hint": "Signals the end of the Observable stream"
+    },
 
     // Angular Modules
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the primary purpose of an Angular module?",
+        "options": [
+            "To define application styling",
+            "To organize related components, directives, and services",
+            "To handle HTTP requests",
+            "To create database connections"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To organize related components, directives, and services",
+        "difficulty": "easy",
+        "explanation": "Angular modules are containers that group related components, directives, pipes, and services together, providing a way to organize and modularize Angular applications.",
+        "hint": "Think of a module as a way to encapsulate related functionality."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "Which decorator is used to define an Angular module?",
+        "options": ["@Module", "@NgModule", "@Component", "@Injectable"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "@NgModule",
+        "difficulty": "easy",
+        "explanation": "@NgModule is the decorator used to define and configure an Angular module, specifying its metadata like declarations, imports, and providers.",
+        "hint": "This decorator helps Angular understand how to compile and run the module."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the purpose of the 'declarations' array in an @NgModule?",
+        "options": [
+            "To import external libraries",
+            "To list components, directives, and pipes used in the module",
+            "To define service providers",
+            "To configure routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To list components, directives, and pipes used in the module",
+        "difficulty": "medium",
+        "explanation": "The 'declarations' array specifies which components, directives, and pipes belong to the module. These must be declared before they can be used in templates.",
+        "hint": "Components and directives must be declared in exactly one module."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the difference between a feature module and the root module?",
+        "options": [
+            "Feature modules cannot have components, root modules can",
+            "Root module is the main module of the application, feature modules provide specific functionality",
+            "Root module is always smaller than feature modules",
+            "Feature modules can only be used in large applications"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Root module is the main module of the application, feature modules provide specific functionality",
+        "difficulty": "medium",
+        "explanation": "The root module (typically AppModule) initializes the application, while feature modules organize specific areas of functionality like user management or product catalog.",
+        "hint": "Think of feature modules as specialized sections of your application."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What does the 'imports' array in @NgModule do?",
+        "options": [
+            "Imports TypeScript files",
+            "Imports other Angular modules",
+            "Imports external JavaScript libraries",
+            "Imports CSS files"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Imports other Angular modules",
+        "difficulty": "easy",
+        "explanation": "The 'imports' array allows a module to use capabilities from other Angular modules, such as CommonModule or FormsModule.",
+        "hint": "This is how you bring in additional module-level capabilities."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is a shared module in Angular?",
+        "options": [
+            "A module that can be accessed globally",
+            "A module that contains components shared across multiple feature modules",
+            "A module used for dependency injection",
+            "A module that handles network requests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A module that contains components shared across multiple feature modules",
+        "difficulty": "medium",
+        "explanation": "A shared module contains reusable components, directives, and pipes that can be imported and used in multiple feature modules, promoting code reuse.",
+        "hint": "Think of a shared module as a collection of common, reusable elements."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "Which method do you use to configure lazy-loaded modules?",
+        "options": [
+            "loadChildren()",
+            "import()",
+            "lazyLoad()",
+            "preloadModule()"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "loadChildren()",
+        "difficulty": "hard",
+        "explanation": "In Angular routing configuration, loadChildren() is used to specify a module that should be lazy-loaded, meaning it's loaded only when its route is accessed.",
+        "hint": "This method helps improve initial load time by loading modules on-demand."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the purpose of the 'providers' array in @NgModule?",
+        "options": [
+            "To define component styles",
+            "To register services for dependency injection",
+            "To create new HTML elements",
+            "To configure routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To register services for dependency injection",
+        "difficulty": "medium",
+        "explanation": "The 'providers' array registers services at the module level, making them available for dependency injection throughout the module.",
+        "hint": "Services declared here can be injected into components, directives, and other services within the module."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What does the 'exports' array in @NgModule do?",
+        "options": [
+            "Exports TypeScript interfaces",
+            "Makes components, directives, and pipes available for other modules",
+            "Creates export files for the application",
+            "Defines module-level variables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Makes components, directives, and pipes available for other modules",
+        "difficulty": "medium",
+        "explanation": "The 'exports' array specifies which declarables (components, directives, pipes) should be made available for other modules to use.",
+        "hint": "Items in the exports array can be used in templates of other modules that import this module."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is a standalone component in Angular?",
+        "options": [
+            "A component that cannot be used in templates",
+            "A component that doesn't require a module declaration",
+            "A component that runs independently of Angular",
+            "A component that can only be used in root module"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A component that doesn't require a module declaration",
+        "difficulty": "hard",
+        "explanation": "Standalone components can be used directly without being declared in an NgModule, introduced in Angular 14 to simplify module architecture.",
+        "hint": "These components manage their own dependencies and imports."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "Which of the following is NOT a typical characteristic of an Angular module?",
+        "options": [
+            "Can have its own providers",
+            "Can import other modules",
+            "Can define routing configuration",
+            "Can create database connections"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Can create database connections",
+        "difficulty": "medium",
+        "explanation": "Angular modules organize application structure, provide dependency injection, and manage component relationships, but they do not directly create database connections.",
+        "hint": "Modules are about organizing code and dependencies, not direct data access."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is a core module typically used for?",
+        "options": [
+            "To handle all HTTP requests",
+            "To store application-wide singleton services",
+            "To define global CSS styles",
+            "To manage component lifecycle"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To store application-wide singleton services",
+        "difficulty": "hard",
+        "explanation": "A core module usually contains singleton services, interceptors, and other app-wide dependencies that should only be imported once in the root module.",
+        "hint": "Think of the core module as a centralized place for global, application-level services."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What does the forRoot() method typically do in a module?",
+        "options": [
+            "Creates a new instance of the module",
+            "Configures services for the root injector",
+            "Defines the root component",
+            "Sets up global routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Configures services for the root injector",
+        "difficulty": "hard",
+        "explanation": "forRoot() is a convention used to configure services at the application's root level, preventing multiple instances of singleton services.",
+        "hint": "This method helps manage service instantiation in large applications."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "Can a component belong to multiple modules?",
+        "options": [
+            "Yes, always",
+            "No, never",
+            "Only in specific circumstances",
+            "Only with special permission"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "No, never",
+        "difficulty": "medium",
+        "explanation": "In Angular, a component must be declared in exactly one module. If you need to use it in multiple modules, you need to export it from its original module and import that module.",
+        "hint": "Each component has a single, strict module declaration."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the primary benefit of using feature modules?",
+        "options": [
+            "Improved performance",
+            "Better code organization and potential lazy loading",
+            "Reduced bundle size",
+            "Enhanced security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Better code organization and potential lazy loading",
+        "difficulty": "easy",
+        "explanation": "Feature modules help organize code into logical sections and enable lazy loading, which can improve application performance and maintainability.",
+        "hint": "Think of feature modules as specialized sections of your application's functionality."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What does @NgModule({ bootstrap: [] }) specify?",
+        "options": [
+            "The main component to start the application",
+            "The loading screen component",
+            "A list of components to preload",
+            "The default route component"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The main component to start the application",
+        "difficulty": "medium",
+        "explanation": "The bootstrap array in @NgModule specifies the root component that Angular creates and inserts into the index.html host web page.",
+        "hint": "This is typically done only in the root AppModule."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the recommended approach for organizing large Angular applications?",
+        "options": [
+            "Put all code in one module",
+            "Create feature modules with clear responsibilities",
+            "Use only the root module",
+            "Maximize the number of components in each module"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Create feature modules with clear responsibilities",
+        "difficulty": "easy",
+        "explanation": "Best practices recommend breaking large applications into feature modules, each responsible for a specific area of functionality.",
+        "hint": "Modularization helps maintain clean, scalable code."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the primary difference between imports and providers in @NgModule?",
+        "options": [
+            "They are exactly the same",
+            "Imports bring in module capabilities, providers register services",
+            "Imports create new components, providers define routes",
+            "Imports handle styling, providers handle logic"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Imports bring in module capabilities, providers register services",
+        "difficulty": "hard",
+        "explanation": "The imports array brings in capabilities from other modules, while the providers array registers services for dependency injection.",
+        "hint": "Think of imports as module-level inclusion, providers as service registration."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What happens if you don't include a component in the declarations array?",
+        "options": [
+            "The component won't compile",
+            "The component will still work",
+            "Angular will automatically declare it",
+            "The application will crash"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The component won't compile",
+        "difficulty": "medium",
+        "explanation": "Components must be declared in a module's declarations array before they can be used in templates. Omitting this will cause a compilation error.",
+        "hint": "Every component needs a module home."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is a dynamic module in Angular?",
+        "options": [
+            "A module that changes during runtime",
+            "A module configured programmatically",
+            "A module that loads components dynamically",
+            "A module with changing imports"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A module configured programmatically",
+        "difficulty": "hard",
+        "explanation": "Dynamic modules are modules that can be configured programmatically, often using static methods like forRoot() or forChild() to provide flexible configuration.",
+        "hint": "Think of these as modules with configurable behavior."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the purpose of CommonModule?",
+        "options": [
+            "To provide common services",
+            "To include common directives like *ngIf and *ngFor",
+            "To handle HTTP requests",
+            "To define routing configuration"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To include common directives like *ngIf and *ngFor",
+        "difficulty": "easy",
+        "explanation": "CommonModule provides common directives such as *ngIf, *ngFor, and *ngSwitch, which are essential for template manipulation.",
+        "hint": "Most feature modules import CommonModule to use basic Angular template directives."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is a potential issue with registering a service in the root module's providers array?",
+        "options": [
+            "It will cause performance issues",
+            "It creates a global singleton instance",
+            "It prevents the service from working",
+            "It duplicates the service"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It creates a global singleton instance",
+        "difficulty": "hard",
+        "explanation": "Services registered in the root module's providers array become singleton instances available application-wide, which might not always be the desired behavior.",
+        "hint": "Consider the scope and lifecycle of your services carefully."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What does @NgModule({ entryComponents: [] }) do in modern Angular?",
+"options": [
+            "Creates entry points for the application",
+            "Defines dynamically created components (deprecated)",
+            "Manages component routing",
+            "Controls component initialization"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Defines dynamically created components (deprecated)",
+        "difficulty": "hard",
+        "explanation": "In modern Angular (9+), entryComponents is deprecated. Ivy renderer has made dynamic component creation more straightforward without requiring explicit registration.",
+        "hint": "This was previously used for components created programmatically."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "How do you prevent a service from being tree-shakable?",
+        "options": [
+            "Use @Injectable({ providedIn: 'root' })",
+            "Use @Injectable({ providedIn: 'platform' })",
+            "Use @Injectable({ providedIn: 'any' })",
+            "Use @Injectable()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use @Injectable({ providedIn: 'platform' })",
+        "difficulty": "hard",
+        "explanation": "Using providedIn: 'platform' prevents tree-shaking, ensuring the service is not removed during build optimization.",
+        "hint": "This relates to Angular's dependency injection and build optimization strategies."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is the primary purpose of creating a routing module?",
+        "options": [
+            "To define component styles",
+            "To separate routing configuration from the main module",
+            "To create new components",
+            "To manage service providers"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To separate routing configuration from the main module",
+        "difficulty": "medium",
+        "explanation": "A routing module keeps routing logic separate from the main module, improving code organization and maintainability.",
+        "hint": "This follows the single responsibility principle."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What is a potential problem with importing the same module multiple times?",
+        "options": [
+            "It improves performance",
+            "It can cause service duplication",
+            "It has no impact",
+            "It creates additional components"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "It can cause service duplication",
+        "difficulty": "hard",
+        "explanation": "Importing the same module multiple times can lead to multiple instances of services, breaking the singleton pattern.",
+        "hint": "Be cautious about module imports, especially for core and shared modules."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What does the resolvedData property in Angular routing configuration represent?",
+        "options": [
+            "Default route parameters",
+            "Data resolved before a route is activated",
+            "Static route configuration",
+            "Component initialization data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data resolved before a route is activated",
+        "difficulty": "hard",
+        "explanation": "Resolved data allows you to fetch data before a route is activated, ensuring components have required data before rendering.",
+        "hint": "This helps prevent incomplete or loading states in routed components."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "In Angular, what is a barrel file?",
+        "options": [
+            "A file that stores large data collections",
+            "An index file that re-exports multiple modules or components",
+            "A configuration file for modules",
+            "A routing definition file"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An index file that re-exports multiple modules or components",
+        "difficulty": "medium",
+        "explanation": "A barrel file (typically index.ts) aggregates and re-exports multiple related modules, components, or services to simplify imports.",
+        "hint": "It helps reduce import complexity in large projects."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Modules",
+        "questionText": "What does the providedIn property in @Injectable do?",
+        "options": [
+            "Defines service availability globally",
+            "Specifies where the service is provided",
+            "Creates multiple service instances",
+            "Manages service inheritance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Specifies where the service is provided",
+        "difficulty": "hard",
+        "explanation": "The providedIn property determines the injection scope of a service, such as 'root' (application-wide), 'platform', or a specific module.",
+        "hint": "This controls service instantiation and tree-shaking behavior."
+    }
 
     // Angular Router
 
