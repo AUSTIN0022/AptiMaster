@@ -3240,17 +3240,2770 @@ const DBSysQuestions = [
         "hint": "This isolation level provides basic protection against reading unstable data."
     },
 
+
     // Concurrency Control
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is the primary goal of concurrency control?",
+        "options": [
+            "Maximize database performance", 
+            "Prevent data inconsistency in multi-user environments", 
+            "Reduce storage requirements", 
+            "Simplify database access"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Prevent data inconsistency in multi-user environments",
+        "difficulty": "easy",
+        "explanation": "Concurrency control ensures data integrity when multiple transactions access the database simultaneously, preventing conflicts and maintaining consistent results.",
+        "hint": "Think about maintaining data correctness in a system with multiple simultaneous users."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a race condition in database concurrency?",
+        "options": [
+            "A database performance test", 
+            "A situation where transaction outcome depends on timing", 
+            "A network connectivity issue", 
+            "A locking mechanism failure"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A situation where transaction outcome depends on timing",
+        "difficulty": "medium",
+        "explanation": "A race condition occurs when the correctness of a transaction depends on the relative timing of multiple concurrent transactions, potentially leading to inconsistent results.",
+        "hint": "Consider how different execution orders might produce different outcomes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a lost update in concurrent transactions?",
+        "options": [
+            "A temporary database error", 
+            "A situation where one transaction's update is overwritten", 
+            "A network disconnection", 
+            "A transaction rollback"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A situation where one transaction's update is overwritten",
+        "difficulty": "medium",
+        "explanation": "Lost update occurs when two transactions read the same data, and the second transaction overwrites the first transaction's modifications without preserving them.",
+        "hint": "This is a common problem in systems with simultaneous data modifications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is an exclusive lock?",
+        "options": [
+            "A lock that allows multiple read operations", 
+            "A lock that prevents any other transaction from accessing the resource", 
+            "A temporary database connection", 
+            "A shared reading mechanism"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A lock that prevents any other transaction from accessing the resource",
+        "difficulty": "easy",
+        "explanation": "An exclusive lock provides complete access control, preventing any other transaction from reading or writing the locked resource.",
+        "hint": "This is the most restrictive type of lock in database concurrency control."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a shared lock?",
+        "options": [
+            "A lock that allows multiple read operations", 
+            "A lock that prevents all access", 
+            "A permanent database lock", 
+            "A transaction-specific lock"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A lock that allows multiple read operations",
+        "difficulty": "easy",
+        "explanation": "A shared lock allows multiple transactions to read a resource simultaneously but prevents any transaction from writing to that resource.",
+        "hint": "This type of lock supports concurrent read operations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a deadlock in database systems?",
+        "options": [
+            "A system performance improvement", 
+            "A situation where transactions wait for each other indefinitely", 
+            "A successful transaction completion", 
+            "A database backup process"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A situation where transactions wait for each other indefinitely",
+        "difficulty": "medium",
+        "explanation": "A deadlock occurs when two or more transactions are unable to proceed because each is waiting for the other to release a lock, creating a circular dependency.",
+        "hint": "Think of two transactions blocking each other's progress."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is pessimistic concurrency control?",
+        "options": [
+            "Assuming transactions will conflict", 
+            "Preventing transactions before they start", 
+            "Locking resources before access", 
+            "Rejecting all concurrent transactions"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Locking resources before access",
+        "difficulty": "hard",
+        "explanation": "Pessimistic concurrency control locks resources before a transaction can access them, preventing potential conflicts by restricting simultaneous access.",
+        "hint": "This approach prioritizes data consistency over performance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is optimistic concurrency control?",
+        "options": [
+            "Transactions always conflict", 
+            "Transactions rarely conflict", 
+            "Transactions must be serialized", 
+            "Transactions cannot run concurrently"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Transactions rarely conflict",
+        "difficulty": "hard",
+        "explanation": "Optimistic concurrency control assumes that transactions will rarely conflict, allowing them to proceed without locking and checking for conflicts at commit time.",
+        "hint": "This approach prioritizes performance over immediate consistency checks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a phantom read?",
+        "options": [
+            "A database error", 
+            "A situation where new rows appear during a transaction", 
+            "A temporary system glitch", 
+            "A network interruption"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A situation where new rows appear during a transaction",
+        "difficulty": "medium",
+        "explanation": "A phantom read occurs when a transaction reads a set of rows that satisfy a condition, and then a second transaction inserts or deletes rows that would have been part of the first transaction's result set.",
+        "hint": "This anomaly involves unexpected changes to the result set during a transaction."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What mechanism helps prevent deadlocks?",
+        "options": [
+            "Random transaction ordering", 
+            "Timeout and rollback", 
+            "Infinite resource allocation", 
+            "Unrestricted locking"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Timeout and rollback",
+        "difficulty": "hard",
+        "explanation": "Timeout and rollback mechanism helps resolve potential deadlocks by automatically terminating long-waiting transactions and rolling them back to release resources.",
+        "hint": "This strategy breaks potential circular wait conditions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a dirty read?",
+        "options": [
+            "Reading committed data", 
+            "Reading uncommitted transaction data", 
+            "A database cleaning process", 
+            "A transaction validation method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Reading uncommitted transaction data",
+        "difficulty": "medium",
+        "explanation": "A dirty read occurs when a transaction reads data that has been modified by another transaction but not yet committed, potentially reading incorrect or temporary data.",
+        "hint": "This is an inconsistency that can happen in low isolation levels."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is two-phase locking (2PL)?",
+        "options": [
+            "A locking mechanism with two types of locks", 
+            "A protocol ensuring serializability of transactions", 
+            "A method of distributed locking", 
+            "A performance optimization technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A protocol ensuring serializability of transactions",
+        "difficulty": "hard",
+        "explanation": "Two-phase locking is a concurrency control method that ensures serializability by dividing transaction actions into two phases: growing (acquiring locks) and shrinking (releasing locks).",
+        "hint": "This protocol helps maintain consistent transaction execution order."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a non-repeatable read?",
+        "options": [
+            "Reading the same data multiple times", 
+            "A situation where data changes during a transaction", 
+            "A database backup process", 
+            "A transaction validation method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A situation where data changes during a transaction",
+        "difficulty": "medium",
+        "explanation": "A non-repeatable read occurs when a transaction reads the same data twice and gets different values because another transaction has modified the data between reads.",
+        "hint": "This anomaly involves unexpected data changes during a single transaction."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is intent locking?",
+        "options": [
+            "A preliminary locking mechanism", 
+            "A temporary database connection", 
+            "A transaction validation method", 
+            "A performance optimization technique"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A preliminary locking mechanism",
+        "difficulty": "hard",
+        "explanation": "Intent locking is a hierarchical locking mechanism that indicates a transaction's intention to place a shared or exclusive lock at a lower level of the database hierarchy.",
+        "hint": "This helps manage locks in complex database structures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is the primary difference between shared and exclusive locks?",
+        "options": [
+            "Performance characteristics", 
+            "Ability to read or write data", 
+            "Transaction duration", 
+            "Database size"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ability to read or write data",
+        "difficulty": "easy",
+        "explanation": "Shared locks allow multiple read operations but prevent writes, while exclusive locks prevent both reads and writes by other transactions.",
+        "hint": "Consider the level of access restriction for each lock type."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What technique helps prevent lost updates?",
+        "options": [
+            "Random transaction ordering", 
+            "Locking mechanisms", 
+            "Unlimited resource allocation", 
+            "Parallel processing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Locking mechanisms",
+        "difficulty": "medium",
+        "explanation": "Locking mechanisms prevent lost updates by ensuring that only one transaction can modify a specific piece of data at a time, preserving the integrity of updates.",
+        "hint": "Think about controlling access to shared resources."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a serializable isolation level?",
+        "options": [
+            "Allowing all concurrent transactions", 
+            "Executing transactions as if they were sequential", 
+            "Maximizing transaction speed", 
+            "Minimizing lock overhead"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Executing transactions as if they were sequential",
+        "difficulty": "hard",
+        "explanation": "Serializable isolation level ensures that concurrent transactions are executed as if they were processed one after another, preventing all concurrency anomalies.",
+        "hint": "This is the highest and most restrictive isolation level."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is the purpose of a transaction timeout?",
+        "options": [
+            "To limit transaction duration", 
+            "To prevent system overload", 
+            "To automatically rollback long-running transactions", 
+            "To schedule transactions"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To automatically rollback long-running transactions",
+        "difficulty": "medium",
+        "explanation": "A transaction timeout automatically rolls back a transaction that exceeds a predefined time limit, preventing resource deadlock and system performance issues.",
+        "hint": "This mechanism helps manage resource allocation and prevent stuck transactions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a lock granularity?",
+        "options": [
+            "The size of a database", 
+            "The level of detail in locking resources", 
+            "The number of concurrent transactions", 
+            "The duration of a lock"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The level of detail in locking resources",
+        "difficulty": "hard",
+        "explanation": "Lock granularity refers to the level of specificity in locking database resources, ranging from fine-grained (individual rows) to coarse-grained (entire tables).",
+        "hint": "Consider how precisely locks can be applied to database resources."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a read-committed isolation level?",
+        "options": [
+            "Allowing all data reads", 
+            "Reading only committed data", 
+            "Preventing all data modifications", 
+            "Maximizing transaction speed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Reading only committed data",
+        "difficulty": "medium",
+        "explanation": "Read Committed isolation level ensures that a transaction can only read data that has been committed, preventing dirty reads but allowing non-repeatable reads.",
+        "hint": "This provides basic protection against reading unstable data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a repeatable read isolation level?",
+        "options": [
+            "Allowing multiple read attempts", 
+            "Ensuring consistent reads within a transaction", 
+            "Maximizing read performance", 
+            "Preventing all data modifications"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ensuring consistent reads within a transaction",
+        "difficulty": "medium",
+        "explanation": "Repeatable Read isolation level guarantees that if a transaction reads a row, subsequent reads of the same row will return the same data, preventing non-repeatable reads.",
+        "hint": "This level provides more consistency than Read Committed."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is the purpose of a wait-for graph in deadlock detection?",
+        "options": [
+            "Tracking transaction performance", 
+            "Identifying circular wait conditions", 
+            "Optimizing database connections", 
+            "Managing resource allocation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Identifying circular wait conditions",
+        "difficulty": "hard",
+        "explanation": "A wait-for graph is a technique used to detect deadlocks by representing transactions as nodes and their wait dependencies as edges, helping identify circular wait conditions.",
+        "hint": "This is a visual method of understanding transaction dependencies."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a timestamp-based concurrency control method?",
+        "options": [
+            "Using system time to limit transactions", 
+            "Ordering transactions based on their arrival time", 
+            "Tracking transaction duration", 
+            "Preventing time-based conflicts"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ordering transactions based on their arrival time",
+        "difficulty": "hard",
+        "explanation": "Timestamp-based concurrency control orders transactions based on their arrival time, ensuring that older transactions are processed first and preventing conflicts.",
+        "hint": "This method uses transaction timestamps to manage execution order."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a write skew anomaly?",
+        "options": [
+            "A database writing error", 
+            "A situation where two transactions modify different data that violates a constraint", 
+            "A performance optimization technique", 
+            "A locking mechanism failure"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A situation where two transactions modify different data that violates a constraint",
+        "difficulty": "hard",
+        "explanation": "Write skew occurs when two transactions read overlapping data sets and make changes that, when committed together, violate a database constraint.",
+        "hint": "This is a subtle concurrency anomaly that can be difficult to detect."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is a read uncommitted isolation level?",
+        "options": [
+            "Preventing all data reads", 
+            "Allowing reads of uncommitted data", 
+            "Maximizing transaction isolation", 
+            "Preventing data modifications"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Allowing reads of uncommitted data",
+        "difficulty": "easy",
+        "explanation": "Read Uncommitted is the lowest isolation level, allowing transactions to read data that has been modified but not yet committed by other transactions.",
+        "hint": "This level provides minimal data consistency protection."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is the primary goal of isolation levels?",
+        "options": [
+            "Maximizing database performance", 
+            "Balancing data consistency and concurrency", 
+            "Reducing storage requirements", 
+            "Simplifying transaction management"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Balancing data consistency and concurrency",
+        "difficulty": "medium",
+        "explanation": "Isolation levels aim to provide a trade-off between data consistency and the ability to process multiple transactions simultaneously.",
+        "hint": "Consider how different isolation levels manage concurrent access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What technique helps prevent write skew?",
+        "options": [
+            "Serializable isolation", 
+            "Read-only transactions", 
+            "Optimistic locking", 
+            "Timeout mechanisms"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Serializable isolation",
+        "difficulty": "hard",
+        "explanation": "Serializable isolation prevents write skew by ensuring that transactions are executed as if they were processed sequentially, eliminating potential concurrent modification conflicts.",
+        "hint": "This is the most restrictive isolation level."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Concurrency Control",
+        "questionText": "What is predicate locking?",
+        "options": [
+            "A method of locking based on data conditions", 
+            "A performance optimization technique", 
+            "A transaction validation method", 
+            "A database connection strategy"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A method of locking based on data conditions",
+        "difficulty": "hard",
+        "explanation": "Predicate locking prevents phantom reads by locking all data that satisfies a specific condition, even if those data points don't currently exist in the database.",
+        "hint": "This advanced locking technique prevents insertions that might affect query results."
+    },
 
     // Indexing & Query Optimization
+    {
+        "topic": "84f869889540770756312791",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is the purpose of a primary index?",
+        "options": [
+            "Enhancing query performance by reducing the amount of data scanned", 
+            "Storing data in a sorted order", 
+            "Preventing data modifications", 
+            "Creating a backup of the database"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Enhancing query performance by reducing the amount of data scanned",
+        "difficulty": "medium",
+        "explanation": "A primary index organizes data based on the primary key, allowing faster lookups and eliminates the need for additional sorting operations.",
+        "hint": "Consider how primary indices improve query performance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is the primary purpose of creating an index in a database?",
+        "options": [
+            "To reduce storage space",
+            "To improve query performance",
+            "To enforce data integrity",
+            "To validate data types"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To improve query performance",
+        "difficulty": "easy",
+        "explanation": "Indexes are data structures that improve the speed of data retrieval operations by allowing faster lookup of rows in a database table.",
+        "hint": "Think about how an index helps in finding data quickly, similar to a book's table of contents."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "Which type of index creates a separate structure that points to the actual data rows?",
+        "options": [
+            "Clustered Index",
+            "Non-Clustered Index",
+            "Bitmap Index",
+            "Hash Index"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Non-Clustered Index",
+        "difficulty": "medium",
+        "explanation": "A non-clustered index creates a separate structure with a copy of selected columns and a pointer to the actual data row, unlike a clustered index which determines the physical order of data.",
+        "hint": "This type of index does not modify the physical order of the table's data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What does the term 'index selectivity' refer to?",
+        "options": [
+            "The number of unique values in an indexed column",
+            "The total number of rows in a table",
+            "The performance of an index",
+            "The complexity of an index structure"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The number of unique values in an indexed column",
+        "difficulty": "hard",
+        "explanation": "Index selectivity measures the number of unique values in an indexed column, which helps determine the effectiveness of an index in filtering data.",
+        "hint": "Higher selectivity means more unique values, which typically leads to better index performance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is a composite index?",
+        "options": [
+            "An index on a single column",
+            "An index created on multiple columns",
+            "A unique index",
+            "A temporary index"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An index created on multiple columns",
+        "difficulty": "medium",
+        "explanation": "A composite index is an index that is created on multiple columns of a table, which can improve query performance for queries that filter or sort by those columns.",
+        "hint": "Think of it as an index that combines multiple columns to speed up complex queries."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "Which SQL clause can prevent the use of an index?",
+        "options": [
+            "WHERE",
+            "SELECT",
+            "HAVING",
+            "LIKE with leading wildcard"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "LIKE with leading wildcard",
+        "difficulty": "hard",
+        "explanation": "When using LIKE with a leading wildcard (e.g., '%text'), the database cannot use an index efficiently because it must scan all rows.",
+        "hint": "Indexes work best when the search starts with a known prefix."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is a covering index?",
+        "options": [
+            "An index that includes all columns needed by a query",
+            "An index that covers the entire table",
+            "A unique index on all columns",
+            "An index that prevents data modification"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "An index that includes all columns needed by a query",
+        "difficulty": "hard",
+        "explanation": "A covering index contains all columns required by a query, allowing the database to retrieve results directly from the index without accessing the actual table.",
+        "hint": "This type of index can significantly improve query performance by avoiding table lookups."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What does the term 'index scan' mean?",
+        "options": [
+            "Deleting an index",
+            "Searching through an index structure",
+            "Creating a new index",
+            "Updating index metadata"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Searching through an index structure",
+        "difficulty": "easy",
+        "explanation": "An index scan involves searching through the index structure to locate the relevant data rows, which is typically faster than a full table scan.",
+        "hint": "Think of an index scan as using a table of contents to quickly find information in a book."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "Which data structure is most commonly used for database indexes?",
+        "options": [
+            "Linked List",
+            "Array",
+            "B-Tree",
+            "Stack"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "B-Tree",
+        "difficulty": "medium",
+        "explanation": "B-Trees are the most common data structure for database indexes due to their balanced nature and efficient search, insertion, and deletion operations.",
+        "hint": "This data structure allows for logarithmic-time search and maintains sorted data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is the primary drawback of creating too many indexes?",
+        "options": [
+            "Increased query complexity",
+            "Reduced storage space",
+            "Slower data modification operations",
+            "Improved database security"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Slower data modification operations",
+        "difficulty": "medium",
+        "explanation": "Each index must be updated whenever data is inserted, updated, or deleted, which can significantly slow down data modification operations.",
+        "hint": "More indexes mean more overhead for maintaining data consistency."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is a 'hash index' best suited for?",
+        "options": [
+            "Range queries",
+            "Exact match queries",
+            "Complex join operations",
+            "Sorting large datasets"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Exact match queries",
+        "difficulty": "hard",
+        "explanation": "Hash indexes are most efficient for exact match queries, providing constant-time lookup but poor performance for range queries or sorting.",
+        "hint": "Hash indexes use a hash table for quick, direct access to data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What does the query execution plan show?",
+        "options": [
+            "Actual data in the database",
+            "The steps the database will take to execute a query",
+            "Index structure details",
+            "Transaction logs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The steps the database will take to execute a query",
+        "difficulty": "medium",
+        "explanation": "A query execution plan details how the database will process a query, including index usage, join methods, and estimated costs.",
+        "hint": "Think of it as a roadmap for query processing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "Which SQL command can help analyze index performance?",
+        "options": [
+            "EXPLAIN",
+            "ANALYZE",
+            "DESCRIBE",
+            "PROFILE"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "EXPLAIN",
+        "difficulty": "medium",
+        "explanation": "The EXPLAIN command provides insight into how a query will be executed, showing the query plan and potential index usage.",
+        "hint": "This command helps developers understand query optimization without actually running the query."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is a 'bitmap index' most useful for?",
+        "options": [
+            "Columns with few unique values",
+            "Columns with many unique values",
+            "Frequently updated columns",
+            "Primary key columns"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Columns with few unique values",
+        "difficulty": "hard",
+        "explanation": "Bitmap indexes are most efficient for columns with a low number of distinct values, such as gender, status, or boolean fields.",
+        "hint": "These indexes use bit vectors to represent data, which is memory-efficient for columns with limited unique values."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What does 'index fragmentation' refer to?",
+        "options": [
+            "Breaking an index into multiple parts",
+            "Scattering of index entries across storage",
+            "Deleting indexes",
+            "Compressing index data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Scattering of index entries across storage",
+        "difficulty": "hard",
+        "explanation": "Index fragmentation occurs when index entries are not stored sequentially, which can degrade query performance and increase disk I/O.",
+        "hint": "High fragmentation means less efficient index structure and potential performance issues."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "When might a full table scan be preferable to using an index?",
+        "options": [
+            "When retrieving most of the table's rows",
+            "When the index is very large",
+            "When performing complex joins",
+            "When using aggregate functions"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "When retrieving most of the table's rows",
+        "difficulty": "hard",
+        "explanation": "If a query needs to retrieve a large percentage of rows, a full table scan can be more efficient than using an index, as it reduces the overhead of index lookups.",
+        "hint": "Consider the percentage of rows being accessed relative to the total table size."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is the purpose of an 'index hint' in SQL?",
+        "options": [
+            "To suggest an index to be created",
+            "To force the use of a specific index",
+            "To recommend query optimization",
+            "To disable indexing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To force the use of a specific index",
+        "difficulty": "medium",
+        "explanation": "An index hint explicitly tells the query optimizer to use a specific index, overriding its default index selection strategy.",
+        "hint": "This allows developers to guide the query execution when they know a better optimization strategy."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What does 'index intersection' mean?",
+        "options": [
+            "Merging multiple indexes",
+            "Deleting common index entries",
+            "Creating a new index from two existing ones",
+            "Comparing index performance"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Merging multiple indexes",
+        "difficulty": "hard",
+        "explanation": "Index intersection is an optimization technique where the database uses multiple indexes to satisfy a query, combining results from different indexes.",
+        "hint": "Think of it as using multiple specialized maps to find a location more efficiently."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "Which type of join typically benefits most from indexing?",
+        "options": [
+            "Cross Join",
+            "Inner Join",
+            "Full Outer Join",
+            "Natural Join"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Inner Join",
+        "difficulty": "medium",
+        "explanation": "Inner joins can significantly benefit from indexing, especially when join conditions are on indexed columns, reducing the computational complexity.",
+        "hint": "Indexes can help quickly match rows between tables during an inner join."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is a 'clustered index'?",
+        "options": [
+            "An index that groups similar data together",
+            "An index on multiple columns",
+            "An index that determines the physical order of data",
+            "A temporary index"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "An index that determines the physical order of data",
+        "difficulty": "hard",
+        "explanation": "A clustered index determines the physical storage order of data in a table, meaning the table data is sorted and stored based on the index key.",
+        "hint": "There can only be one clustered index per table, as it defines the actual data storage order."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is the primary goal of query optimization?",
+        "options": [
+            "Minimizing storage space",
+            "Reducing query execution time",
+            "Increasing data redundancy",
+            "Simplifying database schema"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Reducing query execution time",
+        "difficulty": "easy",
+        "explanation": "Query optimization aims to minimize the time and resources required to execute a database query by selecting the most efficient execution plan.",
+        "hint": "The key is to find the fastest way to retrieve or manipulate data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What does 'index only scan' mean?",
+        "options": [
+            "Scanning an entire index",
+            "Retrieving data directly from the index",
+            "Creating a new index",
+            "Deleting an index"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Retrieving data directly from the index",
+        "difficulty": "hard",
+        "explanation": "An index-only scan retrieves all required data directly from the index structure without accessing the actual table, which can significantly improve performance.",
+        "hint": "This is possible with a covering index that contains all necessary columns."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "When would you consider creating a filtered index?",
+        "options": [
+            "When all rows need indexing",
+            "When only a subset of rows are frequently queried",
+            "When creating a primary key",
+            "When performing full table scans"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "When only a subset of rows are frequently queried",
+        "difficulty": "hard",
+        "explanation": "A filtered index is created on a subset of rows that match a specific condition, reducing index size and improving query performance for those specific rows.",
+        "hint": "This is useful when certain data has different query patterns compared to the rest of the table."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is a key consideration when choosing index columns?",
+        "options": [
+            "Always index primary keys",
+            "Index columns used in WHERE, JOIN, and ORDER BY clauses",
+            "Create an index on every column",
+            "Only index text columns"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Index columns used in WHERE, JOIN, and ORDER BY clauses",
+        "difficulty": "medium",
+        "explanation": "Index columns that are frequently used in filtering (WHERE), joining, and sorting (ORDER BY) conditions to improve query performance.",
+        "hint": "Focus on columns that are commonly used to search, filter, or sort data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is the 'query optimizer' responsible for?",
+        "options": [
+            "Writing database queries",
+            "Selecting the most efficient execution plan",
+            "Creating database indexes",
+            "Managing database connections"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Selecting the most efficient execution plan",
+        "difficulty": "easy",
+        "explanation": "The query optimizer analyzes queries and determines the most efficient way to execute them, considering factors like available indexes, statistics, and resource constraints.",
+        "hint": "Think of it as a query performance strategist."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What performance metric does the query optimizer consider?",
+        "options": [
+            "Disk space usage",
+            "Query execution time",
+            "Network bandwidth",
+            "Memory consumption"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Query execution time",
+        "difficulty": "medium",
+        "explanation": "Query optimizers primarily focus on minimizing query execution time by selecting the most efficient access paths and join strategies.",
+        "hint": "The goal is to retrieve or process data as quickly as possible."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What is a potential drawback of over-indexing?",
+        "options": [
+            "Increased query complexity",
+            "Slower data modification operations",
+            "Reduced query performance",
+            "Increased storage requirements"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Slower data modification operations",
+        "difficulty": "medium",
+        "explanation": "Each additional index requires maintenance during insert, update, and delete operations, which can slow down data modification performance.",
+        "hint": "Every index adds overhead to data manipulation tasks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "In which scenario might a hash index be preferrable?",
+        "options": [
+            "When performing range queries",
+            "When doing exact value lookups",
+            "When sorting large datasets",
+            "When joining multiple tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "When doing exact value lookups",
+        "difficulty": "hard",
+        "explanation": "Hash indexes provide constant-time complexity for exact value lookups but perform poorly for range queries, sorting, or complex join operations.",
+        "hint": "Hash indexes are like a direct address book for finding specific entries."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "What does database statistics help the query optimizer do?",
+        "options": [
+            "Validate data integrity",
+            "Estimate query execution costs",
+            "Encrypt database content",
+            "Manage user permissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Estimate query execution costs",
+        "difficulty": "medium",
+        "explanation": "Database statistics provide information about data distribution, table sizes, and index characteristics, helping the query optimizer estimate the most efficient query execution plan.",
+        "hint": "Think of statistics as a detailed map that helps navigate query performance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Indexing & Query Optimization",
+        "questionText": "When might you consider adding a covering index?",
+        "options": [
+            "When table size is very small",
+            "When queries frequently access the same set of columns",
+            "When primary key is defined",
+            "When performing bulk inserts"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "When queries frequently access the same set of columns",
+        "difficulty": "hard",
+        "explanation": "A covering index includes all columns needed by frequently run queries, allowing the database to retrieve data directly from the index without accessing the table.",
+        "hint": "This can significantly reduce I/O operations for repetitive queries."
+    },
 
     // Database Security
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is the primary goal of database security?",
+        "options": [
+            "Maximizing database performance",
+            "Protecting data from unauthorized access and modifications",
+            "Reducing storage costs",
+            "Increasing data redundancy"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Protecting data from unauthorized access and modifications",
+        "difficulty": "easy",
+        "explanation": "Database security aims to protect sensitive information from unauthorized access, modification, or destruction.",
+        "hint": "Think about safeguarding confidential information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "Which of the following is NOT a primary component of the CIA triad in database security?",
+        "options": [
+            "Confidentiality",
+            "Integrity",
+            "Availability",
+            "Scalability"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Scalability",
+        "difficulty": "easy",
+        "explanation": "The CIA triad consists of Confidentiality, Integrity, and Availability. Scalability is a performance characteristic, not a security principle.",
+        "hint": "Remember the three core security principles."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is SQL injection primarily used for by attackers?",
+        "options": [
+            "Improving database performance",
+            "Encrypting database contents",
+            "Executing unauthorized database commands",
+            "Creating database backups"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Executing unauthorized database commands",
+        "difficulty": "medium",
+        "explanation": "SQL injection is a code injection technique used to attack data-driven applications by inserting malicious SQL statements into input fields.",
+        "hint": "Think about manipulating database queries through input fields."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "Which authentication method provides the strongest security?",
+        "options": [
+            "Single-factor authentication",
+            "Two-factor authentication",
+            "Password-only authentication",
+            "Single sign-on"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Two-factor authentication",
+        "difficulty": "easy",
+        "explanation": "Two-factor authentication requires two different authentication methods, making it more secure than single-factor approaches.",
+        "hint": "More factors mean more security layers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is the purpose of database encryption at rest?",
+        "options": [
+            "To speed up database queries",
+            "To prevent unauthorized access to stored data",
+            "To reduce database size",
+            "To improve database backup speed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To prevent unauthorized access to stored data",
+        "difficulty": "medium",
+        "explanation": "Encryption at rest protects data stored on disk or other storage media from unauthorized access if physical storage is compromised.",
+        "hint": "Consider protection when data is not actively being used."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a database honeypot?",
+        "options": [
+            "A type of encryption algorithm",
+            "A decoy database system to detect and study attacks",
+            "A backup recovery method",
+            "A performance optimization technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A decoy database system to detect and study attacks",
+        "difficulty": "hard",
+        "explanation": "A honeypot is a deliberately vulnerable system designed to attract and trap potential attackers, allowing security researchers to study attack methods.",
+        "hint": "Think about a trap that looks intentionally vulnerable."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What does the principle of least privilege mean in database security?",
+        "options": [
+            "Giving all users maximum access rights",
+            "Restricting user access to only the minimum permissions necessary",
+            "Allowing unlimited database access",
+            "Removing all user permissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Restricting user access to only the minimum permissions necessary",
+        "difficulty": "medium",
+        "explanation": "The principle of least privilege ensures that users have only the minimum levels of access needed to perform their job functions.",
+        "hint": "Minimal access reduces potential security risks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "Which of the following is a common method for preventing SQL injection?",
+        "options": [
+            "Using complex passwords",
+            "Implementing prepared statements",
+            "Increasing server memory",
+            "Disabling database logs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Implementing prepared statements",
+        "difficulty": "medium",
+        "explanation": "Prepared statements separate SQL logic from data, preventing malicious input from being interpreted as part of the SQL command.",
+        "hint": "Look for a method that separates code and data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a database auditing trail?",
+        "options": [
+            "A backup mechanism",
+            "A record of database performance",
+            "A log of database access and changes",
+            "A security encryption method"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A log of database access and changes",
+        "difficulty": "medium",
+        "explanation": "An auditing trail records all significant database events, including user actions, access attempts, and data modifications.",
+        "hint": "Think about tracking who did what in the database."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What does end-to-end encryption protect against?",
+        "options": [
+            "Hardware failures",
+            "Disk space limitations",
+            "Interception of data during transmission",
+            "Slow network connections"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Interception of data during transmission",
+        "difficulty": "medium",
+        "explanation": "End-to-end encryption ensures that data remains encrypted throughout its entire transmission, preventing unauthorized interception.",
+        "hint": "Focus on protection during data transfer."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a database view used for in terms of security?",
+        "options": [
+            "To improve query performance",
+            "To restrict access to specific columns or rows",
+            "To increase storage capacity",
+            "To create database backups"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To restrict access to specific columns or rows",
+        "difficulty": "medium",
+        "explanation": "Database views can be used to limit user access to sensitive data by showing only specific columns or filtered rows.",
+        "hint": "Consider a way to control data visibility."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a salt in password storage?",
+        "options": [
+            "A database performance enhancer",
+            "A random value added to password before hashing",
+            "A type of encryption algorithm",
+            "A backup recovery method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A random value added to password before hashing",
+        "difficulty": "hard",
+        "explanation": "A salt is a random value added to the password before hashing, making it more difficult to crack using precomputed hash tables.",
+        "hint": "Think about adding randomness to increase security."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is the primary purpose of database access control?",
+        "options": [
+            "To increase database speed",
+            "To manage user permissions and restrict unauthorized access",
+            "To reduce storage costs",
+            "To simplify database maintenance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To manage user permissions and restrict unauthorized access",
+        "difficulty": "easy",
+        "explanation": "Access control ensures that only authorized users can perform specific actions on a database, protecting sensitive information.",
+        "hint": "Focus on managing who can do what in the database."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What does data masking primarily protect against?",
+        "options": [
+            "Hardware failures",
+            "Network slowdowns",
+            "Unauthorized exposure of sensitive information",
+            "Disk space limitations"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Unauthorized exposure of sensitive information",
+        "difficulty": "medium",
+        "explanation": "Data masking replaces sensitive data with fictitious but realistic data to protect confidential information while maintaining usability.",
+        "hint": "Think about hiding sensitive details while maintaining data structure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a database firewall?",
+        "options": [
+            "A physical security device",
+            "A network security tool that monitors and filters database traffic",
+            "A backup recovery mechanism",
+            "An encryption method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A network security tool that monitors and filters database traffic",
+        "difficulty": "medium",
+        "explanation": "A database firewall inspects and filters database traffic to prevent unauthorized access and detect potential security threats.",
+        "hint": "Consider a protective barrier for database communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is the primary risk of storing passwords in plain text?",
+        "options": [
+            "Increased storage costs",
+            "Slower database performance",
+            "Vulnerability to password theft",
+            "Difficulty in password recovery"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Vulnerability to password theft",
+        "difficulty": "easy",
+        "explanation": "Storing passwords in plain text makes them easily readable if the database is compromised, exposing user credentials.",
+        "hint": "Consider what happens if an attacker gains database access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What does database input validation prevent?",
+        "options": [
+            "Hardware failures",
+            "Network slowdowns",
+            "Malicious input and potential injection attacks",
+            "Disk space limitations"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Malicious input and potential injection attacks",
+        "difficulty": "medium",
+        "explanation": "Input validation checks and sanitizes user input to prevent malicious data from being processed by the database.",
+        "hint": "Think about protecting against harmful user inputs."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a database security challenge in cloud environments?",
+        "options": [
+            "Increased storage costs",
+            "Shared infrastructure and multi-tenancy risks",
+            "Slower network connections",
+            "Reduced backup capabilities"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Shared infrastructure and multi-tenancy risks",
+        "difficulty": "hard",
+        "explanation": "Cloud databases share physical infrastructure, potentially increasing the risk of unauthorized data access between different tenants.",
+        "hint": "Consider the implications of shared computing resources."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is the purpose of database encryption in transit?",
+        "options": [
+            "To improve query performance",
+            "To protect data during network transmission",
+            "To reduce storage requirements",
+            "To simplify backup processes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To protect data during network transmission",
+        "difficulty": "medium",
+        "explanation": "Encryption in transit ensures that data is encrypted while being transferred between systems, preventing interception.",
+        "hint": "Focus on protection during data movement."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What does a database vulnerability scanner do?",
+        "options": [
+            "Increases database performance",
+            "Identifies potential security weaknesses",
+            "Creates database backups",
+            "Manages user permissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Identifies potential security weaknesses",
+        "difficulty": "medium",
+        "explanation": "A vulnerability scanner automatically checks databases for known security issues, misconfigurations, and potential exploit points.",
+        "hint": "Think about a tool that finds security gaps."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is the primary goal of data anonymization?",
+        "options": [
+            "To improve database performance",
+            "To protect individual identity while preserving data utility",
+            "To reduce storage costs",
+            "To simplify data backup"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To protect individual identity while preserving data utility",
+        "difficulty": "hard",
+        "explanation": "Data anonymization transforms personal data to prevent individual identification while maintaining the dataset's analytical value.",
+        "hint": "Consider protecting privacy without losing data insights."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a key benefit of using stored procedures for database access?",
+        "options": [
+            "Increased storage capacity",
+            "Improved query performance",
+            "Enhanced security through parameterized access",
+            "Simplified database maintenance"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Enhanced security through parameterized access",
+        "difficulty": "medium",
+        "explanation": "Stored procedures provide an additional security layer by controlling database access through predefined, parameterized queries.",
+        "hint": "Think about controlling database interactions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What does the term 'defense in depth' mean in database security?",
+        "options": [
+            "Using multiple layers of security controls",
+            "Increasing server processing power",
+            "Reducing network latency",
+            "Simplifying user authentication"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using multiple layers of security controls",
+        "difficulty": "hard",
+        "explanation": "Defense in depth is a strategy that employs multiple security mechanisms to provide comprehensive protection against various attack vectors.",
+        "hint": "Consider a multi-layered approach to security."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a potential risk of using default database configurations?",
+        "options": [
+            "Slower database performance",
+            "Increased storage costs",
+            "Leaving known security vulnerabilities exposed",
+            "Difficulty in user management"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Leaving known security vulnerabilities exposed",
+        "difficulty": "medium",
+        "explanation": "Default configurations often have well-known security vulnerabilities that attackers can easily exploit if not properly modified.",
+        "hint": "Think about pre-set system settings and their potential risks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What does database role-based access control (RBAC) provide?",
+        "options": [
+            "Improved query performance",
+            "Granular access permissions based on user roles",
+            "Increased storage capacity",
+            "Simplified backup processes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Granular access permissions based on user roles",
+        "difficulty": "medium",
+        "explanation": "RBAC assigns database permissions based on predefined roles, allowing fine-grained control over user access and actions.",
+        "hint": "Consider managing access through organizational roles."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is the primary purpose of a database security policy?",
+        "options": [
+            "To increase database performance",
+            "To define security standards and guidelines",
+            "To reduce storage costs",
+            "To simplify user management"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To define security standards and guidelines",
+        "difficulty": "easy",
+        "explanation": "A database security policy establishes comprehensive rules, responsibilities, and procedures for protecting database assets.",
+        "hint": "Think about creating a framework for database protection."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is a potential consequence of a database breach?",
+        "options": [
+            "Increased storage requirements",
+            "Financial losses and reputational damage",
+            "Improved system performance",
+            "Simplified data management"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Financial losses and reputational damage",
+        "difficulty": "hard",
+        "explanation": "Database breaches can lead to significant financial penalties, legal consequences, and loss of customer trust.",
+        "hint": "Consider the broader impact beyond immediate technical issues."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What does database segregation help prevent?",
+        "options": [
+            "Hardware failures",
+            "Network slowdowns",
+            "Cross-contamination of sensitive data",
+            "Disk space limitations"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Cross-contamination of sensitive data",
+        "difficulty": "medium",
+        "explanation": "Database segregation involves separating different types of data to prevent unauthorized access and limit potential damage from security breaches.",
+        "hint": "Think about isolating different data environments."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Security",
+        "questionText": "What is the recommended password complexity for database accounts?",
+        "options": [
+            "Short, simple passwords",
+            "Passwords with mixed characters, length, and complexity",
+            "Using default system passwords",
+            "Avoiding special characters"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Passwords with mixed characters, length, and complexity",
+        "difficulty": "easy",
+        "explanation": "Strong passwords include a mix of uppercase, lowercase, numbers, and special characters, with sufficient length to resist brute-force attacks.",
+        "hint": "Consider creating difficult-to-guess passwords."
+    },
 
     // NoSQL Databases
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What does NoSQL stand for?",
+        "options": [
+            "Not Only SQL",
+            "No Structured Query Language",
+            "Non-Relational SQL",
+            "New Structured Query Language"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Not Only SQL",
+        "difficulty": "easy",
+        "explanation": "NoSQL originally meant 'Not Only SQL', indicating databases that can handle both relational and non-relational data models.",
+        "hint": "Think about a more flexible approach to databases."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "Which of the following is NOT a typical NoSQL database type?",
+        "options": [
+            "Document store",
+            "Key-value store",
+            "Relational database",
+            "Column-family store"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Relational database",
+        "difficulty": "easy",
+        "explanation": "Relational databases use structured tables with predefined schemas, while NoSQL databases offer more flexible data models.",
+        "hint": "Identify the traditional database model among NoSQL types."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is the primary advantage of a document store database like MongoDB?",
+        "options": [
+            "Fixed schema design",
+            "Flexible schema and nested data storage",
+            "Strong ACID compliance",
+            "Limited horizontal scaling"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Flexible schema and nested data storage",
+        "difficulty": "medium",
+        "explanation": "Document stores like MongoDB allow flexible schemas and can store nested, complex data structures within a single document.",
+        "hint": "Consider how data can be stored more dynamically."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "In a key-value store database like Redis, what does the key represent?",
+        "options": [
+            "A complex data structure",
+            "A unique identifier for accessing a value",
+            "A database table name",
+            "A query parameter"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A unique identifier for accessing a value",
+        "difficulty": "easy",
+        "explanation": "In key-value stores, the key is a unique identifier used to retrieve the associated value quickly and directly.",
+        "hint": "Think about how you would quickly access specific data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is sharding in NoSQL databases?",
+        "options": [
+            "A data encryption method",
+            "Horizontal partitioning of data across multiple servers",
+            "A backup technique",
+            "A query optimization method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Horizontal partitioning of data across multiple servers",
+        "difficulty": "medium",
+        "explanation": "Sharding involves distributing data across multiple servers to improve performance, scalability, and load distribution.",
+        "hint": "Consider how large datasets can be spread across multiple machines."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "Which NoSQL database is best known for graph data relationships?",
+        "options": [
+            "MongoDB",
+            "Cassandra",
+            "Neo4j",
+            "Redis"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Neo4j",
+        "difficulty": "medium",
+        "explanation": "Neo4j is a specialized graph database designed to store and navigate complex relationships between data points.",
+        "hint": "Think about a database optimized for interconnected data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is the CAP theorem in distributed NoSQL databases?",
+        "options": [
+            "A performance optimization technique",
+            "A trade-off between Consistency, Availability, and Partition tolerance",
+            "A data compression method",
+            "A security protocol"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A trade-off between Consistency, Availability, and Partition tolerance",
+        "difficulty": "hard",
+        "explanation": "The CAP theorem states that distributed systems can only simultaneously provide two of three guarantees: Consistency, Availability, and Partition tolerance.",
+        "hint": "Consider the challenges of distributed computing systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is a column-family database like Cassandra typically used for?",
+        "options": [
+            "Complex transaction processing",
+            "Storing time-series and high-write volume data",
+            "Simple key-value storage",
+            "Generating complex reports"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Storing time-series and high-write volume data",
+        "difficulty": "medium",
+        "explanation": "Column-family databases excel at handling large volumes of write operations and time-series data across distributed systems.",
+        "hint": "Think about databases optimized for massive, fast data writing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What makes a key-value store database like Redis popular?",
+        "options": [
+            "Complex query capabilities",
+            "In-memory data storage and high performance",
+            "Strong ACID compliance",
+            "Complex schema design"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "In-memory data storage and high performance",
+        "difficulty": "medium",
+        "explanation": "Redis is known for its in-memory data storage, which provides extremely fast read and write operations.",
+        "hint": "Consider a database designed for speed and simplicity."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is the primary difference between document stores and key-value stores?",
+        "options": [
+            "Storage capacity",
+            "Data structure complexity",
+            "Network performance",
+            "Encryption methods"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data structure complexity",
+        "difficulty": "medium",
+        "explanation": "Document stores support more complex, nested data structures, while key-value stores typically store simpler data types.",
+        "hint": "Think about the depth and complexity of data storage."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "In a graph database like Neo4j, what are nodes primarily used for?",
+        "options": [
+            "Data compression",
+            "Representing entities",
+            "Query optimization",
+            "Data encryption"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Representing entities",
+        "difficulty": "easy",
+        "explanation": "In graph databases, nodes represent individual entities, with relationships (edges) defining connections between these entities.",
+        "hint": "Consider how interconnected data points can be represented."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is eventual consistency in distributed NoSQL databases?",
+        "options": [
+            "Immediate data synchronization across all nodes",
+            "Guaranteeing data will converge over time",
+            "Preventing data conflicts",
+            "Reducing network latency"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Guaranteeing data will converge over time",
+        "difficulty": "hard",
+        "explanation": "Eventual consistency means that in a distributed system, data will become consistent across all nodes given enough time, prioritizing availability over immediate consistency.",
+        "hint": "Think about data synchronization in distributed systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is a primary use case for a key-value store like DynamoDB?",
+        "options": [
+            "Complex reporting",
+            "Caching and session management",
+            "Detailed financial transactions",
+            "Scientific data analysis"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Caching and session management",
+        "difficulty": "medium",
+        "explanation": "Key-value stores are ideal for quick data retrieval scenarios like caching web sessions, user preferences, and temporary data storage.",
+        "hint": "Consider scenarios requiring rapid, simple data access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "Which NoSQL database is most commonly used for real-time web applications?",
+        "options": [
+            "Cassandra",
+            "MongoDB",
+            "Redis",
+            "Neo4j"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Redis",
+        "difficulty": "medium",
+        "explanation": "Redis is frequently used in real-time web applications due to its in-memory data storage and high-performance characteristics.",
+        "hint": "Think about a database optimized for fast, live interactions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What distinguishes a column-family database from a traditional relational database?",
+        "options": [
+            "Storage capacity",
+            "Ability to store data in column groups",
+            "Query complexity",
+            "Indexing methods"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ability to store data in column groups",
+        "difficulty": "medium",
+        "explanation": "Column-family databases store data in column groups, allowing more flexible and efficient storage of sparse data compared to row-based relational databases.",
+        "hint": "Consider how data can be organized differently."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is a primary advantage of document stores like MongoDB?",
+        "options": [
+            "Strong ACID compliance",
+            "Handling semi-structured and unstructured data",
+            "Complex join operations",
+            "Fixed schema requirements"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Handling semi-structured and unstructured data",
+        "difficulty": "medium",
+        "explanation": "Document stores excel at managing data with varying structures, making them ideal for scenarios with evolving or unpredictable data models.",
+        "hint": "Think about databases that can handle diverse data formats."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What does horizontal scaling mean in NoSQL databases?",
+        "options": [
+            "Increasing server memory",
+            "Adding more servers to distribute load",
+            "Optimizing database queries",
+            "Implementing data compression"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Adding more servers to distribute load",
+        "difficulty": "easy",
+        "explanation": "Horizontal scaling involves adding more servers to a database system to distribute data and computational load across multiple machines.",
+        "hint": "Consider how to expand system capacity by adding more machines."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "Which database type is best for recommendation engines?",
+        "options": [
+            "Key-value store",
+            "Column-family store",
+            "Graph database",
+            "Document store"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Graph database",
+        "difficulty": "medium",
+        "explanation": "Graph databases excel at managing complex relationships, making them ideal for recommendation systems that require traversing intricate connection networks.",
+        "hint": "Think about databases optimized for interconnected data relationships."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is a map-reduce operation in NoSQL databases?",
+        "options": [
+            "A data encryption method",
+            "A parallel processing technique for large datasets",
+            "A backup strategy",
+            "A query optimization technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A parallel processing technique for large datasets",
+        "difficulty": "hard",
+        "explanation": "Map-reduce is a programming model for processing and generating large datasets in parallel across distributed computer clusters.",
+        "hint": "Consider how complex computations can be distributed."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What challenges do NoSQL databases typically address?",
+        "options": [
+            "Strict data consistency",
+            "Handling massive scale and performance",
+            "Complex transaction processing",
+            "Rigid schema design"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Handling massive scale and performance",
+        "difficulty": "medium",
+        "explanation": "NoSQL databases are designed to address scalability, performance, and flexibility challenges that traditional relational databases struggle with.",
+        "hint": "Think about database challenges in large, dynamic systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is the primary use of a time-series database?",
+        "options": [
+            "Social media analysis",
+            "Storing and analyzing time-stamped data",
+            "Complex financial modeling",
+            "User authentication"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Storing and analyzing time-stamped data",
+        "difficulty": "medium",
+        "explanation": "Time-series databases are optimized for handling data points indexed by time, such as sensor readings, financial trades, or system metrics.",
+        "hint": "Consider databases designed for tracking changes over time."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "Which NoSQL database is known for wide-column storage?",
+        "options": [
+            "MongoDB",
+            "Redis",
+            "Cassandra",
+            "Neo4j"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Cassandra",
+        "difficulty": "medium",
+        "explanation": "Cassandra is a widely-used NoSQL database known for its wide-column storage model, which allows dynamic column creation per row.",
+        "hint": "Think about a database with flexible column structures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is a potential drawback of NoSQL databases?",
+        "options": [
+            "Limited storage capacity",
+            "Lack of query complexity and join operations",
+            "High implementation cost",
+            "Slow data retrieval"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Lack of query complexity and join operations",
+        "difficulty": "hard",
+        "explanation": "Many NoSQL databases have limited support for complex joins and advanced querying compared to traditional relational databases.",
+        "hint": "Consider the trade-offs in database design flexibility."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What does denormalization mean in NoSQL databases?",
+        "options": [
+            "Removing all data relationships",
+            "Duplicating data to improve read performance",
+            "Strictly enforcing data normalization",
+            "Reducing database size"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Duplicating data to improve read performance",
+        "difficulty": "hard",
+        "explanation": "Denormalization involves intentionally duplicating data across different parts of a database to improve read performance and reduce complex join operations.",
+        "hint": "Think about optimizing data retrieval by sacrificing some data storage efficiency."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is a multi-model database?",
+        "options": [
+            "A database with multiple servers",
+            "A database supporting multiple data models",
+            "A database with complex security layers",
+            "A database with multiple user roles"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A database supporting multiple data models",
+        "difficulty": "medium",
+        "explanation": "A multi-model database can support multiple data models (like document, graph, key-value) within a single database system.",
+        "hint": "Consider a flexible database that can handle different data structures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is the primary purpose of a document store like MongoDB?",
+        "options": [
+            "Strict data validation",
+            "Storing JSON-like documents with dynamic schemas",
+            "Complex financial calculations",
+            "Generating database reports"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Storing JSON-like documents with dynamic schemas",
+        "difficulty": "easy",
+        "explanation": "Document stores like MongoDB are designed to store semi-structured data as documents, allowing flexible and evolving data models.",
+        "hint": "Think about storing data in a more natural, document-like format."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What distinguishes a graph database in data modeling?",
+        "options": [
+            "Strict data normalization",
+            "Explicit representation of relationships between entities",
+            "Fixed schema requirements",
+            "Complex query limitations"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Explicit representation of relationships between entities",
+        "difficulty": "medium",
+        "explanation": "Graph databases focus on representing and querying relationships between data points, making them ideal for interconnected data scenarios.",
+        "hint": "Consider how relationships can be first-class citizens in data modeling."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "NoSQL Databases",
+        "questionText": "What is a key consideration when choosing a NoSQL database?",
+        "options": [
+            "Implementing complex joins",
+            "Matching database type to specific use case",
+            "Maximizing data normalization",
+            "Ensuring strict ACID compliance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Matching database type to specific use case",
+        "difficulty": "easy",
+        "explanation": "Different NoSQL database types excel in different scenarios, so selecting the right type depends on specific application requirements.",
+        "hint": "Think about tailoring database choice to unique project needs."
+    },
 
     // Data Warehousing & OLAP
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What does OLAP stand for?",
+        "options": [
+            "Online Logical Analytical Processing",
+            "Operational Logical Analytical Processing",
+            "Online Analytical Processing",
+            "Operational Advanced Processing"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Online Analytical Processing",
+        "difficulty": "easy",
+        "explanation": "OLAP stands for Online Analytical Processing, which is used for complex analytical queries with a multidimensional approach.",
+        "hint": "Think about data analysis and decision support systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "Which of the following is NOT a typical characteristic of a data warehouse?",
+        "options": [
+            "Subject-oriented",
+            "Time-variant",
+            "Real-time updated",
+            "Integrated"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Real-time updated",
+        "difficulty": "medium",
+        "explanation": "Data warehouses are typically not real-time updated. They are periodically refreshed with historical data from various sources.",
+        "hint": "Consider the difference between operational and analytical systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is a data cube in OLAP?",
+        "options": [
+            "A three-dimensional storage mechanism",
+            "A multidimensional data structure representing aggregated data",
+            "A physical storage device",
+            "A database optimization technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A multidimensional data structure representing aggregated data",
+        "difficulty": "medium",
+        "explanation": "A data cube is a multidimensional data structure that allows rapid analysis of data across multiple dimensions, storing pre-computed aggregations.",
+        "hint": "Think about how data can be viewed from different perspectives."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What does the term 'drill-down' mean in OLAP?",
+        "options": [
+            "Deleting data from a database",
+            "Navigating from a higher-level summary to more detailed data",
+            "Compressing data",
+            "Creating a new database"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Navigating from a higher-level summary to more detailed data",
+        "difficulty": "easy",
+        "explanation": "Drill-down is the process of moving from a higher-level, summarized view of data to a more granular, detailed view.",
+        "hint": "Consider how you might explore data at different levels of detail."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "Which OLAP server type stores data in a multidimensional cube?",
+        "options": [
+            "ROLAP",
+            "MOLAP",
+            "HOLAP",
+            "DOLAP"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MOLAP",
+        "difficulty": "hard",
+        "explanation": "MOLAP (Multidimensional OLAP) stores data in a multidimensional cube, providing fast query performance but requiring more storage space.",
+        "hint": "Look for the term that explicitly mentions 'multidimensional'."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is a star schema in data warehousing?",
+        "options": [
+            "A database design with multiple fact tables",
+            "A normalized database schema",
+            "A dimensional model with a central fact table and surrounding dimension tables",
+            "A schema that represents complex relationships"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A dimensional model with a central fact table and surrounding dimension tables",
+        "difficulty": "medium",
+        "explanation": "A star schema is a dimensional modeling technique where a central fact table is connected to multiple dimension tables, resembling a star shape.",
+        "hint": "Visualize a central point with radiating dimensions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is the primary purpose of a fact table in a data warehouse?",
+        "options": [
+            "To store descriptive attributes",
+            "To store numerical measurements and foreign keys",
+            "To manage database connections",
+            "To create indexes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To store numerical measurements and foreign keys",
+        "difficulty": "medium",
+        "explanation": "Fact tables contain quantitative data about a business process, typically including numerical metrics and foreign keys to dimension tables.",
+        "hint": "Think about the core metrics and connections in a business process."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is the difference between OLTP and OLAP?",
+        "options": [
+            "They are the same thing",
+            "OLTP is for reporting, OLAP is for transactions",
+            "OLTP is for day-to-day transactions, OLAP is for analytical processing",
+            "OLTP is for data storage, OLAP is for data retrieval"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "OLTP is for day-to-day transactions, OLAP is for analytical processing",
+        "difficulty": "easy",
+        "explanation": "OLTP (Online Transaction Processing) handles day-to-day operational transactions, while OLAP supports complex analytical queries and decision-making.",
+        "hint": "Consider the primary use of each system in a business context."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is a slowly changing dimension (SCD)?",
+        "options": [
+            "A dimension that never changes",
+            "A technique for handling changes in dimension attributes over time",
+            "A temporary database table",
+            "A method of data compression"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A technique for handling changes in dimension attributes over time",
+        "difficulty": "hard",
+        "explanation": "Slowly Changing Dimensions are strategies to handle changes in dimension attributes while maintaining historical accuracy in a data warehouse.",
+        "hint": "Think about tracking historical changes in reference data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What does the term 'slice' mean in a data cube?",
+        "options": [
+            "Removing a dimension from the cube",
+            "Selecting a single value for one dimension",
+            "Deleting data from the cube",
+            "Compressing the cube"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Selecting a single value for one dimension",
+        "difficulty": "medium",
+        "explanation": "A slice in a data cube is the process of selecting a single value for one dimension, creating a subset of the multidimensional data.",
+        "hint": "Imagine filtering data along a specific dimension."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is a snowflake schema?",
+        "options": [
+            "A schema with a single table",
+            "A normalized version of a star schema with normalized dimension tables",
+            "A denormalized database design",
+            "A temporary database structure"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A normalized version of a star schema with normalized dimension tables",
+        "difficulty": "hard",
+        "explanation": "A snowflake schema is a dimensional model where dimension tables are normalized, creating a more complex structure compared to a star schema.",
+        "hint": "Consider how normalization affects the dimensional table structure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What does 'roll-up' mean in OLAP?",
+        "options": [
+            "Deleting data from a database",
+            "Moving from detailed data to a more summarized view",
+            "Creating a new database",
+            "Compressing data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Moving from detailed data to a more summarized view",
+        "difficulty": "easy",
+        "explanation": "Roll-up is the process of aggregating data to a higher level of summarization, typically by climbing up a hierarchy.",
+        "hint": "Think about consolidating detailed information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is the primary goal of a data warehouse?",
+        "options": [
+            "To process real-time transactions",
+            "To support decision-making through integrated, historical data",
+            "To reduce database storage costs",
+            "To improve application performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To support decision-making through integrated, historical data",
+        "difficulty": "medium",
+        "explanation": "The primary goal of a data warehouse is to provide a consolidated, historical view of data to support strategic decision-making.",
+        "hint": "Consider the strategic use of data in business."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What does ETL stand for in data warehousing?",
+        "options": [
+            "Extract, Transform, Load",
+            "Enter, Transfer, Link",
+            "Explore, Track, Locate",
+            "Enable, Transform, Link"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Extract, Transform, Load",
+        "difficulty": "easy",
+        "explanation": "ETL stands for Extract, Transform, Load - the process of extracting data from sources, transforming it, and loading it into a data warehouse.",
+        "hint": "Think about the steps of preparing data for analysis."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is a dimension table in a data warehouse?",
+        "options": [
+            "A table that stores numerical measurements",
+            "A table containing descriptive attributes and context for facts",
+            "A temporary storage table",
+            "A system configuration table"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A table containing descriptive attributes and context for facts",
+        "difficulty": "medium",
+        "explanation": "Dimension tables provide context and descriptive attributes for the numerical data in fact tables, allowing for meaningful analysis.",
+        "hint": "Consider the 'who', 'what', 'where', and 'when' of data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is data mart?",
+        "options": [
+            "A small, focused subset of a data warehouse",
+            "A database backup system",
+            "A data storage device",
+            "A network connection protocol"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A small, focused subset of a data warehouse",
+        "difficulty": "easy",
+        "explanation": "A data mart is a smaller, more focused version of a data warehouse, typically designed for a specific business unit or department.",
+        "hint": "Think of a specialized, targeted data repository."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is the purpose of a data warehouse metadata?",
+        "options": [
+            "To store actual data",
+            "To provide information about the data warehouse structure and contents",
+            "To manage database connections",
+            "To compress data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To provide information about the data warehouse structure and contents",
+        "difficulty": "hard",
+        "explanation": "Metadata in a data warehouse provides information about the data's structure, source, transformation rules, and other relevant details.",
+        "hint": "Consider data about data itself."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is an OLAP cube rotation?",
+        "options": [
+            "Physically moving a storage device",
+            "Changing the orientation of data dimensions",
+            "Deleting data from the cube",
+            "Compressing the cube"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Changing the orientation of data dimensions",
+        "difficulty": "medium",
+        "explanation": "OLAP cube rotation (or pivot) involves changing the orientation of dimensions to view data from different perspectives.",
+        "hint": "Think about rearranging data to gain new insights."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What distinguishes a data warehouse from a traditional database?",
+        "options": [
+            "Storage capacity",
+            "Processing speed",
+            "Subject-orientation and time-variance",
+            "Number of tables"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Subject-orientation and time-variance",
+        "difficulty": "hard",
+        "explanation": "Data warehouses are distinguished by being subject-oriented, integrated, time-variant, and non-volatile, unlike traditional operational databases.",
+        "hint": "Consider the strategic purpose of data storage."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is the purpose of a fact table in a star schema?",
+        "options": [
+            "To store descriptive information",
+            "To store numerical measurements and performance metrics",
+            "To manage database connections",
+            "To create indexes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To store numerical measurements and performance metrics",
+        "difficulty": "medium",
+        "explanation": "Fact tables contain quantitative data and key performance indicators that can be analyzed across different dimensions.",
+        "hint": "Think about the measurable aspects of a business process."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is a data warehouse grain?",
+        "options": [
+            "A physical storage unit",
+            "The level of detail or granularity of a fact table",
+            "A compression technique",
+            "A database optimization method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The level of detail or granularity of a fact table",
+        "difficulty": "hard",
+        "explanation": "The grain of a data warehouse defines the most atomic level of information stored in a fact table, representing the finest level of detail.",
+        "hint": "Consider the most granular unit of data measurement."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What does 'hierarchical drill-down' mean in OLAP?",
+        "options": [
+            "Deleting data from different levels",
+            "Navigating through predefined hierarchical levels of data",
+            "Creating new database hierarchies",
+            "Compressing hierarchical data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Navigating through predefined hierarchical levels of data",
+        "difficulty": "medium",
+        "explanation": "Hierarchical drill-down involves moving through predefined hierarchical levels of data, such as from year to quarter to month.",
+        "hint": "Think about exploring data at different organizational levels."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is a type 2 slowly changing dimension?",
+        "options": [
+            "A dimension that never changes",
+            "A dimension that creates a new record with a new version when attributes change",
+            "A dimension that updates existing records",
+            "A temporary dimension"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A dimension that creates a new record with a new version when attributes change",
+        "difficulty": "hard",
+        "explanation": "In a Type 2 SCD, when a dimension attribute changes, a new record is created, preserving the historical version of the data.",
+        "hint": "Consider how to maintain historical accuracy of changing data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is the primary difference between ROLAP and MOLAP?",
+        "options": [
+            "They are exactly the same",
+            "ROLAP uses relational databases, MOLAP uses multidimensional storage",
+            "ROLAP is faster than MOLAP",
+            "MOLAP is only used for small datasets"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "ROLAP uses relational databases, MOLAP uses multidimensional storage",
+        "difficulty": "hard",
+        "explanation": "ROLAP (Relational OLAP) stores data in relational databases, while MOLAP (Multidimensional OLAP) uses specialized multidimensional storage.",
+        "hint": "Focus on the storage mechanism of each approach."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is the purpose of data cleansing in ETL?",
+        "options": [
+            "To reduce storage space",
+            "To remove all historical data",
+            "To improve data quality by correcting or removing incorrect, incomplete, or irrelevant data",
+            "To speed up database connections"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To improve data quality by correcting or removing incorrect, incomplete, or irrelevant data",
+        "difficulty": "medium",
+        "explanation": "Data cleansing is the process of detecting and correcting (or removing) corrupt or inaccurate records from a dataset during the ETL process.",
+        "hint": "Think about ensuring data accuracy and reliability."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What does the term 'aggregation' mean in OLAP?",
+        "options": [
+            "Deleting data from a database",
+            "Summarizing data at different levels of granularity",
+            "Creating new database tables",
+            "Compressing data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Summarizing data at different levels of granularity",
+        "difficulty": "easy",
+        "explanation": "Aggregation in OLAP involves summarizing detailed data into higher-level summary information across different dimensions.",
+        "hint": "Consider combining detailed data into more concise representations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is a conformed dimension?",
+        "options": [
+            "A dimension with strict data validation",
+            "A dimension shared and consistent across multiple fact tables",
+            "A temporary dimension",
+            "A system configuration dimension"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A dimension shared and consistent across multiple fact tables",
+        "difficulty": "hard",
+        "explanation": "A conformed dimension is a dimension that has the same meaning and structure when used in multiple fact tables, ensuring consistency across different business processes.",
+        "hint": "Think about maintaining uniform definitions across different data contexts."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What is the primary challenge of implementing a data warehouse?",
+        "options": [
+            "High initial hardware costs",
+            "Complexity of data integration and transformation",
+            "Limited storage capacity",
+            "Slow network connections"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Complexity of data integration and transformation",
+        "difficulty": "medium",
+        "explanation": "The most significant challenge in implementing a data warehouse is integrating and transforming data from multiple, disparate sources into a consistent, meaningful format.",
+        "hint": "Consider the difficulties of consolidating data from various systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Data Warehousing & OLAP",
+        "questionText": "What does 'materialized view' mean in the context of data warehousing?",
+        "options": [
+            "A temporary database table",
+            "A pre-computed result set stored for quick access",
+            "A database backup",
+            "A connection configuration"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A pre-computed result set stored for quick access",
+        "difficulty": "hard",
+        "explanation": "A materialized view is a database object that contains the results of a query, pre-computed and stored to improve query performance.",
+        "hint": "Think about storing pre-calculated query results."
+    },
 
     // Big Data & Distributed Databases
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What are the four primary characteristics of Big Data, often referred to as the '4 V's'?",
+        "options": [
+            "Velocity, Volume, Variety, and Veracity",
+            "Virtual, Visible, Volatile, and Vital",
+            "Vertical, Velocity, Value, and Variance",
+            "Volume, Visualization, Validation, and Versatility"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Velocity, Volume, Variety, and Veracity",
+        "difficulty": "easy",
+        "explanation": "The 4 V's of Big Data are Volume (amount of data), Velocity (speed of data generation), Variety (different types of data), and Veracity (data trustworthiness).",
+        "hint": "Consider the key challenges in handling massive, diverse, and rapidly changing data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the primary purpose of the CAP theorem in distributed systems?",
+        "options": [
+            "To maximize database performance",
+            "To explain the trade-offs between Consistency, Availability, and Partition Tolerance",
+            "To standardize database design",
+            "To reduce network latency"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To explain the trade-offs between Consistency, Availability, and Partition Tolerance",
+        "difficulty": "hard",
+        "explanation": "The CAP theorem states that in a distributed system, you can only guarantee two out of three properties: Consistency, Availability, and Partition Tolerance.",
+        "hint": "Think about the fundamental challenges in designing distributed systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is Apache Hadoop primarily used for?",
+        "options": [
+            "Web development",
+            "Real-time transaction processing",
+            "Distributed storage and processing of large datasets",
+            "Network security"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Distributed storage and processing of large datasets",
+        "difficulty": "medium",
+        "explanation": "Apache Hadoop is an open-source framework designed for distributed storage and processing of large datasets using a cluster of commodity hardware.",
+        "hint": "Consider frameworks that handle massive amounts of data across multiple machines."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the primary function of HDFS (Hadoop Distributed File System)?",
+        "options": [
+            "To provide real-time data processing",
+            "To store and distribute large files across multiple machines",
+            "To manage database connections",
+            "To compress data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To store and distribute large files across multiple machines",
+        "difficulty": "medium",
+        "explanation": "HDFS is designed to store very large files across multiple machines, providing high aggregate bandwidth and fault tolerance.",
+        "hint": "Think about how large files can be split and stored across a cluster."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is sharding in distributed databases?",
+        "options": [
+            "A method of data encryption",
+            "Partitioning data across multiple machines",
+            "A backup strategy",
+            "A network routing technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Partitioning data across multiple machines",
+        "difficulty": "medium",
+        "explanation": "Sharding is a database partitioning technique that separates very large databases into smaller, faster, more easily managed parts called shards.",
+        "hint": "Consider how to distribute data to improve performance and manageability."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is MapReduce in the context of Big Data?",
+        "options": [
+            "A database backup method",
+            "A programming model for processing and generating large datasets in parallel",
+            "A network security protocol",
+            "A data compression technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A programming model for processing and generating large datasets in parallel",
+        "difficulty": "hard",
+        "explanation": "MapReduce is a programming model that allows for distributed processing of large datasets across clusters of computers, using parallel and distributed algorithms.",
+        "hint": "Think about breaking down complex computational tasks into smaller, manageable parts."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the primary difference between vertical and horizontal scaling?",
+        "options": [
+            "Vertical scaling adds more machines, horizontal scaling upgrades existing machines",
+            "Vertical scaling upgrades existing machines, horizontal scaling adds more machines",
+            "They are exactly the same",
+            "Vertical scaling is only used in cloud computing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Vertical scaling upgrades existing machines, horizontal scaling adds more machines",
+        "difficulty": "medium",
+        "explanation": "Vertical scaling (scaling up) involves adding more power to an existing machine, while horizontal scaling (scaling out) involves adding more machines to a system.",
+        "hint": "Consider how systems can grow to handle increased load."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is a distributed database?",
+        "options": [
+            "A database that can only be accessed remotely",
+            "A database spread across multiple machines that appears as a single database to the user",
+            "A temporary database storage method",
+            "A database compression technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A database spread across multiple machines that appears as a single database to the user",
+        "difficulty": "easy",
+        "explanation": "A distributed database is a database whose storage devices are not all attached to a common processing unit, but dispersed across a network.",
+        "hint": "Think about data storage that looks unified but is actually spread out."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is NoSQL in the context of Big Data?",
+        "options": [
+            "A programming language",
+            "A type of database that provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases",
+            "A network security protocol",
+            "A data compression method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A type of database that provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases",
+        "difficulty": "medium",
+        "explanation": "NoSQL databases are designed to handle large volumes of unstructured data, providing flexible schemas and horizontal scalability.",
+        "hint": "Consider databases that go beyond traditional table-based storage."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the primary advantage of a distributed database system?",
+        "options": [
+            "Reduced initial hardware costs",
+            "Improved performance, reliability, and scalability",
+            "Simplified database management",
+            "Guaranteed data security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improved performance, reliability, and scalability",
+        "difficulty": "easy",
+        "explanation": "Distributed databases offer improved performance through parallel processing, increased reliability through data replication, and better scalability by adding more machines.",
+        "hint": "Think about the benefits of spreading data and processing across multiple systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What does eventual consistency mean in distributed systems?",
+        "options": [
+            "Data is always immediately consistent across all nodes",
+            "Data will converge to a consistent state over time",
+            "Data is never consistent",
+            "Consistency is maintained only during specific time intervals"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data will converge to a consistent state over time",
+        "difficulty": "hard",
+        "explanation": "Eventual consistency is a consistency model where updates to a distributed system will eventually propagate to all nodes, but may not be immediately visible everywhere.",
+        "hint": "Consider how data might temporarily differ across distributed systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is Apache Spark primarily used for?",
+        "options": [
+            "Web development",
+            "Large-scale data processing and analytics",
+            "Network security",
+            "Database backup"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Large-scale data processing and analytics",
+        "difficulty": "medium",
+        "explanation": "Apache Spark is an open-source, distributed computing system used for big data processing, with capabilities for batch processing, stream processing, machine learning, and graph processing.",
+        "hint": "Think about frameworks that can handle complex data processing tasks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is a data node in a distributed system?",
+        "options": [
+            "A central management server",
+            "A machine that stores and processes a portion of the distributed data",
+            "A network router",
+            "A database configuration file"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A machine that stores and processes a portion of the distributed data",
+        "difficulty": "easy",
+        "explanation": "A data node is an individual machine in a distributed system that stores a subset of the data and participates in distributed data processing.",
+        "hint": "Consider the individual components that make up a distributed system."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the primary challenge of distributed database systems?",
+        "options": [
+            "High initial hardware costs",
+            "Maintaining data consistency across multiple nodes",
+            "Limited storage capacity",
+            "Network bandwidth"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Maintaining data consistency across multiple nodes",
+        "difficulty": "hard",
+        "explanation": "The most significant challenge in distributed database systems is ensuring data consistency across multiple nodes while maintaining performance and availability.",
+        "hint": "Think about the complexities of keeping data synchronized across different machines."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What are the main types of NoSQL databases?",
+        "options": [
+            "SQL, MySQL, and PostgreSQL",
+            "Document, Key-Value, Column-Family, and Graph databases",
+            "Relational, Hierarchical, and Network databases",
+            "Primary, Secondary, and Distributed databases"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Document, Key-Value, Column-Family, and Graph databases",
+        "difficulty": "medium",
+        "explanation": "The main types of NoSQL databases are Document (e.g., MongoDB), Key-Value (e.g., Redis), Column-Family (e.g., Cassandra), and Graph databases (e.g., Neo4j).",
+        "hint": "Consider the different ways data can be structured and stored."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the role of a master node in a distributed system?",
+        "options": [
+            "To store all the data",
+            "To coordinate and manage worker nodes",
+            "To provide network security",
+            "To compress data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To coordinate and manage worker nodes",
+        "difficulty": "medium",
+        "explanation": "A master node in a distributed system is responsible for coordinating and managing worker nodes, distributing tasks, and maintaining overall system state.",
+        "hint": "Think about the central management role in a distributed system."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What does partitioning mean in distributed databases?",
+        "options": [
+            "Encrypting database contents",
+            "Dividing data into smaller, more manageable pieces across multiple machines",
+            "Creating database backups",
+            "Compressing database files"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Dividing data into smaller, more manageable pieces across multiple machines",
+        "difficulty": "easy",
+        "explanation": "Partitioning involves breaking a large database into smaller, more manageable pieces that are distributed across multiple machines to improve performance and manageability.",
+        "hint": "Consider how large datasets can be split up for more efficient processing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is a key characteristic of Big Data processing frameworks like Hadoop?",
+        "options": [
+            "Real-time data processing",
+            "Batch processing of large datasets",
+            "Exclusive use in cloud environments",
+            "Limited to small-scale data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Batch processing of large datasets",
+        "difficulty": "medium",
+        "explanation": "Frameworks like Hadoop are designed for batch processing of large datasets, breaking down complex computational tasks into smaller, parallel-processable units.",
+        "hint": "Think about processing massive amounts of data in chunks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the primary purpose of data replication in distributed systems?",
+        "options": [
+            "To reduce storage costs",
+            "To improve fault tolerance and availability",
+            "To compress data",
+            "To increase network speed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To improve fault tolerance and availability",
+        "difficulty": "easy",
+        "explanation": "Data replication involves storing multiple copies of data across different nodes to ensure system reliability, fault tolerance, and improved access speed.",
+        "hint": "Consider how multiple copies of data can protect against system failures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is a distributed cache?",
+        "options": [
+            "A physical storage device",
+            "A memory-based data storage system spread across multiple machines",
+            "A database backup method",
+            "A network security protocol"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A memory-based data storage system spread across multiple machines",
+        "difficulty": "hard",
+        "explanation": "A distributed cache is a memory-based data storage system that is spread across multiple machines, designed to improve data retrieval performance and reduce database load.",
+        "hint": "Think about storing frequently accessed data in memory across multiple systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the primary difference between SQL and NoSQL databases in Big Data?",
+        "options": [
+            "SQL databases are faster",
+            "SQL databases use fixed schemas, while NoSQL databases offer more flexible schema design",
+            "NoSQL databases cannot handle complex queries",
+            "SQL databases are only used for small datasets"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "SQL databases use fixed schemas, while NoSQL databases offer more flexible schema design",
+        "difficulty": "medium",
+        "explanation": "SQL databases have rigid, predefined schemas, while NoSQL databases provide more flexible schema design, making them better suited for unstructured or rapidly changing data.",
+        "hint": "Consider how different types of databases handle data structure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is a distributed transaction?",
+        "options": [
+            "A transaction that occurs only in cloud environments",
+            "A transaction that spans multiple database nodes and ensures atomic operation",
+            "A temporary database connection",
+            "A data compression technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A transaction that spans multiple database nodes and ensures atomic operation",
+        "difficulty": "hard",
+        "explanation": "A distributed transaction is a database transaction that spans multiple database nodes, requiring complex coordination to ensure all parts of the transaction are completed successfully.",
+        "hint": "Think about maintaining data integrity across multiple systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the purpose of a load balancer in distributed systems?",
+        "options": [
+            "To encrypt data",
+            "To distribute network traffic across multiple servers",
+            "To compress data",
+            "To manage database backups"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To distribute network traffic across multiple servers",
+        "difficulty": "easy",
+        "explanation": "A load balancer distributes incoming network traffic across multiple servers to ensure no single server becomes a bottleneck, improving system performance and reliability.",
+        "hint": "Consider how to evenly distribute computational work."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is data locality in distributed computing?",
+        "options": [
+            "Storing data in a single location",
+            "Moving computation close to where the data is stored",
+            "Encrypting local data",
+            "Compressing data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Moving computation close to where the data is stored",
+        "difficulty": "hard",
+        "explanation": "Data locality is a principle in distributed computing where computation is moved to the location of the data to minimize data transfer and improve performance.",
+        "hint": "Think about reducing data movement in distributed systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is a distributed file system?",
+        "options": [
+            "A local computer's file system",
+            "A file system that stores data across multiple machines in a network",
+            "A backup storage method",
+            "A data compression technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A file system that stores data across multiple machines in a network",
+        "difficulty": "medium",
+        "explanation": "A distributed file system allows files to be stored and accessed across multiple machines in a network, providing improved reliability, performance, and scalability.",
+        "hint": "Consider how files can be spread across multiple computers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the primary challenge of big data analytics?",
+        "options": [
+            "Limited computer processing power",
+            "Processing and extracting meaningful insights from large, complex datasets",
+            "High storage costs",
+            "Network bandwidth limitations"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Processing and extracting meaningful insights from large, complex datasets",
+        "difficulty": "easy",
+        "explanation": "The primary challenge of big data analytics is transforming vast, complex, and varied datasets into actionable insights that can drive business decisions.",
+        "hint": "Think about the difficulties of making sense of massive amounts of data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is a consensus algorithm in distributed systems?",
+        "options": [
+            "A method of data encryption",
+            "A mechanism for multiple nodes to agree on a single data value",
+            "A network routing protocol",
+            "A data compression technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A mechanism for multiple nodes to agree on a single data value",
+        "difficulty": "hard",
+        "explanation": "A consensus algorithm allows distributed systems to reach agreement on a single data value or state, ensuring consistency across multiple nodes.",
+        "hint": "Consider how multiple independent systems can agree on a single piece of information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Big Data & Distributed Databases",
+        "questionText": "What is the role of a coordinator in a distributed system?",
+        "options": [
+            "To store all the data",
+            "To manage and synchronize operations across multiple nodes",
+            "To provide network security",
+            "To compress data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To manage and synchronize operations across multiple nodes",
+        "difficulty": "medium",
+        "explanation": "A coordinator in a distributed system is responsible for managing and synchronizing operations across multiple nodes, ensuring proper communication and task distribution.",
+        "hint": "Think about the central management role in coordinating distributed tasks."
+    },
 
     // Database Administration
 
