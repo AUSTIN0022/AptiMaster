@@ -6006,8 +6006,921 @@ const DBSysQuestions = [
     },
 
     // Database Administration
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is the primary purpose of database backup?",
+        "options": [
+            "Improve database performance",
+            "Recover data in case of system failure",
+            "Compress database files",
+            "Increase storage capacity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Recover data in case of system failure",
+        "difficulty": "easy",
+        "explanation": "Database backups are crucial for data recovery in case of hardware failures, data corruption, or accidental deletions.",
+        "hint": "Think about data protection and disaster recovery."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "Which backup strategy involves creating a full backup and then only backing up changes since the last full backup?",
+        "options": [
+            "Full backup",
+            "Differential backup",
+            "Incremental backup",
+            "Mirror backup"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Differential backup",
+        "difficulty": "medium",
+        "explanation": "Differential backup creates a copy of all changes made since the last full backup, which can be faster to restore than incremental backups.",
+        "hint": "Consider the backup size and restore time between different backup strategies."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does RAID 5 provide in terms of data storage?",
+        "options": [
+            "Mirroring without parity",
+            "Striping with distributed parity",
+            "Complete data redundancy",
+            "Maximum read performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Striping with distributed parity",
+        "difficulty": "hard",
+        "explanation": "RAID 5 uses block-level striping with distributed parity, providing both performance and fault tolerance.",
+        "hint": "Consider how data is distributed and protected across multiple drives."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is the typical frequency for running log backups in a transaction-heavy database?",
+        "options": [
+            "Once a week",
+            "Once a month",
+            "Every few hours",
+            "Every few minutes"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Every few minutes",
+        "difficulty": "medium",
+        "explanation": "Log backups are typically performed frequently to minimize potential data loss in case of system failure.",
+        "hint": "Consider the potential data loss window in a high-transaction environment."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "Which of the following is NOT a typical database monitoring metric?",
+        "options": [
+            "Query response time",
+            "CPU utilization",
+            "Network latency",
+            "User's favorite color"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "User's favorite color",
+        "difficulty": "easy",
+        "explanation": "Database monitoring focuses on performance, resource utilization, and system health metrics.",
+        "hint": "Think about metrics that directly relate to database performance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is the primary goal of database normalization?",
+        "options": [
+            "Increase storage space",
+            "Reduce data redundancy",
+            "Improve query performance",
+            "Simplify backup process"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Reduce data redundancy",
+        "difficulty": "medium",
+        "explanation": "Normalization helps organize data to minimize redundancy and dependency by dividing larger tables into smaller ones.",
+        "hint": "Consider how data can be efficiently organized to prevent repetition."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "Which command is used to recover a database to a specific point in time?",
+        "options": [
+            "RESTORE POINT",
+            "POINT RECOVERY",
+            "POINT-IN-TIME RECOVERY",
+            "TIME RESTORE"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "POINT-IN-TIME RECOVERY",
+        "difficulty": "hard",
+        "explanation": "Point-in-time recovery allows restoring a database to a specific moment, useful for recovering from logical errors.",
+        "hint": "Think about recovering to an exact state before a problem occurred."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does WAL stand for in database systems?",
+        "options": [
+            "Wide Area Link",
+            "Write Ahead Log",
+            "Web Access Layer",
+            "Wide Application Logging"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Write Ahead Log",
+        "difficulty": "medium",
+        "explanation": "Write Ahead Log ensures that changes are recorded in the log before being applied to the database, supporting transaction durability.",
+        "hint": "Consider a logging mechanism that ensures data integrity."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is the primary purpose of database replication?",
+        "options": [
+            "Increase storage capacity",
+            "Improve query performance",
+            "Ensure high availability",
+            "Compress database files"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Ensure high availability",
+        "difficulty": "easy",
+        "explanation": "Database replication creates copies of data across multiple servers to provide fault tolerance and continuous availability.",
+        "hint": "Think about maintaining database access during hardware failures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "Which type of database user typically has the most privileges?",
+        "options": [
+            "Read-only user",
+            "Application user",
+            "Database administrator",
+            "Guest user"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Database administrator",
+        "difficulty": "easy",
+        "explanation": "Database administrators have full access and control over the database system, including user management and system configurations.",
+        "hint": "Consider who manages the entire database system."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is database sharding?",
+        "options": [
+            "Encrypting database content",
+            "Partitioning data across multiple servers",
+            "Compressing database files",
+            "Creating database backups"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Partitioning data across multiple servers",
+        "difficulty": "hard",
+        "explanation": "Sharding involves horizontally partitioning data across multiple database servers to improve scalability and performance.",
+        "hint": "Think about distributing large datasets across multiple machines."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does the term 'database migration' typically refer to?",
+        "options": [
+            "Moving data between storage devices",
+            "Transferring data between database systems",
+            "Backing up database files",
+            "Updating database schema"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Transferring data between database systems",
+        "difficulty": "medium",
+        "explanation": "Database migration involves moving data, schema, and sometimes applications from one database system to another.",
+        "hint": "Consider moving data between different database platforms."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "Which security measure helps prevent SQL injection attacks?",
+        "options": [
+            "Strong passwords",
+            "Firewall configuration",
+            "Prepared statements",
+            "Data encryption"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Prepared statements",
+        "difficulty": "medium",
+        "explanation": "Prepared statements separate SQL logic from data, preventing malicious SQL code injection.",
+        "hint": "Think about how to separate database queries from user input."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is a database schema?",
+        "options": [
+            "A backup of the database",
+            "The physical storage layout",
+            "The logical structure of the database",
+            "A security configuration"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The logical structure of the database",
+        "difficulty": "easy",
+        "explanation": "A database schema defines the organization of data, including tables, columns, relationships, and constraints.",
+        "hint": "Consider the blueprint of how data is organized."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does 'database auditing' primarily involve?",
+        "options": [
+            "Checking database performance",
+            "Tracking user activities and access",
+            "Validating backup files",
+            "Optimizing database queries"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Tracking user activities and access",
+        "difficulty": "medium",
+        "explanation": "Database auditing records and monitors user actions to ensure security, compliance, and detect potential unauthorized activities.",
+        "hint": "Think about monitoring and logging database interactions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "Which backup strategy involves creating a complete backup of all data?",
+        "options": [
+            "Incremental backup",
+            "Differential backup",
+            "Full backup",
+            "Snapshot backup"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Full backup",
+        "difficulty": "easy",
+        "explanation": "A full backup creates a complete copy of all data in the database at a specific point in time.",
+        "hint": "Consider the most comprehensive backup method."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is the purpose of a database connection pool?",
+        "options": [
+            "Increase storage capacity",
+            "Reuse and manage database connections",
+            "Encrypt database connections",
+            "Create database backups"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Reuse and manage database connections",
+        "difficulty": "medium",
+        "explanation": "Connection pools manage and reuse database connections, reducing overhead and improving performance.",
+        "hint": "Think about efficiently managing resources for database access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does 'data integrity' in databases refer to?",
+        "options": [
+            "Data storage capacity",
+            "Ensuring data accuracy and consistency",
+            "Data encryption methods",
+            "Backup frequency"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ensuring data accuracy and consistency",
+        "difficulty": "easy",
+        "explanation": "Data integrity ensures that data remains accurate, complete, and consistent throughout its lifecycle.",
+        "hint": "Consider maintaining the quality and reliability of data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "Which protocol is commonly used for secure database connections?",
+        "options": [
+            "HTTP",
+            "FTP",
+            "SSL/TLS",
+            "SMTP"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "SSL/TLS",
+        "difficulty": "medium",
+        "explanation": "SSL/TLS provides encryption and secure communication for database connections.",
+        "hint": "Think about a protocol that ensures encrypted data transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is a deadlock in database systems?",
+        "options": [
+            "A backup failure",
+            "A situation where transactions mutually wait for each other",
+            "A network connection issue",
+            "A schema update problem"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A situation where transactions mutually wait for each other",
+        "difficulty": "hard",
+        "explanation": "A deadlock occurs when two or more transactions are unable to proceed because each is waiting for the other to release resources.",
+        "hint": "Consider a scenario of circular resource dependency."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does 'database normalization' aim to prevent?",
+        "options": [
+            "Data encryption",
+            "Data redundancy",
+            "Performance bottlenecks",
+            "Network latency"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data redundancy",
+        "difficulty": "medium",
+        "explanation": "Normalization organizes data to minimize redundancy and improve data integrity.",
+        "hint": "Think about eliminating unnecessary data repetition."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is a primary key in a database?",
+        "options": [
+            "The most important column",
+            "A unique identifier for a record",
+            "The first column in a table",
+            "A foreign key reference"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A unique identifier for a record",
+        "difficulty": "easy",
+        "explanation": "A primary key uniquely identifies each record in a database table and ensures data integrity.",
+        "hint": "Consider a column that makes each row distinctly identifiable."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does 'database archiving' typically involve?",
+        "options": [
+            "Creating real-time backups",
+            "Moving historical data to separate storage",
+            "Encrypting database files",
+            "Compressing current database"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Moving historical data to separate storage",
+        "difficulty": "medium",
+        "explanation": "Database archiving involves moving older, less frequently accessed data to a separate storage system to optimize performance.",
+        "hint": "Think about managing historical data efficiently."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is horizontal scaling in databases?",
+        "options": [
+            "Adding more memory to a server",
+            "Increasing CPU cores",
+            "Adding more servers to distribute load",
+            "Upgrading network infrastructure"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Adding more servers to distribute load",
+        "difficulty": "hard",
+        "explanation": "Horizontal scaling involves adding more servers to distribute database load and improve performance.",
+        "hint": "Consider expanding capacity by adding more machines."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is a database view?",
+        "options": [
+            "A backup of the database",
+            "A virtual table based on the result of a SQL query",
+            "A physical storage location",
+            "A security configuration"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A virtual table based on the result of a SQL query",
+        "difficulty": "medium",
+        "explanation": "A database view is a virtual table that doesn't store data physically but presents data from one or more tables.",
+        "hint": "Think about a dynamic, query-based representation of data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does 'database recovery' primarily mean?",
+        "options": [
+            "Updating database software",
+            "Restoring data after a system failure",
+            "Optimizing database performance",
+            "Encrypting database contents"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Restoring data after a system failure",
+        "difficulty": "easy",
+        "explanation": "Database recovery involves restoring data to a consistent state after unexpected system failures or data corruption.",
+        "hint": "Consider how to bring a database back to a working state after an issue."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What is a database index?",
+        "options": [
+            "A backup mechanism",
+            "A data structure that improves query performance",
+            "A security feature",
+            "A data compression technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A data structure that improves query performance",
+        "difficulty": "medium",
+        "explanation": "A database index is a data structure that allows faster retrieval of records, similar to an index in a book.",
+        "hint": "Think about a lookup mechanism that speeds up data access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Database Administration",
+        "questionText": "What does 'database partitioning' help achieve?",
+        "options": [
+            "Data encryption",
+            "Improved query performance and manageability",
+            "Backup compression",
+            "Network security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improved query performance and manageability",
+        "difficulty": "hard",
+        "explanation": "Database partitioning divides large tables into smaller, more manageable pieces to improve performance and ease maintenance.",
+        "hint": "Consider breaking large datasets into more manageable segments."
+    },
+
 
     // Modern Database Systems
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a NewSQL database primarily designed to address?",
+        "options": [
+            "Big data processing",
+            "NoSQL scalability with SQL consistency",
+            "Cloud storage",
+            "Machine learning applications"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "NoSQL scalability with SQL consistency",
+        "difficulty": "medium",
+        "explanation": "NewSQL databases aim to provide the scalability of NoSQL systems while maintaining the ACID properties and SQL interface of traditional relational databases.",
+        "hint": "Consider a solution that combines the best of traditional and modern database approaches."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What characterizes an in-memory database?",
+        "options": [
+            "Storing data exclusively in RAM",
+            "Using cloud storage",
+            "Slower data access",
+            "Permanent data storage only"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Storing data exclusively in RAM",
+        "difficulty": "easy",
+        "explanation": "In-memory databases store and process data primarily in a computer's main memory (RAM) for faster data access and processing.",
+        "hint": "Think about the fastest type of computer memory for data storage."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is the primary advantage of a distributed database system?",
+        "options": [
+            "Reduced hardware costs",
+            "Improved data security",
+            "Enhanced scalability and fault tolerance",
+            "Simplified database management"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Enhanced scalability and fault tolerance",
+        "difficulty": "medium",
+        "explanation": "Distributed database systems spread data across multiple servers, providing better scalability, performance, and resilience against hardware failures.",
+        "hint": "Consider how spreading data across multiple machines can improve system reliability."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What does CAP theorem state about distributed systems?",
+        "options": [
+            "Databases can have unlimited storage",
+            "A system can have at most two of three properties: Consistency, Availability, Partition tolerance",
+            "Cloud databases are always faster",
+            "Distributed systems are always secure"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A system can have at most two of three properties: Consistency, Availability, Partition tolerance",
+        "difficulty": "hard",
+        "explanation": "The CAP theorem suggests that in a distributed system, you can only guarantee two out of three properties: Consistency, Availability, and Partition tolerance.",
+        "hint": "Think about the trade-offs in distributed system design."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a cloud-native database?",
+        "options": [
+            "A database that only works in the cloud",
+            "A database designed specifically for cloud environments",
+            "A traditional database moved to cloud storage",
+            "A database with unlimited storage"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A database designed specifically for cloud environments",
+        "difficulty": "medium",
+        "explanation": "Cloud-native databases are designed to leverage cloud computing architectures, providing scalability, elasticity, and native cloud service integration.",
+        "hint": "Consider a database built from the ground up to work seamlessly in cloud infrastructure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is the primary characteristic of a graph database?",
+        "options": [
+            "Storing data in spreadsheet-like tables",
+            "Optimizing relationships between data entities",
+            "Maximizing storage efficiency",
+            "Supporting only numerical data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Optimizing relationships between data entities",
+        "difficulty": "medium",
+        "explanation": "Graph databases are designed to store and query data with complex relationships, representing data as nodes and edges.",
+        "hint": "Think about a database that excels at understanding and traversing connections between data points."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What does 'eventual consistency' mean in distributed databases?",
+        "options": [
+            "Data is never consistent",
+            "Data will become consistent over time",
+            "Immediate data synchronization",
+            "Random data updates"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data will become consistent over time",
+        "difficulty": "hard",
+        "explanation": "Eventual consistency guarantees that if no new updates are made to a given data item, eventually all accesses to that item will return the last updated value.",
+        "hint": "Consider a model where consistency is achieved after a period of time."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a key advantage of columnar databases?",
+        "options": [
+            "Better performance for analytical queries",
+            "Improved transaction processing",
+            "Enhanced data security",
+            "Reduced storage requirements"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Better performance for analytical queries",
+        "difficulty": "medium",
+        "explanation": "Columnar databases store data by column rather than by row, which can significantly improve performance for analytical and aggregation queries.",
+        "hint": "Think about how storing data vertically might benefit certain types of data analysis."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What characterizes a key-value NoSQL database?",
+        "options": [
+            "Complex query support",
+            "Storing data as simple key-pair entries",
+            "Rigid schema requirements",
+            "Mandatory relational structure"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Storing data as simple key-pair entries",
+        "difficulty": "easy",
+        "explanation": "Key-value databases store data as a collection of key-value pairs, providing high performance and scalability for simple data models.",
+        "hint": "Consider the simplest possible way to store and retrieve data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is the primary purpose of a time-series database?",
+        "options": [
+            "Storing historical financial data",
+            "Optimizing storage for time-based data",
+            "Tracking real-time sensor or monitoring data",
+            "Managing user login timestamps"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Tracking real-time sensor or monitoring data",
+        "difficulty": "medium",
+        "explanation": "Time-series databases are optimized for handling time-stamped or time-series data, such as IoT sensor readings, monitoring metrics, or financial trading data.",
+        "hint": "Think about databases designed to handle data that changes over time."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What does 'sharding' mean in distributed databases?",
+        "options": [
+            "Data encryption",
+            "Partitioning data across multiple servers",
+            "Creating database backups",
+            "Compressing database files"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Partitioning data across multiple servers",
+        "difficulty": "medium",
+        "explanation": "Sharding involves horizontally partitioning data across multiple database servers to improve scalability and performance.",
+        "hint": "Consider how to distribute large datasets across multiple machines."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a document-oriented NoSQL database best suited for?",
+        "options": [
+            "Strict relational data models",
+            "Storing semi-structured or hierarchical data",
+            "High-frequency financial transactions",
+            "Geospatial data processing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Storing semi-structured or hierarchical data",
+        "difficulty": "medium",
+        "explanation": "Document databases store data in flexible, JSON-like documents, making them ideal for storing semi-structured or nested data with varying schemas.",
+        "hint": "Think about a database that can handle complex, nested data structures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What distinguishes a multi-model database?",
+        "options": [
+            "Supporting multiple programming languages",
+            "Ability to use multiple data models in a single database",
+            "Storing data in multiple physical locations",
+            "Supporting multiple user authentication methods"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ability to use multiple data models in a single database",
+        "difficulty": "hard",
+        "explanation": "Multi-model databases can support multiple data models (like document, graph, key-value) within a single database system.",
+        "hint": "Consider a database that isn't limited to a single data representation approach."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is the primary advantage of serverless databases?",
+        "options": [
+            "Eliminating the need for database servers",
+            "Automatic scaling and pay-per-use pricing",
+            "Improved data security",
+            "Reduced network latency"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Automatic scaling and pay-per-use pricing",
+        "difficulty": "medium",
+        "explanation": "Serverless databases automatically manage infrastructure, scaling resources up or down based on demand, and typically charge only for actual usage.",
+        "hint": "Think about a database service that manages its own infrastructure dynamically."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What does 'polyglot persistence' refer to?",
+        "options": [
+            "Multiple database language support",
+            "Using different database types for different data needs",
+            "Multilingual database interfaces",
+            "Complex database encryption"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using different database types for different data needs",
+        "difficulty": "hard",
+        "explanation": "Polyglot persistence is the practice of using multiple database technologies to handle different types of data and use cases within a single application.",
+        "hint": "Consider choosing the best database type for specific data requirements."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a vector database primarily used for?",
+        "options": [
+            "Storing geographical data",
+            "Machine learning and AI applications",
+            "Financial transaction tracking",
+            "Web server logging"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Machine learning and AI applications",
+        "difficulty": "medium",
+        "explanation": "Vector databases are designed to store and query high-dimensional vector embeddings, crucial for machine learning, semantic search, and AI applications.",
+        "hint": "Think about databases optimized for storing and searching complex mathematical representations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What characterizes an edge database?",
+        "options": [
+            "Databases located at physical network edges",
+            "Databases optimized for edge computing environments",
+            "Databases with limited functionality",
+            "Databases with minimal security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Databases optimized for edge computing environments",
+        "difficulty": "hard",
+        "explanation": "Edge databases are designed to operate in distributed computing environments, close to data sources, with low latency and minimal infrastructure requirements.",
+        "hint": "Consider databases that work efficiently in decentralized computing scenarios."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a major benefit of in-memory computing?",
+        "options": [
+            "Reduced hardware costs",
+            "Significantly faster data processing",
+            "Unlimited data storage",
+            "Improved network security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Significantly faster data processing",
+        "difficulty": "easy",
+        "explanation": "In-memory computing allows data to be processed directly in RAM, dramatically reducing data access times compared to disk-based storage.",
+        "hint": "Think about the fastest way to access and process data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What does 'data lakehouse' combine?",
+        "options": [
+            "Data lake and data warehouse capabilities",
+            "Cloud and on-premise storage",
+            "Relational and NoSQL databases",
+            "Transactional and analytical databases"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Data lake and data warehouse capabilities",
+        "difficulty": "medium",
+        "explanation": "A data lakehouse merges the flexibility of data lakes with the performance and management features of data warehouses.",
+        "hint": "Consider a hybrid approach to data storage and processing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a geospatial database specialized in?",
+        "options": [
+            "Storing financial data",
+            "Managing location-based and geographical data",
+            "Cloud storage optimization",
+            "Machine learning models"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Managing location-based and geographical data",
+        "difficulty": "medium",
+        "explanation": "Geospatial databases are designed to store, index, and query geographical and location-based information efficiently.",
+        "hint": "Think about databases optimized for handling maps and location data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What characterizes a real-time database?",
+        "options": [
+            "Storing historical data",
+            "Processing and updating data with minimal delay",
+            "Permanent data archiving",
+            "Complex query support"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Processing and updating data with minimal delay",
+        "difficulty": "medium",
+        "explanation": "Real-time databases are designed to process and reflect data changes with extremely low latency, often used in live monitoring and tracking systems.",
+        "hint": "Consider a database that updates and reflects changes almost instantly."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a quantum database?",
+        "options": [
+            "A database running on quantum computers",
+            "A highly advanced cloud database",
+            "A database with quantum encryption",
+            "A database with unlimited processing power"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A database running on quantum computers",
+        "difficulty": "hard",
+        "explanation": "Quantum databases leverage quantum computing principles to potentially process and store information using quantum mechanical phenomena.",
+        "hint": "Think about databases that use quantum computing technologies."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What does 'database virtualization' primarily mean?",
+        "options": [
+            "Creating virtual reality database interfaces",
+            "Abstracting database access across different platforms",
+            "Cloud database storage",
+            "Database encryption"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Abstracting database access across different platforms",
+        "difficulty": "medium",
+        "explanation": "Database virtualization allows applications to access data from multiple database systems through a unified interface, regardless of the underlying database technology.",
+        "hint": "Consider a way to simplify database access across different systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a blockchain database?",
+        "options": [
+            "A database that only stores cryptocurrency data",
+            "A decentralized, immutable database using blockchain technology",
+            "A database with complex encryption",
+            "A cloud-based database system"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A decentralized, immutable database using blockchain technology",
+        "difficulty": "hard",
+        "explanation": "Blockchain databases use distributed ledger technology to create a decentralized, tamper-resistant record of transactions and data.",
+        "hint": "Think about a database designed for transparency and immutability."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What distinguishes a multi-tenant database?",
+        "options": [
+            "Supporting multiple users",
+            "Ability to serve multiple customers/organizations from a single database instance",
+            "Cloud-only deployment",
+            "Unlimited storage capacity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ability to serve multiple customers/organizations from a single database instance",
+        "difficulty": "medium",
+        "explanation": "Multi-tenant databases allow multiple customers or organizations to use the same database infrastructure while keeping their data logically separated.",
+        "hint": "Consider a database design that efficiently serves multiple users or organizations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a reactive database?",
+        "options": [
+            "A database that only responds to user inputs",
+            "A database designed to react to data changes in real-time",
+            "A database with automated backup systems",
+            "A cloud-based database"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A database designed to react to data changes in real-time",
+        "difficulty": "hard",
+        "explanation": "Reactive databases are designed to automatically respond to data changes, propagating updates and maintaining system consistency in real-time.",
+        "hint": "Think about a database that dynamically responds to data modifications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is a key characteristic of NewSQL databases?",
+        "options": [
+            "Abandoning SQL entirely",
+            "Combining NoSQL scalability with SQL ACID guarantees",
+            "Using only cloud storage",
+            "Eliminating database transactions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Combining NoSQL scalability with SQL ACID guarantees",
+        "difficulty": "medium",
+        "explanation": "NewSQL databases aim to provide the horizontal scalability of NoSQL systems while maintaining the ACID transaction properties of traditional relational databases.",
+        "hint": "Consider a database approach that bridges traditional and modern database designs."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What characterizes an autonomous database?",
+        "options": [
+            "Complete independence from human intervention",
+            "Self-managing capabilities using AI and machine learning",
+            "Unlimited processing power",
+            "Mandatory cloud deployment"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Self-managing capabilities using AI and machine learning",
+        "difficulty": "medium",
+        "explanation": "Autonomous databases use AI and machine learning to automate database management tasks like tuning, security, and backup.",
+        "hint": "Think about a database that can manage itself intelligently."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Modern Database Systems",
+        "questionText": "What is the primary purpose of a federated database system?",
+        "options": [
+            "Creating backup copies",
+            "Integrating data from multiple, potentially heterogeneous databases",
+            "Encrypting database connections",
+            "Limiting user access"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Integrating data from multiple, potentially heterogeneous databases",
+        "difficulty": "hard",
+        "explanation": "Federated database systems allow transparent access and integration of data from multiple, potentially different database systems as if they were a single database.",
+        "hint": "Consider a system that can unify data from various sources."
+    },
 
 ]
 
