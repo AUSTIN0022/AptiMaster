@@ -13,7 +13,7 @@ const insertUsers = async () => {
     try {
       for (const userData of userSamples) {
         const User = new Users(userData);
-        await User.save(); // This will trigger the hooks
+        await User.save(); 
       }
       console.log("Users inserted successfully!");
     } catch (err) {
@@ -24,5 +24,4 @@ const insertUsers = async () => {
     }
   };
 
-// Call the function
 insertUsers();
