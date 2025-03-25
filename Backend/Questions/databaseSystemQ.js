@@ -2332,10 +2332,913 @@ const DBSysQuestions = [
         "hint": "Consider the scope and performance of row removal"
     },
 
-    
+
     // Advanced SQL
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a correlated subquery?",
+        "options": [
+            "A subquery that runs only once",
+            "A subquery that references columns from the outer query",
+            "A subquery that joins multiple tables",
+            "A subquery that uses EXISTS operator"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A subquery that references columns from the outer query",
+        "difficulty": "hard",
+        "explanation": "A correlated subquery is a subquery that depends on the outer query for its values, meaning it is executed repeatedly - once for each row processed by the outer query.",
+        "hint": "Think about a nested query that uses values from the main query"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the OVER clause primarily do in SQL?",
+        "options": [
+            "Create a new table",
+            "Define window functions",
+            "Join multiple tables",
+            "Filter rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Define window functions",
+        "difficulty": "hard",
+        "explanation": "The OVER clause is used with window functions to perform calculations across a set of rows that are related to the current row.",
+        "hint": "Enables performing calculations across a set of rows without reducing the number of rows returned"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a recursive Common Table Expression (CTE)?",
+        "options": [
+            "A CTE that calls itself",
+            "A CTE with multiple joins",
+            "A CTE that filters rows",
+            "A CTE used only for sorting"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A CTE that calls itself",
+        "difficulty": "hard",
+        "explanation": "A recursive CTE is a CTE that references itself, allowing for hierarchical or tree-structured queries like traversing organizational hierarchies or bill of materials.",
+        "hint": "Think about a query that can call itself to process hierarchical data"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the MERGE statement do in SQL?",
+        "options": [
+            "Combines two tables permanently",
+            "Performs INSERT, UPDATE, or DELETE operations in a single statement",
+            "Joins two tables",
+            "Creates a new view"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Performs INSERT, UPDATE, or DELETE operations in a single statement",
+        "difficulty": "hard",
+        "explanation": "The MERGE statement allows conditional INSERT, UPDATE, or DELETE operations based on a comparison between a target table and a source table.",
+        "hint": "A powerful statement that can perform multiple data modification operations simultaneously"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a window function?",
+        "options": [
+            "A function that creates a new window",
+            "A function that performs calculations across a set of rows related to the current row",
+            "A function that filters rows",
+            "A function that joins tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A function that performs calculations across a set of rows related to the current row",
+        "difficulty": "hard",
+        "explanation": "Window functions perform calculations across a set of rows that are related to the current row, without reducing the number of rows returned.",
+        "hint": "Allows aggregate-like calculations without grouping the result set"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the PIVOT operator do?",
+        "options": [
+            "Rotates a table's columns into rows",
+            "Transforms rows into columns",
+            "Sorts data",
+            "Filters data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Transforms rows into columns",
+        "difficulty": "hard",
+        "explanation": "The PIVOT operator transforms rows into columns, allowing you to convert unique row values into multiple columns in the result set.",
+        "hint": "Used for converting row-based data into a columnar format"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a view in SQL?",
+        "options": [
+            "A physical table in the database",
+            "A virtual table based on the result of a SELECT statement",
+            "A temporary table that exists only during a session",
+            "A table with no columns"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A virtual table based on the result of a SELECT statement",
+        "difficulty": "medium",
+        "explanation": "A view is a virtual table that does not store data physically, but provides a way to represent the result of a complex SELECT query.",
+        "hint": "Think of it as a saved query that looks like a table"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is the purpose of the MATERIALIZED VIEW?",
+        "options": [
+            "To create a temporary table",
+            "To store the query result physically and update it periodically",
+            "To create a read-only view",
+            "To join multiple tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To store the query result physically and update it periodically",
+        "difficulty": "hard",
+        "explanation": "A materialized view stores the query result as a physical table and can be refreshed periodically, improving query performance for complex queries.",
+        "hint": "Provides a way to cache and precompute complex query results"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the RANK() window function do?",
+        "options": [
+            "Assigns a unique rank to each row",
+            "Assigns the same rank to rows with equal values, with gaps in ranking",
+            "Sorts rows alphabetically",
+            "Filters rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Assigns the same rank to rows with equal values, with gaps in ranking",
+        "difficulty": "medium",
+        "explanation": "RANK() assigns a rank to each row within a partition, with the same rank for rows with equal values, and leaves gaps in the ranking sequence.",
+        "hint": "Used for ranking with potential ranking gaps"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a lateral join?",
+        "options": [
+            "A join that only works horizontally",
+            "A join that allows a subquery to reference columns from previous tables in the join",
+            "A join that always returns all rows",
+            "A join that filters rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A join that allows a subquery to reference columns from previous tables in the join",
+        "difficulty": "hard",
+        "explanation": "A lateral join allows a subquery in the FROM clause to reference columns from preceding tables in the join, enabling more complex data retrieval.",
+        "hint": "Think of it as a join that can use information from previously joined tables in its subquery"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is the difference between DENSE_RANK() and RANK() window functions?",
+        "options": [
+            "They are exactly the same",
+            "DENSE_RANK() does not leave gaps in ranking",
+            "RANK() does not leave gaps in ranking",
+            "They are used for different data types"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "DENSE_RANK() does not leave gaps in ranking",
+        "difficulty": "hard",
+        "explanation": "While RANK() leaves gaps in ranking for rows with equal values, DENSE_RANK() assigns consecutive ranks without gaps.",
+        "hint": "Consider how ranking handles rows with equal values"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does a recursive query help solve?",
+        "options": [
+            "Simple linear data traversal",
+            "Hierarchical or tree-structured data queries",
+            "Sorting large datasets",
+            "Filtering rows quickly"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Hierarchical or tree-structured data queries",
+        "difficulty": "hard",
+        "explanation": "Recursive queries are particularly useful for traversing hierarchical data structures like organizational hierarchies, bill of materials, or network graphs.",
+        "hint": "Think about querying data with parent-child relationships"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is the primary purpose of a stored procedure?",
+        "options": [
+            "To create a new table",
+            "To encapsulate a set of SQL statements that can be reused",
+            "To filter rows",
+            "To join tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To encapsulate a set of SQL statements that can be reused",
+        "difficulty": "medium",
+        "explanation": "A stored procedure is a precompiled collection of one or more SQL statements that can be stored and reused, improving performance and code organization.",
+        "hint": "Think of it as a reusable function in SQL"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the EXCEPT operator do?",
+        "options": [
+            "Combines two result sets",
+            "Returns rows from the first query that do not appear in the second query",
+            "Filters rows",
+            "Joins tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Returns rows from the first query that do not appear in the second query",
+        "difficulty": "medium",
+        "explanation": "The EXCEPT operator returns distinct rows from the first query that are not present in the result of the second query.",
+        "hint": "Used to find differences between two query results"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a trigger in SQL?",
+        "options": [
+            "A type of index",
+            "A stored procedure that automatically executes when a specific database event occurs",
+            "A way to create a new table",
+            "A method to join tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A stored procedure that automatically executes when a specific database event occurs",
+        "difficulty": "medium",
+        "explanation": "A trigger is a special type of stored procedure that automatically runs when a specific event occurs in the database, such as INSERT, UPDATE, or DELETE operations.",
+        "hint": "Automatically responds to database events"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a Common Table Expression (CTE)?",
+        "options": [
+            "A permanent table in the database",
+            "A temporary named result set created within a SELECT, INSERT, UPDATE, DELETE, or MERGE statement",
+            "A way to create indexes",
+            "A method to filter rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A temporary named result set created within a SELECT, INSERT, UPDATE, DELETE, or MERGE statement",
+        "difficulty": "medium",
+        "explanation": "A CTE is a temporary named result set that exists only within the scope of a single SQL statement, helping to make complex queries more readable.",
+        "hint": "Think of it as a temporary view defined within a query"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the CROSS APPLY operator do?",
+        "options": [
+            "Joins all rows from two tables",
+            "Applies a table-valued function to each row of the outer table",
+            "Filters rows",
+            "Creates a new table"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Applies a table-valued function to each row of the outer table",
+        "difficulty": "hard",
+        "explanation": "CROSS APPLY allows you to apply a table-valued function to each row of the outer table, returning only the rows where the function returns a result.",
+        "hint": "Similar to an inner join with a table-valued function"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is the primary difference between a stored procedure and a user-defined function?",
+        "options": [
+            "They are exactly the same",
+            "Stored procedures can return values, functions must return a value",
+            "Functions can modify database state, stored procedures cannot",
+            "Stored procedures can be called from SELECT statements, functions cannot"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Stored procedures can return values, functions must return a value",
+        "difficulty": "hard",
+        "explanation": "The key difference is that stored procedures can optionally return values and can modify database state, while functions must return a value and typically cannot modify database state.",
+        "hint": "Consider the return and modification capabilities"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the LEAD() window function do?",
+        "options": [
+            "Filters rows",
+            "Accesses data from a subsequent row in the result set",
+            "Sorts rows",
+            "Joins tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Accesses data from a subsequent row in the result set",
+        "difficulty": "hard",
+        "explanation": "The LEAD() function allows you to access data from a subsequent row in the result set without the need for a self-join.",
+        "hint": "Used for comparing current row with next row's values"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is the purpose of the UNPIVOT operator?",
+        "options": [
+            "Rotates columns into rows",
+            "Transforms columns back into rows",
+            "Sorts data",
+            "Filters data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Transforms columns back into rows",
+        "difficulty": "hard",
+        "explanation": "The UNPIVOT operator is the opposite of PIVOT, transforming columns back into rows, which is useful for normalizing denormalized data.",
+        "hint": "Reverses the effect of a PIVOT operation"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a user-defined table type?",
+        "options": [
+            "A permanent table in the database",
+            "A custom table type that can be used as a parameter in stored procedures",
+            "A temporary table",
+            "An index type"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A custom table type that can be used as a parameter in stored procedures",
+        "difficulty": "hard",
+        "explanation": "A user-defined table type allows you to create a custom table structure that can be used as a parameter type in stored procedures, enabling more flexible data passing.",
+        "hint": "A way to pass table-structured data as a parameter"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the FIRST_VALUE() window function do?",
+        "options": [
+            "Returns the last value in a set",
+            "Returns the first value in an ordered set of rows",
+            "Filters rows",
+            "Sorts rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Returns the first value in an ordered set of rows",
+        "difficulty": "medium",
+        "explanation": "The FIRST_VALUE() function returns the first value in an ordered set of rows within a window partition.",
+        "hint": "Retrieves the first value based on a specific ordering"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is the purpose of the INTERSECT operator?",
+        "options": [
+            "Combines two result sets",
+            "Returns only the rows that appear in both queries",
+            "Filters rows",
+            "Joins tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Returns only the rows that appear in both queries",
+        "difficulty": "medium",
+        "explanation": "The INTERSECT operator returns distinct rows that are common to both queries, effectively finding the intersection of two result sets.",
+        "hint": "Used to find common rows between two queries"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a recursive function in SQL?",
+        "options": [
+            "A function that never terminates",
+            "A function that calls itself with a base case to prevent infinite recursion",
+            "A function that joins tables",
+            "A function that filters rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A function that calls itself with a base case to prevent infinite recursion",
+        "difficulty": "hard",
+        "explanation": "A recursive function in SQL is a user-defined function that calls itself, with a base case to prevent infinite recursion, typically used for processing hierarchical or tree-structured data.",
+        "hint": "Think about a function that solves a problem by breaking it down into smaller, similar sub-problems"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the PERCENT_RANK() window function do?",
+        "options": [
+            "Calculates the percentage of rows",
+            "Calculates the relative rank of a row as a percentage",
+            "Filters rows",
+            "Sorts rows"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Calculates the relative rank of a row as a percentage",
+        "difficulty": "hard",
+        "explanation": "The PERCENT_RANK() function calculates the relative rank of a row within a partition as a percentage, where the lowest row has a percent rank of 0 and the highest has a percent rank of 1.",
+        "hint": "Provides a way to understand a row's position relative to other rows"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a window frame in window functions?",
+        "options": [
+            "A physical window in the database",
+            "A subset of rows in the current partition to which the window function is applied",
+            "A way to filter rows",
+            "A method to join tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A subset of rows in the current partition to which the window function is applied",
+        "difficulty": "hard",
+        "explanation": "A window frame defines a subset of rows in the current partition to which the window function is applied, allowing more granular calculations.",
+        "hint": "Defines the specific rows used in a window function calculation"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is the primary purpose of the INSTEAD OF trigger?",
+        "options": [
+            "To run before any database operation",
+            "To replace the default insert, update, or delete action",
+            "To filter rows",
+            "To join tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To replace the default insert, update, or delete action",
+        "difficulty": "hard",
+        "explanation": "An INSTEAD OF trigger allows you to replace the default insert, update, or delete action with custom logic, providing more control over data modifications.",
+        "hint": "Used to implement custom logic that overrides standard database operations"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What does the OUTER APPLY operator do?",
+        "options": [
+            "Joins all rows from two tables",
+            "Applies a table-valued function to each row of the outer table, including rows where no result is returned",
+            "Filters rows",
+            "Creates a new table"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Applies a table-valued function to each row of the outer table, including rows where no result is returned",
+        "difficulty": "hard",
+        "explanation": "OUTER APPLY is similar to CROSS APPLY, but it returns all rows from the outer table, even when the table-valued function returns no results (similar to a LEFT OUTER JOIN).",
+        "hint": "A more inclusive version of CROSS APPLY"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Advanced SQL",
+        "questionText": "What is a common table expression (CTE) used for in complex queries?",
+        "options": [
+            "To create a permanent table",
+            "To improve query readability and break down complex queries",
+            "To filter rows",
+            "To join tables"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To improve query readability and break down complex queries",
+        "difficulty": "medium",
+        "explanation": "CTEs help improve the readability of complex queries by allowing you to define named subqueries that can be referenced multiple times within a single SQL statement.",
+        "hint": "Think of it as a way to simplify and modularize complex query logic"
+    },
 
     // Transaction Management
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What does the 'A' in ACID properties stand for?",
+        "options": ["Availability", "Atomicity", "Abstraction", "Aggregation"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Atomicity",
+        "difficulty": "easy",
+        "explanation": "Atomicity ensures that a transaction is treated as a single, indivisible unit of work that either completely succeeds or completely fails.",
+        "hint": "Think of an atomic operation that cannot be divided further."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "Which of the following is NOT an ACID property of transactions?",
+        "options": ["Consistency", "Isolation", "Independence", "Durability"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Independence",
+        "difficulty": "medium",
+        "explanation": "The ACID properties are Atomicity, Consistency, Isolation, and Durability. Independence is not a standard ACID property.",
+        "hint": "Check the standard definition of ACID properties in database systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What happens during a transaction rollback?",
+        "options": [
+            "Transaction is permanently saved", 
+            "Database is backed up", 
+            "Transaction changes are undone", 
+            "New transaction is created"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Transaction changes are undone",
+        "difficulty": "easy",
+        "explanation": "A rollback reverses all changes made by a transaction, returning the database to its previous consistent state.",
+        "hint": "Think of a rollback as an 'undo' operation for a transaction."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "Which isolation level allows dirty reads?",
+        "options": [
+            "Serializable", 
+            "Repeatable Read", 
+            "Read Committed", 
+            "Read Uncommitted"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Read Uncommitted",
+        "difficulty": "medium",
+        "explanation": "Read Uncommitted is the lowest isolation level where transactions can read uncommitted data from other transactions, potentially causing dirty reads.",
+        "hint": "This is the least restrictive isolation level in terms of data consistency."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What is a savepoint in a transaction?",
+        "options": [
+            "A permanent database backup", 
+            "A point to which a transaction can be rolled back", 
+            "A transaction log entry", 
+            "A database checkpoint"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A point to which a transaction can be rolled back",
+        "difficulty": "medium",
+        "explanation": "A savepoint allows you to create a point within a transaction to which you can later roll back, without rolling back the entire transaction.",
+        "hint": "It's like a temporary bookmark within a transaction's execution."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What does the 'C' in ACID properties represent?",
+        "options": ["Control", "Commitment", "Concurrency", "Consistency"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Consistency",
+        "difficulty": "easy",
+        "explanation": "Consistency ensures that a transaction brings the database from one valid state to another, maintaining database integrity rules.",
+        "hint": "This property ensures data integrity across database state changes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "Which command is used to permanently save transaction changes?",
+        "options": ["Save", "Commit", "Store", "Insert"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Commit",
+        "difficulty": "easy",
+        "explanation": "The COMMIT command saves all transaction changes permanently to the database, making them visible to other transactions.",
+        "hint": "This is the SQL command that finalizes a transaction's changes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What problem can occur in concurrent transaction processing?",
+        "options": [
+            "Database Freeze", 
+            "Lost Updates", 
+            "System Shutdown", 
+            "Memory Leak"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Lost Updates",
+        "difficulty": "medium",
+        "explanation": "Lost updates can occur when two transactions read and modify the same data concurrently, causing one transaction's changes to be overwritten.",
+        "hint": "This is a common concurrency-related issue in database systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "In the context of transactions, what is a deadlock?",
+        "options": [
+            "A system crash", 
+            "A permanent database error", 
+            "A situation where transactions wait for each other", 
+            "A transaction timeout"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A situation where transactions wait for each other",
+        "difficulty": "hard",
+        "explanation": "A deadlock occurs when two or more transactions are unable to proceed because each is waiting for the other to release a lock.",
+        "hint": "Think of two transactions holding resources that the other needs."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What prevents the 'Phantom Read' anomaly?",
+        "options": [
+            "Read Committed Isolation", 
+            "Serializable Isolation", 
+            "Read Uncommitted Isolation", 
+            "Repeatable Read Isolation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Serializable Isolation",
+        "difficulty": "hard",
+        "explanation": "Serializable isolation level prevents phantom reads by locking all rows that match a query's conditions, ensuring no new rows can be inserted during the transaction.",
+        "hint": "This is the highest and most restrictive isolation level."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What does the 'D' in ACID properties mean?",
+        "options": ["Dispatch", "Durability", "Dynamic", "Dependency"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Durability",
+        "difficulty": "easy",
+        "explanation": "Durability guarantees that once a transaction is committed, its changes will persist even in the event of a system failure.",
+        "hint": "This property ensures data is permanently stored after commitment."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "Which transaction isolation level prevents non-repeatable reads?",
+        "options": [
+            "Read Uncommitted", 
+            "Read Committed", 
+            "Repeatable Read", 
+            "Serializable"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Repeatable Read",
+        "difficulty": "medium",
+        "explanation": "Repeatable Read isolation level prevents non-repeatable reads by locking rows read by a transaction, ensuring consistent data throughout the transaction.",
+        "hint": "This level provides more consistency than Read Committed."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What is a distributed transaction?",
+        "options": [
+            "A transaction within a single database", 
+            "A transaction across multiple database systems", 
+            "A transaction with multiple savepoints", 
+            "A read-only transaction"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A transaction across multiple database systems",
+        "difficulty": "hard",
+        "explanation": "A distributed transaction involves multiple database systems that must coordinate to ensure all parts of the transaction are completed successfully.",
+        "hint": "Think of a transaction that spans different database platforms or servers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What technique helps manage transaction consistency in distributed systems?",
+        "options": [
+            "Load Balancing", 
+            "Two-Phase Commit", 
+            "Caching", 
+            "Data Sharding"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Two-Phase Commit",
+        "difficulty": "hard",
+        "explanation": "Two-Phase Commit is a protocol that ensures all databases in a distributed transaction either commit or abort, maintaining consistency.",
+        "hint": "This protocol involves a preparation phase and a commit/abort phase."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What prevents concurrent transactions from interfering with each other?",
+        "options": [
+            "Transaction Logs", 
+            "Locking Mechanisms", 
+            "Savepoints", 
+            "Rollback Strategies"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Locking Mechanisms",
+        "difficulty": "medium",
+        "explanation": "Locking mechanisms prevent concurrent transactions from accessing the same data simultaneously, ensuring data integrity and preventing race conditions.",
+        "hint": "These mechanisms control access to database resources during transactions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What is a transaction log used for?",
+        "options": [
+            "Tracking user activities", 
+            "Recording transaction details for recovery", 
+            "Managing database connections", 
+            "Generating performance reports"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Recording transaction details for recovery",
+        "difficulty": "medium",
+        "explanation": "Transaction logs record all database modifications, enabling system recovery in case of failures and supporting rollback operations.",
+        "hint": "Think of it as a detailed record of all database changes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What is pessimistic concurrency control?",
+        "options": [
+            "Assuming transactions will conflict", 
+            "Preventing transactions before they start", 
+            "Locking resources before access", 
+            "Rejecting all concurrent transactions"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Locking resources before access",
+        "difficulty": "hard",
+        "explanation": "Pessimistic concurrency control locks resources before a transaction can access them, preventing potential conflicts.",
+        "hint": "This approach prioritizes data consistency over performance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What does optimistic concurrency control assume?",
+        "options": [
+            "Transactions always conflict", 
+            "Transactions rarely conflict", 
+            "Transactions must be serialized", 
+            "Transactions cannot run concurrently"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Transactions rarely conflict",
+        "difficulty": "hard",
+        "explanation": "Optimistic concurrency control assumes that transactions will rarely conflict, allowing them to proceed without locking and checking for conflicts at commit time.",
+        "hint": "This approach prioritizes performance over immediate consistency checks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What type of lock allows multiple transactions to read but prevents writes?",
+        "options": [
+            "Exclusive Lock", 
+            "Shared Lock", 
+            "Intent Lock", 
+            "Update Lock"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Shared Lock",
+        "difficulty": "medium",
+        "explanation": "A shared lock allows multiple transactions to read a resource simultaneously but prevents any transaction from writing to that resource.",
+        "hint": "This lock type is read-oriented and supports concurrent read operations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What does an exclusive lock prevent?",
+        "options": [
+            "Reading data", 
+            "Writing data", 
+            "Concurrent access", 
+            "Transaction logging"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Concurrent access",
+        "difficulty": "medium",
+        "explanation": "An exclusive lock prevents any other transaction from reading or writing the locked resource, ensuring exclusive access.",
+        "hint": "This is the most restrictive type of lock in database systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What is the purpose of a transaction timeout?",
+        "options": [
+            "To limit transaction duration", 
+            "To prevent system overload", 
+            "To automatically rollback long-running transactions", 
+            "To schedule transactions"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To automatically rollback long-running transactions",
+        "difficulty": "medium",
+        "explanation": "A transaction timeout automatically rolls back a transaction that exceeds a predefined time limit, preventing resource deadlock and system performance issues.",
+        "hint": "This mechanism helps manage resource allocation and prevent stuck transactions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "Which method helps resolve potential deadlocks in databases?",
+        "options": [
+            "Transaction Prioritization", 
+            "Resource Allocation", 
+            "Timeout and Rollback", 
+            "Dependency Tracking"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Timeout and Rollback",
+        "difficulty": "hard",
+        "explanation": "Timeout and rollback mechanism helps resolve deadlocks by automatically terminating long-waiting transactions and rolling them back to release resources.",
+        "hint": "This is a common strategy to break potential circular wait conditions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What is a read-only transaction?",
+        "options": [
+            "A transaction that cannot modify data", 
+            "A transaction without a commit", 
+            "A transaction logging operation", 
+            "A transaction with no effect"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A transaction that cannot modify data",
+        "difficulty": "easy",
+        "explanation": "A read-only transaction allows data retrieval but prevents any data modifications, improving performance and ensuring data integrity.",
+        "hint": "This type of transaction is used for retrieving information without changing the database state."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What problem does the 'Lost Update' anomaly describe?",
+        "options": [
+            "Data is permanently deleted", 
+            "One transaction's update overwrites another's", 
+            "Transaction logs are lost", 
+            "Database connection is interrupted"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "One transaction's update overwrites another's",
+        "difficulty": "medium",
+        "explanation": "The 'Lost Update' anomaly occurs when two concurrent transactions read and modify the same data, causing one transaction's changes to be unintentionally overwritten.",
+        "hint": "This is a classic concurrency-related data consistency issue."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What ensures that a transaction is processed exactly once?",
+        "options": [
+            "Idempotency", 
+            "Consistency", 
+            "Atomicity", 
+            "Durability"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Idempotency",
+        "difficulty": "hard",
+        "explanation": "Idempotency ensures that a transaction can be applied multiple times without changing the result beyond the initial application, preventing duplicate processing.",
+        "hint": "This concept is crucial in distributed and fault-tolerant systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What is a transaction boundary?",
+        "options": [
+            "Transaction size limit", 
+            "Start and end points of a transaction", 
+            "Database connection limit", 
+            "Transaction processing speed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Start and end points of a transaction",
+        "difficulty": "easy",
+        "explanation": "A transaction boundary defines the beginning and end of a transaction, typically marked by BEGIN TRANSACTION and COMMIT or ROLLBACK statements.",
+        "hint": "Think of it as the scope of a single unit of work."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What helps ensure data integrity during distributed transactions?",
+        "options": [
+            "Load Balancing", 
+            "Two-Phase Commit Protocol", 
+            "Data Caching", 
+            "Connection Pooling"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Two-Phase Commit Protocol",
+        "difficulty": "hard",
+        "explanation": "The Two-Phase Commit Protocol ensures that all database systems in a distributed transaction either commit or abort together, maintaining data consistency across systems.",
+        "hint": "This protocol coordinates transaction completion across multiple databases."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What is the primary goal of transaction management?",
+        "options": [
+            "Maximize database performance", 
+            "Ensure data integrity and consistency", 
+            "Reduce storage requirements", 
+            "Speed up data retrieval"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ensure data integrity and consistency",
+        "difficulty": "easy",
+        "explanation": "The primary goal of transaction management is to maintain data integrity and consistency, ensuring that database operations are reliable and accurate.",
+        "hint": "This involves managing complex database operations and potential concurrent access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad88",
+        "module": "Transaction Management",
+        "questionText": "What prevents the 'Dirty Read' anomaly?",
+        "options": [
+            "Read Uncommitted", 
+            "Read Committed", 
+            "Repeatable Read", 
+            "Serializable"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Read Committed",
+        "difficulty": "medium",
+        "explanation": "Read Committed isolation level prevents dirty reads by ensuring a transaction can only read data that has been committed, not uncommitted changes from other transactions.",
+        "hint": "This isolation level provides basic protection against reading unstable data."
+    },
 
     // Concurrency Control
 
