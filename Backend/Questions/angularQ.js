@@ -2918,13 +2918,1363 @@ const AngularQuestions = [
         "difficulty": "hard",
         "explanation": "The providedIn property determines the injection scope of a service, such as 'root' (application-wide), 'platform', or a specific module.",
         "hint": "This controls service instantiation and tree-shaking behavior."
-    }
+    },
 
     // Angular Router
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the main purpose of Angular Router?",
+        "options": [
+            "To manage server-side routing",
+            "To enable client-side navigation between views",
+            "To handle HTTP requests",
+            "To create database connections"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To enable client-side navigation between views",
+        "difficulty": "easy",
+        "explanation": "Angular Router enables navigation between different components without reloading the entire page, creating a single-page application (SPA) experience.",
+        "hint": "Think of routing as seamless view transitions within a web application."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "Which module do you need to import to use routing in Angular?",
+        "options": [
+            "RouterModule",
+            "NavigationModule",
+            "RouteModule",
+            "PathModule"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "RouterModule",
+        "difficulty": "easy",
+        "explanation": "RouterModule provides the necessary services and directives for routing in Angular applications.",
+        "hint": "This module is essential for configuring routes and navigation."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the purpose of the routerLink directive?",
+        "options": [
+            "To define route parameters",
+            "To create navigation links in templates",
+            "To handle route guards",
+            "To manage route configurations"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To create navigation links in templates",
+        "difficulty": "easy",
+        "explanation": "routerLink is used in templates to create clickable links that navigate between different components without page reload.",
+        "hint": "Similar to <a> tag, but for Angular routing."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What does the 'children' property in route configuration do?",
+        "options": [
+            "Defines parent-child component relationships",
+            "Creates nested routes within a parent route",
+            "Manages component inheritance",
+            "Controls route visibility"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creates nested routes within a parent route",
+        "difficulty": "medium",
+        "explanation": "The 'children' property allows you to define child routes that are rendered within the parent route's component.",
+        "hint": "Useful for creating hierarchical route structures."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the purpose of a route guard in Angular?",
+        "options": [
+            "To prevent unauthorized access to routes",
+            "To validate form inputs",
+            "To manage HTTP interceptors",
+            "To create route animations"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To prevent unauthorized access to routes",
+        "difficulty": "medium",
+        "explanation": "Route guards are interfaces that allow or prevent navigation to and from routes based on conditions like authentication or permissions.",
+        "hint": "Think of guards as checkpoints for route navigation."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What does the 'resolve' property in route configuration do?",
+        "options": [
+            "Resolves CSS styles",
+            "Fetches data before activating a route",
+            "Defines route parameters",
+            "Handles route redirects"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Fetches data before activating a route",
+        "difficulty": "hard",
+        "explanation": "The resolve guard allows you to fetch data before a route is activated, ensuring the component has all required data before rendering.",
+        "hint": "Prevents rendering incomplete or loading components."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is lazy loading in Angular routing?",
+        "options": [
+            "Delaying component rendering",
+            "Loading modules only when needed",
+            "Caching route configurations",
+            "Preloading all routes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Loading modules only when needed",
+        "difficulty": "medium",
+        "explanation": "Lazy loading allows you to load feature modules only when their routes are accessed, improving initial application load time.",
+        "hint": "A performance optimization technique for large applications."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "How do you define a route parameter in Angular?",
+        "options": [
+            "Using :paramName syntax",
+            "With query parameters",
+            "Through route guards",
+            "In the component definition"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using :paramName syntax",
+        "difficulty": "easy",
+        "explanation": "Route parameters are defined using the :paramName syntax in the route configuration, allowing dynamic routing.",
+        "hint": "Example: { path: 'user/:id', component: UserComponent }"
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the difference between ActivatedRoute and Router?",
+        "options": [
+            "They are the same thing",
+            "ActivatedRoute provides current route information, Router handles navigation",
+            "Router manages components, ActivatedRoute handles templates",
+            "ActivatedRoute is only used for guards"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "ActivatedRoute provides current route information, Router handles navigation",
+        "difficulty": "hard",
+        "explanation": "ActivatedRoute provides information about the current route, while Router is used for programmatic navigation between routes.",
+        "hint": "One provides route details, the other enables route changes."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What does the wildcard route ('**') represent?",
+        "options": [
+            "A route that matches all possible paths",
+            "A catch-all route for undefined routes",
+            "A route with multiple parameters",
+            "A dynamic routing mechanism"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A catch-all route for undefined routes",
+        "difficulty": "medium",
+        "explanation": "The wildcard route is typically used to handle 404 errors or redirect to a default route when no matching route is found.",
+        "hint": "Usually placed at the end of route configurations."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the purpose of RouterModule.forRoot()?",
+        "options": [
+            "To create routes in feature modules",
+            "To configure routes in the root module",
+            "To generate route links",
+            "To manage route guards"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To configure routes in the root module",
+        "difficulty": "medium",
+        "explanation": "RouterModule.forRoot() is used in the root module to register the main routes and route services for the entire application.",
+        "hint": "Should only be used once in the main AppModule."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What types of route guards exist in Angular?",
+        "options": [
+            "CanActivate only",
+            "CanActivate, CanDeactivate, CanLoad, Resolve",
+            "Only authentication guards",
+            "Client-side and server-side guards"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "CanActivate, CanDeactivate, CanLoad, Resolve",
+        "difficulty": "hard",
+        "explanation": "Angular provides multiple types of route guards to control navigation, component loading, and data resolution.",
+        "hint": "Each guard serves a different purpose in route navigation."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "How can you pass optional parameters in routing?",
+        "options": [
+            "Only through route configuration",
+            "Using query parameters or matrix parameters",
+            "Through component inputs",
+            "Only in resolve guards"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using query parameters or matrix parameters",
+        "difficulty": "medium",
+        "explanation": "Optional parameters can be passed using query parameters (?) or matrix parameters (;) in the route URL.",
+        "hint": "Provides flexibility in passing additional route information."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the purpose of RouterModule.forChild()? ",
+        "options": [
+            "To create the main application routes",
+            "To configure routes in feature modules",
+            "To handle root-level navigation",
+            "To manage global routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To configure routes in feature modules",
+        "difficulty": "medium",
+        "explanation": "RouterModule.forChild() is used in feature modules to register routes specific to that module without duplicating root-level services.",
+        "hint": "Used for modular route configuration."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What does the CanLoad guard prevent?",
+        "options": [
+            "User navigation",
+            "Lazy-loaded module download",
+            "Component rendering",
+            "Route parameter access"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Lazy-loaded module download",
+        "difficulty": "hard",
+        "explanation": "CanLoad prevents downloading of lazy-loaded modules if the guard returns false, unlike CanActivate which only prevents route activation.",
+        "hint": "Provides an additional layer of access control for lazy-loaded modules."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "How can you retrieve route parameters in a component?",
+        "options": [
+            "Using window.location",
+            "Through ActivatedRoute service",
+            "By accessing global router object",
+            "Using @Input decorators"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Through ActivatedRoute service",
+        "difficulty": "easy",
+        "explanation": "ActivatedRoute service provides methods like params and snapshot to retrieve route parameters in a component.",
+        "hint": "Inject ActivatedRoute in the component constructor."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is a preloading strategy in Angular routing?",
+        "options": [
+            "Preloading all modules at startup",
+            "A technique to load modules in the background",
+            "Caching route configurations",
+            "Preventing module downloads"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A technique to load modules in the background",
+        "difficulty": "hard",
+        "explanation": "Preloading strategies allow lazy-loaded modules to be downloaded in the background after the initial application load, improving performance.",
+        "hint": "Balances initial load time with subsequent navigation speed."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What does the routerLinkActive directive do?",
+        "options": [
+            "Creates navigation links",
+            "Applies CSS class when route is active",
+            "Manages route transitions",
+            "Handles route redirects"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Applies CSS class when route is active",
+        "difficulty": "easy",
+        "explanation": "routerLinkActive automatically applies a CSS class to an element when its associated route becomes active.",
+        "hint": "Useful for highlighting current navigation item."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "How do you programmatically navigate in Angular?",
+        "options": [
+            "Using window.location",
+            "Through the Router.navigate() method",
+            "By changing URL manually",
+            "Using routerLink in code"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Through the Router.navigate() method",
+        "difficulty": "easy",
+        "explanation": "The Router service provides a navigate() method to programmatically change routes in a component.",
+        "hint": "Inject Router in the component and use navigate() method."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the purpose of the location strategy in routing?",
+"options": [
+            "To define route locations",
+            "To determine how URLs are handled",
+            "To manage route parameters",
+            "To create route guards"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To determine how URLs are handled",
+        "difficulty": "medium",
+        "explanation": "Location strategy determines how Angular handles URLs, with PathLocationStrategy (clean URLs) and HashLocationStrategy (using #) as main options.",
+        "hint": "Affects how routes are represented in the browser URL."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What does the CanDeactivate guard prevent?",
+        "options": [
+            "Route navigation",
+            "Leaving a current route",
+            "Module loading",
+            "Parameter access"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Leaving a current route",
+        "difficulty": "hard",
+        "explanation": "CanDeactivate guard allows you to prevent navigation away from the current route, often used to warn users about unsaved changes.",
+        "hint": "Provides a way to intercept route departure."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "How can you handle route redirects?",
+        "options": [
+            "Using JavaScript",
+            "Through route configuration's redirectTo property",
+            "By modifying URL manually",
+            "Using only guards"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Through route configuration's redirectTo property",
+        "difficulty": "medium",
+        "explanation": "Route configuration allows defining redirects using the redirectTo property, specifying where to redirect when a specific path is accessed.",
+        "hint": "Simplifies route redirection logic."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the difference between snapshot and observable params?",
+        "options": [
+            "They are the same",
+            "Snapshot is current state, observable tracks changes",
+            "Snapshot is for guards, observable for components",
+            "One is deprecated, other is current"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Snapshot is current state, observable tracks changes",
+        "difficulty": "hard",
+        "explanation": "Route params snapshot provides the current parameter values, while params observable allows tracking parameter changes within the same component.",
+        "hint": "Choose based on whether you need to react to parameter changes."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What does the Resolve guard do?",
+        "options": [
+            "Resolves CSS styles",
+            "Fetches data before route activation",
+            "Manages route transitions",
+            "Handles error routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Fetches data before route activation",
+        "difficulty": "hard",
+        "explanation": "Resolve guard allows you to fetch required data before a route is activated, ensuring the component has all necessary data before rendering.",
+        "hint": "Prevents rendering incomplete components."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "How can you pass data to a route?",
+        "options": [
+            "Only through URL parameters",
+            "Using route configuration's data property",
+            "Through component inputs only",
+            "Using only query parameters"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using route configuration's data property",
+        "difficulty": "medium",
+        "explanation": "Routes can have a data property to pass static data that can be accessed via ActivatedRoute service.",
+        "hint": "Useful for passing configuration or metadata to routes."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is a child route in Angular?",
+        "options": [
+            "A route that can't have children",
+            "A nested route rendered within a parent component",
+            "A route with multiple parameters",
+            "A dynamically created route"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A nested route rendered within a parent component",
+        "difficulty": "medium",
+        "explanation": "Child routes are defined within a parent route and render their components inside the parent component's template using <router-outlet>.",
+        "hint": "Creates hierarchical route structures."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "What is the primary purpose of <router-outlet>?",
+        "options": [
+            "To create navigation menus",
+            "To render routed components",
+            "To define route configurations",
+            "To manage route guards"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To render routed components",
+        "difficulty": "easy",
+        "explanation": "<router-outlet> is a placeholder where Angular dynamically renders components based on the current route.",
+        "hint": "Think of it as a component display area that changes based on routing."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Router",
+        "questionText": "How do multiple <router-outlet> work?",
+        "options": [
+            "They always conflict",
+            "Named outlets allow rendering different components",
+            "Only one can be used per application",
+            "They require special configuration"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Named outlets allow rendering different components",
+        "difficulty": "hard",
+        "explanation": "Multiple router outlets can be used with named outlets, allowing different components to be rendered in different parts of the application simultaneously.",
+        "hint": "Enables more complex routing scenarios."
+    },
 
     // Template-Driven Forms
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What directive is used to create a template-driven form in Angular?",
+        "options": ["ngForm", "formGroup", "ngModel", "formControl"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "ngForm",
+        "difficulty": "easy",
+        "explanation": "The `ngForm` directive is automatically applied to `<form>` elements in template-driven forms, creating a form control group.",
+        "hint": "This directive is automatically applied to form elements in template-driven forms."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "Which directive is used to bind form controls to model properties in template-driven forms?",
+        "options": ["ngBind", "formControlName", "ngModel", "ngControl"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "ngModel",
+        "difficulty": "easy",
+        "explanation": "`ngModel` is used for two-way data binding in template-driven forms, connecting form inputs to component properties.",
+        "hint": "This directive enables two-way data binding in forms."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is the purpose of the `name` attribute in template-driven forms?",
+        "options": [
+            "To define CSS classes", 
+            "To create a unique identifier for form controls", 
+            "To set input validation", 
+            "To bind form data to a model"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To create a unique identifier for form controls",
+        "difficulty": "medium",
+        "explanation": "The `name` attribute creates a unique identifier for form controls, allowing Angular to track and manage individual form inputs.",
+        "hint": "This attribute helps Angular track form elements uniquely."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "How do you mark a form control as required in a template-driven form?",
+        "options": [
+            "Use [required] attribute", 
+            "Use required attribute", 
+            "Use ngRequired directive", 
+            "Use formValidator"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Use required attribute",
+        "difficulty": "easy",
+        "explanation": "In template-driven forms, you use the standard HTML `required` attribute to mark a form control as mandatory.",
+        "hint": "This is a standard HTML form validation attribute."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What method is used to access form validation state in a template-driven form?",
+        "options": [
+            "form.isValid()", 
+            "ngForm.valid", 
+            "form.validate()", 
+            "ngModel.validation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "ngForm.valid",
+        "difficulty": "medium",
+        "explanation": "`ngForm.valid` is a property that returns a boolean indicating whether the entire form is valid.",
+        "hint": "This is a property that checks the overall form validation state."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "Which of the following is NOT a built-in validator in Angular template-driven forms?",
+        "options": [
+            "required", 
+            "minlength", 
+            "maxlength", 
+            "mustMatch"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "mustMatch",
+        "difficulty": "medium",
+        "explanation": "`mustMatch` is not a built-in Angular validator. Developers typically create custom validators for such complex validations.",
+        "hint": "This is a custom validation that would require manual implementation."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "How can you display validation error messages in a template-driven form?",
+        "options": [
+            "Using ngIf with form control state", 
+            "Using JavaScript alerts", 
+            "Using console.log()", 
+            "Using ngSwitch"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using ngIf with form control state",
+        "difficulty": "medium",
+        "explanation": "Validation error messages are typically displayed using `ngIf` directive and checking form control states like `touched`, `invalid`, etc.",
+        "hint": "Use Angular's structural directive with form control validation properties."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is the correct way to import FormsModule for template-driven forms?",
+        "options": [
+            "import { FormsModule } from '@angular/forms'", 
+            "import { TemplateFormsModule } from '@angular/core'", 
+            "import { NgModel } from '@angular/forms'", 
+            "import { FormModule } from '@angular/core'"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "import { FormsModule } from '@angular/forms'",
+        "difficulty": "easy",
+        "explanation": "FormsModule is imported from '@angular/forms' and must be added to the imports array in the module decorator.",
+        "hint": "Check the standard Angular forms module import path."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What does the `ngSubmit` event do in a template-driven form?",
+        "options": [
+            "Validates form data", 
+            "Triggers form submission handler", 
+            "Resets form fields", 
+            "Stops form submission"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Triggers form submission handler",
+        "difficulty": "easy",
+        "explanation": "`ngSubmit` is an event that is emitted when a form is submitted, allowing you to define a method to handle the submission.",
+        "hint": "This event is used to define what happens when a form is submitted."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "How can you disable form submission if the form is invalid?",
+        "options": [
+            "[disabled]='!myForm.form.valid'", 
+            "disabled='myForm.invalid'", 
+            "[disabled]='myForm.invalid'", 
+            "disabled='!myForm.form.valid'"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "[disabled]='!myForm.form.valid'",
+        "difficulty": "medium",
+        "explanation": "Use property binding with the form's valid state to disable the submit button when the form is invalid.",
+        "hint": "Use square brackets for property binding and check form validity."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is the purpose of `ngModel` standalone attribute?",
+        "options": [
+            "To create a two-way binding", 
+            "To mark a form control without requiring FormsModule", 
+            "To validate form inputs", 
+            "To reset form data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To mark a form control without requiring FormsModule",
+        "difficulty": "hard",
+        "explanation": "The standalone `ngModel` allows creating form controls without importing FormsModule, useful in specific scenarios.",
+        "hint": "This attribute provides an alternative way to use form controls."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "Which method can you use to reset a template-driven form programmatically?",
+        "options": [
+            "form.reset()", 
+            "ngForm.resetForm()", 
+            "form.clear()", 
+            "ngModel.reset()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "ngForm.resetForm()",
+        "difficulty": "medium",
+        "explanation": "`ngForm.resetForm()` completely resets the form, clearing all form controls and resetting validation states.",
+        "hint": "This method is available on the ngForm directive."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What does the `touched` property indicate in form control state?",
+        "options": [
+            "The field has been modified", 
+            "The field has been focused", 
+            "The field has been blurred", 
+            "The field is currently active"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The field has been blurred",
+        "difficulty": "medium",
+        "explanation": "`touched` becomes true when a form control loses focus after being interacted with.",
+        "hint": "This state changes when a user moves away from an input field."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "How do you create a custom validator in a template-driven form?",
+        "options": [
+            "Using @Validator decorator", 
+            "Implementing ValidatorFn interface", 
+            "Using ngValidator directive", 
+            "Creating a directive with validate method"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Creating a directive with validate method",
+        "difficulty": "hard",
+        "explanation": "Custom validators in template-driven forms are typically created using custom directives with a validate method.",
+        "hint": "This involves creating a custom directive that implements validation logic."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is the correct syntax for two-way data binding in template-driven forms?",
+        "options": [
+            "[(ngModel)]='property'", 
+            "{{ngModel}}='property'", 
+            "[ngModel]='property'", 
+            "(ngModel)='property'"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "[(ngModel)]='property'",
+        "difficulty": "easy",
+        "explanation": "The banana in a box syntax `[(ngModel)]='property'` provides two-way data binding in template-driven forms.",
+        "hint": "This syntax combines property and event binding."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "Which form state property indicates if any form control has been modified?",
+        "options": [
+            "pristine", 
+            "dirty", 
+            "modified", 
+            "changed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "dirty",
+        "difficulty": "medium",
+        "explanation": "The `dirty` state becomes true when any form control's value has been changed from its initial value.",
+        "hint": "This property tracks if the form has been modified from its original state."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is the default email validation pattern in Angular?",
+        "options": [
+            "/^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$/", 
+            "/^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$/", 
+            "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/", 
+            "No default pattern"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/",
+        "difficulty": "hard",
+        "explanation": "Angular provides a default email validation pattern that checks for standard email format.",
+        "hint": "This pattern allows most common email formats."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What does the `novalidate` attribute do in a template-driven form?",
+        "options": [
+            "Disables all form validations", 
+            "Prevents HTML5 browser validations", 
+            "Enables custom Angular validations", 
+            "Marks form as always valid"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Prevents HTML5 browser validations",
+        "difficulty": "medium",
+        "explanation": "The `novalidate` attribute prevents browser's native HTML5 form validation, allowing Angular's form validation to take over.",
+        "hint": "This attribute gives full control to Angular's validation mechanism."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "How can you access form control values in the component?",
+        "options": [
+            "Using @ViewChild", 
+            "Directly through ngModel", 
+            "Using form.value", 
+            "Through component properties"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using form.value",
+        "difficulty": "medium",
+        "explanation": "In template-driven forms, you can access all form control values using the `form.value` property.",
+        "hint": "This property provides an object with all form control values."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is the purpose of `ngModelGroup`?",
+        "options": [
+            "To create nested form groups", 
+            "To validate multiple fields together", 
+            "To style form groups", 
+            "To disable form submission"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "To create nested form groups",
+        "difficulty": "hard",
+        "explanation": "`ngModelGroup` allows creating nested form groups within a template-driven form, organizing related form controls.",
+        "hint": "This directive helps structure complex form hierarchies."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "Which method prevents the default form submission behavior?",
+        "options": [
+            "event.stop()", 
+            "event.preventDefault()", 
+            "form.stopSubmit()", 
+            "ngSubmit.cancel()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "event.preventDefault()",
+        "difficulty": "easy",
+        "explanation": "`event.preventDefault()` stops the default form submission behavior, allowing custom handling.",
+        "hint": "This is a standard JavaScript method to prevent default event actions."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What does the `pending` state in form validation indicate?",
+        "options": [
+            "Form is being validated", 
+            "Validation is complete", 
+            "Form has errors", 
+            "Form is valid"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Form is being validated",
+        "difficulty": "hard",
+        "explanation": "The `pending` state occurs during asynchronous validations, indicating that validation is in progress.",
+        "hint": "This state is common with async validators like checking unique usernames."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "How can you add custom CSS classes based on form control state?",
+        "options": [
+            "Using [ngClass]", 
+            "Using CSS selectors", 
+            "Using [class.is-invalid]", 
+            "Using form state attributes"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using [class.is-invalid]",
+        "difficulty": "medium",
+        "explanation": "Angular allows adding dynamic CSS classes using property binding with form control states.",
+        "hint": "Use property binding to conditionally apply classes."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is the primary difference between template-driven and reactive forms?",
+        "options": [
+            "Validation complexity", 
+            "Form creation approach", 
+            "Performance", 
+            "Browser compatibility"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Form creation approach",
+        "difficulty": "hard",
+        "explanation": "Template-driven forms are created in the template using directives, while reactive forms are created programmatically in the component.",
+        "hint": "Consider where most of the form logic is defined."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What does the `pattern` attribute do in form validation?",
+        "options": [
+            "Creates custom validation rules", 
+            "Defines input format", 
+            "Applies regex validation", 
+            "Restricts input characters"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Applies regex validation",
+        "difficulty": "medium",
+        "explanation": "The `pattern` attribute allows applying regular expression validation to form inputs.",
+        "hint": "Use this to enforce specific input formats."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "How do you disable a form control in a template-driven form?",
+        "options": [
+            "[disabled]='true'", 
+            "disabled attribute", 
+            "[ngModel]='disabled'", 
+            "formControl.disable()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "disabled attribute",
+        "difficulty": "easy",
+        "explanation": "Use the standard HTML `disabled` attribute to disable form controls in template-driven forms.",
+        "hint": "This is a standard HTML form control attribute."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is the purpose of `ngModelChange` event?",
+        "options": [
+            "To validate input", 
+            "To trigger a method on value change", 
+            "To reset form", 
+            "To disable form controls"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To trigger a method on value change",
+        "difficulty": "medium",
+        "explanation": "`ngModelChange` allows executing a method whenever a form control's value changes.",
+        "hint": "This event is used for reactive form interactions."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "Which method is used to check if a specific form control is valid?",
+        "options": [
+            "form.isControlValid()", 
+            "control.valid", 
+            "ngModel.validate()", 
+            "form.checkValidity()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "control.valid",
+        "difficulty": "easy",
+        "explanation": "The `valid` property on a form control indicates whether that specific control is valid.",
+        "hint": "This is a boolean property available on form controls."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Template-Driven Forms",
+        "questionText": "What is an async validator in Angular forms?",
+        "options": [
+            "A validator that runs synchronously", 
+            "A validator that checks form state", 
+            "A validator that returns a Promise or Observable", 
+            "A validator for complex forms"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A validator that returns a Promise or Observable",
+        "difficulty": "hard",
+        "explanation": "Async validators perform validation that might take time, typically returning a Promise or Observable that resolves to a validation result.",
+        "hint": "These are useful for server-side validations like checking username availability."
+    },
 
     // Reactive Forms
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What module must be imported to use Reactive Forms in Angular?",
+        "options": [
+            "FormsModule", 
+            "ReactiveFormsModule", 
+            "FormModule", 
+            "AngularFormsModule"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "ReactiveFormsModule",
+        "difficulty": "easy",
+        "explanation": "ReactiveFormsModule must be imported from '@angular/forms' to use reactive form features in Angular.",
+        "hint": "Check the standard Angular reactive forms module import path."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "Which class is used to create a form control in Reactive Forms?",
+        "options": [
+            "FormControl", 
+            "NgControl", 
+            "FormGroup", 
+            "FormBuilder"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "FormControl",
+        "difficulty": "easy",
+        "explanation": "`FormControl` is the basic building block for creating individual form controls in reactive forms.",
+        "hint": "This class represents a single input element in a form."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What method is used to add validators to a FormControl?",
+        "options": [
+            "addValidators()", 
+            "setValidators()", 
+            "withValidators()", 
+            "createValidators()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "setValidators()",
+        "difficulty": "medium",
+        "explanation": "`setValidators()` is used to add one or more validators to a FormControl.",
+        "hint": "This method replaces existing validators with new ones."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What is the purpose of FormBuilder service?",
+        "options": [
+            "To create form templates", 
+            "To simplify form control creation", 
+            "To validate forms", 
+            "To style form elements"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To simplify form control creation",
+        "difficulty": "medium",
+        "explanation": "FormBuilder provides syntactic sugar for creating FormControl, FormGroup, and FormArray instances more concisely.",
+        "hint": "This service reduces boilerplate code when creating complex forms."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "Which method creates a form group in Reactive Forms?",
+        "options": [
+            "createGroup()", 
+            "new FormGroup()", 
+            "FormBuilder.group()", 
+            "addGroup()"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "FormBuilder.group()",
+        "difficulty": "easy",
+        "explanation": "`FormBuilder.group()` is the recommended way to create a form group with multiple form controls.",
+        "hint": "This method is part of the FormBuilder service."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What is the primary difference between FormControl and FormGroup?",
+        "options": [
+            "FormControl is for multiple inputs, FormGroup for single input", 
+            "FormControl manages a single input, FormGroup manages multiple controls", 
+            "They are exactly the same", 
+            "FormControl is only for validation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "FormControl manages a single input, FormGroup manages multiple controls",
+        "difficulty": "medium",
+        "explanation": "FormControl represents a single input element, while FormGroup is a collection of FormControls.",
+        "hint": "Think of FormGroup as a container for multiple FormControls."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "How do you add a validator to a form control programmatically?",
+        "options": [
+            "this.control.validator = Validators.required", 
+            "this.control.setValidators(Validators.required)", 
+            "this.control.addValidator(Validators.required)", 
+            "this.control.validate(Validators.required)"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "this.control.setValidators(Validators.required)",
+        "difficulty": "medium",
+        "explanation": "`setValidators()` method is used to add validators to a form control in the component class.",
+        "hint": "This method is part of the FormControl class."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What does the `touched` property indicate in Reactive Forms?",
+        "options": [
+            "The field has been modified", 
+            "The field has been focused", 
+            "The field has been blurred", 
+            "The field is currently active"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "The field has been blurred",
+        "difficulty": "easy",
+        "explanation": "`touched` becomes true when a form control loses focus after being interacted with.",
+        "hint": "This state changes when a user moves away from an input field."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "Which method is used to reset a Reactive Form?",
+        "options": [
+            "form.reset()", 
+            "form.clear()", 
+            "form.clearValidators()", 
+            "form.removeControl()"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "form.reset()",
+        "difficulty": "easy",
+        "explanation": "`reset()` method clears the form controls and resets their validation states.",
+        "hint": "This method restores the form to its initial state."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What is FormArray used for in Reactive Forms?",
+        "options": [
+            "To create static form layouts", 
+            "To manage a dynamic list of form controls", 
+            "To validate multiple inputs", 
+            "To style form elements"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To manage a dynamic list of form controls",
+        "difficulty": "hard",
+        "explanation": "FormArray allows dynamically adding or removing form controls at runtime.",
+        "hint": "Useful for forms with variable number of inputs, like dynamic form fields."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "How do you create a custom validator in Reactive Forms?",
+        "options": [
+            "Using @Validator decorator", 
+            "Creating a function that returns null or ValidationErrors", 
+            "Using ngValidator directive", 
+            "Extending Validators class"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creating a function that returns null or ValidationErrors",
+        "difficulty": "hard",
+        "explanation": "Custom validators are functions that return null if valid or a ValidationErrors object if invalid.",
+        "hint": "The validator function receives the form control as an argument."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What method adds a control to an existing FormGroup?",
+        "options": [
+            "addControl()", 
+            "insertControl()", 
+            "setControl()", 
+            "pushControl()"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "setControl()",
+        "difficulty": "medium",
+        "explanation": "`setControl()` method adds or replaces a control in an existing FormGroup.",
+        "hint": "This method allows dynamic control management."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What does the `markAllAsTouched()` method do?",
+        "options": [
+            "Marks all controls as modified", 
+            "Triggers validation for all controls", 
+            "Marks all controls as touched", 
+            "Disables all form controls"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Marks all controls as touched",
+        "difficulty": "medium",
+        "explanation": "`markAllAsTouched()` sets the `touched` state to true for all controls in a form group.",
+        "hint": "Useful for showing validation errors on form submission."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "How do you disable a form control in Reactive Forms?",
+        "options": [
+            "this.control.disabled = true", 
+            "this.control.disable()", 
+            "this.control.setDisabled(true)", 
+            "this.control.markAsDisabled()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "this.control.disable()",
+        "difficulty": "easy",
+        "explanation": "`disable()` method prevents user interaction and changes the control's disabled state.",
+        "hint": "This method is part of the FormControl class."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What is an async validator in Reactive Forms?",
+        "options": [
+            "A validator that runs synchronously", 
+            "A validator that checks form state", 
+            "A validator that returns a Promise or Observable", 
+            "A validator for complex forms"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A validator that returns a Promise or Observable",
+        "difficulty": "hard",
+        "explanation": "Async validators perform validation that might take time, typically returning a Promise or Observable.",
+        "hint": "Useful for server-side validations like checking username availability."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What method retrieves the value of a form group?",
+        "options": [
+            "form.getValue()", 
+            "form.values", 
+            "form.value", 
+            "form.getValues()"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "form.value",
+        "difficulty": "easy",
+        "explanation": "`value` property returns an object containing the current values of all controls in a form group.",
+        "hint": "This is a simple way to access form data."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "How do you check if a form control is valid?",
+        "options": [
+            "this.control.isValid()", 
+            "this.control.valid", 
+            "this.control.validate()", 
+            "this.control.checkValidity()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "this.control.valid",
+        "difficulty": "easy",
+        "explanation": "`valid` property is a boolean indicating whether the form control passes all its validators.",
+        "hint": "This is a simple boolean property on form controls."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What is the purpose of `patchValue()` method?",
+        "options": [
+            "To completely replace form values", 
+            "To update part of the form values", 
+            "To reset form values", 
+            "To validate form values"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To update part of the form values",
+        "difficulty": "medium",
+        "explanation": "`patchValue()` allows updating specific form control values without replacing the entire form group.",
+        "hint": "Unlike `setValue()`, this method doesn't require all values to be specified."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What does the `pending` state indicate in form validation?",
+        "options": [
+            "Form is being validated", 
+            "Validation is complete", 
+            "Form has errors", 
+            "Form is valid"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Form is being validated",
+        "difficulty": "hard",
+        "explanation": "`pending` state occurs during asynchronous validations, indicating validation is in progress.",
+        "hint": "Common with async validators like server-side checks."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "How do you add error messages conditionally in Reactive Forms?",
+        "options": [
+            "Using ngIf with form control errors", 
+            "Using JavaScript alerts", 
+            "Using console.log()", 
+            "Using ngSwitch"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using ngIf with form control errors",
+        "difficulty": "medium",
+        "explanation": "Error messages are typically displayed using `ngIf` directive and checking form control's `errors` property.",
+        "hint": "Access specific error types through the control's errors object."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What is the difference between `setValue()` and `patchValue()`?",
+        "options": [
+            "They are exactly the same", 
+            "setValue() updates partial values, patchValue() replaces all", 
+            "setValue() replaces all values, patchValue() updates partial values", 
+            "No difference"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "setValue() replaces all values, patchValue() updates partial values",
+        "difficulty": "hard",
+        "explanation": "`setValue()` requires all form control values to be specified, while `patchValue()` allows updating only specific values.",
+        "hint": "Consider the level of control needed when updating form values."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "How do you create a cross-field validator?",
+        "options": [
+            "Using @CrossValidator decorator", 
+            "Creating a custom validator function for the form group", 
+            "Using built-in cross-field validators", 
+            "Extending Validators class"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creating a custom validator function for the form group",
+        "difficulty": "hard",
+        "explanation": "Cross-field validators are custom validator functions applied to the entire form group, comparing multiple control values.",
+        "hint": "The validator function receives the entire form group as an argument."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What method removes a control from a FormGroup?",
+        "options": [
+            "deleteControl()", 
+            "removeControl()", 
+            "clearControl()", 
+            "destroyControl()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "removeControl()",
+        "difficulty": "medium",
+        "explanation": "`removeControl()` method removes a specific control from a FormGroup.",
+        "hint": "Used for dynamically managing form controls."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What is the purpose of `statusChanges` observable?",
+        "options": [
+            "To track form value changes", 
+            "To monitor form validation status", 
+            "To disable form controls", 
+            "To reset form values"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To monitor form validation status",
+        "difficulty": "hard",
+        "explanation": "`statusChanges` observable emits whenever the validation status of a form control or group changes.",
+        "hint": "Useful for reactive programming and complex form interactions."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "How do you create a dynamic form control?",
+        "options": [
+            "Using ngIf", 
+            "Using FormArray", 
+            "Using *ngFor", 
+            "Using ngSwitch"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using FormArray",
+        "difficulty": "hard",
+        "explanation": "FormArray allows dynamically adding or removing form controls at runtime.",
+        "hint": "Ideal for forms with a variable number of input fields."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What method is used to clear validators from a form control?",
+        "options": [
+            "clearValidators()", 
+            "removeValidators()", 
+            "setValidators(null)", 
+            "deleteValidators()"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "clearValidators()",
+        "difficulty": "medium",
+        "explanation": "`clearValidators()` removes all validators from a form control.",
+        "hint": "Use this when you want to remove all validation rules."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "What is the primary advantage of Reactive Forms over Template-Driven Forms?",
+        "options": [
+            "Less code in template", 
+            "More control and predictability", 
+            "Easier to set up", 
+            "Better performance"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "More control and predictability",
+        "difficulty": "hard",
+        "explanation": "Reactive Forms provide more explicit control over form validation, value changes, and form management in the component class.",
+        "hint": "Consider where most of the form logic is defined and managed."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Reactive Forms",
+        "questionText": "How do you bind a reactive form to a template?",
+        "options": [
+            "Using ngModel", 
+            "Using formControlName", 
+            "Using [(ngModel)]", 
+            "Using form attribute"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using formControlName",
+        "difficulty": "easy",
+        "explanation": "`formControlName` directive binds form controls defined in the component to template inputs.",
+        "hint": "This is the standard way to connect reactive form controls to template elements."
+    },
 
     // HTTP Client
 
