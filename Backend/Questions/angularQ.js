@@ -4277,9 +4277,852 @@ const AngularQuestions = [
     },
 
     // HTTP Client
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What module do you need to import to use HttpClient in Angular?",
+        "options": ["HttpModule", "HttpClientModule", "AngularHttpModule", "WebRequestModule"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "HttpClientModule",
+        "difficulty": "easy",
+        "explanation": "To use HttpClient, you must import HttpClientModule in your app module's imports array.",
+        "hint": "Look for the module that provides HTTP client functionality in Angular core."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "Which method is used to send a GET request in Angular's HttpClient?",
+        "options": ["get()", "fetch()", "retrieve()", "request()"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "get()",
+        "difficulty": "easy",
+        "explanation": "HttpClient.get() is used to send HTTP GET requests and retrieve data from a server.",
+        "hint": "This method returns an Observable of the response."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What does the `HttpClient.post()` method return by default?",
+        "options": ["Promise<any>", "Observable<any>", "Array<any>", "Subject<any>"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Observable<any>",
+        "difficulty": "medium",
+        "explanation": "HttpClient methods like post() return an Observable by default, which needs to be subscribed to trigger the request.",
+        "hint": "RxJS Observables are central to Angular's HTTP client design."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "How can you handle HTTP request errors in Angular?",
+        "options": [
+            "Using try-catch block", 
+            "Using catchError operator from RxJS", 
+            "Using global error handler", 
+            "Using async/await"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Using catchError operator from RxJS",
+        "difficulty": "medium",
+        "explanation": "The catchError operator from RxJS allows you to intercept and handle HTTP errors in the request stream.",
+        "hint": "Error handling in Observables is different from traditional error handling."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What is the purpose of HttpInterceptor in Angular?",
+        "options": [
+            "To modify request headers", 
+            "To cache HTTP responses", 
+            "To log network activity", 
+            "All of the above"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "All of the above",
+        "difficulty": "hard",
+        "explanation": "HttpInterceptor allows you to intercept and modify HTTP requests and responses globally, enabling tasks like adding headers, logging, and response caching.",
+        "hint": "Interceptors are powerful middleware for HTTP requests in Angular."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "Code Snippet: What will be the output of this HTTP request?",
+        "options": [
+            "Returns User data", 
+            "Throws an error", 
+            "Returns null", 
+            "Returns empty array"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Returns User data",
+        "difficulty": "hard",
+        "questionCode": `
+@Injectable()
+export class UserService {
+    constructor(private http: HttpClient) {}
+    
+    getUsers(): Observable<User[]> {
+    return this.http.get<User[]>('/api/users');
+    }
+}`,
+        "explanation": "The method returns an Observable of User array by making a GET request to '/api/users' endpoint.",
+        "hint": "Type casting with generic type helps TypeScript understand the response structure."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "Which RxJS operator is best for handling multiple HTTP requests concurrently?",
+        "options": ["mergeMap", "switchMap", "concatMap", "forkJoin"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "forkJoin",
+        "difficulty": "hard",
+        "explanation": "forkJoin is ideal for executing multiple HTTP requests concurrently and waiting for all to complete.",
+        "hint": "Think about scenarios where you need results from multiple parallel API calls."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What HTTP method would you use to update a resource partially?",
+        "options": ["PUT", "POST", "PATCH", "UPDATE"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "PATCH",
+        "difficulty": "medium",
+        "explanation": "PATCH is used for partial updates, sending only the changes instead of the entire resource.",
+        "hint": "Difference between PUT (full update) and PATCH (partial update)."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "How do you set custom headers in an HTTP request?",
+        "options": [
+            "Using request() method", 
+            "Using headers property", 
+            "Using HttpHeaders class", 
+            "Using interceptors"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using HttpHeaders class",
+        "difficulty": "medium",
+        "explanation": "HttpHeaders provides methods to set, append, and modify HTTP headers for requests.",
+        "hint": "Angular provides a dedicated class for managing HTTP headers."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What does the HttpClient.delete() method do?",
+        "options": [
+            "Removes local data", 
+            "Sends DELETE request to server", 
+            "Clears browser cache", 
+            "Stops ongoing requests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Sends DELETE request to server",
+        "difficulty": "easy",
+        "explanation": "delete() method sends an HTTP DELETE request to remove a resource on the server.",
+        "hint": "Used for removing resources in RESTful APIs."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What is the purpose of HttpParams in Angular's HttpClient?",
+        "options": [
+            "To set request headers", 
+            "To create query parameters", 
+            "To handle response data", 
+            "To manage error handling"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To create query parameters",
+        "difficulty": "medium",
+        "explanation": "HttpParams helps construct and manage URL query parameters for HTTP requests.",
+        "hint": "Used when you need to add parameters to a GET request URL."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "How can you set a timeout for an HTTP request in Angular?",
+        "options": [
+            "Using setTimeout()", 
+            "With catchError operator", 
+            "Using HttpClient's timeout config", 
+            "By catching network errors"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using HttpClient's timeout config",
+        "difficulty": "hard",
+        "explanation": "Angular's HttpClient allows setting request timeout using the timeout operator from RxJS.",
+        "hint": "RxJS provides operators for managing request timing and cancellation."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What does the withCredentials option do in HTTP requests?",
+        "options": [
+            "Adds authentication headers", 
+            "Enables cross-origin requests with credentials", 
+            "Stores cookies locally", 
+            "Manages session tokens"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Enables cross-origin requests with credentials",
+        "difficulty": "hard",
+        "explanation": "withCredentials allows sending cookies and authentication headers in cross-origin requests.",
+        "hint": "Important for handling authentication across different domains."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "Code Snippet: What is the purpose of this HTTP interceptor?",
+        "questionCode": `
+@Injectable()
+export class AuthInterceptor implements HttpInterceptor {
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    const authReq = req.clone({
+        headers: req.headers.set('Authorization', 'Bearer ' + token)
+    });
+    return next.handle(authReq);
+    }
+}`,
+        "options": [
+            "Logging requests", 
+            "Adding authentication token", 
+            "Caching responses", 
+            "Error handling"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Adding authentication token",
+        "difficulty": "hard",
+        "explanation": "This interceptor automatically adds an Authorization header to every outgoing HTTP request.",
+        "hint": "Interceptors can modify requests globally before they are sent."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "Which RxJS operator is best for sequential HTTP requests?",
+        "options": [
+            "mergeMap", 
+            "switchMap", 
+            "concatMap", 
+            "exhaustMap"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "concatMap",
+        "difficulty": "hard",
+        "explanation": "concatMap ensures HTTP requests are made sequentially, waiting for each to complete before starting the next.",
+        "hint": "Think about scenarios requiring ordered API calls."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What method can you use to handle HTTP request progress?",
+        "options": [
+            "reportProgress option", 
+            "onProgress method", 
+            "trackProgress method", 
+            "progressEvent listener"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "reportProgress option",
+        "difficulty": "medium",
+        "explanation": "The reportProgress option in HttpClient allows tracking upload and download progress.",
+        "hint": "Useful for file uploads and downloads to show progress bars."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What does the responseType option do in HTTP requests?",
+        "options": [
+            "Changes response format", 
+            "Sets content type", 
+            "Defines expected response type", 
+            "Modifies request headers"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Defines expected response type",
+        "difficulty": "medium",
+        "explanation": "responseType allows specifying the expected type of response data (e.g., json, text, blob).",
+        "hint": "Helps in handling different types of server responses."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "How can you cancel an ongoing HTTP request?",
+        "options": [
+            "Using Promise.cancel()", 
+            "With RxJS takeUntil operator", 
+            "Calling unsubscribe()", 
+            "Using HttpClient.abort()"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "With RxJS takeUntil operator",
+        "difficulty": "hard",
+        "explanation": "RxJS's takeUntil operator allows cancelling ongoing observables based on a cancellation signal.",
+        "hint": "Provides a clean way to manage request lifecycle."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "What is the primary difference between HttpClient and HttpModule?",
+        "options": [
+            "No significant difference", 
+            "HttpClient is more modern and feature-rich", 
+            "HttpModule supports more request types", 
+            "HttpClient is slower"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "HttpClient is more modern and feature-rich",
+        "difficulty": "medium",
+        "explanation": "HttpClient is a more modern replacement for HttpModule, offering improved features like typed requests and better testing support.",
+        "hint": "HttpClient is recommended for new Angular applications."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "HTTP Client",
+        "questionText": "Code Snippet: What will this code accomplish?",
+        "questionCode": `
+@Injectable({
+    providedIn: 'root'
+})
+export class UserService {
+    constructor(private http: HttpClient) {}
+
+    createUser(user: User): Observable<User> {
+    return this.http.post<User>('/api/users', user)
+        .pipe(
+        retry(3),
+        catchError(this.handleError)
+        );
+    }
+}`,
+        "options": [
+            "Simple user creation without error handling", 
+            "User creation with retry and error handling", 
+            "Automatic user validation", 
+            "Cached user request"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "User creation with retry and error handling",
+        "difficulty": "hard",
+        "explanation": "The code creates a user via POST request, with 3 retry attempts and custom error handling.",
+        "hint": "RxJS operators provide powerful request management capabilities."
+    },
+
 
     // angular Material
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What module must be imported to use Angular Material components?",
+        "options": [
+            "MatComponentsModule", 
+            "MaterialModule", 
+            "MatModule", 
+            "MatImportsModule"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MaterialModule",
+        "difficulty": "easy",
+        "explanation": "To use Angular Material components, you need to import specific Material modules for each component type.",
+        "hint": "Each Material component typically has its own import module."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "Which command is used to add Angular Material to an Angular project?",
+        "options": [
+            "ng add material", 
+            "npm install @angular/material", 
+            "ng add @angular/material", 
+            "npm install material-angular"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "ng add @angular/material",
+        "difficulty": "easy",
+        "explanation": "The ng add command installs Angular Material and sets up necessary configurations automatically.",
+        "hint": "This is the official Angular CLI command for adding Material to a project."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the purpose of MatThemingModule?",
+        "options": [
+            "Create custom color themes", 
+            "Manage component animations", 
+            "Handle material icons", 
+            "Configure material layouts"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Create custom color themes",
+        "difficulty": "medium",
+        "explanation": "MatThemingModule allows developers to create and apply custom color palettes across Angular Material components.",
+        "hint": "Theming is a key feature of Angular Material for consistent design."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "Which decorator is used to create a custom Material theme?",
+        "options": [
+            "@Theme", 
+            "@MaterialTheme", 
+            "@angular/theme", 
+            "No specific decorator needed"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "No specific decorator needed",
+        "difficulty": "medium",
+        "explanation": "Custom themes in Angular Material are typically created using SCSS mixins and configuration, not a specific decorator.",
+        "hint": "Theme creation involves SCSS configuration rather than a TypeScript decorator."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What component is used for creating responsive layout in Angular Material?",
+        "options": [
+            "MatGrid", 
+            "MatLayout", 
+            "MatFlex", 
+            "MatCard"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MatLayout",
+        "difficulty": "easy",
+        "explanation": "MatLayout provides flexible layout directives for creating responsive designs in Angular Material.",
+        "hint": "This component helps in creating responsive and adaptive layouts."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "Which Material component is used for creating dialog boxes?",
+        "options": [
+            "MatPopup", 
+            "MatModal", 
+            "MatDialog", 
+            "MatOverlay"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "MatDialog",
+        "difficulty": "easy",
+        "explanation": "MatDialog service is used to create and manage dialog boxes in Angular Material.",
+        "hint": "This service allows programmatic creation of dialog windows."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the primary use of MatSnackBar?",
+        "options": [
+            "Creating complex forms", 
+            "Displaying temporary notifications", 
+            "Managing data tables", 
+            "Creating navigation menus"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Displaying temporary notifications",
+        "difficulty": "medium",
+        "explanation": "MatSnackBar provides a way to show brief, temporary notifications to users.",
+        "hint": "Think of toast messages or quick feedback mechanisms."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "Code Snippet: How would you open a Material Dialog?",
+        "options": [
+            "dialog.open()", 
+            "dialog.create()", 
+            "dialog.show()", 
+            "dialog.launch()"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "dialog.open()",
+        "difficulty": "medium",
+        "questionCode": `
+@Component({...})
+export class ExampleComponent {
+    constructor(public dialog: MatDialog) {}
 
+    openDialog(): void {
+    const dialogRef = this.dialog.open(MyDialogComponent, {
+        width: '250px',
+        data: { name: 'John' }
+    });
+    }
+}`,
+        "explanation": "The open() method of MatDialog creates and displays a dialog with optional configuration.",
+        "hint": "MatDialog.open() takes the component and optional configuration object."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "Which Material component is used for creating tabs?",
+        "options": [
+            "MatTabs", 
+            "MatNavigation", 
+            "MatTabGroup", 
+            "MatRouter"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "MatTabGroup",
+        "difficulty": "easy",
+        "explanation": "MatTabGroup component is used to create tabbed interfaces in Angular Material.",
+        "hint": "This component manages a group of interactive tabs."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the primary purpose of MatPaginator?",
+        "options": [
+            "Creating forms", 
+            "Managing pagination for data tables", 
+            "Routing between pages", 
+            "Handling user authentication"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Managing pagination for data tables",
+        "difficulty": "medium",
+        "explanation": "MatPaginator provides controls for paginating data in tables or lists.",
+        "hint": "Used to break large datasets into manageable pages."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "How do you create a custom theme in Angular Material?",
+        "options": [
+            "Using @angular/theme decorator", 
+            "Through SCSS with mat-core() and mat-palette()", 
+            "In component metadata", 
+            "Using TypeScript configuration"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Through SCSS with mat-core() and mat-palette()",
+        "difficulty": "hard",
+        "explanation": "Custom themes in Angular Material are created using SCSS mixins like mat-core() and defining color palettes.",
+        "hint": "Theming involves creating SCSS variables and using Material's theming mixins."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the purpose of MatBottomSheet?",
+        "options": [
+            "Creating full-screen dialogs", 
+            "Showing sheets from bottom of screen", 
+            "Managing page navigation", 
+            "Handling form submissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Showing sheets from bottom of screen",
+        "difficulty": "medium",
+        "explanation": "MatBottomSheet displays a sheet of content from the bottom of the screen, typically for mobile interfaces.",
+        "hint": "Similar to a modal, but slides up from the bottom."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "Code Snippet: How would you create a form field with error handling?",
+        "questionCode": `
+<mat-form-field>
+    <input matInput 
+            [formControl]="emailControl">
+    <mat-error *ngIf="emailControl.hasError('required')">
+    Email is required
+    </mat-error>
+    <mat-error *ngIf="emailControl.hasError('email')">
+    Invalid email format
+    </mat-error>
+</mat-form-field>`,
+        "options": [
+            "Simple input field", 
+            "Form field with error messages", 
+            "Disabled input", 
+            "Read-only input"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Form field with error messages",
+        "difficulty": "medium",
+        "explanation": "This demonstrates using MatFormField with reactive forms to show specific error messages.",
+        "hint": "MatError provides conditional error display based on form control state."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What component is used for creating expandable panels?",
+        "options": [
+            "MatExpand", 
+            "MatAccordion", 
+            "MatExpansionPanel", 
+            "MatDropdown"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "MatExpansionPanel",
+        "difficulty": "easy",
+        "explanation": "MatExpansionPanel creates collapsible/expandable content sections in Angular Material.",
+        "hint": "Commonly used for creating FAQ-style or accordion-like interfaces."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "How do you implement dark mode in Angular Material?",
+        "options": [
+            "Using @angular/dark-theme", 
+            "Manually switching CSS classes", 
+            "Using predefined dark theme from Material", 
+            "Through MatThemingModule"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Using predefined dark theme from Material",
+        "difficulty": "hard",
+        "explanation": "Angular Material provides predefined dark themes that can be applied through SCSS configuration.",
+        "hint": "Involves creating alternate theme stylesheets and toggling between them."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the purpose of MatRipple directive?",
+        "options": [
+            "Creating loading animations", 
+            "Adding click interaction effects", 
+            "Managing form validations", 
+            "Handling scroll events"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Adding click interaction effects",
+        "difficulty": "easy",
+        "explanation": "MatRipple creates material design-style click/touch interaction ripple effects on elements.",
+        "hint": "Provides visual feedback for user interactions."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "Which service is used to create dynamic tooltips?",
+        "options": [
+            "MatTooltipService", 
+            "MatTooltip", 
+            "TooltipBuilder", 
+            "MatTooltipModule"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MatTooltip",
+        "difficulty": "medium",
+        "explanation": "MatTooltip directive is used to create informational tooltips on elements.",
+        "hint": "Can be applied directly to elements in the template."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What module provides stepper functionality?",
+        "options": [
+            "MatStepperModule", 
+            "MatWizardModule", 
+            "MatProgressModule", 
+            "MatSequenceModule"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "MatStepperModule",
+        "difficulty": "easy",
+        "explanation": "MatStepperModule allows creation of multi-step forms or processes with linear/non-linear progression.",
+        "hint": "Useful for complex forms or guided workflows."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "How can you customize Material component appearance?",
+        "options": [
+            "Using @Input() decorators", 
+            "Through global SCSS variables", 
+            "By extending component classes", 
+            "Using ViewEncapsulation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Through global SCSS variables",
+        "difficulty": "hard",
+        "explanation": "Material components can be customized using global SCSS variables and theme mixins.",
+        "hint": "Theming involves modifying color, typography, and density variables."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the primary use of MatChipsModule?",
+        "options": [
+            "Creating navigation menus", 
+            "Displaying compact input tags", 
+            "Managing form validations", 
+            "Creating dropdown selections"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Displaying compact input tags",
+        "difficulty": "medium",
+        "explanation": "MatChipsModule provides components for creating compact, removable input tags or chips.",
+        "hint": "Commonly used in email inputs, tag selections, and filters."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the purpose of MatSidenavModule?",
+        "options": [
+            "Creating pop-up windows", 
+            "Implementing side navigation drawers", 
+            "Managing form layouts", 
+            "Creating modal dialogs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Implementing side navigation drawers",
+        "difficulty": "easy",
+        "explanation": "MatSidenavModule provides components for creating sliding side navigation menus that can be toggled open and closed.",
+        "hint": "Common in responsive web applications for mobile and desktop layouts."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "How do you implement drag and drop functionality in Angular Material?",
+        "options": [
+            "Using MatDragDrop", 
+            "With CdkDragDrop from @angular/cdk", 
+            "Through MatDropModule", 
+            "Using custom directives"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "With CdkDragDrop from @angular/cdk",
+        "difficulty": "medium",
+        "explanation": "CdkDragDrop is part of Angular's CDK (Component Dev Kit) and provides drag and drop functionality.",
+        "hint": "Part of the Angular Material ecosystem but from the CDK package."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "Code Snippet: What does this Angular Material configuration demonstrate?",
+        "questionCode": `
+const myTheme = createTheme({
+    palette: {
+    primary: {
+        main: '#ff4400',
+    },
+    secondary: {
+        main: '#0044ff',
+    },
+    },
+});`,
+        "options": [
+            "Creating a new Angular component", 
+            "Defining a custom color palette", 
+            "Setting up routing", 
+            "Managing form validations"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Defining a custom color palette",
+        "difficulty": "hard",
+        "explanation": "This code creates a custom theme with specific primary and secondary color definitions.",
+        "hint": "Theming allows precise control over Material component colors."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What component is used for creating date pickers?",
+        "options": [
+            "MatCalendar", 
+            "MatDatepicker", 
+            "MatDateInput", 
+            "MatCalendarInput"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MatDatepicker",
+        "difficulty": "easy",
+        "explanation": "MatDatepicker provides a calendar interface for selecting dates in forms.",
+        "hint": "Supports various date input and selection scenarios."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "How can you implement progressive loading in Material data tables?",
+        "options": [
+            "Using MatPaginator", 
+            "With CdkVirtualScrollViewport", 
+            "Through MatProgressBar", 
+            "Using ngFor directive"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "With CdkVirtualScrollViewport",
+        "difficulty": "hard",
+        "explanation": "CdkVirtualScrollViewport enables efficient rendering of large lists by only rendering visible items.",
+        "hint": "Part of Angular CDK, helps with performance in large datasets."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the primary purpose of MatBadge?",
+        "options": [
+            "Creating form badges", 
+            "Displaying notification counts", 
+            "Marking form fields", 
+            "Generating QR codes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Displaying notification counts",
+        "difficulty": "easy",
+        "explanation": "MatBadge allows adding small numerical or status indicators to elements.",
+        "hint": "Commonly used for showing unread notifications or item counts."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "How do you implement form field hints in Material?",
+        "options": [
+            "Using matHint directive", 
+            "With tooltip", 
+            "Through error messages", 
+            "Using placeholder"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using matHint directive",
+        "difficulty": "medium",
+        "explanation": "matHint directive allows adding helper text to form fields in Material design.",
+        "hint": "Provides additional context for form inputs."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What module provides progress indicator components?",
+        "options": [
+            "MatLoadingModule", 
+            "MatProgressModule", 
+            "MatIndicatorModule", 
+            "MatSpinnerModule"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MatProgressModule",
+        "difficulty": "easy",
+        "explanation": "MatProgressModule provides components like progress bar and spinner for indicating loading states.",
+        "hint": "Essential for providing user feedback during async operations."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "How can you implement responsive layouts in Angular Material?",
+        "options": [
+            "Using MatGrid", 
+            "With @angular/flex-layout", 
+            "Through CSS media queries", 
+            "Using MatLayout"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "With @angular/flex-layout",
+        "difficulty": "hard",
+        "explanation": "While not strictly part of Material, @angular/flex-layout provides powerful responsive layout directives.",
+        "hint": "Complements Material's responsive design capabilities."
+    },
+    {
+        "topic": "67defd2be107cf2e3745af6c",
+        "module": "Angular Material",
+        "questionText": "What is the purpose of MatMenuModule?",
+        "options": [
+            "Creating dropdown navigation", 
+            "Managing form menus", 
+            "Handling context menus", 
+            "Creating side navigation"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Creating dropdown navigation",
+        "difficulty": "easy",
+        "explanation": "MatMenuModule provides components for creating dropdown menus and navigation lists.",
+        "hint": "Supports nested menus and various interaction patterns."
+    },
     // State Management
 
     // Testing Angular Applications
