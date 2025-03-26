@@ -854,6 +854,465 @@ const CNQuestions = [
     },
 
     // Physical Layer
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary function of the Physical Layer in the network communication model?",
+        "options": [
+            "Data encryption", 
+            "Routing packets", 
+            "Transmitting raw bits over a physical medium", 
+            "Managing network sessions"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Transmitting raw bits over a physical medium",
+        "difficulty": "easy",
+        "explanation": "The Physical Layer is responsible for the actual transmission of raw bit streams over physical transmission media like cables, wireless signals, etc.",
+        "hint": "Lowest layer in the network communication model"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary purpose of a repeater in network communication?",
+        "options": [
+            "Filtering network traffic", 
+            "Regenerating and retransmitting signals", 
+            "Connecting different network types", 
+            "Encrypting data transmission"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Regenerating and retransmitting signals",
+        "difficulty": "medium",
+        "explanation": "Repeaters regenerate and retransmit signals to extend the transmission distance by combating signal degradation over long distances.",
+        "hint": "Helps maintain signal strength across network segments"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What does bandwidth represent in physical layer communication?",
+        "options": [
+            "Network security level", 
+            "Data transmission capacity", 
+            "Number of connected devices", 
+            "Signal processing speed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data transmission capacity",
+        "difficulty": "easy",
+        "explanation": "Bandwidth represents the maximum data transmission capacity of a communication channel, typically measured in bits per second (bps).",
+        "hint": "Think about how much data can be sent through a network connection"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "Which transmission medium offers the highest bandwidth?",
+        "options": [
+            "Coaxial Cable", 
+            "Twisted Pair Cable", 
+            "Fiber Optic Cable", 
+            "Wireless"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Fiber Optic Cable",
+        "difficulty": "medium",
+        "explanation": "Fiber optic cables provide the highest bandwidth and lowest signal loss, using light pulses to transmit data over long distances.",
+        "hint": "Uses light for data transmission"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is multiplexing in physical layer communication?",
+        "options": [
+            "Data encryption method", 
+            "Combining multiple signals on a single transmission medium", 
+            "Network routing technique", 
+            "Signal compression method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Combining multiple signals on a single transmission medium",
+        "difficulty": "hard",
+        "explanation": "Multiplexing allows multiple signals to be transmitted simultaneously over a single communication channel, increasing transmission efficiency.",
+        "hint": "Enables multiple data streams to use the same physical medium"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary difference between analog and digital transmission?",
+        "options": [
+            "Transmission speed", 
+            "Signal representation", 
+            "Network security", 
+            "Bandwidth usage"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Signal representation",
+        "difficulty": "medium",
+        "explanation": "Analog transmission uses continuous signals, while digital transmission uses discrete binary signals (0s and 1s).",
+        "hint": "Consider how information is represented in the transmission"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is a key characteristic of twisted pair cables?",
+        "options": [
+            "Highest bandwidth", 
+            "Electromagnetic interference resistance", 
+            "Wireless transmission", 
+            "Optical signal transmission"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Electromagnetic interference resistance",
+        "difficulty": "medium",
+        "explanation": "Twisted pair cables have pairs of insulated copper wires twisted together to reduce electromagnetic interference.",
+        "hint": "Used in Ethernet and telephone networks"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What does modulation do in physical layer communication?",
+        "options": [
+            "Data encryption", 
+            "Varying signal characteristics to encode data", 
+            "Routing packets", 
+            "Compressing data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Varying signal characteristics to encode data",
+        "difficulty": "hard",
+        "explanation": "Modulation involves varying a carrier signal's characteristics (amplitude, frequency, or phase) to encode digital or analog data.",
+        "hint": "Transforms data into a format suitable for transmission"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary function of a transceiver?",
+        "options": [
+            "Data routing", 
+            "Signal conversion between transmission and reception", 
+            "Network security", 
+            "Data compression"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Signal conversion between transmission and reception",
+        "difficulty": "medium",
+        "explanation": "A transceiver is a device that can both transmit and receive signals, converting between transmission and reception modes.",
+        "hint": "Combines transmitter and receiver functions"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is attenuation in physical layer communication?",
+        "options": [
+            "Signal encryption", 
+            "Signal strength reduction over distance", 
+            "Signal amplification", 
+            "Data compression"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Signal strength reduction over distance",
+        "difficulty": "medium",
+        "explanation": "Attenuation is the gradual loss of signal strength as it travels through a transmission medium.",
+        "hint": "Explains why signals weaken over long distances"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary advantage of coaxial cables?",
+        "options": [
+            "Wireless transmission", 
+            "High bandwidth and noise resistance", 
+            "Optical signal transmission", 
+            "Lowest cost"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "High bandwidth and noise resistance",
+        "difficulty": "medium",
+        "explanation": "Coaxial cables offer high bandwidth and good resistance to electromagnetic interference due to their shielded design.",
+        "hint": "Used in cable television and some network installations"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is synchronous transmission?",
+        "options": [
+            "Wireless data transmission", 
+            "Data transmission with predefined timing signals", 
+            "Encryption method", 
+            "Data compression technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data transmission with predefined timing signals",
+        "difficulty": "hard",
+        "explanation": "Synchronous transmission uses predefined timing signals to synchronize data transmission between sender and receiver.",
+        "hint": "Ensures precise timing of data bits"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What does baseband transmission mean?",
+        "options": [
+            "Multiple signal transmission", 
+            "Digital signal transmission on full channel bandwidth", 
+            "Wireless transmission", 
+            "Analog signal transmission"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Digital signal transmission on full channel bandwidth",
+        "difficulty": "hard",
+        "explanation": "Baseband transmission involves sending digital signals using the entire channel bandwidth without frequency division.",
+        "hint": "Uses the full capacity of the transmission medium"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary function of line coding in physical layer?",
+        "options": [
+            "Data encryption", 
+            "Converting digital data for transmission", 
+            "Network routing", 
+            "Signal compression"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Converting digital data for transmission",
+        "difficulty": "medium",
+        "explanation": "Line coding converts digital data into a format suitable for transmission over a physical medium, ensuring reliable signal transmission.",
+        "hint": "Prepares digital signals for physical transmission"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary characteristic of fiber optic cables?",
+        "options": [
+            "Lowest cost", 
+            "Transmission using light signals", 
+            "Wireless transmission", 
+            "Highest electromagnetic interference"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Transmission using light signals",
+        "difficulty": "easy",
+        "explanation": "Fiber optic cables transmit data using light pulses through glass or plastic fibers, offering high bandwidth and low signal loss.",
+        "hint": "Uses light instead of electrical signals"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What does the term 'bit rate' represent?",
+        "options": [
+            "Network security level", 
+            "Number of bits transmitted per second", 
+            "Number of connected devices", 
+            "Signal processing speed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Number of bits transmitted per second",
+        "difficulty": "easy",
+        "explanation": "Bit rate is the number of bits transmitted per second, typically measured in bits per second (bps).",
+        "hint": "Measures data transmission speed"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the purpose of a hub in physical layer communication?",
+        "options": [
+            "Routing packets", 
+            "Broadcasting signals to all connected devices", 
+            "Encrypting data", 
+            "Compressing data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Broadcasting signals to all connected devices",
+        "difficulty": "medium",
+        "explanation": "A hub is a basic networking device that broadcasts incoming signals to all connected devices, operating at the physical layer.",
+        "hint": "Operates as a simple signal distributor"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is frequency division multiplexing (FDM)?",
+        "options": [
+            "Data encryption method", 
+            "Dividing bandwidth into separate frequency channels", 
+            "Network routing technique", 
+            "Signal compression method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Dividing bandwidth into separate frequency channels",
+        "difficulty": "hard",
+        "explanation": "Frequency Division Multiplexing (FDM) divides the total bandwidth of a communication channel into multiple non-overlapping frequency channels.",
+        "hint": "Allows multiple signals to use different frequencies"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary difference between simplex, half-duplex, and full-duplex transmission?",
+        "options": [
+            "Signal strength", 
+            "Data transmission direction", 
+            "Bandwidth usage", 
+            "Network security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data transmission direction",
+        "difficulty": "hard",
+        "explanation": "Simplex allows transmission in one direction, half-duplex allows alternating transmission, and full-duplex allows simultaneous transmission in both directions.",
+        "hint": "Consider communication flow between sender and receiver"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary challenge with wireless transmission?",
+        "options": [
+            "High cost", 
+            "Signal interference and attenuation", 
+            "Limited encryption", 
+            "Slow transmission speed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Signal interference and attenuation",
+        "difficulty": "medium",
+        "explanation": "Wireless transmission faces challenges like signal interference from other devices, obstacles, and signal strength reduction over distance.",
+        "hint": "External factors affect signal quality"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is time division multiplexing (TDM)?",
+        "options": [
+            "Data encryption method", 
+            "Dividing transmission time into fixed-length slots", 
+            "Network routing technique", 
+            "Signal compression method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Dividing transmission time into fixed-length slots",
+        "difficulty": "hard",
+        "explanation": "Time Division Multiplexing (TDM) divides the transmission time into fixed-length slots, allowing multiple signals to share the same transmission medium.",
+        "hint": "Allocates specific time slots for different signals"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary function of encoding in physical layer?",
+        "options": [
+            "Data routing", 
+            "Converting data for reliable transmission", 
+            "Network security", 
+            "Data compression"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Converting data for reliable transmission",
+        "difficulty": "medium",
+        "explanation": "Encoding converts digital data into a format that ensures reliable transmission, including error detection and synchronization.",
+        "hint": "Prepares data for physical transmission"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the maximum theoretical bandwidth of standard Category 6 (Cat 6) Ethernet cable?",
+        "options": ["100 Mbps", "1 Gbps", "10 Gbps", "40 Gbps"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "10 Gbps",
+        "difficulty": "hard",
+        "explanation": "Category 6 (Cat 6) Ethernet cables can support up to 10 Gbps transmission speeds over distances up to 55 meters.",
+        "hint": "Considers both speed and distance limitations"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What does Manchester encoding do in digital transmission?",
+        "options": [
+            "Data encryption", 
+            "Ensuring signal transitions for clock synchronization", 
+            "Data compression", 
+            "Network routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ensuring signal transitions for clock synchronization",
+        "difficulty": "hard",
+        "explanation": "Manchester encoding ensures a signal transition for every bit, providing inherent clock synchronization and easier signal detection.",
+        "hint": "Combines data and clock signal in one transmission"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary advantage of wireless transmission?",
+        "options": [
+            "Highest bandwidth", 
+            "Mobility and flexibility", 
+            "Lowest cost", 
+            "Highest security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Mobility and flexibility",
+        "difficulty": "easy",
+        "explanation": "Wireless transmission offers mobility and flexibility, allowing devices to connect without physical cable constraints.",
+        "hint": "Consider freedom of movement and device placement"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is noise in physical layer communication?",
+        "options": [
+            "Network security threat", 
+            "Unwanted signals that distort data transmission", 
+            "Data compression technique", 
+            "Routing method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Unwanted signals that distort data transmission",
+        "difficulty": "medium",
+        "explanation": "Noise refers to unwanted electrical or electromagnetic signals that interfere with and distort data transmission.",
+        "hint": "External factors that affect signal quality"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary purpose of a modem in physical layer communication?",
+        "options": [
+            "Network routing", 
+            "Modulating and demodulating signals", 
+            "Data encryption", 
+            "Signal compression"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Modulating and demodulating signals",
+        "difficulty": "easy",
+        "explanation": "A modem (modulator-demodulator) converts digital signals from computers to analog signals for transmission and vice versa.",
+        "hint": "Bridges digital and analog communication"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is wavelength division multiplexing (WDM)?",
+        "options": [
+            "Data encryption method", 
+            "Transmitting multiple signals using different light wavelengths", 
+            "Network routing technique", 
+            "Signal compression method"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Transmitting multiple signals using different light wavelengths",
+        "difficulty": "hard",
+        "explanation": "Wavelength Division Multiplexing (WDM) allows multiple optical signals to be transmitted simultaneously using different light wavelengths on a single fiber optic cable.",
+        "hint": "Increases data transmission capacity in fiber optics"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Physical Layer",
+        "questionText": "What is the primary function of a transducer in physical layer?",
+        "options": [
+            "Data routing", 
+            "Converting one form of energy to another", 
+            "Network security", 
+            "Data compression"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Converting one form of energy to another",
+        "difficulty": "medium",
+        "explanation": "A transducer converts one form of energy to another, such as converting electrical signals to sound or light for transmission.",
+        "hint": "Enables energy transformation in communication"
+    },
 
     // Data Link Layer
 
