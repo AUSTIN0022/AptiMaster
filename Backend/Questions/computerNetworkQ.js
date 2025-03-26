@@ -1781,8 +1781,729 @@ const CNQuestions = [
     },
 
     // Network Layer & IP Addressing
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the default subnet mask for a Class B IP address?",
+        "options": ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "255.255.0.0",
+        "difficulty": "easy",
+        "explanation": "Class B IP addresses have a default subnet mask of 255.255.0.0, which means the first two octets represent the network portion.",
+        "hint": "Think about the network bits in a Class B address."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the total number of usable host addresses in the subnet 192.168.1.0/24?",
+        "options": ["254", "256", "252", "258"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "254",
+        "difficulty": "easy",
+        "explanation": "In a /24 subnet, two IP addresses are reserved for network and broadcast addresses, leaving 254 usable host addresses.",
+        "hint": "Subtract 2 from the total possible addresses in a /24 network."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Which address class does 172.16.0.0 belong to?",
+        "options": ["Class A", "Class B", "Class C", "Class D"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Class B",
+        "difficulty": "easy",
+        "explanation": "IP addresses starting with 172 are in the Class B range, with the first two octets representing the network portion.",
+        "hint": "Look at the first octet to determine the address class."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is CIDR notation for a subnet mask of 255.255.255.192?",
+        "options": ["/24", "/25", "/26", "/27"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "/26",
+        "difficulty": "medium",
+        "explanation": "255.255.255.192 represents a /26 CIDR notation, which means 26 bits are used for the network portion.",
+        "hint": "Count the consecutive 1's in the binary representation of the subnet mask."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the network address for 192.168.10.45/28?",
+        "options": ["192.168.10.32", "192.168.10.40", "192.168.10.48", "192.168.10.0"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "192.168.10.32",
+        "difficulty": "medium",
+        "explanation": "For a /28 subnet, the network address is the lowest address in the subnet range that is divisible by the subnet size.",
+        "hint": "Round down to the nearest multiple of the subnet size."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Which of the following is a private IP address range?",
+        "options": [
+            "10.0.0.0 - 10.255.255.255", 
+            "172.32.0.0 - 172.63.255.255", 
+            "192.168.0.0 - 192.168.255.255", 
+            "All of the above"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "10.0.0.0 - 10.255.255.255",
+        "difficulty": "easy",
+        "explanation": "10.0.0.0/8 is a private IP address range defined by RFC 1918 for internal network use.",
+        "hint": "Private IP addresses are used in local networks and are not routable on the public internet."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "How many subnets are created by borrowing 3 bits from a Class C network?",
+        "options": ["4", "6", "8", "16"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "8",
+        "difficulty": "medium",
+        "explanation": "Borrowing 3 bits creates 2^3 = 8 subnets. The formula is 2^(borrowed bits).",
+        "hint": "Use the formula 2^(number of borrowed bits)."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the purpose of the default gateway in IP networking?",
+        "options": [
+            "To assign IP addresses", 
+            "To route traffic between different networks", 
+            "To create subnets", 
+            "To perform DNS resolution"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To route traffic between different networks",
+        "difficulty": "easy",
+        "explanation": "The default gateway is a router interface that connects local network to other networks, forwarding traffic between different network segments.",
+        "hint": "Think about how packets move between networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Calculate the total number of usable hosts in a /26 subnet",
+        "options": ["62", "64", "126", "128"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "62",
+        "difficulty": "medium",
+        "explanation": "A /26 subnet has 64 total addresses, but 2 are reserved for network and broadcast addresses, leaving 62 usable hosts.",
+        "hint": "Subtract 2 from the total possible addresses."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the broadcast address for 192.168.1.128/25?",
+        "options": ["192.168.1.255", "192.168.1.254", "192.168.1.129", "192.168.1.0"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "192.168.1.255",
+        "difficulty": "hard",
+        "explanation": "In a /25 subnet, the broadcast address is the highest address in the subnet range, which is all host bits set to 1.",
+        "hint": "The highest address in the subnet range is the broadcast address."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Which technique allows splitting a large network into smaller, more efficient segments?",
+        "options": ["Routing", "NAT", "Subnetting", "Encapsulation"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Subnetting",
+        "difficulty": "easy",
+        "explanation": "Subnetting allows network administrators to divide a larger network into smaller, more manageable and efficient subnetworks.",
+        "hint": "This technique helps in network organization and efficient IP address utilization."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What does VLSM stand for?",
+        "options": [
+            "Very Large Subnet Management", 
+            "Variable Length Subnet Masking", 
+            "Virtual Layer Switching Method", 
+            "Vertical Link State Management"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Variable Length Subnet Masking",
+        "difficulty": "medium",
+        "explanation": "VLSM allows network administrators to use different subnet masks for the same network class, providing more flexible IP address allocation.",
+        "hint": "Think about the ability to create subnets of different sizes within the same network."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the network prefix for the IP address 10.20.30.40/29?",
+        "options": ["10.20.30.32", "10.20.30.40", "10.20.30.0", "10.20.30.255"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "10.20.30.32",
+        "difficulty": "hard",
+        "explanation": "In a /29 subnet, the network prefix is the lowest address in the range that is divisible by the subnet size.",
+        "hint": "Round down to the nearest multiple that fits the subnet mask."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Which IP address is used for loopback testing?",
+        "options": ["127.0.0.1", "192.168.1.1", "10.0.0.1", "172.16.0.1"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "127.0.0.1",
+        "difficulty": "easy",
+        "explanation": "127.0.0.1 is the standard loopback address used for testing network interfaces on the local machine.",
+        "hint": "This address always refers to the local host."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the maximum number of hosts in a Class A network by default?",
+        "options": ["65,534", "126", "16,777,214", "254"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "16,777,214",
+        "difficulty": "medium",
+        "explanation": "A default Class A network uses 8 bits for the network portion and 24 bits for hosts, allowing 2^24 - 2 = 16,777,214 usable hosts.",
+        "hint": "Calculate 2^(host bits) - 2"
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What does NAT primarily do?",
+        "options": [
+            "Create new IP addresses", 
+            "Translate private IP addresses to public IP addresses", 
+            "Encrypt network traffic", 
+            "Load balance network connections"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Translate private IP addresses to public IP addresses",
+        "difficulty": "easy",
+        "explanation": "Network Address Translation (NAT) allows private IP addresses to communicate on the public internet by translating them to a public IP address.",
+        "hint": "Think about how devices with private IPs access the internet."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "In CIDR notation, what does /16 represent?",
+        "options": [
+            "16 total IP addresses", 
+            "16 bits used for the network portion", 
+            "16 subnets", 
+            "16 network interfaces"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "16 bits used for the network portion",
+        "difficulty": "medium",
+        "explanation": "In CIDR notation, /16 means 16 bits are used for the network portion of the IP address, leaving 16 bits for host addressing.",
+        "hint": "CIDR notation indicates how many bits are used for the network prefix."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Which routing method uses a single route to reach multiple destinations?",
+        "options": ["Static Routing", "Dynamic Routing", "Default Routing", "Broadcast Routing"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Default Routing",
+        "difficulty": "medium",
+        "explanation": "Default routing uses a single route to forward packets to destinations not explicitly defined in the routing table.",
+        "hint": "This method is like a 'catch-all' for unknown network destinations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the purpose of an IP routing table?",
+        "options": [
+            "To assign IP addresses", 
+            "To store network interface information", 
+            "To determine the best path for network packets", 
+            "To create network subnets"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To determine the best path for network packets",
+        "difficulty": "easy",
+        "explanation": "A routing table contains information about network destinations and the best path to reach them, guiding packet forwarding.",
+        "hint": "Think about how routers decide where to send network traffic."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Calculate the number of subnets when borrowing 4 bits from a Class C network",
+        "options": ["8", "12", "16", "32"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "32",
+        "difficulty": "hard",
+        "explanation": "Borrowing 4 bits creates 2^4 = 16 subnets. However, the first and last subnets are reserved, leaving 14 usable subnets.",
+        "hint": "Use the formula 2^(borrowed bits), then subtract the reserved subnets."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is a supernet?",
+        "options": [
+            "A network larger than a Class A network", 
+            "A method of combining multiple smaller networks", 
+            "A type of routing protocol", 
+            "A network security mechanism"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A method of combining multiple smaller networks",
+        "difficulty": "hard",
+        "explanation": "Supernetting (or CIDR) allows combining multiple contiguous network prefixes into a single, larger network prefix to reduce routing table complexity.",
+        "hint": "Think about aggregating multiple smaller networks into a single, more efficient routing entry."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Which IP address range is used for multicast addresses?",
+        "options": [
+            "10.0.0.0 - 10.255.255.255", 
+            "172.16.0.0 - 172.31.255.255", 
+            "224.0.0.0 - 239.255.255.255", 
+            "192.168.0.0 - 192.168.255.255"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "224.0.0.0 - 239.255.255.255",
+        "difficulty": "medium",
+        "explanation": "The IP address range 224.0.0.0 to 239.255.255.255 is reserved for multicast group addresses, used for one-to-many communication.",
+        "hint": "Multicast addresses allow sending a single packet to multiple recipients simultaneously."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the significance of the subnet mask 255.255.255.240?",
+        "options": ["/24", "/25", "/26", "/28"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "/28",
+        "difficulty": "hard",
+        "explanation": "A subnet mask of 255.255.255.240 corresponds to a /28 CIDR notation, providing 16 total addresses with 14 usable host addresses.",
+        "hint": "Count the consecutive 1's in the binary representation of the subnet mask."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What technique allows a single public IP address to be shared by multiple devices?",
+        "options": ["Subnetting", "DHCP", "PAT (Port Address Translation)", "VLAN"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "PAT (Port Address Translation)",
+        "difficulty": "medium",
+        "explanation": "Port Address Translation (PAT) allows multiple devices with private IP addresses to share a single public IP address by using unique port numbers.",
+        "hint": "This is a method of overloading a single public IP address."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is a classless interdomain routing (CIDR) block?",
+        "options": [
+            "A method of assigning IP addresses", 
+            "A routing protocol", 
+            "A way to represent network prefixes with variable-length subnet masks", 
+            "A type of network security"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A way to represent network prefixes with variable-length subnet masks",
+        "difficulty": "hard",
+        "explanation": "CIDR allows more flexible IP address allocation by using a variable-length subnet mask notation, represented by the '/' followed by the number of network bits.",
+        "hint": "Think about how CIDR notation provides more precise network addressing compared to traditional class-based addressing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the primary function of an IP address?",
+        "options": [
+            "To encrypt network traffic", 
+            "To uniquely identify a device on a network", 
+            "To perform DNS resolution", 
+            "To compress network data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To uniquely identify a device on a network",
+        "difficulty": "easy",
+        "explanation": "An IP address serves as a unique identifier for a device or network interface, enabling communication and routing across networks.",
+        "hint": "Think about how devices recognize and communicate with each other on a network."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "Which command can be used to view the routing table on a Windows system?",
+        "options": ["netstat", "ping", "tracert", "route print"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "route print",
+        "difficulty": "medium",
+        "explanation": "The 'route print' command displays the current routing table configuration on a Windows system.",
+        "hint": "Think about a command that shows routing information on Windows."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Layer & IP Addressing",
+        "questionText": "What is the network address for 172.16.50.129/25?",
+        "options": ["172.16.50.128", "172.16.50.0", "172.16.50.64", "172.16.50.255"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "172.16.50.128",
+        "difficulty": "hard",
+        "explanation": "In a /25 subnet, the network address is the lowest address in the subnet range, which is 172.16.50.128.",
+        "hint": "Round down to the nearest multiple that fits the subnet mask."
+    },
 
     // Routing Protocols
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is the primary purpose of a routing protocol?",
+        "options": [
+            "To encrypt network traffic", 
+            "To determine the best path for data transmission", 
+            "To assign IP addresses", 
+            "To create network subnets"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To determine the best path for data transmission",
+        "difficulty": "easy",
+        "explanation": "Routing protocols dynamically exchange information between routers to select the most efficient path for network packets.",
+        "hint": "Think about how routers decide the optimal route for data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol uses link-state algorithm?",
+        "options": ["RIP", "EIGRP", "OSPF", "BGP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "OSPF",
+        "difficulty": "medium",
+        "explanation": "Open Shortest Path First (OSPF) is a link-state routing protocol that creates a complete topology map of the network.",
+        "hint": "This protocol builds a comprehensive network topology map."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What does the administrative distance represent in routing?",
+        "options": [
+            "Network speed", 
+            "Physical distance between routers", 
+            "Trustworthiness of a routing source", 
+            "Number of hops"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Trustworthiness of a routing source",
+        "difficulty": "medium",
+        "explanation": "Administrative distance is a value that indicates the reliability of a routing source, with lower numbers being more trusted.",
+        "hint": "Lower values mean more preferred routing sources."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol is classless?",
+        "options": ["RIPv1", "IGRP", "OSPF", "EIGRP"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "EIGRP",
+        "difficulty": "hard",
+        "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) is a classless routing protocol that supports Variable Length Subnet Masking (VLSM).",
+        "hint": "Classless protocols support more flexible subnet designs."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What type of routing protocol is BGP?",
+        "options": ["Interior Gateway Protocol", "Exterior Gateway Protocol", "Link-State Protocol", "Distance Vector Protocol"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Exterior Gateway Protocol",
+        "difficulty": "medium",
+        "explanation": "Border Gateway Protocol (BGP) is an Exterior Gateway Protocol used for routing between autonomous systems on the internet.",
+        "hint": "This protocol connects different networks or service providers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What metric does RIP use for path selection?",
+        "options": ["Bandwidth", "Hop Count", "Delay", "Load"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Hop Count",
+        "difficulty": "easy",
+        "explanation": "Routing Information Protocol (RIP) uses hop count as its primary metric, selecting routes with the least number of routers between source and destination.",
+        "hint": "Fewer routers means a shorter path."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol uses the DUAL algorithm?",
+        "options": ["OSPF", "RIP", "EIGRP", "BGP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "EIGRP",
+        "difficulty": "hard",
+        "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) uses the Diffusing Update Algorithm (DUAL) for route calculation and loop prevention.",
+        "hint": "This algorithm provides fast convergence and loop-free routing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is the maximum hop count for RIPv2?",
+        "options": ["15", "16", "32", "64"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "15",
+        "difficulty": "medium",
+        "explanation": "RIPv2 has a maximum hop count of 15. Routes with 16 or more hops are considered unreachable.",
+        "hint": "Beyond this limit, the route is considered invalid."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol is primarily used in large enterprise networks?",
+        "options": ["RIP", "EIGRP", "OSPF", "BGP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "OSPF",
+        "difficulty": "easy",
+        "explanation": "Open Shortest Path First (OSPF) is widely used in large enterprise networks due to its scalability and efficiency.",
+        "hint": "This protocol works well in complex network architectures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What does OSPF use to exchange routing information?",
+        "options": ["Distance Vector", "Link-State", "Path Vector", "Bellman-Ford"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Link-State",
+        "difficulty": "medium",
+        "explanation": "OSPF uses Link-State advertisements to share detailed network topology information between routers.",
+        "hint": "Routers share complete network map information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol uses path vector mechanism?",
+        "options": ["OSPF", "RIP", "EIGRP", "BGP"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "BGP",
+        "difficulty": "hard",
+        "explanation": "Border Gateway Protocol (BGP) uses a path vector mechanism to prevent routing loops and provide path information.",
+        "hint": "This mechanism helps track the entire route path."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is route redistribution?",
+        "options": [
+            "Blocking routes between networks", 
+            "Sharing routing information between different routing protocols", 
+            "Encrypting routing data", 
+            "Limiting network access"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Sharing routing information between different routing protocols",
+        "difficulty": "medium",
+        "explanation": "Route redistribution allows routing information to be shared between different routing protocols in a network.",
+        "hint": "This helps connect networks using different routing protocols."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol supports IPv6 natively?",
+        "options": ["RIPv2", "EIGRP", "OSPF", "RIP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "OSPF",
+        "difficulty": "easy",
+        "explanation": "OSPF version 3 (OSPFv3) provides native support for IPv6 routing.",
+        "hint": "Look for the protocol with built-in IPv6 support."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is a routing domain?",
+        "options": [
+            "A physical network segment", 
+            "A group of routers under a single administrative control", 
+            "A network security zone", 
+            "A routing table"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A group of routers under a single administrative control",
+        "difficulty": "medium",
+        "explanation": "A routing domain is a collection of routers and networks under a single administrative control, typically running the same routing protocol.",
+        "hint": "Think about a network area managed by a single authority."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What does the term 'convergence' mean in routing?",
+        "options": [
+            "Combining multiple networks", 
+            "The time routers take to agree on optimal routes", 
+            "Encrypting routing data", 
+            "Reducing network complexity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "The time routers take to agree on optimal routes",
+        "difficulty": "easy",
+        "explanation": "Convergence is the time it takes for all routers in a network to agree on the optimal routes after a network change.",
+        "hint": "Consider how quickly routers adapt to network changes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol can summarize routes at any interface?",
+        "options": ["RIP", "OSPF", "EIGRP", "BGP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "EIGRP",
+        "difficulty": "hard",
+        "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) allows route summarization at any interface, reducing routing table size.",
+        "hint": "Look for the protocol with flexible route aggregation."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is the primary difference between distance vector and link-state routing protocols?",
+        "options": [
+            "Speed of routing", 
+            "How they share network topology information", 
+            "Number of supported networks", 
+            "Encryption methods"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "How they share network topology information",
+        "difficulty": "medium",
+        "explanation": "Distance vector protocols share routing information with neighbors, while link-state protocols create a complete network topology map.",
+        "hint": "Consider how routers exchange and understand network information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What protocol is used for routing between Internet Service Providers?",
+        "options": ["OSPF", "EIGRP", "BGP", "RIP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "BGP",
+        "difficulty": "easy",
+        "explanation": "Border Gateway Protocol (BGP) is the standard exterior routing protocol used for routing between different autonomous systems on the internet.",
+        "hint": "Think about routing between large network providers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is an autonomous system (AS) in routing?",
+        "options": [
+            "A single router", 
+            "A network under single administrative control", 
+            "A routing protocol", 
+            "A network security zone"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A network under single administrative control",
+        "difficulty": "medium",
+        "explanation": "An autonomous system is a collection of networks and routers under a single administrative control, typically identified by a unique AS number.",
+        "hint": "Consider a network managed by a single organization."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol is Cisco proprietary?",
+        "options": ["OSPF", "RIP", "EIGRP", "BGP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "EIGRP",
+        "difficulty": "easy",
+        "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) was originally a Cisco proprietary protocol, though it has since been made open standard.",
+        "hint": "Look for the protocol developed by a major networking company."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is route poisoning?",
+        "options": [
+            "Blocking all routes", 
+            "Marking a route as unreachable to prevent routing loops", 
+            "Encrypting routing information", 
+            "Reducing network complexity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Marking a route as unreachable to prevent routing loops",
+        "difficulty": "hard",
+        "explanation": "Route poisoning is a technique used in distance vector protocols to prevent routing loops by advertising an unreachable route with a maximum metric.",
+        "hint": "This is a method to prevent incorrect route propagation."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What routing protocol uses multicast address 224.0.0.10?",
+        "options": ["RIP", "EIGRP", "OSPF", "BGP"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "EIGRP",
+        "difficulty": "hard",
+        "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) uses the multicast address 224.0.0.10 for routing updates.",
+        "hint": "Look for the protocol with a specific multicast address for communications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is the purpose of route summarization?",
+        "options": [
+            "To increase network security", 
+            "To reduce routing table size and complexity", 
+            "To encrypt routing data", 
+            "To limit network access"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To reduce routing table size and complexity",
+        "difficulty": "medium",
+        "explanation": "Route summarization (or route aggregation) combines multiple specific routes into a single, broader route to simplify routing tables and reduce routing overhead.",
+        "hint": "Think about simplifying network routing information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol uses triggered updates?",
+        "options": ["RIP", "OSPF", "EIGRP", "BGP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "EIGRP",
+        "difficulty": "hard",
+        "explanation": "Enhanced Interior Gateway Routing Protocol (EIGRP) uses triggered updates, sending routing information immediately when a network change occurs.",
+        "hint": "Look for the protocol that quickly propagates network changes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is the primary metric used by OSPF?",
+        "options": ["Hop Count", "Bandwidth", "Delay", "Load"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Bandwidth",
+        "difficulty": "medium",
+        "explanation": "OSPF primarily uses bandwidth as its metric for route selection, choosing the fastest path between routers.",
+        "hint": "Consider the data transmission speed between network segments."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What does the term 'administrative distance' represent?",
+        "options": [
+            "Physical distance between routers", 
+            "Network speed", 
+            "Trustworthiness of a routing source", 
+            "Number of network segments"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Trustworthiness of a routing source",
+        "difficulty": "easy",
+        "explanation": "Administrative distance is a value that indicates the reliability of a routing source, with lower numbers being more preferred.",
+        "hint": "Lower values mean more trusted routing sources."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "Which routing protocol is best for small networks?",
+        "options": ["OSPF", "EIGRP", "RIP", "BGP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "RIP",
+        "difficulty": "easy",
+        "explanation": "Routing Information Protocol (RIP) is simple and best suited for smaller networks with limited complexity.",
+        "hint": "Look for the most straightforward routing protocol."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Routing Protocols",
+        "questionText": "What is a stub area in OSPF?",
+        "options": [
+            "A dead-end network segment", 
+            "A network area with no external routes", 
+            "A network security zone", 
+            "A routing loop prevention mechanism"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A network area with no external routes",
+        "difficulty": "hard",
+        "explanation": "In OSPF, a stub area is a network area that does not allow external routes, simplifying routing and reducing routing table size.",
+        "hint": "Consider a network segment with limited routing complexity."
+    },
 
     // Transport Layer
 
