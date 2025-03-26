@@ -2506,8 +2506,781 @@ const CNQuestions = [
     },
 
     // Transport Layer
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which transport layer protocol provides reliable, connection-oriented communication?",
+        "options": ["UDP", "TCP", "SCTP", "DCCP"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "TCP",
+        "difficulty": "easy",
+        "explanation": "TCP (Transmission Control Protocol) ensures reliable, ordered, and error-checked delivery of data between applications.",
+        "hint": "Think about the protocol that guarantees packet delivery."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What does the 'sequence number' field in a TCP header help accomplish?",
+        "options": [
+            "Determine packet priority",
+            "Identify source IP address",
+            "Maintain order of data segments",
+            "Encrypt communication"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Maintain order of data segments",
+        "difficulty": "medium",
+        "explanation": "The sequence number helps TCP reassemble data segments in the correct order at the receiving end, ensuring data integrity.",
+        "hint": "Consider how data can be reconstructed after transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which TCP mechanism prevents network congestion?",
+        "options": [
+            "Slow Start",
+            "Fast Retransmit",
+            "Three-way Handshake",
+            "Checksum Verification"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Slow Start",
+        "difficulty": "hard",
+        "explanation": "Slow Start is an algorithm that gradually increases the transmission rate to avoid overwhelming the network and prevent congestion collapse.",
+        "hint": "This mechanism helps TCP adapt to network capacity dynamically."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What is the default port number for HTTP?",
+        "options": ["21", "22", "80", "443"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "80",
+        "difficulty": "easy",
+        "explanation": "Port 80 is the standard port for unencrypted HTTP (Hypertext Transfer Protocol) web traffic.",
+        "hint": "This is the most common port for web browsing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which protocol is connectionless and does not guarantee packet delivery?",
+        "options": ["TCP", "SCTP", "UDP", "RTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "UDP",
+        "difficulty": "medium",
+        "explanation": "UDP (User Datagram Protocol) sends packets without establishing a connection and does not ensure their arrival or order.",
+        "hint": "Think of a protocol used for fast, lightweight communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What does the 'window size' field in a TCP header represent?",
+        "options": [
+            "Maximum packet size",
+            "Number of retransmissions",
+            "Amount of data receiver can accept",
+            "Transmission speed"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Amount of data receiver can accept",
+        "difficulty": "hard",
+        "explanation": "The window size indicates how many bytes the receiver can accept without sending an acknowledgment, crucial for flow control.",
+        "hint": "This field helps prevent the sender from overwhelming the receiver."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What is the purpose of the TCP three-way handshake?",
+        "options": [
+            "Data encryption",
+            "Establishing a connection",
+            "Error correction",
+            "Routing packets"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Establishing a connection",
+        "difficulty": "medium",
+        "explanation": "The three-way handshake (SYN, SYN-ACK, ACK) establishes a reliable connection between sender and receiver before data transmission.",
+        "hint": "This process synchronizes sequence numbers between hosts."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which port is typically used for SSH?",
+        "options": ["21", "22", "23", "80"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "22",
+        "difficulty": "easy",
+        "explanation": "Port 22 is the standard port for SSH (Secure Shell), used for secure remote administration.",
+        "hint": "This port is used for encrypted terminal access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What mechanism does TCP use to handle out-of-order packets?",
+        "options": [
+            "Packet dropping",
+            "Buffering",
+            "Immediate retransmission",
+            "Connection reset"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Buffering",
+        "difficulty": "hard",
+        "explanation": "TCP uses a buffer to temporarily store out-of-order segments and reassemble them in the correct sequence before delivering to the application.",
+        "hint": "Consider how packets can be reordered without losing data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What does the acronym 'MSS' stand for in TCP?",
+        "options": [
+            "Maximum Segment Size",
+            "Maximum Signal Strength",
+            "Minimum Segment Speed",
+            "Message Transmission System"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Maximum Segment Size",
+        "difficulty": "medium",
+        "explanation": "MSS defines the largest amount of data that can be sent in a single TCP segment, excluding headers.",
+        "hint": "This relates to the size of data packets in TCP transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which transport layer protocol is best suited for real-time multimedia streaming?",
+        "options": ["TCP", "UDP", "SCTP", "DCCP"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "UDP",
+        "difficulty": "medium",
+        "explanation": "UDP is preferred for streaming because it has lower latency and can tolerate some packet loss, which is acceptable in multimedia transmission.",
+        "hint": "Consider a protocol that prioritizes speed over perfect delivery."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What is the primary function of TCP's acknowledgment mechanism?",
+        "options": [
+            "Data encryption",
+            "Verifying packet delivery",
+            "Routing packets",
+            "Compressing data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Verifying packet delivery",
+        "difficulty": "easy",
+        "explanation": "TCP's acknowledgment mechanism ensures that sent packets are successfully received by the destination, requesting retransmission if needed.",
+        "hint": "This helps maintain reliable communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What does the 'URG' flag in a TCP header indicate?",
+        "options": [
+            "Urgent data present",
+            "Unrecognized request",
+            "Urgent connection",
+            "Unreliable transmission"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Urgent data present",
+        "difficulty": "hard",
+        "explanation": "The URG (Urgent) flag signals that the incoming data contains urgent information that should be processed immediately.",
+        "hint": "This flag helps prioritize certain data segments."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which port is typically used for HTTPS?",
+        "options": ["80", "443", "22", "25"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "443",
+        "difficulty": "easy",
+        "explanation": "Port 443 is the standard port for HTTPS (HTTP Secure), which provides encrypted web communication.",
+        "hint": "This port is used for secure web browsing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What is TCP's 'Fast Retransmit' mechanism?",
+        "options": [
+            "Immediate packet resending",
+            "Rapid connection establishment",
+            "Quick error detection",
+            "Accelerated data transmission"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Immediate packet resending",
+        "difficulty": "hard",
+        "explanation": "Fast Retransmit allows TCP to resend a lost packet quickly without waiting for a retransmission timeout, improving network efficiency.",
+        "hint": "This mechanism speeds up loss recovery."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What protocol is used for email transmission?",
+        "options": ["SMTP", "FTP", "HTTP", "DHCP"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "SMTP",
+        "difficulty": "easy",
+        "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending and routing email between servers.",
+        "hint": "This protocol handles email communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What is the primary difference between TCP and UDP?",
+        "options": [
+            "Network speed",
+            "Packet routing",
+            "Reliability and connection-orientation",
+            "Data encryption"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Reliability and connection-orientation",
+        "difficulty": "medium",
+        "explanation": "TCP provides reliable, ordered, and error-checked delivery, while UDP offers faster, connectionless transmission without guaranteed delivery.",
+        "hint": "Consider the trade-offs between guaranteed and quick transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What is the purpose of the TCP 'checksum' field?",
+        "options": [
+            "Data encryption",
+            "Error detection",
+            "Packet routing",
+            "Connection establishment"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Error detection",
+        "difficulty": "medium",
+        "explanation": "The TCP checksum helps detect errors in transmitted data by performing a mathematical calculation to verify data integrity.",
+        "hint": "This field helps ensure data was not corrupted during transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which transport layer protocol supports multi-streaming?",
+        "options": ["TCP", "UDP", "SCTP", "DCCP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "SCTP",
+        "difficulty": "hard",
+        "explanation": "SCTP (Stream Control Transmission Protocol) supports multiple streams within a single connection, allowing independent message delivery.",
+        "hint": "This protocol offers advanced features beyond TCP and UDP."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What mechanism prevents TCP connection starvation?",
+        "options": [
+            "Slow Start",
+            "Fast Retransmit",
+            "Congestion Avoidance",
+            "Three-way Handshake"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Congestion Avoidance",
+        "difficulty": "hard",
+        "explanation": "Congestion Avoidance works with Slow Start to dynamically adjust transmission rates and prevent network overload.",
+        "hint": "This algorithm helps maintain network stability."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What port is typically used for FTP?",
+        "options": ["20", "21", "22", "23"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "21",
+        "difficulty": "easy",
+        "explanation": "Port 21 is used for FTP (File Transfer Protocol) control connection, while port 20 is used for data transfer.",
+        "hint": "This is the standard port for file transfer commands."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What does TCP's 'Nagle's Algorithm' aim to reduce?",
+        "options": [
+            "Network latency",
+            "Packet fragmentation",
+            "Small packet overhead",
+            "Connection establishment time"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Small packet overhead",
+        "difficulty": "hard",
+        "explanation": "Nagle's Algorithm reduces network congestion by buffering small packets and sending them together, minimizing transmission overhead.",
+        "hint": "This algorithm improves network efficiency for small data transmissions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which transport layer protocol is designed for network games and streaming?",
+        "options": ["TCP", "UDP", "SCTP", "DCCP"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "DCCP",
+        "difficulty": "hard",
+        "explanation": "DCCP (Datagram Congestion Control Protocol) provides congestion control for unreliable flows like games and media streaming.",
+        "hint": "Consider a protocol optimized for real-time applications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What is the standard port for SMTP over TLS/SSL?",
+        "options": ["25", "465", "587", "993"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "465",
+        "difficulty": "medium",
+        "explanation": "Port 465 is the standard port for SMTP with SSL/TLS encryption, providing secure email transmission.",
+        "hint": "This port ensures encrypted email communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What does the 'RST' flag in a TCP header signify?",
+        "options": [
+            "Reset connection",
+            "Request synchronization",
+            "Reduce speed",
+            "Request transmission"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Reset connection",
+        "difficulty": "medium",
+        "explanation": "The RST (Reset) flag abruptly terminates a TCP connection, typically used to reject an invalid connection request.",
+        "hint": "This flag immediately stops a connection."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What protocol is used for DNS queries?",
+        "options": ["TCP", "UDP", "SCTP", "DCCP"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "UDP",
+        "difficulty": "easy",
+        "explanation": "DNS typically uses UDP for quick, lightweight name resolution, switching to TCP for large responses.",
+        "hint": "Consider a protocol suitable for small, fast queries."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What is the primary purpose of TCP's flow control?",
+        "options": [
+            "Encrypt data",
+            "Prevent buffer overflow",
+            "Route packets",
+            "Compress transmission"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Prevent buffer overflow",
+        "difficulty": "medium",
+        "explanation": "Flow control prevents the sender from overwhelming the receiver by managing the rate of data transmission based on the receiver's buffer capacity.",
+        "hint": "This mechanism protects the receiver from being flooded with data."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "Which port is used for Telnet?",
+        "options": ["22", "23", "80", "443"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "23",
+        "difficulty": "easy",
+        "explanation": "Port 23 is the standard port for Telnet, an unencrypted protocol for remote terminal access.",
+        "hint": "This is the traditional port for remote login."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Transport Layer",
+        "questionText": "What mechanism helps TCP adapt to changing network conditions?",
+        "options": [
+            "Three-way Handshake",
+            "Slow Start",
+            "Fast Retransmit",
+            "Window Scaling"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Slow Start",
+        "difficulty": "hard",
+        "explanation": "Slow Start dynamically increases transmission rate, helping TCP adapt to network capacity and prevent congestion.",
+        "hint": "This algorithm helps manage network resources efficiently."
+    },
 
     // Application Layer
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol is used for secure file transfer?",
+        "options": ["HTTP", "FTP", "SFTP", "SMTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "SFTP",
+        "difficulty": "easy",
+        "explanation": "SFTP (Secure File Transfer Protocol) provides secure file transfer over SSH, encrypting both commands and data.",
+        "hint": "Look for the protocol that adds security to traditional file transfer."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What does DNS primarily do?",
+        "options": [
+            "Encrypt network traffic",
+            "Translate domain names to IP addresses",
+            "Manage email servers",
+            "Control network routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Translate domain names to IP addresses",
+        "difficulty": "easy",
+        "explanation": "DNS (Domain Name System) translates human-readable domain names into IP addresses that computers use to identify each other.",
+        "hint": "Consider how websites are located on the internet."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "Which protocol is used for sending emails?",
+        "options": ["POP3", "IMAP", "SMTP", "HTTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "SMTP",
+        "difficulty": "easy",
+        "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending and routing email between servers.",
+        "hint": "This protocol handles email transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What is the primary purpose of HTTP?",
+        "options": [
+            "File transfer",
+            "Email communication",
+            "Web page transfer",
+            "Remote login"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Web page transfer",
+        "difficulty": "easy",
+        "explanation": "HTTP (Hypertext Transfer Protocol) is used for transferring web pages and other resources between web servers and clients.",
+        "hint": "This protocol is fundamental to web browsing."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol retrieves emails from a mail server?",
+        "options": ["SMTP", "IMAP", "POP3", "DHCP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "POP3",
+        "difficulty": "medium",
+        "explanation": "POP3 (Post Office Protocol version 3) downloads emails from a mail server to a local device, typically removing them from the server.",
+        "hint": "This protocol downloads emails to your local device."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What is the primary function of DHCP?",
+        "options": [
+            "Domain name resolution",
+            "Automatic IP address assignment",
+            "Email routing",
+            "Secure file transfer"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Automatic IP address assignment",
+        "difficulty": "medium",
+        "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses and other network configuration parameters to devices on a network.",
+        "hint": "Consider how devices get their network settings automatically."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "Which protocol provides secure remote administration?",
+        "options": ["Telnet", "SSH", "FTP", "HTTP"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "SSH",
+        "difficulty": "easy",
+        "explanation": "SSH (Secure Shell) provides a secure, encrypted method for remotely accessing and managing network devices.",
+        "hint": "Look for the protocol that adds encryption to remote access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What does IMAP offer that POP3 does not?",
+        "options": [
+            "Email encryption",
+            "Server-side email storage",
+            "Faster download",
+            "More compact storage"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Server-side email storage",
+        "difficulty": "hard",
+        "explanation": "IMAP (Internet Message Access Protocol) allows emails to remain on the server, enabling access from multiple devices and preserving folder structures.",
+        "hint": "Consider how email synchronization across devices works."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol is used for file transfer?",
+        "options": ["HTTP", "SMTP", "FTP", "DNS"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "FTP",
+        "difficulty": "easy",
+        "explanation": "FTP (File Transfer Protocol) is used for transferring files between a client and a server on a computer network.",
+        "hint": "This protocol specializes in file transfer."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What does HTTPS provide over HTTP?",
+        "options": [
+            "Faster browsing",
+            "More websites",
+            "Encryption and security",
+            "Better compression"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Encryption and security",
+        "difficulty": "medium",
+        "explanation": "HTTPS (HTTP Secure) adds a layer of encryption (SSL/TLS) to protect data transmitted between web browsers and servers.",
+        "hint": "Consider how data can be protected during web communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "Which protocol is used for real-time messaging?",
+        "options": ["SMTP", "HTTP", "XMPP", "FTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "XMPP",
+        "difficulty": "hard",
+        "explanation": "XMPP (Extensible Messaging and Presence Protocol) is used for real-time communication, instant messaging, and presence information.",
+        "hint": "Look for a protocol designed for instant communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol manages network printer communication?",
+        "options": ["SNMP", "SMTP", "HTTP", "DNS"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "SNMP",
+        "difficulty": "medium",
+        "explanation": "SNMP (Simple Network Management Protocol) is used for collecting and organizing information about managed devices on IP networks, including printers.",
+        "hint": "This protocol helps manage network devices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What is the purpose of a proxy server protocol like HTTP Proxy?",
+        "options": [
+            "Increase internet speed",
+            "Provide network security",
+            "Encrypt all traffic",
+            "Manage email servers"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Provide network security",
+        "difficulty": "hard",
+        "explanation": "HTTP Proxy serves multiple purposes including filtering content, improving security, caching, and providing anonymity.",
+        "hint": "Consider how intermediary servers can protect networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "Which protocol is used for network time synchronization?",
+        "options": ["DNS", "DHCP", "NTP", "SNMP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "NTP",
+        "difficulty": "medium",
+        "explanation": "NTP (Network Time Protocol) synchronizes computer clock times in a network with high precision.",
+        "hint": "This protocol ensures accurate timekeeping across devices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What does LDAP primarily do?",
+        "options": [
+            "Manage email servers",
+            "Directory services and authentication",
+            "Transfer files",
+            "Encrypt network traffic"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Directory services and authentication",
+        "difficulty": "hard",
+        "explanation": "LDAP (Lightweight Directory Access Protocol) is used for accessing and maintaining distributed directory information services over an IP network.",
+        "hint": "Consider a protocol for managing user and resource information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol is used for secure email transfer?",
+        "options": ["SMTP", "POP3", "IMAP", "SMTPS"],
+        "correctOptionIndex": 3,
+        "correctOptionText": "SMTPS",
+        "difficulty": "medium",
+        "explanation": "SMTPS (SMTP Secure) provides an encrypted and secure method for sending emails.",
+        "hint": "Look for the secure version of the email sending protocol."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol enables voice communication over IP?",
+        "options": ["HTTP", "FTP", "SIP", "SMTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "SIP",
+        "difficulty": "hard",
+        "explanation": "SIP (Session Initiation Protocol) is used for initiating, maintaining, and terminating real-time sessions that involve video, voice, messaging, and other communications.",
+        "hint": "This protocol is crucial for internet telephony."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What does WebSocket protocol enable?",
+        "options": [
+            "Email transfer",
+            "File download",
+            "Real-time, two-way communication",
+            "DNS resolution"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Real-time, two-way communication",
+        "difficulty": "hard",
+        "explanation": "WebSocket provides full-duplex communication channels over a single TCP connection, enabling real-time interaction between client and server.",
+        "hint": "Consider a protocol for live, interactive web applications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "Which protocol manages email retrieval with folder synchronization?",
+        "options": ["POP3", "SMTP", "IMAP", "HTTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "IMAP",
+        "difficulty": "medium",
+        "explanation": "IMAP allows users to access and manage email folders on the server, maintaining synchronization across multiple devices.",
+        "hint": "This protocol keeps email organization consistent."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol is used for network printer discovery?",
+        "options": ["SNMP", "HTTP", "FTP", "DHCP"],
+        "correctOptionIndex": 0,
+        "correctOptionText": "SNMP",
+        "difficulty": "hard",
+        "explanation": "SNMP enables network devices, including printers, to share management and configuration information.",
+        "hint": "Consider a protocol for device management and discovery."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol manages email routing between servers?",
+        "options": ["POP3", "IMAP", "SMTP", "HTTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "SMTP",
+        "difficulty": "easy",
+        "explanation": "SMTP handles the routing and transmission of email between mail servers.",
+        "hint": "This is the primary protocol for email transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What does a CDN protocol like HTTP/2 provide?",
+        "options": [
+            "Email encryption",
+            "Improved web performance",
+            "File transfer",
+            "DNS resolution"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improved web performance",
+        "difficulty": "hard",
+        "explanation": "HTTP/2 provides features like multiplexing, header compression, and server push to improve web page loading speed and efficiency.",
+        "hint": "Consider protocols that optimize web content delivery."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "Which protocol is used for network device configuration?",
+        "options": ["HTTP", "SNMP", "FTP", "DNS"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "SNMP",
+        "difficulty": "medium",
+        "explanation": "SNMP allows network administrators to manage network performance, find and solve network problems, and plan for network growth.",
+        "hint": "This protocol helps manage network infrastructure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol enables secure remote desktop access?",
+        "options": ["Telnet", "SSH", "FTP", "HTTP"],
+        "correctOptionIndex": 1,
+        "correctOptionText": "SSH",
+        "difficulty": "easy",
+        "explanation": "SSH provides a secure method for remotely accessing and managing computer systems.",
+        "hint": "Look for the protocol that provides encrypted remote access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What does SFTP provide over traditional FTP?",
+        "options": [
+            "Faster file transfer",
+            "More file types",
+            "Encryption and security",
+            "Larger file sizes"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Encryption and security",
+        "difficulty": "medium",
+        "explanation": "SFTP (SSH File Transfer Protocol) adds a layer of security by encrypting file transfers and authentication.",
+        "hint": "Consider how file transfers can be made more secure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol enables video streaming?",
+        "options": ["HTTP", "FTP", "RTSP", "SMTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "RTSP",
+        "difficulty": "hard",
+        "explanation": "RTSP (Real Time Streaming Protocol) controls media sessions between end points, enabling video streaming.",
+        "hint": "Look for a protocol designed for multimedia streaming."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What does RADIUS protocol primarily do?",
+        "options": [
+            "Email routing",
+            "Network authentication",
+            "File transfer",
+            "Web browsing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Network authentication",
+        "difficulty": "hard",
+        "explanation": "RADIUS (Remote Authentication Dial-In User Service) provides centralized authentication, authorization, and accounting management for network users.",
+        "hint": "Consider a protocol for managing user access."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "Which protocol manages email folders across devices?",
+        "options": ["POP3", "SMTP", "IMAP", "HTTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "IMAP",
+        "difficulty": "easy",
+        "explanation": "IMAP allows users to access and organize email folders on the server, maintaining consistency across multiple devices.",
+        "hint": "This protocol keeps your email organization synced."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Application Layer",
+        "questionText": "What protocol enables secure web browsing?",
+        "options": ["HTTP", "FTP", "HTTPS", "SMTP"],
+        "correctOptionIndex": 2,
+        "correctOptionText": "HTTPS",
+        "difficulty": "easy",
+        "explanation": "HTTPS provides encryption and secure communication between web browsers and websites.",
+        "hint": "Look for the secure version of the web transfer protocol."
+    },
 
     // Network Security
 
