@@ -1315,6 +1315,470 @@ const CNQuestions = [
     },
 
     // Data Link Layer
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the primary function of the Data Link Layer in the OSI model?",
+        "options": [
+            "Routing packets between networks",
+            "Providing node-to-node data transfer",
+            "Establishing end-to-end connections",
+            "Managing IP addressing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Providing node-to-node data transfer",
+        "difficulty": "easy",
+        "explanation": "The Data Link Layer is responsible for reliable transmission of data between two directly connected nodes in a network.",
+        "hint": "Focus on communication between adjacent network devices"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What does MAC stand for in networking?",
+        "options": [
+            "Multiple Access Control",
+            "Media Access Control",
+            "Maximum Access Channel",
+            "Managed Access Connectivity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Media Access Control",
+        "difficulty": "easy",
+        "explanation": "MAC (Media Access Control) address is a unique identifier assigned to network interfaces for communications on the physical network segment.",
+        "hint": "Think about device-specific addressing at the lowest network level"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which sublayer of the Data Link Layer is responsible for addressing and frame synchronization?",
+        "options": [
+            "Physical Layer",
+            "Logical Link Control (LLC)",
+            "Media Access Control (MAC)",
+            "Network Layer"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Logical Link Control (LLC)",
+        "difficulty": "medium",
+        "explanation": "The LLC sublayer provides addressing and control mechanisms for network communications, handling frame synchronization and error control.",
+        "hint": "Consider the layer responsible for communication between network layers"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the purpose of CRC (Cyclic Redundancy Check) in the Data Link Layer?",
+        "options": [
+            "Data compression",
+            "Encryption",
+            "Error detection",
+            "Network routing"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Error detection",
+        "difficulty": "medium",
+        "explanation": "CRC is an error-detecting code used to detect accidental changes or errors in raw data at the Data Link Layer.",
+        "hint": "Think about ensuring data integrity during transmission"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which Ethernet standard uses CSMA/CD access method?",
+        "options": [
+            "10BASE-T",
+            "100BASE-TX",
+            "1000BASE-T",
+            "10GBASE-T"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "10BASE-T",
+        "difficulty": "medium",
+        "explanation": "10BASE-T is an Ethernet standard that uses Carrier Sense Multiple Access with Collision Detection (CSMA/CD).",
+        "hint": "Look for the older Ethernet standard"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the maximum length of an Ethernet frame?",
+        "options": [
+            "1518 bytes",
+            "512 bytes",
+            "2048 bytes",
+            "4096 bytes"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "1518 bytes",
+        "difficulty": "medium",
+        "explanation": "A standard Ethernet frame has a maximum length of 1518 bytes, including header and trailer information.",
+        "hint": "Consider the standard maximum frame size in traditional Ethernet"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the primary purpose of framing in the Data Link Layer?",
+        "options": [
+            "Data encryption",
+            "Routing data",
+            "Packaging data for transmission",
+            "Compressing data"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Packaging data for transmission",
+        "difficulty": "easy",
+        "explanation": "Framing is the process of dividing data into manageable units called frames, adding header and trailer information for reliable transmission.",
+        "hint": "Think about organizing data for network transmission"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which type of addressing is used in the Data Link Layer?",
+        "options": [
+            "IP addressing",
+            "Logical addressing",
+            "Physical (MAC) addressing",
+            "Port addressing"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Physical (MAC) addressing",
+        "difficulty": "easy",
+        "explanation": "The Data Link Layer uses physical or MAC addressing to identify specific network interfaces.",
+        "hint": "Consider the hardware-specific address used for network communication"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the function of the preamble in an Ethernet frame?",
+        "options": [
+            "Data encryption",
+            "Frame synchronization",
+            "Error correction",
+            "Address resolution"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Frame synchronization",
+        "difficulty": "hard",
+        "explanation": "The preamble is a sequence of alternating 1s and 0s that helps receivers synchronize with the incoming frame and prepare for data reception.",
+        "hint": "Think about how devices prepare to receive network data"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which error detection method is most commonly used in the Data Link Layer?",
+        "options": [
+            "Parity check",
+            "Cyclic Redundancy Check (CRC)",
+            "Hamming code",
+            "Checksum"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Cyclic Redundancy Check (CRC)",
+        "difficulty": "medium",
+        "explanation": "CRC is the most widely used error detection method in the Data Link Layer due to its effectiveness in detecting transmission errors.",
+        "hint": "Consider the most robust error detection technique"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the purpose of the LLC sublayer?",
+        "options": [
+            "Physical transmission of bits",
+            "Providing an interface to the network layer",
+            "Managing physical network connections",
+            "Handling MAC addressing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Providing an interface to the network layer",
+        "difficulty": "hard",
+        "explanation": "The Logical Link Control (LLC) sublayer provides a uniform interface to the network layer and handles frame synchronization, flow control, and error control.",
+        "hint": "Think about the communication bridge between different network layers"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What does VLAN stand for?",
+        "options": [
+            "Virtual Local Area Network",
+            "Virtual Link Access Network",
+            "Verified Local Area Network",
+            "Virtual Logical Access Network"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Virtual Local Area Network",
+        "difficulty": "easy",
+        "explanation": "VLAN is a method of creating multiple logical networks within a single physical network infrastructure.",
+        "hint": "Consider network segmentation at the Data Link Layer"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which of the following is NOT a type of framing method?",
+        "options": [
+            "Character-oriented framing",
+            "Bit-oriented framing",
+            "Length-oriented framing",
+            "Protocol-oriented framing"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Protocol-oriented framing",
+        "difficulty": "hard",
+        "explanation": "The three main framing methods are character-oriented, bit-oriented, and length-oriented. Protocol-oriented framing is not a standard framing technique.",
+        "hint": "Identify the non-standard framing method"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the purpose of a switch at the Data Link Layer?",
+        "options": [
+            "Routing between networks",
+            "Filtering and forwarding frames based on MAC addresses",
+            "Translating IP addresses",
+            "Compressing network traffic"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Filtering and forwarding frames based on MAC addresses",
+        "difficulty": "medium",
+        "explanation": "A switch operates at the Data Link Layer and uses MAC addresses to intelligently forward frames to the correct destination port.",
+        "hint": "Think about device-level network communication"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is ARQ in data link protocols?",
+        "options": [
+            "Automatic Request Queuing",
+            "Adaptive Routing Qualifier",
+            "Automatic Repeat reQuest",
+            "Advanced Routing Queue"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Automatic Repeat reQuest",
+        "difficulty": "hard",
+        "explanation": "ARQ is an error control method where the receiver sends acknowledgments for received frames and requests retransmission of lost or corrupted frames.",
+        "hint": "Consider error recovery mechanisms in network communication"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which addressing is used in Ethernet frames?",
+        "options": [
+            "IP addressing",
+            "Subnet addressing",
+            "MAC addressing",
+            "Logical addressing"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "MAC addressing",
+        "difficulty": "easy",
+        "explanation": "Ethernet frames use MAC (Media Access Control) addresses to identify source and destination network interfaces.",
+        "hint": "Think about hardware-level addressing in Ethernet"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the function of the trailer in a data link frame?",
+        "options": [
+            "Adding network layer information",
+            "Providing frame synchronization",
+            "Error detection and correction",
+            "Compressing data"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Error detection and correction",
+        "difficulty": "medium",
+        "explanation": "The trailer typically contains error-checking information like CRC to detect and potentially correct transmission errors.",
+        "hint": "Consider the end-of-frame error-checking mechanism"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the primary difference between half-duplex and full-duplex communication?",
+        "options": [
+            "Transmission speed",
+            "Network topology",
+            "Simultaneous data transmission",
+            "Packet size"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Simultaneous data transmission",
+        "difficulty": "medium",
+        "explanation": "Half-duplex allows transmission in only one direction at a time, while full-duplex enables simultaneous bidirectional communication.",
+        "hint": "Think about data flow in communication channels"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What protocol is used in PPP (Point-to-Point Protocol)?",
+        "options": [
+            "UDP",
+            "TCP",
+            "HDLC",
+            "ICMP"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "HDLC",
+        "difficulty": "hard",
+        "explanation": "PPP is based on the High-Level Data Link Control (HDLC) protocol, used for point-to-point connections.",
+        "hint": "Consider the data link protocol for direct connections"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the purpose of a bridge in the Data Link Layer?",
+        "options": [
+            "Connecting different network types",
+            "Routing between networks",
+            "Filtering network traffic",
+            "Translating network protocols"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Connecting different network types",
+        "difficulty": "medium",
+        "explanation": "A bridge operates at the Data Link Layer and connects network segments with different characteristics, filtering and forwarding frames.",
+        "hint": "Think about network segment interconnection"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What does the term 'collision domain' refer to?",
+        "options": [
+            "A network with multiple switches",
+            "An area where network devices can cause data collisions",
+            "A router's coverage area",
+            "A security perimeter"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An area where network devices can cause data collisions",
+        "difficulty": "hard",
+        "explanation": "A collision domain is a network segment where devices can potentially interfere with each other's transmissions, causing data collisions.",
+        "hint": "Consider network communication interference"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which Ethernet standard supports 10 Gbps transmission?",
+        "options": [
+            "10BASE-T",
+            "100BASE-TX",
+            "1000BASE-T",
+            "10GBASE-T"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "10GBASE-T",
+        "difficulty": "medium",
+        "explanation": "10GBASE-T is the Ethernet standard that supports 10 Gigabit per second transmission over twisted pair cables.",
+        "hint": "Look for the standard with the highest transmission speed"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the primary function of MAC sublayer?",
+        "options": [
+            "Providing network layer interfaces",
+            "Managing physical transmission",
+            "Handling device addressing and channel access",
+            "Encrypting network data"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Handling device addressing and channel access",
+        "difficulty": "hard",
+        "explanation": "The MAC sublayer is responsible for device-specific addressing and managing access to the shared communication channel.",
+        "hint": "Think about low-level network communication management"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the purpose of flow control in the Data Link Layer?",
+        "options": [
+            "Encrypting data",
+            "Routing packets",
+            "Preventing sender from overwhelming receiver",
+            "Increasing network speed"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Preventing sender from overwhelming receiver",
+        "difficulty": "medium",
+        "explanation": "Flow control manages the rate of data transmission to ensure the receiver can process incoming frames without being overwhelmed.",
+        "hint": "Consider data transmission synchronization"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which addressing is used in ARP (Address Resolution Protocol)?",
+        "options": [
+            "Only MAC addressing",
+            "Only IP addressing",
+            "Both MAC and IP addressing",
+            "Network layer addressing"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Both MAC and IP addressing",
+        "difficulty": "hard",
+        "explanation": "ARP maps IP addresses to MAC addresses, bridging the Network and Data Link Layers.",
+        "hint": "Think about address translation between layers"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the maximum MAC address length?",
+        "options": [
+            "32 bits",
+            "48 bits",
+            "64 bits",
+            "128 bits"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "48 bits",
+        "difficulty": "easy",
+        "explanation": "Standard MAC addresses are 48 bits (6 bytes) long, providing a unique identifier for network interfaces.",
+        "hint": "Consider the standard MAC address length"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What does CSMA/CA stand for?",
+        "options": [
+            "Carrier Sense Multiple Access with Collision Avoidance",
+            "Channel Sensing Multiple Access",
+            "Carrier Signal Multiple Allocation",
+            "Collision Synchronization Multiple Access"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Carrier Sense Multiple Access with Collision Avoidance",
+        "difficulty": "hard",
+        "explanation": "CSMA/CA is a network protocol that helps prevent data collisions by requiring devices to check the channel before transmitting.",
+        "hint": "Think about preventing network communication conflicts"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "Which device operates primarily at the Data Link Layer?",
+        "options": [
+            "Router",
+            "Switch",
+            "Firewall",
+            "Gateway"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Switch",
+        "difficulty": "easy",
+        "explanation": "A switch operates primarily at the Data Link Layer, using MAC addresses to forward frames between network segments.",
+        "hint": "Consider the device that works with MAC addresses"
+    },
+    {
+        "topicId": "67d6b45a953bd3a26da2ad89",
+        "module": "Data Link Layer",
+        "questionText": "What is the purpose of bit stuffing?",
+        "options": [
+            "Data encryption",
+            "Error detection",
+            "Preventing frame synchronization issues",
+            "Increasing transmission speed"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Preventing frame synchronization issues",
+        "difficulty": "hard",
+        "explanation": "Bit stuffing is a technique used in bit-oriented framing to ensure proper frame synchronization by inserting additional bits.",
+        "hint": "Think about maintaining frame boundaries during transmission"
+    },
 
     // Network Layer & IP Addressing
 
