@@ -4665,6 +4665,438 @@ const CNQuestions = [
     },
 
     // Network Management
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does SNMP stand for in network management?",
+        "options": [
+            "Simple Network Monitoring Protocol",
+            "Systematic Network Management Platform",
+            "Simple Network Management Protocol",
+            "Structured Network Monitoring Process"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Simple Network Management Protocol",
+        "difficulty": "easy",
+        "explanation": "SNMP is a standard protocol used for collecting and organizing information about managed devices on IP networks, enabling network monitoring and management.",
+        "hint": "This is the most widely used protocol for network device communication and monitoring."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is the primary purpose of a Network Management System (NMS)?",
+        "options": [
+            "Generating network traffic",
+            "Monitoring, configuring, and maintaining network infrastructure",
+            "Creating network security policies",
+            "Designing network topologies"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Monitoring, configuring, and maintaining network infrastructure",
+        "difficulty": "medium",
+        "explanation": "A Network Management System provides centralized tools for monitoring network performance, managing network devices, detecting and resolving issues, and ensuring optimal network operation.",
+        "hint": "Think of this as the control center for an organization's network infrastructure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does the term 'MIB' refer to in network management?",
+        "options": [
+            "Mobile Internet Browser",
+            "Management Information Base",
+            "Multiple Interface Bridge",
+            "Network Monitoring Database"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Management Information Base",
+        "difficulty": "hard",
+        "explanation": "A Management Information Base (MIB) is a hierarchical database that defines the structure of management data for a device subsystem using SNMP, allowing standardized device information collection.",
+        "hint": "This is a key component in defining what information can be accessed about a network device."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "Which tool is commonly used for network performance monitoring and fault detection?",
+        "options": [
+            "Microsoft Excel",
+            "Wireshark",
+            "Notepad",
+            "Adobe Photoshop"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Wireshark",
+        "difficulty": "medium",
+        "explanation": "Wireshark is a popular network protocol analyzer that allows administrators to capture and interactively browse network traffic in real-time, helping diagnose network issues and performance problems.",
+        "hint": "This is an open-source network protocol analyzer used for network troubleshooting."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does 'fault management' involve in network administration?",
+        "options": [
+            "Creating network faults",
+            "Detecting, logging, and resolving network problems",
+            "Generating network errors",
+            "Preventing network upgrades"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Detecting, logging, and resolving network problems",
+        "difficulty": "medium",
+        "explanation": "Fault management is a critical network management process that involves identifying, documenting, and resolving network issues to minimize downtime and maintain network reliability.",
+        "hint": "This is about proactively addressing and fixing network-related problems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is a 'trap' in SNMP terminology?",
+        "options": [
+            "A physical network device",
+            "An unsolicited notification from a network device",
+            "A network security mechanism",
+            "A type of network cable"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An unsolicited notification from a network device",
+        "difficulty": "hard",
+        "explanation": "In SNMP, a trap is an autonomous message sent by a network device to the management station to report an event or condition, such as a critical error or significant status change.",
+        "hint": "This is how network devices can proactively alert administrators to important events."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is the primary goal of 'configuration management' in network administration?",
+        "options": [
+            "Creating network configurations",
+            "Maintaining consistent device configurations",
+            "Blocking network changes",
+            "Generating network documentation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Maintaining consistent device configurations",
+        "difficulty": "medium",
+        "explanation": "Configuration management involves tracking and controlling network device configurations to ensure consistency, compliance, and ease of management across the network infrastructure.",
+        "hint": "This process helps maintain uniform settings and reduce configuration-related errors."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does 'performance management' primarily focus on in network administration?",
+        "options": [
+            "Hiring network administrators",
+            "Monitoring and optimizing network performance",
+            "Creating network performance reports",
+            "Designing network architecture"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Monitoring and optimizing network performance",
+        "difficulty": "easy",
+        "explanation": "Performance management involves continuously monitoring network metrics, identifying bottlenecks, and implementing optimizations to ensure efficient network operation and resource utilization.",
+        "hint": "This is about ensuring the network meets performance requirements and user expectations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is a Network Management Protocol (NMP)?",
+        "options": [
+            "A physical network device",
+            "A set of rules for managing network devices",
+            "A type of network cable",
+            "A network security mechanism"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A set of rules for managing network devices",
+        "difficulty": "medium",
+        "explanation": "A Network Management Protocol defines a standard set of rules and procedures for communicating with, monitoring, and managing network devices across different platforms and manufacturers.",
+        "hint": "SNMP is a prime example of such a protocol."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does 'capacity management' involve in network administration?",
+        "options": [
+            "Limiting network users",
+            "Planning and managing network resources and growth",
+            "Reducing network bandwidth",
+            "Blocking network expansion"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Planning and managing network resources and growth",
+        "difficulty": "medium",
+        "explanation": "Capacity management focuses on ensuring the network has sufficient resources to meet current and future operational requirements, involving bandwidth, storage, and processing capabilities.",
+        "hint": "This is about anticipating and preparing for network resource needs."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What tool is commonly used for network mapping and topology visualization?",
+        "options": [
+            "Microsoft Paint",
+            "Wireshark",
+            "Nmap",
+            "Adobe Illustrator"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Nmap",
+        "difficulty": "hard",
+        "explanation": "Nmap (Network Mapper) is a powerful open-source tool used for network discovery, security auditing, and creating comprehensive network maps and topologies.",
+        "hint": "This tool can scan and map network devices and their interconnections."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is the purpose of a 'Network Management Dashboard'?",
+        "options": [
+            "Displaying network advertisements",
+            "Providing a centralized view of network status and performance",
+            "Creating network designs",
+            "Generating network invoices"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Providing a centralized view of network status and performance",
+        "difficulty": "easy",
+        "explanation": "A Network Management Dashboard provides a comprehensive, real-time visual representation of network health, performance metrics, and potential issues, enabling quick decision-making.",
+        "hint": "Think of this as a control center for monitoring network operations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does 'security management' primarily focus on in network administration?",
+        "options": [
+            "Hiring security personnel",
+            "Implementing and maintaining network security measures",
+            "Creating security reports",
+            "Designing security uniforms"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Implementing and maintaining network security measures",
+        "difficulty": "medium",
+        "explanation": "Security management involves developing, implementing, and continuously monitoring security policies, access controls, and protective measures to safeguard network resources from potential threats.",
+        "hint": "This is about protecting the network from unauthorized access and potential security breaches."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is a 'Network Management Agent'?",
+        "options": [
+            "A human network administrator",
+            "Software running on a network device that collects and reports management information",
+            "A physical network security guard",
+            "A network consulting service"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Software running on a network device that collects and reports management information",
+        "difficulty": "hard",
+        "explanation": "A Network Management Agent is a software component embedded in network devices that collects performance data, monitors device status, and communicates with network management systems.",
+        "hint": "This is the 'eyes and ears' of network management software on individual devices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is 'log management' in network administration?",
+        "options": [
+            "Cutting down trees",
+            "Collecting, storing, and analyzing network device logs",
+            "Managing physical log books",
+            "Creating network documentation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Collecting, storing, and analyzing network device logs",
+        "difficulty": "medium",
+        "explanation": "Log management involves systematically collecting, storing, and analyzing log files from network devices to track events, troubleshoot issues, and maintain security compliance.",
+        "hint": "This helps in understanding network activities and investigating potential problems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does 'availability management' ensure in network operations?",
+        "options": [
+            "Network device availability for purchase",
+            "Maximizing network uptime and reliability",
+            "Creating network schedules",
+            "Limiting network access"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Maximizing network uptime and reliability",
+        "difficulty": "easy",
+        "explanation": "Availability management focuses on maintaining high network reliability, minimizing downtime, and ensuring that network resources are consistently accessible to users.",
+        "hint": "This is about keeping the network operational and accessible as much as possible."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What tool is used for network bandwidth monitoring?",
+        "options": [
+            "Microsoft Word",
+            "Iperf",
+            "Adobe Photoshop",
+            "Microsoft PowerPoint"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Iperf",
+        "difficulty": "hard",
+        "explanation": "Iperf is a network testing tool used to measure maximum TCP and UDP bandwidth performance, helping administrators understand network throughput and potential bottlenecks.",
+        "hint": "This tool can help diagnose network speed and performance issues."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is a 'Network Management Information Base (MIB)'?",
+        "options": [
+            "A physical network storage device",
+            "A database defining manageable objects in a network device",
+            "A network security mechanism",
+            "A type of network cable"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A database defining manageable objects in a network device",
+        "difficulty": "hard",
+        "explanation": "A Network Management Information Base is a hierarchical database that defines the properties and attributes of managed network devices, allowing standardized information retrieval and management.",
+        "hint": "This provides a structured way to access and manage network device information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is the primary purpose of 'network monitoring'?",
+        "options": [
+            "Creating network traffic",
+            "Tracking network performance and detecting potential issues",
+            "Blocking network access",
+            "Designing network architecture"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Tracking network performance and detecting potential issues",
+        "difficulty": "easy",
+        "explanation": "Network monitoring involves continuously observing network performance, tracking resource utilization, and identifying potential problems before they impact users.",
+        "hint": "This is about maintaining a proactive approach to network health."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does 'root cause analysis' involve in network troubleshooting?",
+        "options": [
+            "Identifying the fundamental source of a network problem",
+            "Planting trees near network infrastructure",
+            "Creating network root directories",
+            "Generating network root passwords"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Identifying the fundamental source of a network problem",
+        "difficulty": "medium",
+        "explanation": "Root cause analysis is a systematic approach to identifying the underlying origin of network issues, helping administrators develop long-term solutions rather than just addressing symptoms.",
+        "hint": "This approach focuses on understanding why a problem occurred, not just treating its immediate effects."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is a 'network baseline' in performance management?",
+        "options": [
+            "A minimum network speed requirement",
+            "A standard performance measurement for normal network operations",
+            "A network security threshold",
+            "A network design template"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A standard performance measurement for normal network operations",
+        "difficulty": "medium",
+        "explanation": "A network baseline represents the typical performance metrics of a network under normal conditions, serving as a reference point for identifying anomalies and performance deviations.",
+        "hint": "This helps in understanding what 'normal' network performance looks like."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What tool is commonly used for network configuration management?",
+        "options": [
+            "Microsoft Excel",
+            "Ansible",
+            "Adobe Illustrator",
+            "Microsoft PowerPoint"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ansible",
+        "difficulty": "hard",
+        "explanation": "Ansible is an open-source automation tool used for network configuration management, allowing administrators to automate device configuration, deployment, and management across multiple platforms.",
+        "hint": "This tool helps standardize and automate network device configurations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is the purpose of a 'Network Management Protocol'?",
+        "options": [
+            "Creating network traffic",
+            "Providing a standard method for managing network devices",
+            "Blocking network access",
+            "Designing network architecture"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Providing a standard method for managing network devices",
+        "difficulty": "easy",
+        "explanation": "A Network Management Protocol establishes a standardized set of rules and procedures for communicating with, monitoring, and managing network devices across different manufacturers and platforms.",
+        "hint": "SNMP is a prime example of such a protocol."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does 'incident management' focus on in network administration?",
+        "options": [
+            "Creating network incidents",
+            "Responding to and resolving network problems quickly",
+            "Preventing network upgrades",
+            "Generating network reports"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Responding to and resolving network problems quickly",
+        "difficulty": "medium",
+        "explanation": "Incident management involves developing processes and procedures to quickly detect, respond to, and resolve network issues to minimize their impact on business operations.",
+        "hint": "This is about having a structured approach to handling network emergencies."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What is a 'network inventory' in network management?",
+        "options": [
+            "A list of network devices and their configurations",
+            "A physical storage of network equipment",
+            "A network security checklist",
+            "A network design document"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A list of network devices and their configurations",
+        "difficulty": "easy",
+        "explanation": "A network inventory is a comprehensive record of all network devices, their configurations, locations, and characteristics, helping administrators track and manage network resources.",
+        "hint": "This is essentially a detailed catalog of network infrastructure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What does 'change management' involve in network administration?",
+        "options": [
+            "Generating network changes",
+            "Controlling and documenting network modifications",
+            "Preventing network updates",
+            "Creating network change reports"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Controlling and documenting network modifications",
+        "difficulty": "medium",
+        "explanation": "Change management in network administration involves systematically planning, implementing, and documenting network modifications to minimize disruption and maintain network stability.",
+        "hint": "This ensures that network changes are carefully planned and tracked."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Management",
+        "questionText": "What tool is used for network device configuration backup?",
+        "options": [
+            "Microsoft Paint",
+            "RANCID",
+            "Adobe Photoshop",
+            "Microsoft Word"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "RANCID",
+        "difficulty": "hard",
+        "explanation": "RANCID (Really Awesome New Cisco confIg Differ) is a tool used to maintain an archive of network device configurations, helping administrators track and restore device settings.",
+        "hint": "This tool helps in preserving and managing network device configurations."
+    },
 
     // IPv6
 
