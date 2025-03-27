@@ -3283,8 +3283,936 @@ const CNQuestions = [
     },
 
     // Network Security
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does CIA stand for in information security?",
+        "options": [
+            "Confidentiality, Integrity, Availability",
+            "Cryptography, Identification, Authentication",
+            "Compliance, Investigation, Assurance",
+            "Control, Inspection, Access"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Confidentiality, Integrity, Availability",
+        "difficulty": "easy",
+        "explanation": "CIA triad represents the three fundamental principles of information security: Confidentiality (protecting data from unauthorized access), Integrity (ensuring data remains unaltered), and Availability (ensuring data is accessible when needed).",
+        "hint": "Think about the core principles that protect information systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "Which type of attack involves flooding a network with traffic to overwhelm its resources?",
+        "options": [
+            "Phishing Attack",
+            "Man-in-the-Middle Attack",
+            "Denial of Service (DoS) Attack",
+            "Social Engineering Attack"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Denial of Service (DoS) Attack",
+        "difficulty": "medium",
+        "explanation": "A Denial of Service (DoS) attack aims to make a network, service, or resource unavailable by overwhelming it with a flood of internet traffic, causing system resources to be exhausted.",
+        "hint": "This attack type tries to make a service or network inaccessible."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is the primary purpose of a firewall?",
+        "options": [
+            "To encrypt network traffic",
+            "To monitor and control network traffic",
+            "To detect malware",
+            "To backup network data"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To monitor and control network traffic",
+        "difficulty": "easy",
+        "explanation": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules, acting as a barrier between trusted and untrusted networks.",
+        "hint": "Think of a firewall like a security checkpoint for network traffic."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does SSL/TLS primarily provide?",
+        "options": [
+            "Data storage encryption",
+            "Network address translation",
+            "Secure communication over a network",
+            "User authentication"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Secure communication over a network",
+        "difficulty": "medium",
+        "explanation": "SSL (Secure Sockets Layer) and its successor TLS (Transport Layer Security) provide encrypted communication between client and server, ensuring data privacy and integrity during transmission.",
+        "hint": "This protocol ensures secure data transfer between devices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "Which authentication factor involves something you know?",
+        "options": [
+            "Biometrics",
+            "Smart Card",
+            "Password",
+            "Security Token"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Password",
+        "difficulty": "easy",
+        "explanation": "Something you know (knowledge factor) typically refers to passwords, PINs, or security questions that only the authorized user should know.",
+        "hint": "Think about authentication methods based on memorized information."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a digital certificate used for?",
+        "options": [
+            "Storing passwords",
+            "Encrypting hard drives",
+            "Verifying the identity of a website or entity",
+            "Creating network backups"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Verifying the identity of a website or entity",
+        "difficulty": "medium",
+        "explanation": "A digital certificate is an electronic document that verifies the identity of a website or entity and enables secure, encrypted communication using public key infrastructure (PKI).",
+        "hint": "This helps prevent impersonation in online communications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does VPN stand for?",
+        "options": [
+            "Virtual Private Network",
+            "Virtual Public Network",
+            "Verified Private Network",
+            "Virtual Protocol Network"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Virtual Private Network",
+        "difficulty": "easy",
+        "explanation": "A Virtual Private Network (VPN) creates a secure, encrypted connection over a less secure network, typically the internet, providing privacy and anonymity.",
+        "hint": "This technology creates a secure 'tunnel' for network communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "Which type of malware can replicate itself and spread to other computers?",
+        "options": [
+            "Trojan Horse",
+            "Spyware",
+            "Virus",
+            "Worm"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "Worm",
+        "difficulty": "medium",
+        "explanation": "A worm is a type of malware that can replicate itself and spread to other computers without human interaction, often exploiting network vulnerabilities.",
+        "hint": "This malware type spreads autonomously across networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a 'salt' in password hashing?",
+        "options": [
+            "A special encryption algorithm",
+            "A random value added to password before hashing",
+            "A password recovery method",
+            "A network security protocol"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A random value added to password before hashing",
+        "difficulty": "hard",
+        "explanation": "A salt is a random value added to the input of a hash function to ensure unique hash outputs, making it more difficult for attackers to use precomputed hash tables.",
+        "hint": "This technique adds randomness to password storage."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does IDS stand for?",
+        "options": [
+            "Internet Defense System",
+            "Intrusion Detection System",
+            "Internal Data Security",
+            "Internet Data Sync"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Intrusion Detection System",
+        "difficulty": "easy",
+        "explanation": "An Intrusion Detection System (IDS) monitors network traffic for suspicious activities and generates alerts when potential security breaches are detected.",
+        "hint": "This system watches for potential security threats."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a 'man-in-the-middle' attack?",
+        "options": [
+            "An attack that targets system administrators",
+            "A technique where an attacker intercepts communication between two parties",
+            "A physical security breach",
+            "A method of password cracking"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A technique where an attacker intercepts communication between two parties",
+        "difficulty": "medium",
+        "explanation": "In a man-in-the-middle attack, an attacker secretly intercepts and potentially alters the communication between two parties who believe they are directly communicating with each other.",
+        "hint": "This attack involves secretly eavesdropping on network communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is the primary purpose of a DMZ in network security?",
+        "options": [
+            "To encrypt network traffic",
+            "To create a subnetwork that exposes external-facing services",
+            "To block all incoming traffic",
+            "To manage wireless networks"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To create a subnetwork that exposes external-facing services",
+        "difficulty": "hard",
+        "explanation": "A Demilitarized Zone (DMZ) is a physical or logical subnetwork that contains and exposes an organization's external-facing services to an untrusted network, typically the internet, while keeping the internal network protected.",
+        "hint": "This network area provides controlled access to public services."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a zero-day vulnerability?",
+        "options": [
+            "A vulnerability unknown to the software vendor",
+            "A security flaw that is immediately patched",
+            "A vulnerability that affects only zero systems",
+            "A type of network encryption"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "A vulnerability unknown to the software vendor",
+        "difficulty": "hard",
+        "explanation": "A zero-day vulnerability is a software security flaw that is unknown to the vendor and has not yet been patched, making it potentially very dangerous as attackers can exploit it before a fix is available.",
+        "hint": "This type of vulnerability is discovered before the vendor knows about it."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "Which encryption standard is considered secure for symmetric key encryption?",
+        "options": [
+            "MD5",
+            "SHA-1",
+            "AES",
+            "RC4"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "AES",
+        "difficulty": "medium",
+        "explanation": "Advanced Encryption Standard (AES) is a widely used symmetric encryption algorithm considered secure and approved by the U.S. National Security Agency (NSA) for top-secret information.",
+        "hint": "This encryption method is widely used in government and commercial applications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is social engineering primarily focused on?",
+        "options": [
+            "Technical network vulnerabilities",
+            "Exploiting human psychology",
+            "Hardware system weaknesses",
+            "Network protocol manipulation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Exploiting human psychology",
+        "difficulty": "easy",
+        "explanation": "Social engineering is a technique that manipulates people into divulging confidential information or performing actions that compromise security by exploiting psychological vulnerabilities.",
+        "hint": "This method targets human behavior rather than technical systems."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does HTTPS indicate about a website?",
+        "options": [
+            "High-speed internet connection",
+            "Secure, encrypted web connection",
+            "Hypertext transfer protocol",
+            "Host transfer protocol"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Secure, encrypted web connection",
+        "difficulty": "easy",
+        "explanation": "HTTPS (Hypertext Transfer Protocol Secure) indicates that the website uses SSL/TLS protocol to encrypt communication between the web browser and the website, providing a secure connection.",
+        "hint": "The 'S' stands for secure communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a brute-force attack?",
+        "options": [
+            "An attack that uses sophisticated algorithms",
+            "A method of guessing login credentials by trying multiple combinations",
+            "A physical security breach",
+            "A network scanning technique"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A method of guessing login credentials by trying multiple combinations",
+        "difficulty": "medium",
+        "explanation": "A brute-force attack involves systematically trying all possible password combinations until the correct one is found, typically using automated tools to attempt rapid password guessing.",
+        "hint": "This method relies on trying many password combinations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does 'defense in depth' mean in network security?",
+        "options": [
+            "Using multiple layers of security controls",
+            "Focusing on a single strong security measure",
+            "Protecting only the network perimeter",
+            "Implementing security only at the application layer"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Using multiple layers of security controls",
+        "difficulty": "hard",
+        "explanation": "Defense in depth is a comprehensive security strategy that employs multiple layers of security controls throughout an information system to provide redundant protection mechanisms.",
+        "hint": "This approach creates multiple barriers against potential security threats."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a honeypot in network security?",
+        "options": [
+            "A type of encryption method",
+            "A decoy system designed to attract cyber attacks",
+            "A network monitoring tool",
+            "A password recovery system"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A decoy system designed to attract cyber attacks",
+        "difficulty": "medium",
+        "explanation": "A honeypot is a computer system or network segment intentionally designed to appear vulnerable, used to attract and study cyber attacks while keeping actual production systems safe.",
+        "hint": "This is a trap set to detect and analyze potential attackers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does the principle of least privilege mean?",
+        "options": [
+            "Giving maximum access to all users",
+            "Restricting user access to only essential resources",
+            "Allowing unlimited network access",
+            "Sharing administrative credentials"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Restricting user access to only essential resources",
+        "difficulty": "hard",
+        "explanation": "The principle of least privilege ensures that users are given minimum levels of access or permissions needed to perform their job functions, reducing potential security risks.",
+        "hint": "This principle minimizes potential damage from accidental or intentional misuse."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a packet sniffer?",
+        "options": [
+            "A network security device",
+            "A tool for capturing and analyzing network traffic",
+            "A type of firewall",
+            "A malware detection system"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A tool for capturing and analyzing network traffic",
+        "difficulty": "medium",
+        "explanation": "A packet sniffer is a software or hardware tool that can intercept and log network traffic, allowing analysis of data packets traveling across a network.",
+        "hint": "This tool allows monitoring of network communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is phishing?",
+        "options": [
+            "A network scanning technique",
+            "A method of stealing network hardware",
+            "A social engineering attack to obtain sensitive information",
+            "A type of encryption method"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "A social engineering attack to obtain sensitive information",
+        "difficulty": "easy",
+        "explanation": "Phishing is a type of social engineering attack where attackers trick individuals into revealing sensitive information like passwords or credit card details by impersonating trustworthy entities.",
+        "hint": "This attack often involves deceptive emails or websites."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a security policy?",
+        "options": [
+            "A technical configuration for firewalls",
+            "A document defining an organization's security approach and requirements",
+            "A type of network encryption",
+            "A password creation guideline"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A document defining an organization's security approach and requirements",
+        "difficulty": "easy",
+        "explanation": "A security policy is a comprehensive document that outlines an organization's approach to information security, defining guidelines, responsibilities, and procedures for protecting assets.",
+        "hint": "This document provides a framework for security practices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does two-factor authentication (2FA) provide?",
+        "options": [
+            "Double encryption",
+            "Two different types of passwords",
+            "An additional layer of security beyond passwords",
+            "Two separate network connections"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "An additional layer of security beyond passwords",
+        "difficulty": "medium",
+        "explanation": "Two-factor authentication requires users to provide two different authentication factors, typically a password and a second verification method like a code sent to a mobile device, enhancing security.",
+        "hint": "This method adds an extra verification step beyond passwords."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is the primary purpose of an intrusion prevention system (IPS)?",
+        "options": [
+            "To detect network intrusions",
+            "To block and prevent potential security threats",
+            "To encrypt network traffic",
+            "To manage user permissions"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To block and prevent potential security threats",
+        "difficulty": "hard",
+        "explanation": "An Intrusion Prevention System (IPS) actively monitors network traffic, identifies potential security threats, and takes immediate action to block or prevent those threats in real-time.",
+        "hint": "This system actively stops potential security breaches."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a security token?",
+        "options": [
+            "A type of password",
+            "A physical or digital device generating temporary access codes",
+            "A network encryption method",
+            "A firewall configuration"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A physical or digital device generating temporary access codes",
+        "difficulty": "medium",
+        "explanation": "A security token is a physical device or software that generates temporary authentication codes, providing an additional layer of security beyond traditional passwords.",
+        "hint": "This device creates unique, time-limited access codes."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does end-to-end encryption ensure?",
+        "options": [
+            "Encryption only at network endpoints",
+            "Data is encrypted throughout its entire transmission",
+            "Encryption of network infrastructure",
+            "Protection against all types of attacks"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data is encrypted throughout its entire transmission",
+        "difficulty": "hard",
+        "explanation": "End-to-end encryption ensures that data remains encrypted from the point of origin to its final destination, preventing intermediaries from accessing the unencrypted content.",
+        "hint": "This method protects data during its entire communication journey."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What is a security audit?",
+        "options": [
+            "A software update",
+            "A comprehensive evaluation of an organization's security posture",
+            "A type of network scanning",
+            "A password reset procedure"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A comprehensive evaluation of an organization's security posture",
+        "difficulty": "hard",
+        "explanation": "A security audit is a systematic evaluation of an organization's information systems, policies, and procedures to assess their effectiveness in maintaining security and identifying potential vulnerabilities.",
+        "hint": "This process thoroughly examines an organization's security practices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Network Security",
+        "questionText": "What does a security baseline define?",
+        "options": [
+            "The minimum security requirements for a system",
+            "A network encryption standard",
+            "A password complexity rule",
+            "A firewall configuration"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The minimum security requirements for a system",
+        "difficulty": "medium",
+        "explanation": "A security baseline establishes the minimum acceptable security configuration and requirements for systems, networks, and applications to ensure a consistent level of protection.",
+        "hint": "This sets the foundational security standards for an organization."
+    },
 
     // Wireless Networks
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does WiFi stand for?",
+        "options": [
+            "Wireless Fidelity",
+            "Wireless Framework",
+            "Wireless Frequency",
+            "Wireless Function"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Wireless Fidelity",
+        "difficulty": "easy",
+        "explanation": "Contrary to popular belief, WiFi doesn't actually stand for anything specific. The term was created by the Wi-Fi Alliance as a play on 'Hi-Fi' (High Fidelity), but it's not an acronym.",
+        "hint": "Think about audio terminology and wireless technology."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What frequency bands do most modern WiFi networks operate on?",
+        "options": [
+            "1 GHz and 2 GHz",
+            "2.4 GHz and 5 GHz",
+            "3 GHz and 6 GHz",
+            "4 GHz and 7 GHz"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "2.4 GHz and 5 GHz",
+        "difficulty": "medium",
+        "explanation": "Most modern WiFi networks operate on two primary frequency bands: 2.4 GHz (longer range, more interference) and 5 GHz (shorter range, less interference).",
+        "hint": "Consider the common frequency bands used in wireless networking."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does SSID stand for?",
+        "options": [
+            "Secure System Identification",
+            "Service Set Identifier",
+            "Signal Strength Indicator",
+            "Synchronized System Interface Device"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Service Set Identifier",
+        "difficulty": "easy",
+        "explanation": "SSID (Service Set Identifier) is the name of a wireless network that identifies it to devices in the area. It's essentially the name you see when searching for WiFi networks.",
+        "hint": "This is the name of a wireless network."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does WPA3 provide that its predecessor WPA2 did not?",
+"options": [
+            "Faster internet speeds",
+            "Improved encryption and protection against brute-force attacks",
+            "Longer WiFi range",
+            "More simultaneous connections"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improved encryption and protection against brute-force attacks",
+        "difficulty": "medium",
+        "explanation": "WPA3 (Wi-Fi Protected Access 3) offers stronger encryption, individualized data encryption, and more robust protection against password guessing attacks compared to WPA2.",
+        "hint": "Focus on security improvements in wireless encryption."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the primary purpose of a wireless access point (WAP)?",
+        "options": [
+            "To create a wired network",
+            "To extend cellular network coverage",
+            "To connect wireless devices to a wired network",
+            "To block wireless signals"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "To connect wireless devices to a wired network",
+        "difficulty": "easy",
+        "explanation": "A wireless access point (WAP) acts as a central transmitter and receiver of wireless radio signals, allowing wireless devices to connect to a wired network infrastructure.",
+        "hint": "Think about bridging wireless and wired networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does MIMO stand for in wireless networking?",
+        "options": [
+            "Mobile Integrated Management Operation",
+            "Multiple Input Multiple Output",
+            "Mobile Internet Management Option",
+            "Modular Integrated Multipath Operation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Multiple Input Multiple Output",
+        "difficulty": "medium",
+        "explanation": "MIMO is a wireless technology that uses multiple antennas at both the transmitter and receiver to improve communication performance and increase data throughput.",
+        "hint": "This technology involves multiple antennas for better signal transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the primary difference between 802.11ac and 802.11ax (WiFi 6) standards?",
+        "options": [
+            "Frequency bands used",
+            "Maximum theoretical speed",
+            "Improved efficiency in crowded environments",
+            "Encryption methods"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Improved efficiency in crowded environments",
+        "difficulty": "hard",
+        "explanation": "WiFi 6 (802.11ax) improves upon 802.11ac by introducing technologies like OFDMA and MU-MIMO that significantly enhance network efficiency in dense environments with many connected devices.",
+        "hint": "Consider how modern WiFi standards handle multiple device connections."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is a rogue access point?",
+        "options": [
+            "A government-controlled WiFi network",
+            "An unauthorized wireless access point installed without network administrator's permission",
+            "A high-speed wireless router",
+            "A specialized network security device"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "An unauthorized wireless access point installed without network administrator's permission",
+        "difficulty": "medium",
+        "explanation": "A rogue access point is a wireless access point installed on a network without the knowledge or permission of the network administrator, potentially creating a significant security vulnerability.",
+        "hint": "Think about unauthorized network access points."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What technology allows wireless devices to communicate directly without a central access point?",
+        "options": [
+            "Bluetooth",
+            "WiFi Direct",
+            "NFC",
+            "Infrared"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "WiFi Direct",
+        "difficulty": "easy",
+        "explanation": "WiFi Direct allows devices to connect directly to each other without needing a wireless router or internet connection, creating a peer-to-peer network.",
+        "hint": "This technology enables direct device-to-device communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does LTE stand for in cellular networks?",
+        "options": [
+            "Long-Term Evolution",
+            "Local Telecommunications Exchange",
+            "Lightweight Technical Encryption",
+            "Limited Transmission Efficiency"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Long-Term Evolution",
+        "difficulty": "easy",
+        "explanation": "LTE (Long-Term Evolution) is a standard for wireless broadband communication for mobile devices, offering high-speed data for mobile phones and data terminals.",
+        "hint": "This refers to a cellular network technology."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is a major advantage of 5G networks over 4G?",
+        "options": [
+            "Longer battery life",
+            "Significantly lower latency and higher data speeds",
+            "Reduced network coverage",
+            "Lower initial infrastructure costs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Significantly lower latency and higher data speeds",
+        "difficulty": "medium",
+        "explanation": "5G networks offer dramatically reduced latency (response time) and much higher data transmission speeds compared to 4G, enabling new technologies like real-time remote surgery and autonomous vehicles.",
+        "hint": "Consider the performance improvements in cellular networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is a WiFi 'channel'?",
+        "options": [
+            "A physical cable connection",
+            "A specific frequency range within a WiFi band",
+            "A network security protocol",
+            "A type of wireless encryption"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A specific frequency range within a WiFi band",
+        "difficulty": "medium",
+        "explanation": "A WiFi channel is a specific frequency range within a WiFi band (2.4 GHz or 5 GHz) that wireless routers use to transmit data. Choosing the right channel can help reduce interference.",
+        "hint": "Think about how wireless signals are organized."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is beamforming in wireless networking?",
+        "options": [
+            "A method of blocking wireless signals",
+            "A technique to focus a wireless signal toward a specific device",
+            "A way to increase network security",
+            "A method of creating mesh networks"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A technique to focus a wireless signal toward a specific device",
+        "difficulty": "hard",
+        "explanation": "Beamforming is a signal processing technique used in wireless networks that focuses a wireless signal towards a specific receiving device, improving signal strength and network performance.",
+        "hint": "This technology helps target wireless signals more precisely."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the primary purpose of IoT in wireless networks?",
+        "options": [
+            "To replace traditional networking",
+            "To connect and communicate between various smart devices",
+            "To increase internet speed",
+            "To reduce network security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To connect and communicate between various smart devices",
+        "difficulty": "easy",
+        "explanation": "The Internet of Things (IoT) enables devices to communicate and exchange data over wireless networks, creating smart, interconnected ecosystems in homes, industries, and cities.",
+        "hint": "Think about how different devices can communicate wirelessly."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is a mesh network?",
+        "options": [
+            "A network with a single central access point",
+            "A network where devices can relay data for each other",
+            "A wired network configuration",
+            "A cellular network topology"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "A network where devices can relay data for each other",
+        "difficulty": "medium",
+        "explanation": "A mesh network is a network topology where each device can act as a relay, extending the network's range and providing multiple paths for data transmission, improving reliability.",
+        "hint": "Consider how devices can help extend network coverage."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does NFC stand for?",
+        "options": [
+            "Network Frequency Control",
+            "Near Field Communication",
+            "Network Fiber Connection",
+            "Network Forwarding Channel"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Near Field Communication",
+        "difficulty": "easy",
+        "explanation": "NFC (Near Field Communication) is a short-range wireless technology that enables communication between devices when they are brought very close together, typically within 4 cm.",
+        "hint": "This technology is used for short-range wireless interactions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the primary security risk of using public WiFi?",
+        "options": [
+            "Slower internet speeds",
+            "Potential unauthorized access to your data",
+            "Limited device compatibility",
+            "Increased battery consumption"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Potential unauthorized access to your data",
+        "difficulty": "medium",
+        "explanation": "Public WiFi networks often lack robust security, making it easier for attackers to intercept data, perform man-in-the-middle attacks, or gain unauthorized access to users' devices and information.",
+        "hint": "Consider the security vulnerabilities of shared networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the purpose of a WiFi repeater?",
+        "options": [
+            "To create a new WiFi network",
+            "To extend the range of an existing WiFi network",
+            "To increase internet speed",
+            "To provide network security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To extend the range of an existing WiFi network",
+        "difficulty": "easy",
+        "explanation": "A WiFi repeater receives an existing WiFi signal, amplifies it, and retransmits it, helping to extend the wireless network's coverage area.",
+        "hint": "Think about expanding wireless network reach."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the primary difference between WiFi and Bluetooth?",
+        "options": [
+            "They are exactly the same technology",
+            "Range and data transfer capabilities",
+            "Encryption methods",
+            "Frequency bands used"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Range and data transfer capabilities",
+        "difficulty": "medium",
+        "explanation": "WiFi is designed for longer-range, high-bandwidth network connections, while Bluetooth is optimized for short-range, low-power device communication.",
+        "hint": "Consider the typical use cases for each technology."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does MU-MIMO stand for?",
+        "options": [
+            "Multi-User Multiple Input Multiple Output",
+            "Mobile Unified Mobile Input Management Operation",
+            "Managed Unified Multipath Input Model",
+            "Mobile Unified Modular Internet Management"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Multi-User Multiple Input Multiple Output",
+        "difficulty": "hard",
+        "explanation": "MU-MIMO is a wireless technology that allows a router to communicate with multiple devices simultaneously, improving network efficiency and performance in crowded environments.",
+        "hint": "This technology enhances multi-device communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is a potential security vulnerability in WiFi networks?",
+        "options": [
+            "Too many devices connected",
+            "Physical distance between devices",
+            "Weak or default passwords",
+            "High internet speeds"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Weak or default passwords",
+        "difficulty": "easy",
+        "explanation": "Weak or default passwords are a significant security risk in WiFi networks, as they can be easily guessed or brute-forced by attackers, potentially allowing unauthorized access.",
+        "hint": "Consider how passwords can compromise network security."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What technology enables wireless charging?",
+        "options": [
+            "Bluetooth",
+            "NFC",
+            "Qi Wireless Charging",
+            "WiFi"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Qi Wireless Charging",
+        "difficulty": "easy",
+        "explanation": "Qi is the international standard for wireless charging, using electromagnetic induction to transfer energy between a charging pad and a compatible device.",
+        "hint": "This is a standard for charging without physical connections."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the primary advantage of millimeter-wave technology in 5G?",
+        "options": [
+            "Lower power consumption",
+            "Ability to transmit extremely high-bandwidth data",
+            "Increased network security",
+            "Longer transmission range"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ability to transmit extremely high-bandwidth data",
+        "difficulty": "hard",
+        "explanation": "Millimeter-wave technology in 5G allows for extremely high-frequency signals that can transmit massive amounts of data, enabling technologies like ultra-high-definition video streaming and real-time industrial applications.",
+        "hint": "Consider the data transmission capabilities of advanced wireless technologies."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the purpose of a VPN in wireless networks?",
+        "options": [
+            "To increase WiFi speed",
+            "To provide a secure, encrypted connection",
+            "To extend WiFi range",
+            "To create a new wireless network"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To provide a secure, encrypted connection",
+        "difficulty": "medium",
+        "explanation": "A Virtual Private Network (VPN) creates an encrypted tunnel for network communications, protecting data from interception and providing privacy, especially on public or unsecured wireless networks.",
+        "hint": "Think about securing network communications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does LoRaWAN stand for?",
+        "options": [
+            "Long Range Wide Area Network",
+            "Local Rapid Wireless Access Network",
+            "Low-Range Wireless Analog Network",
+            "Lightweight Radio Wide Area Network"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Long Range Wide Area Network",
+        "difficulty": "hard",
+        "explanation": "LoRaWAN is a low-power, wide-area networking protocol designed for long-range communication in Internet of Things (IoT) devices, particularly in smart city and industrial applications.",
+        "hint": "Consider wireless technologies for long-range IoT communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the primary function of a WiFi bridge?",
+        "options": [
+            "To increase WiFi security",
+            "To connect two separate network segments",
+            "To create a new WiFi network",
+            "To boost WiFi speed"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To connect two separate network segments",
+        "difficulty": "medium",
+        "explanation": "A WiFi bridge connects two network segments that are physically separated, allowing them to communicate as if they were part of the same local network.",
+        "hint": "Think about connecting distant network areas."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What does 'roaming' mean in wireless networks?",
+        "options": [
+            "Moving physical locations",
+            "Switching between different wireless access points while maintaining connection",
+            "Increasing WiFi range",
+            "Creating a new wireless network"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Switching between different wireless access points while maintaining connection",
+        "difficulty": "easy",
+        "explanation": "In wireless networking, roaming allows a device to automatically switch between different access points or cellular towers while maintaining a continuous network connection.",
+        "hint": "Consider how devices maintain connectivity while moving."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What technology enables wireless sensor networks?",
+        "options": [
+            "Bluetooth",
+            "WiFi",
+            "Zigbee",
+            "NFC"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Zigbee",
+        "difficulty": "hard",
+        "explanation": "Zigbee is a low-power, low-data-rate wireless networking standard designed for battery-powered devices, making it ideal for wireless sensor networks in home automation, industrial monitoring, and IoT applications.",
+        "hint": "Consider wireless technologies for low-power sensor networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wireless Networks",
+        "questionText": "What is the primary purpose of WiFi calling?",
+        "options": [
+            "To replace cellular networks",
+            "To make phone calls over WiFi instead of cellular networks",
+            "To increase internet speed",
+            "To provide network security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "To make phone calls over WiFi instead of cellular networks",
+        "difficulty": "easy",
+        "explanation": "WiFi calling allows users to make and receive phone calls and text messages over a WiFi network when cellular signal is weak or unavailable, using Voice over IP (VoIP) technology.",
+        "hint": "Think about alternative ways to make phone calls."
+    },
 
     // Wide Area Networks
 
