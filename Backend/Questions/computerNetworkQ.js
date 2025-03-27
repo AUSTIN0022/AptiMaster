@@ -5721,6 +5721,486 @@ const CNQuestions = [
     },
 
     // Cloud Networking
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What is a key characteristic of cloud networking?",
+        "options": [
+            "Fixed physical infrastructure",
+            "Dynamic and scalable resource allocation",
+            "Exclusively on-premises networking",
+            "Single vendor dependency"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Dynamic and scalable resource allocation",
+        "difficulty": "easy",
+        "explanation": "Cloud networking allows dynamic scaling of network resources based on demand, providing flexibility and efficiency.",
+        "hint": "Think about how cloud resources can be quickly provisioned or deprovisioned."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which cloud networking model provides direct network connections between on-premises infrastructure and cloud providers?",
+        "options": [
+            "Virtual Private Cloud (VPC)",
+            "Direct Connect/ExpressRoute",
+            "Public Cloud Peering",
+            "Software-Defined Networking (SDN)"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Direct Connect/ExpressRoute",
+        "difficulty": "medium",
+        "explanation": "Direct Connect (AWS) and ExpressRoute (Azure) provide dedicated, private network connections between on-premises networks and cloud providers.",
+        "hint": "This option bypasses public internet for more secure and consistent network performance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What does 'multi-cloud networking' primarily refer to?",
+        "options": [
+            "Using multiple internet service providers",
+            "Connecting networks across different cloud providers",
+            "Implementing multiple network protocols",
+            "Redundant network infrastructure"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Connecting networks across different cloud providers",
+        "difficulty": "medium",
+        "explanation": "Multi-cloud networking involves creating interconnected networks that span multiple cloud service providers like AWS, Azure, and Google Cloud.",
+        "hint": "Consider scenarios where organizations want to avoid vendor lock-in and leverage different cloud services."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which protocol is crucial for secure communication in cloud networking?",
+        "options": [
+            "HTTP",
+            "FTP",
+            "IPSec",
+            "SMTP"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "IPSec",
+        "difficulty": "easy",
+        "explanation": "IPSec (Internet Protocol Security) provides encryption and authentication for secure network communications, especially in VPN and cloud environments.",
+        "hint": "This protocol operates at the network layer and ensures data confidentiality and integrity."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What is a Virtual Network Interface (VNI) primarily used for in cloud networking?",
+        "options": [
+            "Physical server management",
+            "Wireless network configuration",
+            "Creating software-defined network connections",
+            "Monitoring network traffic"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Creating software-defined network connections",
+        "difficulty": "hard",
+        "explanation": "VNIs are logical network interfaces that enable software-defined networking, allowing flexible and programmable network configurations in cloud environments.",
+        "hint": "Think about how virtualization enables more dynamic network setups."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which cloud networking concept allows network segmentation and isolation?",
+        "options": [
+            "Load Balancing",
+            "Network Address Translation (NAT)",
+            "Virtual Private Cloud (VPC)",
+            "Domain Name System (DNS)"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Virtual Private Cloud (VPC)",
+        "difficulty": "medium",
+        "explanation": "VPC provides a logically isolated section of a cloud where you can launch resources in a virtual network that you define, enabling network segmentation.",
+        "hint": "This concept is similar to creating a private network within a public cloud infrastructure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What does SD-WAN primarily aim to improve in cloud networking?",
+        "options": [
+            "Server processing speed",
+            "Network performance and management",
+            "Data storage efficiency",
+            "Cloud migration processes"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Network performance and management",
+        "difficulty": "medium",
+        "explanation": "Software-Defined Wide Area Network (SD-WAN) enhances network performance by intelligently routing traffic across multiple network paths.",
+        "hint": "Consider how intelligent routing can optimize network connections dynamically."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which security mechanism is commonly used to control network access in cloud environments?",
+        "options": [
+            "SSL Certificates",
+            "Network Access Control List (ACL)",
+            "Proxy Servers",
+            "MAC Address Filtering"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Network Access Control List (ACL)",
+        "difficulty": "easy",
+        "explanation": "Network ACLs provide a layer of security by filtering traffic based on predefined rules at the subnet level in cloud networks.",
+        "hint": "This mechanism acts like a firewall, controlling inbound and outbound traffic."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What is the primary purpose of a cloud network load balancer?",
+        "options": [
+            "Data encryption",
+            "Distributing network traffic across multiple servers",
+            "Network monitoring",
+            "Creating virtual networks"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Distributing network traffic across multiple servers",
+        "difficulty": "easy",
+        "explanation": "Load balancers in cloud networking distribute incoming network traffic across multiple servers to ensure high availability and reliability.",
+        "hint": "Think about how this prevents any single server from becoming a bottleneck."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which cloud networking strategy helps minimize latency and improve performance?",
+        "options": [
+            "Data compression",
+            "Content Delivery Network (CDN)",
+            "Packet filtering",
+            "Network tokenization"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Content Delivery Network (CDN)",
+        "difficulty": "medium",
+        "explanation": "CDNs distribute content across multiple geographically dispersed servers, reducing latency by serving content from locations closer to end-users.",
+        "hint": "Consider how proximity to data can speed up network interactions."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What does 'network peering' enable in cloud environments?",
+        "options": [
+            "Wireless network connections",
+            "Direct network connections between VPCs",
+            "Physical server interconnections",
+            "Inter-continent network routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Direct network connections between VPCs",
+        "difficulty": "medium",
+        "explanation": "Network peering allows direct network connectivity between Virtual Private Clouds (VPCs), enabling resources in different networks to communicate privately.",
+        "hint": "Think of this as creating a private highway between two separate network infrastructures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which cloud networking technology enables network function virtualization?",
+        "options": [
+            "MPLS",
+            "Software-Defined Networking (SDN)",
+            "VLAN",
+            "DHCP"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Software-Defined Networking (SDN)",
+        "difficulty": "hard",
+        "explanation": "SDN decouples network control functions from hardware, allowing network services to be virtualized and programmatically initialized.",
+        "hint": "This technology separates the control plane from the data plane in networking."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What is a key benefit of using overlay networks in cloud computing?",
+        "options": [
+            "Increased hardware costs",
+            "Simplified network management",
+            "Reduced security",
+            "Limited scalability"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Simplified network management",
+        "difficulty": "hard",
+        "explanation": "Overlay networks create a virtual network layer on top of physical infrastructure, enabling more flexible and easier network configuration and management.",
+        "hint": "Consider how abstraction can simplify complex network setups."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which authentication mechanism is crucial for secure cloud networking?",
+        "options": [
+            "Basic password authentication",
+            "Multi-Factor Authentication (MFA)",
+            "Single sign-on (SSO)",
+            "IP whitelisting"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Multi-Factor Authentication (MFA)",
+        "difficulty": "easy",
+        "explanation": "MFA adds an extra layer of security by requiring multiple verification methods before granting network access.",
+        "hint": "Think beyond just passwords for network authentication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What does 'network slicing' refer to in cloud and 5G contexts?",
+        "options": [
+            "Physical network segmentation",
+            "Virtual network customization",
+            "Data compression techniques",
+            "Load balancing strategies"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Virtual network customization",
+        "difficulty": "hard",
+        "explanation": "Network slicing allows creating multiple virtual networks on a single physical infrastructure, each tailored to specific performance and service requirements.",
+        "hint": "Consider how this enables more efficient and flexible network resource allocation."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which protocol is fundamental for secure remote access in cloud networking?",
+        "options": [
+            "ICMP",
+            "OpenVPN",
+            "Telnet",
+            "SSH"
+        ],
+        "correctOptionIndex": 3,
+        "correctOptionText": "SSH",
+        "difficulty": "easy",
+        "explanation": "SSH (Secure Shell) provides encrypted, secure remote access and file transfer capabilities in cloud and network environments.",
+        "hint": "This protocol ensures secure communication over an unsecured network."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What is a potential challenge in hybrid cloud networking?",
+        "options": [
+            "Limited bandwidth",
+            "Ensuring consistent network policy across environments",
+            "Reduced security",
+            "Increased operational costs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ensuring consistent network policy across environments",
+        "difficulty": "medium",
+        "explanation": "Maintaining uniform network policies, security measures, and performance across on-premises and cloud infrastructures can be complex in hybrid cloud setups.",
+        "hint": "Consider the complexities of managing networks across different infrastructure types."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which technology helps manage IP address allocation in cloud networks?",
+        "options": [
+            "OSPF",
+            "DHCP",
+            "NAT",
+            "BGP"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "DHCP",
+        "difficulty": "easy",
+        "explanation": "Dynamic Host Configuration Protocol (DHCP) automatically assigns and manages IP addresses in cloud and network environments.",
+        "hint": "This protocol simplifies IP address management by dynamically allocating addresses."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What is the primary function of a cloud network firewall?",
+        "options": [
+            "Accelerating network speed",
+            "Filtering and controlling network traffic",
+            "Storing network logs",
+            "Managing DNS records"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Filtering and controlling network traffic",
+        "difficulty": "easy",
+        "explanation": "Cloud network firewalls monitor, filter, and control incoming and outgoing network traffic based on predetermined security rules.",
+        "hint": "Think of this as a security checkpoint for network communications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which network security model focuses on trust verification for every access attempt?",
+        "options": [
+            "Perimeter security",
+            "Zero Trust Network",
+            "Whitelisting",
+            "VPN-based security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Zero Trust Network",
+        "difficulty": "hard",
+        "explanation": "Zero Trust Network assumes no implicit trust and requires verification for every user, device, and application attempting to access network resources.",
+        "hint": "Consider a security model that never automatically trusts any network entity."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What role do microservices play in cloud networking architecture?",
+        "options": [
+            "Physical server management",
+            "Creating modular, independently deployable services",
+            "Network encryption",
+            "Bandwidth management"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creating modular, independently deployable services",
+        "difficulty": "medium",
+        "explanation": "Microservices architecture breaks applications into smaller, independent services that can be developed, deployed, and scaled separately.",
+        "hint": "Think about how breaking down complex systems can improve flexibility."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which cloud networking concept enables network resource elasticity?",
+        "options": [
+            "Network virtualization",
+            "Static routing",
+            "Physical server clustering",
+            "Manual IP configuration"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Network virtualization",
+        "difficulty": "hard",
+        "explanation": "Network virtualization allows dynamic creation, modification, and deletion of network resources without physical infrastructure changes.",
+        "hint": "Consider how software can make networks more flexible and adaptable."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What does a cloud network's NAT gateway primarily do?",
+        "options": [
+            "Generate network certificates",
+            "Translate private IP addresses to public ones",
+            "Encrypt network traffic",
+            "Load balance network requests"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Translate private IP addresses to public ones",
+        "difficulty": "medium",
+        "explanation": "NAT (Network Address Translation) gateways allow private network resources to access the internet using a public IP address.",
+        "hint": "This helps maintain network security by hiding internal network structures."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which emerging technology is transforming cloud network automation?",
+        "options": [
+            "Blockchain",
+            "Artificial Intelligence",
+            "Quantum Computing",
+            "Augmented Reality"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Artificial Intelligence",
+        "difficulty": "hard",
+        "explanation": "AI is increasingly used for predictive network management, automated traffic routing, and intelligent security responses in cloud networking.",
+        "hint": "Consider how machine learning can optimize complex network operations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What is a primary advantage of using container networking?",
+        "options": [
+            "Increased hardware costs",
+            "Improved application portability",
+            "Reduced network security",
+            "Limited scalability"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improved application portability",
+        "difficulty": "medium",
+        "explanation": "Container networking allows applications to be packaged with their dependencies, enabling consistent deployment across different cloud environments.",
+        "hint": "Think about how containers can make applications more independent of specific infrastructure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which protocol is crucial for secure cloud communication?",
+        "options": [
+            "HTTP",
+            "HTTPS",
+            "FTP",
+            "SMTP"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "HTTPS",
+        "difficulty": "easy",
+        "explanation": "HTTPS (HTTP Secure) provides encrypted communication between web clients and servers, essential for secure cloud interactions.",
+        "hint": "The 'S' stands for secure, indicating encryption and data integrity."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What does 'network function virtualization' enable in cloud environments?",
+        "options": [
+            "Physical network expansion",
+            "Virtualizing network services like firewalls and load balancers",
+            "Increasing hardware complexity",
+            "Reducing network flexibility"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Virtualizing network services like firewalls and load balancers",
+        "difficulty": "hard",
+        "explanation": "Network Function Virtualization (NFV) allows traditional network functions to be run as software, increasing flexibility and reducing hardware dependency.",
+        "hint": "Consider how software can replace dedicated hardware devices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which cloud networking approach minimizes data transfer costs?",
+        "options": [
+            "Continuous data replication",
+            "Data locality and edge computing",
+            "Unlimited bandwidth provisioning",
+            "Manual data migration"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Data locality and edge computing",
+        "difficulty": "medium",
+        "explanation": "By processing data closer to its source and minimizing long-distance data transfers, edge computing reduces network transmission costs.",
+        "hint": "Think about reducing the distance data needs to travel."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "What is a key consideration in cloud network design?",
+        "options": [
+            "Maximizing hardware complexity",
+            "Balancing performance, security, and cost",
+            "Limiting network scalability",
+            "Reducing automation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Balancing performance, security, and cost",
+        "difficulty": "hard",
+        "explanation": "Effective cloud network design requires carefully balancing network performance, robust security measures, and overall infrastructure costs.",
+        "hint": "Consider the multiple, sometimes competing priorities in network architecture."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Cloud Networking",
+        "questionText": "Which networking concept supports application communication in cloud environments?",
+        "options": [
+            "Physical routing",
+            "Service mesh",
+            "Manual packet switching",
+            "Static IP allocation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Service mesh",
+        "difficulty": "hard",
+        "explanation": "Service mesh provides a dedicated infrastructure layer for managing service-to-service communication, offering features like load balancing and encryption.",
+        "hint": "Consider a sophisticated approach to managing complex microservices interactions."
+    },
 
     // Emerging Network Technologies
 
