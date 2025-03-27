@@ -4215,6 +4215,454 @@ const CNQuestions = [
     },
 
     // Wide Area Networks
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What does WAN stand for?",
+        "options": [
+            "World Area Network",
+            "Wide Area Network", 
+            "Wireless Access Network",
+            "Wide Aggregate Network"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Wide Area Network",
+        "difficulty": "easy",
+        "explanation": "A Wide Area Network (WAN) is a telecommunications network that extends over a large geographical area, typically connecting multiple local area networks (LANs).",
+        "hint": "Think about networks that span cities, countries, or even continents."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "Which technology is commonly used for connecting remote branch offices in WANs?",
+        "options": [
+            "Bluetooth",
+            "MPLS",
+            "WiFi",
+            "NFC"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MPLS",
+        "difficulty": "medium",
+        "explanation": "Multiprotocol Label Switching (MPLS) is a routing technique that directs data from one network node to the next based on short path labels rather than long network addresses.",
+        "hint": "This protocol is efficient for creating private wide area networks with multiple locations."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is the primary purpose of a leased line in WAN connectivity?",
+        "options": [
+            "Wireless communication",
+            "Dedicated point-to-point connection",
+            "Network security",
+            "Load balancing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Dedicated point-to-point connection",
+        "difficulty": "medium",
+        "explanation": "A leased line provides a dedicated, symmetric, and permanent communication link between two locations, offering consistent bandwidth and reliability.",
+        "hint": "Consider a private communication channel that is always available between two specific points."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "Which WAN technology allows dynamic path selection for improved network performance?",
+        "options": [
+            "MPLS",
+            "SD-WAN",
+            "Frame Relay",
+            "X.25"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "SD-WAN",
+        "difficulty": "hard",
+        "explanation": "Software-Defined Wide Area Network (SD-WAN) enables intelligent path selection, allowing traffic to be routed over the most efficient network path in real-time.",
+        "hint": "This technology uses software to control and optimize WAN connectivity."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is the typical bandwidth range for a T1 leased line?",
+        "options": [
+            "1.544 Mbps",
+            "10 Mbps",
+            "100 Mbps",
+            "1 Gbps"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "1.544 Mbps",
+        "difficulty": "medium",
+        "explanation": "A T1 line provides 1.544 Mbps of symmetric bandwidth, traditionally used for enterprise connectivity before higher-speed alternatives.",
+        "hint": "This is a standard telecommunications transmission rate in North America."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What does the term 'last mile' refer to in WAN connectivity?",
+        "options": [
+            "The final network segment connecting the customer to the internet service provider",
+            "The longest cable run in a network",
+            "The final 100 meters of a network cable",
+            "The maximum distance of a network connection"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "The final network segment connecting the customer to the internet service provider",
+        "difficulty": "medium",
+        "explanation": "'Last mile' describes the final leg of telecommunications networks that deliver services to customers, often representing the most costly and technically challenging part of network infrastructure.",
+        "hint": "This is the connection between the ISP's infrastructure and the end-user's location."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "Which protocol is used for tunneling and creating VPN connections in WANs?",
+        "options": [
+            "HTTP",
+            "SMTP",
+            "IPsec",
+            "FTP"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "IPsec",
+        "difficulty": "hard",
+        "explanation": "Internet Protocol Security (IPsec) is a protocol suite for securing internet communications by authenticating and encrypting data packets.",
+        "hint": "This protocol operates at the network layer and is crucial for creating secure network tunnels."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is Frame Relay primarily used for in WAN architectures?",
+"options": [
+    "Wireless communication",
+    "Data link layer packet switching",
+    "Network address translation",
+    "Physical layer encoding"
+],
+"correctOptionIndex": 1,
+"correctOptionText": "Data link layer packet switching",
+"difficulty": "hard",
+"explanation": "Frame Relay is a packet-switching protocol for connecting devices on a wide area network, operating at the data link layer to efficiently transmit data between network points.",
+"hint": "This technology was popular before the widespread adoption of MPLS and IP-based networks."
+},
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What does the abbreviation 'ATM' stand for in WAN technologies?",
+        "options": [
+            "Asynchronous Transfer Mode",
+            "Advanced Transmission Management",
+            "Automated Traffic Monitoring",
+            "Advanced Telecommunications Mechanism"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Asynchronous Transfer Mode",
+        "difficulty": "medium",
+        "explanation": "Asynchronous Transfer Mode (ATM) is a high-speed networking technology that uses fixed-size packets called cells for transmitting various types of network traffic.",
+        "hint": "This was a popular WAN technology in the 1990s and early 2000s before being largely replaced by IP-based technologies."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is the primary advantage of using MPLS in a WAN?",
+        "options": [
+            "Increased wireless range",
+            "Reduced network latency and improved traffic management",
+            "Automatic IP address assignment",
+            "Enhanced physical security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Reduced network latency and improved traffic management",
+        "difficulty": "medium",
+        "explanation": "MPLS provides efficient routing by using label switching, which reduces network congestion and allows for better traffic prioritization and quality of service (QoS).",
+        "hint": "This technology helps in creating more predictable and performance-optimized network paths."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is the purpose of a Point of Presence (PoP) in WAN infrastructure?",
+"options": [
+    "Physical network endpoint",
+    "Network access point for internet service providers",
+    "Personal computer connection",
+    "Packet routing mechanism"
+],
+"correctOptionIndex": 1,
+"correctOptionText": "Network access point for internet service providers",
+"difficulty": "hard",
+"explanation": "A Point of Presence (PoP) is a physical location where telecommunications equipment is installed, allowing internet service providers to connect their customers to the broader internet infrastructure.",
+"hint": "Think of this as a local access point that connects regional networks to the global internet backbone."
+},
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "Which WAN technology is designed to provide virtual circuit connectivity?",
+        "options": [
+            "MPLS",
+            "X.25",
+            "Ethernet",
+            "WiFi"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "X.25",
+        "difficulty": "hard",
+        "explanation": "X.25 is a packet-switching network protocol that provides virtual circuit connectivity between devices, popular in the 1980s and early 1990s before being largely replaced by more modern technologies.",
+        "hint": "This was an early standardized protocol for wide area network communication."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What does 'bandwidth on demand' typically mean in WAN contexts?",
+        "options": [
+            "Unlimited internet access",
+            "Ability to dynamically adjust network capacity",
+            "Free network upgrades",
+            "Constant maximum bandwidth"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ability to dynamically adjust network capacity",
+        "difficulty": "medium",
+        "explanation": "Bandwidth on demand allows organizations to quickly scale their network capacity up or down based on current needs, typically in cloud or software-defined networking environments.",
+        "hint": "This feature provides flexibility in managing network resources in real-time."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is the primary difference between a dedicated leased line and a VPN?",
+        "options": [
+            "Transmission speed",
+            "Geographic coverage",
+            "Physical vs. virtual connectivity",
+            "Protocol used"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "Physical vs. virtual connectivity",
+        "difficulty": "hard",
+        "explanation": "A dedicated leased line is a physical, fixed-bandwidth connection between two points, while a VPN creates a secure, virtual tunnel over existing network infrastructure.",
+        "hint": "One provides a guaranteed physical connection, the other a secure logical connection."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What technology enables the extension of a private network across public networks?",
+        "options": [
+            "Firewall",
+            "Load Balancer",
+            "VPN",
+            "Proxy Server"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "VPN",
+        "difficulty": "easy",
+        "explanation": "A Virtual Private Network (VPN) creates an encrypted tunnel that allows secure communication over public networks, effectively extending a private network's reach.",
+        "hint": "This technology provides privacy and security for remote network connections."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What does SD-WAN primarily aim to optimize?",
+        "options": [
+            "Hardware costs",
+            "Network performance and connectivity",
+            "Physical network infrastructure",
+            "Server deployment"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Network performance and connectivity",
+        "difficulty": "medium",
+        "explanation": "Software-Defined Wide Area Network (SD-WAN) focuses on dynamically managing network resources to optimize performance, reliability, and cost-effectiveness across multiple connection types.",
+        "hint": "This technology uses software intelligence to route network traffic more efficiently."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "Which protocol is crucial for managing remote network devices in WANs?",
+        "options": [
+            "HTTP",
+            "SNMP",
+            "FTP",
+            "SMTP"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "SNMP",
+        "difficulty": "hard",
+        "explanation": "Simple Network Management Protocol (SNMP) allows network administrators to collect and organize information about managed devices on IP networks, facilitating remote monitoring and configuration.",
+        "hint": "This protocol enables centralized management of network infrastructure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is the primary function of a WAN optimizer?",
+        "options": [
+            "Increase network security",
+            "Reduce network latency and improve performance",
+            "Assign IP addresses",
+            "Create wireless networks"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Reduce network latency and improve performance",
+        "difficulty": "medium",
+        "explanation": "WAN optimizers use various techniques like data compression, caching, and protocol optimization to improve network performance and reduce bandwidth consumption.",
+        "hint": "These devices help accelerate application performance across wide area networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What technology enables connecting multiple branch offices with centralized network management?",
+        "options": [
+            "Bluetooth",
+            "MPLS",
+            "NFC",
+            "WiFi"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MPLS",
+        "difficulty": "easy",
+        "explanation": "Multiprotocol Label Switching (MPLS) allows organizations to create reliable, secure, and scalable wide area networks that connect multiple branch locations with efficient routing and management.",
+        "hint": "This is a preferred enterprise networking solution for multi-location businesses."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What does 'tunneling' mean in WAN technologies?",
+        "options": [
+            "Physical cable installation",
+            "Creating encrypted network paths",
+            "Underground network deployment",
+            "Network cable management"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creating encrypted network paths",
+        "difficulty": "medium",
+        "explanation": "Network tunneling involves encapsulating one network protocol within another, creating a secure, logical pathway for data transmission across different network infrastructures.",
+        "hint": "This technique allows secure communication over potentially untrusted networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is a primary advantage of using fiber optic connections in WANs?",
+        "options": [
+            "Lower cost",
+            "Shorter transmission distances",
+            "High bandwidth and low signal degradation",
+            "Easier installation"
+        ],
+        "correctOptionIndex": 2,
+        "correctOptionText": "High bandwidth and low signal degradation",
+        "difficulty": "hard",
+        "explanation": "Fiber optic connections offer significantly higher bandwidth, lower latency, and less signal loss compared to traditional copper-based network media, making them ideal for long-distance WAN connections.",
+        "hint": "These cables use light signals instead of electrical signals for data transmission."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What technology enables secure remote access to corporate networks?",
+        "options": [
+            "Firewall",
+            "VPN",
+            "Load Balancer",
+            "Proxy Server"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "VPN",
+        "difficulty": "easy",
+        "explanation": "Virtual Private Networks (VPNs) create encrypted tunnels that allow remote workers to securely access corporate networks from external locations.",
+        "hint": "This technology provides a secure, private connection over public networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What problem does SD-WAN specifically address in enterprise networking?",
+        "options": [
+            "Physical server management",
+            "Network performance and connectivity challenges",
+            "Email routing",
+            "Wireless signal strength"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Network performance and connectivity challenges",
+        "difficulty": "medium",
+        "explanation": "SD-WAN addresses network complexity by dynamically routing traffic across multiple connection types to optimize performance, reliability, and cost-effectiveness.",
+        "hint": "This technology provides intelligent path selection and management."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is the primary purpose of a carrier-neutral data center in WAN infrastructure?",
+        "options": [
+            "Single carrier connectivity",
+            "Multiple internet service provider interconnection",
+            "Local network management",
+            "Server cooling"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Multiple internet service provider interconnection",
+        "difficulty": "hard",
+        "explanation": "A carrier-neutral data center allows multiple telecommunications carriers to interconnect, providing organizations with greater network flexibility, redundancy, and potentially lower connectivity costs.",
+        "hint": "This facility enables businesses to choose from multiple network providers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What technology provides quality of service (QoS) in wide area networks?",
+        "options": [
+            "DHCP",
+            "MPLS",
+            "NAT",
+            "DNS"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "MPLS",
+        "difficulty": "medium",
+        "explanation": "Multiprotocol Label Switching (MPLS) enables traffic prioritization and guaranteed service levels by using label-switched paths, ensuring critical applications receive appropriate bandwidth and low latency.",
+        "hint": "This protocol can differentiate and prioritize various types of network traffic."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What does 'redundancy' mean in WAN network design?",
+        "options": [
+            "Duplicate network equipment",
+            "Unnecessary network components",
+            "Single point of failure",
+            "Limited network capacity"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Duplicate network equipment",
+        "difficulty": "easy",
+        "explanation": "Network redundancy involves deploying backup systems and multiple communication paths to ensure continuous network operation in case of component failure.",
+        "hint": "This strategy prevents total network shutdown if one component fails."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "What is the primary benefit of using private line services in WANs?",
+        "options": [
+            "Lower cost",
+            "Guaranteed bandwidth and reliability",
+            "Unlimited data transfer",
+            "Wireless connectivity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Guaranteed bandwidth and reliability",
+        "difficulty": "medium",
+        "explanation": "Private line services provide dedicated, symmetric bandwidth with guaranteed performance levels, making them ideal for mission-critical business communications.",
+        "hint": "These services offer consistent network performance without sharing resources with other customers."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Wide Area Networks",
+        "questionText": "Which emerging technology is transforming WAN connectivity?",
+        "options": [
+            "Dial-up networking",
+            "5G networks",
+            "Token Ring",
+            "AppleTalk"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "5G networks",
+        "difficulty": "easy",
+        "explanation": "5G networks promise significantly higher bandwidth, lower latency, and greater network flexibility, potentially revolutionizing wide area network connectivity and enabling new communication paradigms.",
+        "hint": "This wireless technology offers substantial improvements over previous cellular network generations."
+    },
 
     // Network Management
 
