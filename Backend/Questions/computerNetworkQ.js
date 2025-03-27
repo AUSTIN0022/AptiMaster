@@ -6203,6 +6203,471 @@ const CNQuestions = [
     },
 
     // Emerging Network Technologies
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is the primary technological advancement of 5G networks?",
+        "options": [
+            "Increased download speeds",
+            "Ultra-low latency and massive device connectivity",
+            "Reduced network complexity",
+            "Elimination of wireless interference"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Ultra-low latency and massive device connectivity",
+        "difficulty": "medium",
+        "explanation": "5G networks are designed to provide extremely low latency and support a massive number of connected devices simultaneously.",
+        "hint": "Consider how 5G goes beyond just speed improvements."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What technology enables networks to dynamically adapt to changing conditions?",
+        "options": [
+            "Network Automation",
+            "Static Routing",
+            "Manual Configuration",
+            "Physical Rewiring"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Network Automation",
+        "difficulty": "easy",
+        "explanation": "Network automation allows networks to automatically configure, manage, and optimize themselves without manual intervention.",
+        "hint": "Think about how software can make networks more intelligent and responsive."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is the primary goal of Intent-Based Networking (IBN)?",
+        "options": [
+            "Increasing hardware complexity",
+            "Translating business intent into network configurations",
+            "Reducing network security",
+            "Limiting network scalability"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Translating business intent into network configurations",
+        "difficulty": "hard",
+        "explanation": "Intent-Based Networking automatically translates high-level business requirements into specific network configurations and policies.",
+        "hint": "Consider a system that understands and implements business objectives directly."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "Which technology is crucial for supporting Internet of Things (IoT) connectivity?",
+        "options": [
+            "5G",
+            "Bluetooth",
+            "Infrared",
+            "AM Radio"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "5G",
+        "difficulty": "medium",
+        "explanation": "5G networks provide the necessary bandwidth, low latency, and device density to support massive IoT device ecosystems.",
+        "hint": "Think about the network requirements for connecting numerous small devices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What does network virtualization primarily enable?",
+        "options": [
+            "Physical network expansion",
+            "Creating multiple virtual networks on shared hardware",
+            "Increasing hardware costs",
+            "Reducing network flexibility"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creating multiple virtual networks on shared hardware",
+        "difficulty": "medium",
+        "explanation": "Network virtualization allows creating multiple logical networks that operate independently on the same physical infrastructure.",
+        "hint": "Consider how software can create flexible network environments."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What role does Artificial Intelligence play in emerging network technologies?",
+        "options": [
+            "Replacing human network administrators",
+            "Predictive network management and optimization",
+            "Increasing network complexity",
+            "Reducing network security"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Predictive network management and optimization",
+        "difficulty": "hard",
+        "explanation": "AI enables predictive maintenance, intelligent traffic routing, anomaly detection, and automated network optimization.",
+        "hint": "Think about how machine learning can make networks more intelligent."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is the primary advantage of Software-Defined Wide Area Network (SD-WAN)?",
+        "options": [
+            "Increased hardware complexity",
+            "Improved network performance and management",
+            "Reduced network security",
+            "Limited scalability"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improved network performance and management",
+        "difficulty": "medium",
+        "explanation": "SD-WAN intelligently routes traffic across multiple network paths to optimize performance, reliability, and cost.",
+        "hint": "Consider how software can make network routing more dynamic."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "Which technology is critical for quantum network communication?",
+        "options": [
+            "Quantum Encryption",
+            "Quantum Entanglement",
+            "Quantum Routing",
+            "Quantum Switching"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Quantum Entanglement",
+        "difficulty": "hard",
+        "explanation": "Quantum entanglement enables secure communication by creating interconnected quantum states that are instantly correlated.",
+        "hint": "Think about communication methods that go beyond classical physics."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What does Network Function Virtualization (NFV) primarily achieve?",
+        "options": [
+            "Increasing physical network infrastructure",
+            "Virtualizing network services like firewalls and load balancers",
+            "Reducing network flexibility",
+            "Increasing operational costs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Virtualizing network services like firewalls and load balancers",
+        "difficulty": "medium",
+        "explanation": "NFV allows traditional network functions to be implemented as software, reducing dependency on specialized hardware.",
+        "hint": "Consider how software can replace dedicated network devices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is a key characteristic of edge computing?",
+        "options": [
+            "Centralized data processing",
+            "Processing data closer to its source",
+            "Increasing network latency",
+            "Reducing network flexibility"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Processing data closer to its source",
+        "difficulty": "easy",
+        "explanation": "Edge computing moves computational processes closer to data sources, reducing latency and bandwidth usage.",
+        "hint": "Think about minimizing data travel distance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What technology enables more efficient network resource allocation?",
+        "options": [
+            "Network Slicing",
+            "Static Resource Allocation",
+            "Manual Configuration",
+            "Physical Expansion"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Network Slicing",
+        "difficulty": "hard",
+        "explanation": "Network slicing allows creating multiple virtual networks on a single physical infrastructure, each tailored to specific performance requirements.",
+        "hint": "Consider how networks can be customized for different use cases."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is the primary focus of zero-trust networking?",
+        "options": [
+            "Eliminating all network security",
+            "Verifying every access attempt",
+            "Removing network boundaries",
+            "Reducing authentication complexity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Verifying every access attempt",
+        "difficulty": "medium",
+        "explanation": "Zero-trust networking assumes no implicit trust and requires verification for every user, device, and application attempting to access network resources.",
+        "hint": "Think about a security model that never automatically trusts any network entity."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "Which technology is crucial for next-generation network security?",
+        "options": [
+            "Firewall Expansion",
+            "Artificial Intelligence-driven Security",
+            "Manual Security Audits",
+            "Physical Barrier Installation"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Artificial Intelligence-driven Security",
+        "difficulty": "hard",
+        "explanation": "AI-driven security uses machine learning to detect anomalies, predict threats, and respond to security incidents in real-time.",
+        "hint": "Consider how intelligent systems can enhance network defense."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What does 6G technology aim to improve over 5G?",
+        "options": [
+            "Reducing network complexity",
+            "Extreme data rates and ultra-low latency",
+            "Limiting device connectivity",
+            "Increasing network costs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Extreme data rates and ultra-low latency",
+        "difficulty": "hard",
+        "explanation": "6G is expected to provide even faster data rates, lower latency, and support for more advanced technologies like holographic communications.",
+        "hint": "Think beyond the capabilities of current 5G networks."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is a key benefit of container networking?",
+        "options": [
+            "Increased hardware complexity",
+            "Improved application portability",
+            "Reduced network security",
+            "Limited scalability"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Improved application portability",
+        "difficulty": "medium",
+        "explanation": "Container networking allows applications to be packaged with their dependencies, enabling consistent deployment across different environments.",
+        "hint": "Consider how containers make applications more independent of specific infrastructure."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What technology supports dynamic network resource allocation?",
+        "options": [
+            "Static Routing",
+            "Network Virtualization",
+            "Manual Configuration",
+            "Physical Rewiring"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Network Virtualization",
+        "difficulty": "easy",
+        "explanation": "Network virtualization enables dynamic creation, modification, and deletion of network resources without physical infrastructure changes.",
+        "hint": "Think about how software can make networks more flexible."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is the primary challenge in implementing Internet of Things (IoT) networks?",
+        "options": [
+            "Limited device connectivity",
+            "Managing massive device scale and security",
+            "Reducing network speed",
+            "Increasing network complexity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Managing massive device scale and security",
+        "difficulty": "medium",
+        "explanation": "IoT networks must handle millions of diverse devices while maintaining robust security and efficient communication.",
+        "hint": "Consider the challenges of connecting numerous small, often unsecured devices."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What technology enables more intelligent network routing?",
+        "options": [
+            "Manual Routing",
+            "Artificial Intelligence",
+            "Static Path Selection",
+            "Physical Rewiring"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Artificial Intelligence",
+        "difficulty": "hard",
+        "explanation": "AI can analyze network conditions in real-time and dynamically optimize routing paths for better performance and reliability.",
+        "hint": "Think about how machine learning can make network routing more adaptive."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is the primary goal of service mesh in modern network architectures?",
+        "options": [
+            "Increasing network complexity",
+            "Managing service-to-service communication",
+            "Reducing network security",
+            "Limiting application scalability"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Managing service-to-service communication",
+        "difficulty": "hard",
+        "explanation": "Service mesh provides a dedicated infrastructure layer for handling service interactions, offering features like load balancing, encryption, and observability.",
+        "hint": "Consider a sophisticated approach to managing microservices communications."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "Which technology supports more efficient data center networking?",
+        "options": [
+            "Traditional Switching",
+            "Software-Defined Networking (SDN)",
+            "Manual Configuration",
+            "Physical Expansion"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Software-Defined Networking (SDN)",
+        "difficulty": "medium",
+        "explanation": "SDN centralizes network control, allowing more flexible and programmable data center network management.",
+        "hint": "Think about how software can make network infrastructure more adaptable."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is a key advantage of network automation?",
+        "options": [
+            "Increasing manual configuration",
+            "Reducing human error and operational costs",
+            "Limiting network flexibility",
+            "Increasing network complexity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Reducing human error and operational costs",
+        "difficulty": "easy",
+        "explanation": "Network automation minimizes manual interventions, reducing configuration errors and operational expenses.",
+        "hint": "Consider how software can make network management more efficient."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What technology supports more secure network communications?",
+        "options": [
+            "Quantum Encryption",
+            "Traditional Encryption",
+            "Manual Security Checks",
+            "Physical Isolation"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Quantum Encryption",
+        "difficulty": "hard",
+        "explanation": "Quantum encryption uses quantum mechanics principles to create theoretically unbreakable communication channels.",
+        "hint": "Think about encryption methods that go beyond classical cryptography."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is the primary benefit of network function virtualization?",
+        "options": [
+            "Increasing hardware dependency",
+            "Implementing network functions as software",
+            "Reducing network flexibility",
+            "Increasing operational costs"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Implementing network functions as software",
+        "difficulty": "medium",
+        "explanation": "NFV allows network services like firewalls and load balancers to be implemented as flexible software solutions.",
+        "hint": "Consider how software can replace dedicated network hardware."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What technology supports more responsive IoT networks?",
+        "options": [
+            "Edge Computing",
+            "Centralized Processing",
+            "Manual Data Routing",
+            "Physical Network Expansion"
+        ],
+        "correctOptionIndex": 0,
+        "correctOptionText": "Edge Computing",
+        "difficulty": "easy",
+        "explanation": "Edge computing moves data processing closer to IoT devices, reducing latency and improving network responsiveness.",
+        "hint": "Think about minimizing data travel distance."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is a key characteristic of intent-based networking?",
+        "options": [
+            "Manual Configuration",
+            "Translating business intent into network configurations",
+            "Increasing network complexity",
+            "Reducing network flexibility"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Translating business intent into network configurations",
+        "difficulty": "hard",
+        "explanation": "Intent-based networking automatically transforms high-level business objectives into specific network configurations and policies.",
+        "hint": "Consider a system that understands and directly implements business requirements."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "Which technology supports more adaptive network security?",
+        "options": [
+            "Static Security Rules",
+            "AI-driven Security",
+            "Manual Security Audits",
+            "Physical Firewalls"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "AI-driven Security",
+        "difficulty": "medium",
+        "explanation": "AI-driven security can dynamically detect threats, predict potential breaches, and respond in real-time.",
+        "hint": "Think about how intelligent systems can enhance network defense."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is the primary goal of network slicing?",
+        "options": [
+            "Reducing network performance",
+            "Creating customized virtual networks",
+            "Increasing hardware complexity",
+            "Limiting network scalability"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Creating customized virtual networks",
+        "difficulty": "hard",
+        "explanation": "Network slicing allows creating multiple virtual networks on a single physical infrastructure, each optimized for specific performance requirements.",
+        "hint": "Consider how networks can be tailored for different use cases."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What technology supports more efficient cloud networking?",
+        "options": [
+            "Manual Configuration",
+            "Software-Defined Networking",
+            "Physical Network Expansion",
+            "Static Routing"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Software-Defined Networking",
+        "difficulty": "easy",
+        "explanation": "Software-Defined Networking enables more flexible, programmable, and efficient network management in cloud environments.",
+        "hint": "Think about how software can make network infrastructure more adaptable."
+    },
+    {
+        "topic": "67d6b45a953bd3a26da2ad89",
+        "module": "Emerging Network Technologies",
+        "questionText": "What is a key challenge in implementing 5G networks?",
+        "options": [
+            "Reducing network speed",
+            "Managing network density and security",
+            "Limiting device connectivity",
+            "Increasing network complexity"
+        ],
+        "correctOptionIndex": 1,
+        "correctOptionText": "Managing network density and security",
+        "difficulty": "medium",
+        "explanation": "5G networks must handle massive numbers of connected devices while maintaining robust security and performance.",
+        "hint": "Consider the challenges of supporting numerous diverse network connections."
+    },
+    
 
 ]
 
