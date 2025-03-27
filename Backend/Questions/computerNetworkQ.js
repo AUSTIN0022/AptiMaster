@@ -2,7 +2,7 @@ const CNQuestions = [
 
     // Network Fundamentals
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is a network?",
         "options": [
@@ -18,7 +18,7 @@ const CNQuestions = [
         "hint": "Think about devices that can communicate and exchange information."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which network topology connects each device to a central hub or switch?",
         "options": [
@@ -34,7 +34,7 @@ const CNQuestions = [
         "hint": "Imagine devices radiating out from a central point like the rays of a star."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What does LAN stand for?",
         "options": [
@@ -50,7 +50,7 @@ const CNQuestions = [
         "hint": "This network type covers a small geographical area."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which of the following is NOT a type of network based on geographical area?",
         "options": [
@@ -66,7 +66,7 @@ const CNQuestions = [
         "hint": "Consider the range of communication for each network type."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is the primary purpose of a router in a network?",
         "options": [
@@ -82,7 +82,7 @@ const CNQuestions = [
         "hint": "Think about how data travels between different network segments."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which network type covers a city or large campus?",
         "options": [
@@ -98,7 +98,7 @@ const CNQuestions = [
         "hint": "Consider the geographical size between a LAN and WAN."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What does the term 'bandwidth' represent in networking?",
         "options": [
@@ -114,7 +114,7 @@ const CNQuestions = [
         "hint": "Think about how much data can flow through a network connection."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is network protocol?",
         "options": [
@@ -130,7 +130,7 @@ const CNQuestions = [
         "hint": "Protocols are like communication guidelines for network devices."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "In a mesh network topology, how are devices connected?",
         "options": [
@@ -146,7 +146,7 @@ const CNQuestions = [
         "hint": "Consider maximum interconnectivity between all network nodes."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is the primary advantage of a peer-to-peer (P2P) network?",
         "options": [
@@ -162,7 +162,7 @@ const CNQuestions = [
         "hint": "Think about resource sharing without a central control point."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which network transmission mode allows communication in both directions simultaneously?",
         "options": [
@@ -178,7 +178,7 @@ const CNQuestions = [
         "hint": "Consider the most unrestricted form of communication."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What does SSID stand for in wireless networking?",
         "options": [
@@ -194,7 +194,7 @@ const CNQuestions = [
         "hint": "This is the name you see when searching for Wi-Fi networks."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which of these is an example of a network interface device?",
         "options": [
@@ -210,7 +210,7 @@ const CNQuestions = [
         "hint": "This is a physical component inside or connected to a computer."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is the purpose of a network switch?",
         "options": [
@@ -226,7 +226,7 @@ const CNQuestions = [
         "hint": "Consider how data is directed within a local network."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is network segmentation?",
         "options": [
@@ -242,7 +242,7 @@ const CNQuestions = [
         "hint": "Think about organizing a large network into more controlled sections."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What does the term 'latency' refer to in networking?",
         "options": [
@@ -258,7 +258,7 @@ const CNQuestions = [
         "hint": "Consider the delay between sending and receiving data."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which topology is most resistant to network failures?",
         "options": [
@@ -274,7 +274,7 @@ const CNQuestions = [
         "hint": "Consider which topology provides the most redundant connections."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is the primary function of a network bridge?",
         "options": [
@@ -290,7 +290,7 @@ const CNQuestions = [
         "hint": "Consider how data is managed between similar network segments."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What does NAT stand for in networking?",
         "options": [
@@ -306,7 +306,7 @@ const CNQuestions = [
         "hint": "This technique helps conserve public IP addresses."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which communication mode allows transmission in only one direction?",
         "options": [
@@ -322,7 +322,7 @@ const CNQuestions = [
         "hint": "Think about one-way communication channels."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is a broadcast domain?",
         "options": [
@@ -338,7 +338,7 @@ const CNQuestions = [
         "hint": "Consider how broadcast messages are distributed within a network."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is the purpose of a default gateway?",
         "options": [
@@ -354,7 +354,7 @@ const CNQuestions = [
         "hint": "Think about how data travels between different network segments."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which network type covers the smallest geographical area?",
         "options": [
@@ -370,7 +370,7 @@ const CNQuestions = [
         "hint": "Consider the most localized network type."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is packet switching?",
         "options": [
@@ -386,7 +386,7 @@ const CNQuestions = [
         "hint": "Think about how data is divided and transmitted efficiently."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is network convergence?",
         "options": [
@@ -402,7 +402,7 @@ const CNQuestions = [
         "hint": "Consider how different communication types can be unified."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which device operates at the lowest layer of the OSI model?",
         "options": [
@@ -418,7 +418,7 @@ const CNQuestions = [
         "hint": "Think about the most basic network device."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is the primary benefit of a client-server network?",
         "options": [
@@ -434,7 +434,7 @@ const CNQuestions = [
         "hint": "Consider how resources are organized and controlled."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What does QoS stand for in networking?",
         "options": [
@@ -450,7 +450,7 @@ const CNQuestions = [
         "hint": "Think about prioritizing different types of network traffic."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "What is network virtualization?",
         "options": [
@@ -466,7 +466,7 @@ const CNQuestions = [
         "hint": "Consider how network resources can be logically separated from physical infrastructure."
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Network Fundamentals",
         "questionText": "Which network topology is most cost-effective for small networks?",
         "options": [
@@ -1316,7 +1316,7 @@ const CNQuestions = [
 
     // Data Link Layer
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the primary function of the Data Link Layer in the OSI model?",
         "options": [
@@ -1332,7 +1332,7 @@ const CNQuestions = [
         "hint": "Focus on communication between adjacent network devices"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What does MAC stand for in networking?",
         "options": [
@@ -1348,7 +1348,7 @@ const CNQuestions = [
         "hint": "Think about device-specific addressing at the lowest network level"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which sublayer of the Data Link Layer is responsible for addressing and frame synchronization?",
         "options": [
@@ -1364,7 +1364,7 @@ const CNQuestions = [
         "hint": "Consider the layer responsible for communication between network layers"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the purpose of CRC (Cyclic Redundancy Check) in the Data Link Layer?",
         "options": [
@@ -1380,7 +1380,7 @@ const CNQuestions = [
         "hint": "Think about ensuring data integrity during transmission"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which Ethernet standard uses CSMA/CD access method?",
         "options": [
@@ -1396,7 +1396,7 @@ const CNQuestions = [
         "hint": "Look for the older Ethernet standard"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the maximum length of an Ethernet frame?",
         "options": [
@@ -1412,7 +1412,7 @@ const CNQuestions = [
         "hint": "Consider the standard maximum frame size in traditional Ethernet"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the primary purpose of framing in the Data Link Layer?",
         "options": [
@@ -1428,7 +1428,7 @@ const CNQuestions = [
         "hint": "Think about organizing data for network transmission"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which type of addressing is used in the Data Link Layer?",
         "options": [
@@ -1444,7 +1444,7 @@ const CNQuestions = [
         "hint": "Consider the hardware-specific address used for network communication"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the function of the preamble in an Ethernet frame?",
         "options": [
@@ -1460,7 +1460,7 @@ const CNQuestions = [
         "hint": "Think about how devices prepare to receive network data"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which error detection method is most commonly used in the Data Link Layer?",
         "options": [
@@ -1476,7 +1476,7 @@ const CNQuestions = [
         "hint": "Consider the most robust error detection technique"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the purpose of the LLC sublayer?",
         "options": [
@@ -1492,7 +1492,7 @@ const CNQuestions = [
         "hint": "Think about the communication bridge between different network layers"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What does VLAN stand for?",
         "options": [
@@ -1508,7 +1508,7 @@ const CNQuestions = [
         "hint": "Consider network segmentation at the Data Link Layer"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which of the following is NOT a type of framing method?",
         "options": [
@@ -1524,7 +1524,7 @@ const CNQuestions = [
         "hint": "Identify the non-standard framing method"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the purpose of a switch at the Data Link Layer?",
         "options": [
@@ -1540,7 +1540,7 @@ const CNQuestions = [
         "hint": "Think about device-level network communication"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is ARQ in data link protocols?",
         "options": [
@@ -1556,7 +1556,7 @@ const CNQuestions = [
         "hint": "Consider error recovery mechanisms in network communication"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which addressing is used in Ethernet frames?",
         "options": [
@@ -1572,7 +1572,7 @@ const CNQuestions = [
         "hint": "Think about hardware-level addressing in Ethernet"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the function of the trailer in a data link frame?",
         "options": [
@@ -1588,7 +1588,7 @@ const CNQuestions = [
         "hint": "Consider the end-of-frame error-checking mechanism"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the primary difference between half-duplex and full-duplex communication?",
         "options": [
@@ -1604,7 +1604,7 @@ const CNQuestions = [
         "hint": "Think about data flow in communication channels"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What protocol is used in PPP (Point-to-Point Protocol)?",
         "options": [
@@ -1620,7 +1620,7 @@ const CNQuestions = [
         "hint": "Consider the data link protocol for direct connections"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the purpose of a bridge in the Data Link Layer?",
         "options": [
@@ -1636,7 +1636,7 @@ const CNQuestions = [
         "hint": "Think about network segment interconnection"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What does the term 'collision domain' refer to?",
         "options": [
@@ -1652,7 +1652,7 @@ const CNQuestions = [
         "hint": "Consider network communication interference"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which Ethernet standard supports 10 Gbps transmission?",
         "options": [
@@ -1668,7 +1668,7 @@ const CNQuestions = [
         "hint": "Look for the standard with the highest transmission speed"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the primary function of MAC sublayer?",
         "options": [
@@ -1684,7 +1684,7 @@ const CNQuestions = [
         "hint": "Think about low-level network communication management"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the purpose of flow control in the Data Link Layer?",
         "options": [
@@ -1700,7 +1700,7 @@ const CNQuestions = [
         "hint": "Consider data transmission synchronization"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which addressing is used in ARP (Address Resolution Protocol)?",
         "options": [
@@ -1716,7 +1716,7 @@ const CNQuestions = [
         "hint": "Think about address translation between layers"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the maximum MAC address length?",
         "options": [
@@ -1732,7 +1732,7 @@ const CNQuestions = [
         "hint": "Consider the standard MAC address length"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What does CSMA/CA stand for?",
         "options": [
@@ -1748,7 +1748,7 @@ const CNQuestions = [
         "hint": "Think about preventing network communication conflicts"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "Which device operates primarily at the Data Link Layer?",
         "options": [
@@ -1764,7 +1764,7 @@ const CNQuestions = [
         "hint": "Consider the device that works with MAC addresses"
     },
     {
-        "topicId": "67d6b45a953bd3a26da2ad89",
+        "topic": "67d6b45a953bd3a26da2ad89",
         "module": "Data Link Layer",
         "questionText": "What is the purpose of bit stuffing?",
         "options": [

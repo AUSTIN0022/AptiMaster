@@ -4,6 +4,7 @@ import { Questions } from "./Database/schema.js";
 
 // Import all question sets
 import AngularQuestions from './Questions/angularQ.js';
+import CNQuestions from './Questions/computerNetworkQ.js';
 import CQuestions from './Questions/cQ.js';
 import DBSysQuestions from './Questions/databaseSystemQ.js';
 import JavaQuestions from './Questions/javaQ.js';
@@ -17,7 +18,6 @@ import TSQuestions from './Questions/typeScriptQ.js';
 
 dotenv.config();
 
-
 async function insertQuestions() {
   try {
   
@@ -28,7 +28,6 @@ async function insertQuestions() {
     await Questions.deleteMany({});
     console.log("Cleared Questions Collections");
 
-    // Define all question sets with their names for better logging
     const questionSets = [
       { name: 'C', data: CQuestions },
       { name: 'Java', data: JavaQuestions },
@@ -40,10 +39,11 @@ async function insertQuestions() {
       { name: 'Node.js', data: nodeJSQuestions },
       { name: 'MongoDB', data: mongoDBQuestions },
       { name: 'React.js', data: reactJSQuestions },
-      { name: 'Angular', data: AngularQuestions }
+      { name: 'Angular', data: AngularQuestions },
+      { name: 'Computer Network', data: CNQuestions }
     ];
 
-    // Use insertMany for better performance
+
     for (const set of questionSets) {
       if (set.data && set.data.length > 0) {
         await Questions.insertMany(set.data);
@@ -62,5 +62,4 @@ async function insertQuestions() {
   }
 }
 
-// Execute the function
 insertQuestions();
